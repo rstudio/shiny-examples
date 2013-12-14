@@ -2,15 +2,17 @@
 
 # first, sync shiny examples
 if (file_test('-d', '../shiny/inst/examples')) {
-  for (app in list.dirs('../shiny/inst/examples', recursive = FALSE))
-    file.copy(app, './', recursive = TRUE)
+  for (app in list.dirs('../shiny/inst/examples', recursive = FALSE)) {
+    dir.create(app1 <- sub('^(\\d\\d)_', '0\\1-', basename(app)), showWarnings = FALSE)
+    file.copy(list.files(app, full.names = TRUE), app1, recursive = TRUE)
+  }
 }
 
 # then deploy all apps
 library(methods)
 library(shinyapps)
 apps = list.dirs(full.names = FALSE, recursive = FALSE)
-apps = grep('^[0-9]{2,}', apps, value = TRUE)
+apps = grep('^[0-9]{3,}', apps, value = TRUE)
 for (app in apps) {
   deployApp(app)
   writeLines(
