@@ -1,3 +1,3 @@
-# 10_download
+# 010-download
 
-Live demo: <http://demo.shinyapps.io/10_download>
+Live demo: <http://demo.shinyapps.io/010-download>

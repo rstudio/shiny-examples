@@ -1,3 +1,3 @@
-# 04_mpg
+# 004-mpg
 
-Live demo: <http://demo.shinyapps.io/04_mpg>
+Live demo: <http://demo.shinyapps.io/004-mpg>

@@ -1,3 +1,3 @@
-# 03_reactivity
+# 003-reactivity
 
-Live demo: <http://demo.shinyapps.io/03_reactivity>
+Live demo: <http://demo.shinyapps.io/003-reactivity>

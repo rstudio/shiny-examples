@@ -1,3 +1,3 @@
-# 11_timer
+# 011-timer
 
-Live demo: <http://demo.shinyapps.io/11_timer>
+Live demo: <http://demo.shinyapps.io/011-timer>

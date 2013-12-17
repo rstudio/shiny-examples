@@ -1,3 +1,3 @@
-# 12_datatables
+# 012-datatables
 
-Live demo: <http://demo.shinyapps.io/12_datatables>
+Live demo: <http://demo.shinyapps.io/012-datatables>

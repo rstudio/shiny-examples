@@ -1,3 +1,3 @@
-# 07_widgets
+# 007-widgets
 
-Live demo: <http://demo.shinyapps.io/07_widgets>
+Live demo: <http://demo.shinyapps.io/007-widgets>

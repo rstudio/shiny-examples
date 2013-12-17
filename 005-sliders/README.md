@@ -1,3 +1,3 @@
-# 05_sliders
+# 005-sliders
 
-Live demo: <http://demo.shinyapps.io/05_sliders>
+Live demo: <http://demo.shinyapps.io/005-sliders>

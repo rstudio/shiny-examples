@@ -1,3 +1,3 @@
-# 02_text
+# 002-text
 
-Live demo: <http://demo.shinyapps.io/02_text>
+Live demo: <http://demo.shinyapps.io/002-text>

@@ -1,3 +1,3 @@
-# 06_tabsets
+# 006-tabsets
 
-Live demo: <http://demo.shinyapps.io/06_tabsets>
+Live demo: <http://demo.shinyapps.io/006-tabsets>
