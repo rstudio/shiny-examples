@@ -15,5 +15,12 @@ shinyServer(function(input, output, session) {
     Sys.sleep(5)  # pretend this is time-consuming
     "This happens later"
   })
+  output$slow_plot <- renderPlot({
+    if (values$starting) {
+      invalidateLater(0, session)
+      return(plot(cars, main = "Please wait for a while"))
+    }
+    plot(rnorm(100000), main = "A slow plot")
+  })
 
 })
