@@ -15,8 +15,4 @@ apps = list.dirs(full.names = FALSE, recursive = FALSE)
 apps = grep('^[0-9]{3,}', apps, value = TRUE)
 for (app in apps) {
   deployApp(app)
-  writeLines(
-    sprintf(c('# %s', '', 'Live demo: <http://demo.shinyapps.io/%s>'), app),
-    file.path(app, 'README.md')
-  )
 }
