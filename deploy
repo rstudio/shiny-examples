@@ -1,5 +1,10 @@
 #!/usr/bin/Rscript
 
+if (FALSE) {
+  devtools::install_github('rstudio/shiny')
+  devtools::install_github('rstudio/shinyapps')
+}
+
 # first, sync shiny examples
 if (file_test('-d', '../shiny/inst/examples')) {
   for (app in list.dirs('../shiny/inst/examples', recursive = FALSE)) {
