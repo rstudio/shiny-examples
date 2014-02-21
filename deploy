@@ -5,6 +5,10 @@ if (file_test('-d', '../shiny/inst/examples')) {
   for (app in list.dirs('../shiny/inst/examples', recursive = FALSE)) {
     dir.create(app1 <- sub('^(\\d\\d)_', '0\\1-', basename(app)), showWarnings = FALSE)
     file.copy(list.files(app, full.names = TRUE), app1, recursive = TRUE)
+    writeLines(
+      sub('^License: .+$', 'License: MIT', readLines(file.path(app, 'DESCRIPTION'))),
+      file.path(app1, 'DESCRIPTION')
+    )
   }
 }
 
