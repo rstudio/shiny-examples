@@ -22,6 +22,13 @@ library(methods)
 library(shinyapps)
 apps = list.dirs(full.names = FALSE, recursive = FALSE)
 apps = grep('^[0-9]{3,}', apps, value = TRUE)
-for (app in apps) {
-  deployApp(app)
-}
+# print the apps that were not successfully deployed
+print(apps[unlist(lapply(apps, function(app) {
+  if (inherits(try(deployApp(app)), 'try-error')) return(1)
+  system(paste(
+    '../shiny-gallery/_scripts/import.R',
+    app,
+    sprintf('http://demo.shinyapps.io/%s', app),
+    sprintf('https://github.com/rstudio/shiny-examples/tree/master/%s', app)
+  ))
+})) != 0])
