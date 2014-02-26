@@ -20,8 +20,13 @@ if (file_test('-d', '../shiny/inst/examples')) {
 # then deploy all apps
 library(methods)
 library(shinyapps)
-apps = list.dirs(full.names = FALSE, recursive = FALSE)
-apps = grep('^[0-9]{3,}', apps, value = TRUE)
+# ./deploy 001-hello 002-text ...
+apps = commandArgs(TRUE)
+# if not specified, use all the directories here
+if (length(apps) == 0) {
+  apps = list.dirs(full.names = FALSE, recursive = FALSE)
+  apps = grep('^[0-9]{3,}', apps, value = TRUE)
+}
 # print the apps that were not successfully deployed
 print(apps[unlist(lapply(apps, function(app) {
   if (inherits(try(deployApp(app)), 'try-error')) return(1)
