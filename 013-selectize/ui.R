@@ -15,7 +15,15 @@ shinyUI(fluidPage(
     selectizeInput(
       'e5', '5. Max number of items to select', choices = states, multiple = TRUE,
       options = list(maxItems = 2)
-    )),
+    ),
+    selectizeInput(
+      'e6', '6. Placeholder', choices = states,
+      options = list(
+        placeholder = 'Please select an option below',
+        onInitialize = I('function() { this.setValue(""); }')
+      )
+    )
+  ),
   mainPanel(
     selectizeInput('e6', '6. Select a movie', choices = '', options = list(
       theme = 'movies',
