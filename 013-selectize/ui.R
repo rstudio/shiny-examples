@@ -4,7 +4,7 @@ states <- setNames(state.abb, state.name)
 shinyUI(fluidPage(
   titlePanel('Selectize examples'),
   sidebarLayout(sidebarPanel(
-    selectInput('e0', '0. An ordinary select input', choices = states),
+    selectInput('e0', '0. An ordinary select input', choices = states, selectize = FALSE),
     selectizeInput('e1', '1. A basic example (zero-configuration)', choices = states),
     selectizeInput('e2', '2. Multi-select', choices = states, multiple = TRUE),
     selectizeInput('e3', '3. Item creation', choices = states, options = list(create = TRUE)),
