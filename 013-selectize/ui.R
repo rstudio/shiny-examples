@@ -22,7 +22,12 @@ shinyUI(fluidPage(
         placeholder = 'Please select an option below',
         onInitialize = I('function() { this.setValue(""); }')
       )
+    ),
+    selectInput(
+      'e7', '7. selectInput() does not allow deletion for single input by default',
+      choices = states
     )
+
   ),
   mainPanel(
     # use Github instead
