@@ -25,48 +25,49 @@ shinyUI(fluidPage(
     )
   ),
   mainPanel(
-    selectizeInput('e6', '6. Select a movie', choices = '', options = list(
-      theme = 'movies',
-      valueField = 'title',
-      labelField = 'title',
-      searchField = 'title',
+    # use Github instead
+    selectizeInput('github', 'Select a Github repo', choices = '', options = list(
+      valueField = 'url',
+      labelField = 'name',
+      searchField = 'name',
       options = list(),
       create = FALSE,
       render = I("{
   option: function(item, escape) {
-    var actors = [];
-    for (var i = 0, n = item.abridged_cast.length; i < n; i++) {
-      actors.push('<span>' + escape(item.abridged_cast[i].name) + '</span>');
-    }
-    return '<div>' + '<img src=\"' + escape(item.posters.thumbnail) + '\" alt=\"\">' +
-           '<span class=\"title\">' +
-           '<span class=\"name\">' + escape(item.title) + '</span>' +
-           '</span>' +
-           '<span class=\"description\">' + escape(item.synopsis || 'No synopsis available at this time.') + '</span>' +
-           '<span class=\"actors\">' + (actors.length ? 'Starring ' + actors.join(', ') : 'Actors unavailable') + '</span>' +
-           '</div>';
+    return '<div>' +
+           '<strong><img src=\"http://brianreavis.github.io/selectize.js/images/repo-' + (item.fork ? 'forked' : 'source') + '.png\" width=20 />' + escape(item.name) + '</strong>:' +
+           ' <em>' + escape(item.description) + '</em>' +
+           ' (by ' + escape(item.username) + ')' +
+        '<ul>' +
+            (item.language ? '<li>' + escape(item.language) + '</li>' : '') +
+            '<li><span>' + escape(item.watchers) + '</span> watchers</li>' +
+            '<li><span>' + escape(item.forks) + '</span> forks</li>' +
+        '</ul>' +
+    '</div>';
   }
+}"),
+      score = I("function(search) {
+  var score = this.getScoreFunction(search);
+  return function(item) {
+    return score(item) * (1 + Math.min(item.watchers / 100, 1));
+  };
 }"),
       load = I("function(query, callback) {
   if (!query.length) return callback();
   $.ajax({
-    url: 'http://api.rottentomatoes.com/api/public/v1.0/movies.json',
+    url: 'https://api.github.com/legacy/repos/search/' + encodeURIComponent(query),
     type: 'GET',
-    dataType: 'jsonp',
-    data: {
-      q: query,
-      page_limit: 10,
-      apikey: '3qqmdwbuswut94jv4eua3j85'
-    },
     error: function() {
       callback();
     },
     success: function(res) {
-      callback(res.movies);
+      callback(res.repositories.slice(0, 10));
     }
   });
 }")
     )),
+    helpText('If the above searching fails, it is probably the Github API limit
+             has been reached (5 per minute). You can try later.'),
     verbatimTextOutput('e4out')
   )
 )))
