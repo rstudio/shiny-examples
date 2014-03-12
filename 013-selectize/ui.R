@@ -1,35 +1,47 @@
 library(shiny)
 
-states <- setNames(state.abb, state.name)
 shinyUI(fluidPage(
-  titlePanel('Selectize examples'),
+  title = 'Selectize examples',
   sidebarLayout(sidebarPanel(
-    selectInput('e0', '0. An ordinary select input', choices = states, selectize = FALSE),
-    selectizeInput('e1', '1. A basic example (zero-configuration)', choices = states),
-    selectizeInput('e2', '2. Multi-select', choices = states, multiple = TRUE),
-    selectizeInput('e3', '3. Item creation', choices = states, options = list(create = TRUE)),
+    selectInput(
+      'e0', '0. An ordinary select input', choices = state.name,
+      selectize = FALSE
+    ),
     selectizeInput(
-      'e4', '4. Max number of options to show', choices = states,
+      'e1', '1. A basic example (zero-configuration)',
+      choices = state.name
+    ),
+    selectizeInput(
+      'e2', '2. Multi-select', choices = state.name, multiple = TRUE
+    ),
+    selectizeInput(
+      'e3', '3. Item creation', choices = state.name,
+      options = list(create = TRUE)
+    ),
+    selectizeInput(
+      'e4', '4. Max number of options to show', choices = state.name,
       options = list(maxOptions = 5)
     ),
     selectizeInput(
-      'e5', '5. Max number of items to select', choices = states, multiple = TRUE,
-      options = list(maxItems = 2)
+      'e5', '5. Max number of items to select', choices = state.name,
+      multiple = TRUE, options = list(maxItems = 2)
     ),
     selectizeInput(
-      'e6', '6. Placeholder', choices = states,
+      'e6', '6. Placeholder', choices = state.name,
       options = list(
         placeholder = 'Please select an option below',
         onInitialize = I('function() { this.setValue(""); }')
       )
     ),
     selectInput(
-      'e7', '7. selectInput() does not allow deletion for single input by default',
-      choices = states
+      'e7', '7. selectInput() does not respond to empty strings',
+      choices = state.name
     )
 
   ),
   mainPanel(
+    helpText('Output of the examples in the left:'),
+    verbatimTextOutput('ex_out'),
     # use Github instead
     selectizeInput('github', 'Select a Github repo', choices = '', options = list(
       valueField = 'url',
@@ -73,6 +85,6 @@ shinyUI(fluidPage(
     )),
     helpText('If the above searching fails, it is probably the Github API limit
              has been reached (5 per minute). You can try later.'),
-    verbatimTextOutput('e4out')
+    verbatimTextOutput('github')
   )
 )))
