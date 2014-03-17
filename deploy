@@ -29,7 +29,7 @@ if (length(apps) == 0) {
 }
 # print the apps that were not successfully deployed
 print(apps[unlist(lapply(apps, function(app) {
-  if (inherits(try(deployApp(app)), 'try-error')) return(1)
+  if (inherits(try(deployApp(app, account = 'demo')), 'try-error')) return(1)
   system(paste(
     '../shiny-gallery/_scripts/import.R',
     app,
