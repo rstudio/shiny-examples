@@ -27,7 +27,7 @@ if (length(apps) == 0) {
 print(apps[unlist(lapply(apps, function(app) {
   if (inherits(try(deployApp(app, account = 'demo')), 'try-error')) return(1)
   system(paste(
-    '../shiny-gallery/_scripts/import.R',
+    '../shiny-dev-center/_scripts/import.R',
     app,
     sprintf('http://demo.shinyapps.io/%s', app),
     sprintf('https://github.com/rstudio/shiny-examples/tree/master/%s', app)
