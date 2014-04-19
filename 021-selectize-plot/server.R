@@ -39,8 +39,9 @@ shinyServer(function(input, output, session) {
     options = list(render = I(sprintf(
       "{
           option: function(item, escape) {
-            return '<div><img width=\"100\" src=\"%s&state=' + escape(item.value) +
-               '\" />' + escape(item.value) + '</div>';
+            return '<div><img width=\"100\" height=\"50\" ' +
+                'src=\"%s&state=' + escape(item.value) + '\" />' +
+                escape(item.value) + '</div>';
           }
       }",
       mapurl
