@@ -5,7 +5,7 @@ shinyServer(function(input, output, session) {
 
   mapurl <- session$registerDataObj(
 
-    shiny:::createUniqueId(4),
+    name   = 'arrests', # an arbitrary but unique name for the data object
     data   = USArrests,
     filter = function(data, req) {
 
