@@ -17,4 +17,10 @@ shinyServer(function(input, output) {
                $$\\frac{1}{\\pi\\gamma\\,\\left[1 +
                \\left(\\frac{x-x_0}{\\gamma}\\right)^2\\right]}\\!$$'))
   })
+  output$ex4 <- renderUI({
+    if (!input$ex4_visible) return()
+    withMathJax(
+      helpText('You do not see me initially: $$e^{i \\pi} + 1 = 0$$')
+    )
+  })
 })

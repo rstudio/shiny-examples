@@ -11,5 +11,7 @@ shinyUI(fluidPage(
            \\frac{\\sqrt{2+\\sqrt{2+\\sqrt2}}}2 \\cdots$$'),
   uiOutput('ex1'),
   uiOutput('ex2'),
-  uiOutput('ex3')
+  uiOutput('ex3'),
+  checkboxInput('ex4_visible', 'Show Example 4', FALSE),
+  uiOutput('ex4')
 ))
