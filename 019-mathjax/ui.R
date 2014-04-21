@@ -12,6 +12,7 @@ shinyUI(fluidPage(
   uiOutput('ex1'),
   uiOutput('ex2'),
   uiOutput('ex3'),
-  checkboxInput('ex4_visible', 'Show Example 4', FALSE),
-  uiOutput('ex4')
+  uiOutput('ex4'),
+  checkboxInput('ex5_visible', 'Show Example 5', FALSE),
+  uiOutput('ex5')
 ))

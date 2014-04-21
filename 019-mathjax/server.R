@@ -1,7 +1,7 @@
 library(shiny)
 if (FALSE) library(knitr)  # please ignore this line
 
-shinyServer(function(input, output) {
+shinyServer(function(input, output, session) {
   output$ex1 <- renderUI({
     withMathJax(helpText('Dynamic output 1:  $$\\alpha^2$$'))
   })
@@ -18,7 +18,13 @@ shinyServer(function(input, output) {
                \\left(\\frac{x-x_0}{\\gamma}\\right)^2\\right]}\\!$$'))
   })
   output$ex4 <- renderUI({
-    if (!input$ex4_visible) return()
+    invalidateLater(5000, session)
+    x <- round(rcauchy(1), 3)
+    withMathJax(sprintf("If \\(X\\) is a Cauchy random variable, then
+                        $$P(X \\leq %.03f ) = %.03f$$", x, pcauchy(x)))
+  })
+  output$ex5 <- renderUI({
+    if (!input$ex5_visible) return()
     withMathJax(
       helpText('You do not see me initially: $$e^{i \\pi} + 1 = 0$$')
     )
