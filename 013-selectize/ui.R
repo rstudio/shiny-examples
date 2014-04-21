@@ -26,6 +26,8 @@ shinyUI(fluidPage(
       'e5', '5. Max number of items to select', choices = state.name,
       multiple = TRUE, options = list(maxItems = 2)
     ),
+    # I() indicates it is raw JavaScript code that should be evaluated, instead
+    # of a normal character string
     selectizeInput(
       'e6', '6. Placeholder', choices = state.name,
       options = list(
