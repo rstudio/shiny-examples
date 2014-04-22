@@ -3,5 +3,5 @@ The function `withMathJax()` is a wrapper function to load the
 content, we only need to call `withMathJax()` once. However, for dynamic UI
 output via `renderUI()`, we must wrap the content that contains math
 expressions in `withMathJax()`, because we have to call the MathJax function
-`MathJax.Hub.Typeset()` to render math manually, which is what
-`withMathJax()` does.
+`MathJax.Hub.Queue(["Typeset", MathJax.Hub])` to render math manually, which is
+what `withMathJax()` does.
