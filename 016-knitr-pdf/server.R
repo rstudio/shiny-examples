@@ -5,6 +5,7 @@ shinyServer(function(input, output) {
   })
 
   output$regPlot <- renderPlot({
+    par(mar = c(4, 4, .1, .1))
     plot(regFormula(), data = mtcars, pch = 19)
   })
 
