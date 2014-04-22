@@ -1,4 +1,4 @@
-#!/usr/bin/Rscript
+#!/usr/bin/env Rscript
 
 if (FALSE) {
   devtools::install_github('rstudio/shiny')
