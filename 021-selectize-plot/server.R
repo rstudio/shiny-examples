@@ -52,19 +52,15 @@ shinyServer(function(input, output, session) {
   # a parallel coordinate plot showing the three crime variables
   output$parcoord <- renderPlot({
     par(mar = c(2, 4, 2, .1))
-    state <- input$state
-    if (state == '') {
-      plot.new()
-      text(.5, .5, 'Please select a state', cex = 2)
-      box()
-      return()
-    }
     arrests <- USArrests[, -3]
     plot(c(1, 3), range(as.matrix(arrests)), type = 'n', xaxt = 'n', las = 1,
          xlab = '', ylab = 'Number of arrests (per 100,000)')
     matlines(t(arrests), type = 'l', lty = 1, col = 'gray')
-    lines(1:3, arrests[state, ], lwd = 2, col = 'red')
-    text(2, arrests[state, 2], state)
+    state <- input$state
+    if (state != '') {
+      lines(1:3, arrests[state, ], lwd = 2, col = 'red')
+      text(2, arrests[state, 2], state, cex = 2)
+    }
     axis(1, 1:3, colnames(arrests))
   })
 
