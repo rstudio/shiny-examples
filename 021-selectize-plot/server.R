@@ -1,6 +1,5 @@
 library(shiny)
 library(maps)
-if (FALSE) library(knitr)  # please ignore this line
 
 shinyServer(function(input, output, session) {
 

@@ -1,5 +1,4 @@
 library(shiny)
-if (FALSE) library(knitr)  # please ignore this line
 
 shinyServer(function(input, output, session) {
   output$ex1 <- renderUI({
