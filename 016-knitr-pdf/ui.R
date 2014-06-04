@@ -5,7 +5,7 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
       helpText(),
-      selectInput('x', 'Build a regression model of mpg agaist:',
+      selectInput('x', 'Build a regression model of mpg against:',
                   choices = names(mtcars)[-1]),
       downloadButton('downloadReport')
     ),
