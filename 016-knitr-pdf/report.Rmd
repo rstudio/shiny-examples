@@ -1,22 +1,16 @@
-\documentclass{article}
-
-\begin{document}
-
 Here is my regression model:
 
-<<model>>=
+```{r model}
 fit <- lm(regFormula(), data = mtcars)
 b   <- coef(fit)
 summary(fit)
-@
+```
 
-The fitting result is $mpg = \Sexpr{b[1]} + \Sexpr{b[2]}\Sexpr{input$x}$.
+The fitting result is $mpg = `r b[1]` + `r b[2]``r input$x`$.
 Below is a scatter plot with the regression line.
 
-<<plot, fig.height=5>>=
+```{r plot, fig.height=5}
 par(mar = c(4, 4, 1, 1))
 plot(regFormula(), data = mtcars, pch = 19, col = 'gray')
 abline(fit, col = 'red', lwd = 2)
-@
-
-\end{document}
+```
