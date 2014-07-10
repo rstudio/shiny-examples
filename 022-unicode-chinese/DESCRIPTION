@@ -1,7 +1,7 @@
-Title: Shiny应用中的中文字符
-Author: RStudio, Inc.
-AuthorUrl: http://www.rstudio.com/
+Title: Unicode characters
+Author: Yihui Xie
+AuthorUrl: http://www.rstudio.com
 License: MIT
 DisplayMode: Showcase
-Tags: getting-started
+Tags: unicode
 Type: Shiny
