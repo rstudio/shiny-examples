@@ -1,0 +1,38 @@
+---
+title: "Inline Output in R Markdown Documents"
+author: "Yihui Xie"
+runtime: shiny
+output: html_document
+---
+
+Since **shiny** 0.10.1, you can embed inline output elements. We have added an argument `inline` to a few output functions such as `textOutput()`, `plotOutput()`, and `uiOutput()`. This argument will be set to `TRUE` automatically when these types of output are rendered in the inline R expressions of R Markdown documents, e.g. `` `r '\x60r'` renderText(input$foo)` ``.
+
+First we show a normal shiny app, with a select input to change the title of a plot, and a slider to change the size of points:
+
+```{r}
+library(shiny)
+sidebarLayout(
+  sidebarPanel(
+    selectizeInput('main', 'Main title', LETTERS),
+    sliderInput('size', 'Point size', min = 0.2, max = 5, value = 1)
+  ),
+  mainPanel(
+    renderPlot(plot(cars, main = input$main, cex = input$size, pch = 19),
+               width = 600, height = 400)
+  )
+)
+```
+
+Now we use `renderText()` to render the plot title and point size in this paragraph. The main title is **`r renderText(input$main)`** and the point size is **`r renderText(input$size)`**.
+
+Besides `renderText()`, you can also embed some other output elements inline. We define a function to draw the `sunspots` data, with the aspect ratio value from a slider:
+
+```{r}
+sunsplots_line = function() {
+  par(mar = rep(0, 4))
+  plot(sunspots, axes = FALSE, ann = FALSE, asp = input$asp)
+}
+sliderInput('asp', 'Change the aspect ratio', .02, .3, .2)
+```
+
+Here is a spark line `r renderPlot(sunsplots_line(), width=300, height=40)` that shows you the time series `sunspots`. Note when you render inline plots, you must provide both `width` and `height` values (in pixels), because it is not possible for **shiny** to figure out the width and height values automatically in this case. We used the size `300 x 40` here.
