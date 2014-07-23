@@ -1,0 +1,17 @@
+Here is my regression model:
+
+```{r model, collapse=TRUE}
+options(digits = 4)
+fit <- lm(regFormula(), data = mtcars)
+b   <- coef(fit)
+summary(fit)
+```
+
+The fitting result is $mpg = `r b[1]` + `r b[2]``r input$x`$.
+Below is a scatter plot with the regression line.
+
+```{r plot, fig.height=5}
+par(mar = c(4, 4, 1, 1))
+plot(regFormula(), data = mtcars, pch = 19, col = 'gray')
+abline(fit, col = 'red', lwd = 2)
+```
