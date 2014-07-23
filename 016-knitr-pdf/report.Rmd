@@ -1,6 +1,6 @@
 Here is my regression model:
 
-```{r model}
+```{r model, collapse=TRUE}
 options(digits = 4)
 fit <- lm(regFormula(), data = mtcars)
 b   <- coef(fit)
