@@ -7,3 +7,6 @@
 
 # ShinyApps manifest
 *.dcf
+
+# Fonts
+*.ttc

@@ -19,6 +19,13 @@ if (file_test('-d', '../shiny/inst/examples')) {
   }
 }
 
+# a font file that is needed for the example 022
+if (!file.exists('022-unicode-chinese/wqy-zenhei.ttc'))
+  shiny:::download(
+    'https://github.com/rstudio/shiny-examples/releases/download/v0.10.1/wqy-zenhei.ttc',
+    '022-unicode-chinese/wqy-zenhei.ttc'
+  )
+
 # then deploy all apps
 library(methods)
 library(shinyapps)
