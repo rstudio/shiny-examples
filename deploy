@@ -19,6 +19,9 @@ if (file_test('-d', '../shiny/inst/examples')) {
   }
 }
 
+# we reused report.Rmd in example 020, so make a hard link
+system2('ln', '-f 016-knitr-pdf/report.Rmd 020-knit-html/')
+
 # a font file that is needed for the example 022
 if (!file.exists('022-unicode-chinese/wqy-zenhei.ttc'))
   shiny:::download(
