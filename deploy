@@ -1,5 +1,11 @@
 #!/usr/bin/env Rscript
 
+# Usage: ./deploy [app]; if app is missing, all apps under this directory will
+# be deployed; otherwise deploy the app(s) specified. Note the shiny-dev-center
+# repository must be under the same directory of this shiny-examples repository.
+# Please ask yihui@rstudio.com if you want the credentials for the account
+# `demo` on ShinyApps.io.
+
 if (FALSE) {
   devtools::install_github('rstudio/shiny')
   devtools::install_github('rstudio/shinyapps')
