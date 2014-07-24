@@ -56,12 +56,13 @@ if (length(apps) == 0) {
 # print the apps that were not successfully deployed
 print(apps[unlist(lapply(apps, function(app) {
   if (!only_publish)  # need deployment
-    if (inherits(try(deployApp(app, account = 'demo')), 'try-error')) return(1)
+    if (inherits(try(deployApp(app, account = 'gallery')), 'try-error'))
+      return(1)
   if (only_deploy) return(0)  # no need to publish posts
   system(paste(
     '../shiny-dev-center/_scripts/import.R',
     app,
-    sprintf('http://demo.shinyapps.io/%s', app),
+    sprintf('http://gallery.shinyapps.io/%s', app),
     sprintf('https://github.com/rstudio/shiny-examples/tree/master/%s', app)
   ))
 })) != 0])
