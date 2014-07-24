@@ -3,8 +3,10 @@
 # Usage: ./deploy [app]; if app is missing, all apps under this directory will
 # be deployed; otherwise deploy the app(s) specified. Note the shiny-dev-center
 # repository must be under the same directory of this shiny-examples repository.
-# Please ask yihui@rstudio.com if you want the credentials for the account
-# `demo` on ShinyApps.io.
+# Please ask garrett@rstudio.com if you want the credentials for the account
+# `gallery` on ShinyApps.io. There are two optional arguments -d and -p, meaning
+# deploy the app(s) without publishing to the gallery, and publish without
+# deployment.
 
 if (FALSE) {
   devtools::install_github('rstudio/shiny')
@@ -32,16 +34,30 @@ if (!file.exists('022-unicode-chinese/wqy-zenhei.ttc'))
 # then deploy all apps
 library(methods)
 library(shinyapps)
-# ./deploy 001-hello 002-text ...
+
+# ./deploy [-d] [-p] [001-hello 002-text ...]
 apps = commandArgs(TRUE)
-# if not specified, use all the directories here
+only_deploy = FALSE
+if ('-d' %% apps) {
+  apps = setdiff(apps, '-d')
+  only_deploy = TRUE
+}
+only_publish = FALSE
+if ('-p' %% apps) {
+  apps = setdiff(apps, '-p')
+  only_publish = TRUE
+}
+
+# if no other arguments specified, use all the directories here
 if (length(apps) == 0) {
   apps = list.dirs(full.names = FALSE, recursive = FALSE)
   apps = grep('^[0-9]{3,}', apps, value = TRUE)
 }
 # print the apps that were not successfully deployed
 print(apps[unlist(lapply(apps, function(app) {
-  if (inherits(try(deployApp(app, account = 'demo')), 'try-error')) return(1)
+  if (!only_publish)  # need deployment
+    if (inherits(try(deployApp(app, account = 'demo')), 'try-error')) return(1)
+  if (only_deploy) return(0)  # no need to publish posts
   system(paste(
     '../shiny-dev-center/_scripts/import.R',
     app,
