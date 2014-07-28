@@ -1,0 +1,7 @@
+Type: Shiny
+Title: Observer demo
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: observer
+DisplayMode: Showcase

@@ -1,0 +1,7 @@
+Type: Shiny
+Title: Including HTML, text, and Markdown files
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: include
+DisplayMode: Showcase

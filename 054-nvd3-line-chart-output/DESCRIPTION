@@ -1,0 +1,7 @@
+Title: NVD3 line chart output
+Author: Joe Cheng <joe@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+License: MIT
+Type: Shiny
+Tags: custom-output nvd3 d3 javascript
+

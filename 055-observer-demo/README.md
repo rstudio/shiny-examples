@@ -1,0 +1,3 @@
+`output` variables are used to send information to client to display, and in most cases, they are all that's needed for an app. In some cases, though, you need more flexibility in what the server does in response to inputs.
+
+When you set an `output` variable to a value, that value is sent to the client to be displayed. In contrast, observers don't (by default) send anything to the client. Their purpose is simply to execute R code. For example, observers can be used to write to files or databases. They can also be used send custom messages to the client -- these are messages that don't fit into the normal `output` model.

@@ -1,0 +1,7 @@
+Type: Shiny
+Title: conditionalPanel demo
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: conditionalpanel
+DisplayMode: Showcase

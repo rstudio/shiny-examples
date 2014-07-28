@@ -1,0 +1,7 @@
+Type: Shiny
+Title: Update input demo
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: updateinput
+DisplayMode: Showcase

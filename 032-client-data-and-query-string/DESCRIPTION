@@ -1,0 +1,7 @@
+Type: Shiny
+Title: Client data and query string
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: clientdata query-string
+DisplayMode: Showcase

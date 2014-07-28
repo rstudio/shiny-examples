@@ -1,0 +1,6 @@
+Title: Movie explorer
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+License: MIT
+Type: Shiny
+Tags: ggvis sliderinput

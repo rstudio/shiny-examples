@@ -1,0 +1,7 @@
+Type: Shiny
+Title: submitButton demo
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: submitbutton
+DisplayMode: Showcase

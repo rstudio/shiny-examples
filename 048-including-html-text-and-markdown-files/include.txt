@@ -1,0 +1,5 @@
+This file is include.txt.
+
+The content of this file is escaped, so special characters like & and <br> will display correctly in the web page. However, no other processing is done, so hard breaks and multiple spaces will be rendered as usual in HTML.
+
+If you want to display preformatted text, wrap the text in pre().

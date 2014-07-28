@@ -1,0 +1,7 @@
+Type: Shiny
+Title: navlistPanel example
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: navlistpanel
+DisplayMode: Showcase

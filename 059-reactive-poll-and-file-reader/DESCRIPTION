@@ -1,0 +1,8 @@
+Type: Shiny
+Title: Reactive poll and file reader
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: reactive-poll reactive-file-reader
+DisplayMode: Showcase
+

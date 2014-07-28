@@ -1,0 +1,7 @@
+Type: Shiny
+Title: Image output 
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: image-output
+DisplayMode: Showcase

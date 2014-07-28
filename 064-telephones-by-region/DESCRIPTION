@@ -1,0 +1,7 @@
+Title: Telephones by region
+Author: Jeff Allen <jeff@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+License: MIT
+DisplayMode: Showcase
+Tags: sidebarlayout helptext selectinput
+Type: Shiny

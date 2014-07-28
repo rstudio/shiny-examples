@@ -1,0 +1,7 @@
+Title: Plot plus three columns
+Author: JJ Allaire <jj@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Type: Shiny
+License: MIT
+DisplayMode: Showcase
+Tags: application-layout ggplot2

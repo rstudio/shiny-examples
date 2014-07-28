@@ -1,0 +1,7 @@
+Type: Shiny
+Title: Date and date range
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: date, daterange
+DisplayMode: Showcase

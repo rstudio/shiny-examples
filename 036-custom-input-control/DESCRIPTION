@@ -1,0 +1,7 @@
+Title: Custom input control
+Author: Joe Cheng <joe@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+License: MIT
+Type: Shiny
+Tags: javascript custom-input
+DisplayMode: Normal

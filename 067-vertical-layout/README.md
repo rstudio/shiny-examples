@@ -1,0 +1,1 @@
+Each item passed to `verticalLayout()` will occupy a row. This is similar to `fluidRow()`, except that `fluidRow()` expects there to be one or more `column()`s inside, whereas `vertcialLayout()` does not; each item takes a full row.

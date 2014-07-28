@@ -1,0 +1,8 @@
+Type: Shiny
+Title: Dynamic UI
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: dynamic-ui renderui uioutput
+DisplayMode: Showcase
+

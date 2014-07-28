@@ -1,0 +1,7 @@
+Title: Word cloud
+Author: Fereshteh Karimeddini <fereshteh@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+License: MIT
+DisplayMode: Showcase
+Tags: wordcloud text-mining actionbutton
+Type: Shiny

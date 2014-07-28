@@ -1,0 +1,7 @@
+Title: SuperZip example
+License: MIT
+DisplayMode: Normal
+Author: Joe Cheng <joe@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Type: Shiny
+Tags: leaflet selectize datatables absolutepanel

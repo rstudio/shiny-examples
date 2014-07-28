@@ -1,0 +1,7 @@
+Type: Shiny
+Title: Custom input bindings
+License: MIT
+Author: Winston Chang <winston@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: custom-input-binding
+DisplayMode: Showcase
