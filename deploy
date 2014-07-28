@@ -38,12 +38,12 @@ library(shinyapps)
 # ./deploy [-d] [-p] [001-hello 002-text ...]
 apps = commandArgs(TRUE)
 only_deploy = FALSE
-if ('-d' %% apps) {
+if ('-d' %in% apps) {
   apps = setdiff(apps, '-d')
   only_deploy = TRUE
 }
 only_publish = FALSE
-if ('-p' %% apps) {
+if ('-p' %in% apps) {
   apps = setdiff(apps, '-p')
   only_publish = TRUE
 }
