@@ -4,7 +4,7 @@ library(shiny)
 shinyUI(fluidPage(
 
   # 标题
-  titlePanel("这里是Shiny应用的标题"),
+  titlePanel("麻麻再也不用担心我的Shiny应用不能显示中文了"),
 
   # 侧边栏布局
   sidebarLayout(
