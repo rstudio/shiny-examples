@@ -52,6 +52,18 @@ if ('-p' %in% apps) {
 if (length(apps) == 0) {
   apps = list.dirs(full.names = FALSE, recursive = FALSE)
   apps = grep('^[0-9]{3,}', apps, value = TRUE)
+} else if (any(i <- !file_test('-d', apps))) {
+  # you can also `./deploy 001 002` without typing the full app names
+  if (!all(grep('^[0-9]{3,}$', apps[i])))
+    stop('Unknown app name(s) ', paste(apps[i], collapse = ', '))
+  apps = c(
+    apps[!i],
+    grep(
+      paste0('^', paste(apps[i], collapse = '|')),
+      list.dirs(recursive = FALSE, full.names = FALSE),
+      value = TRUE
+    )
+  )
 }
 # print the apps that were not successfully deployed
 print(apps[unlist(lapply(apps, function(app) {
