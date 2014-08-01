@@ -28,11 +28,14 @@ Now we use `renderText()` to render the plot title and point size in this paragr
 Besides `renderText()`, you can also embed some other output elements inline. We define a function to draw the `sunspots` data, with the aspect ratio value from a slider:
 
 ```{r}
-sunsplots_line = function() {
+sunspots_line = function() {
   par(mar = rep(0, 4))
   plot(sunspots, axes = FALSE, ann = FALSE, asp = input$asp)
+}
+sunspots_width = function() {
+  if (input$asp <= 0.11) 300 else 30/input$asp
 }
 sliderInput('asp', 'Change the aspect ratio', .02, .3, .2)
 ```
 
-Here is a spark line `r renderPlot(sunsplots_line(), width=300, height=40)` that shows you the time series `sunspots`. Note when you render inline plots, you must provide both `width` and `height` values (in pixels), because it is not possible for **shiny** to figure out the width and height values automatically in this case. We used the size `300 x 40` here.
+Here is a spark line `r renderPlot(sunspots_line(), width=sunspots_width, height=40)` that shows you the time series `sunspots`. Note when you render inline plots, you must provide both `width` and `height` values (in pixels), because it is not possible for **shiny** to figure out the width and height values automatically in this case. We used `40` as the fixed height here, and a changing width (calculated from the function `sunspots_width()`) depending on the aspect ratio.
