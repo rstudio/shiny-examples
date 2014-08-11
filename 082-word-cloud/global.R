@@ -24,6 +24,10 @@ getTermMatrix <- memoise(function(book) {
   myCorpus = tm_map(myCorpus, removeWords,
     c(stopwords("SMART"), "thy", "thou", "thee"))
 
+  # Added to avoid "Error in inherits(doc, "TextDocument")" error due to tm 6.0 (worked fine with 5.2), UT
+  # See http://stackoverflow.com/questions/24191728/documenttermmatrix-error-on-corpus-argument
+  myCorpus <- tm_map(myCorpus, PlainTextDocument)
+
   myDTM = TermDocumentMatrix(myCorpus,
               control = list(minWordLength = 1))
   

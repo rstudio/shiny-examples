@@ -1,0 +1,1 @@
+A simple Shiny app that displays eruption data for the Old Faithful geyser. Featured on the front page of the [Shiny Dev Center](http://shiny.rstudio.com).
