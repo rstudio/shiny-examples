@@ -9,5 +9,5 @@ shinyServer(function(input, output, session) {
 
   output$table <- renderDataTable({
     cars
-  }, options=list(iDisplayLength=10))
+  }, options=list(pageLength=10))
 })
