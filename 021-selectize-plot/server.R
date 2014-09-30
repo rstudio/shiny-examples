@@ -66,7 +66,7 @@ shinyServer(function(input, output, session) {
   # show raw data
   output$rawdata <- renderDataTable(
     cbind(State = rownames(USArrests), USArrests),
-    options = list(iDisplayLength = 10)
+    options = list(pageLength = 10)
   )
 
 })
