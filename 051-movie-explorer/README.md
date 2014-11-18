@@ -8,7 +8,7 @@ if (!require('devtools') || packageVersion('devtools') < 1.4) install.packages('
 
 devtools::install_github(c('rstudio/ggvis', 'rstudio/shiny', 'hadley/dplyr'))
 
-install.packages(c('RSQLite', 'RSQLite.extfuns'))
+install.packages(c('RSQLite'))
 ```
 
 You may need to restart R to make sure the newly-installed packages work properly.
