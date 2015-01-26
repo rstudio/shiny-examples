@@ -7,7 +7,7 @@ allzips$college <- allzips$college * 100
 allzips$zipcode <- formatC(allzips$zipcode, width=5, format="d", flag="0")
 row.names(allzips) <- allzips$zipcode
 
-cleantable <- allzips %.%
+cleantable <- allzips %>%
   select(
     City = city.x,
     State = state.x,

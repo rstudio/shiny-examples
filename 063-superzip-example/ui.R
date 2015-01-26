@@ -15,13 +15,13 @@ shinyUI(navbarPage("Superzip", id="nav",
 
   tabPanel("Interactive map",
     div(class="outer",
-      
+
       tags$head(
         # Include our custom CSS
         includeCSS("styles.css"),
         includeScript("gomap.js")
       ),
-      
+
       leafletMap("map", width="100%", height="100%",
         initialTileLayer = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
         initialTileLayerAttribution = HTML('Maps by <a href="http://www.mapbox.com/">Mapbox</a>'),

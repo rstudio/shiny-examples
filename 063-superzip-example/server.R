@@ -13,7 +13,7 @@ zipdata <- allzips[sample.int(nrow(allzips), 10000),]
 zipdata <- zipdata[order(zipdata$centile),]
 
 shinyServer(function(input, output, session) {
-  
+
   ## Interactive Map ###########################################
 
   # Create the map
@@ -27,12 +27,12 @@ shinyServer(function(input, output, session) {
     bounds <- input$map_bounds
     latRng <- range(bounds$north, bounds$south)
     lngRng <- range(bounds$east, bounds$west)
-    
+
     subset(zipdata,
       latitude >= latRng[1] & latitude <= latRng[2] &
         longitude >= lngRng[1] & longitude <= lngRng[2])
   })
-  
+
   # Precalculate the breaks we'll need for the two histograms
   centileBreaks <- hist(plot = FALSE, allzips$centile, breaks = 20)$breaks
 
@@ -40,7 +40,7 @@ shinyServer(function(input, output, session) {
     # If no zipcodes are in view, don't plot
     if (nrow(zipsInBounds()) == 0)
       return(NULL)
-    
+
     hist(zipsInBounds()$centile,
       breaks = centileBreaks,
       main = "SuperZIP score (visible zips)",
@@ -49,15 +49,15 @@ shinyServer(function(input, output, session) {
       col = '#00DD00',
       border = 'white')
   })
-  
+
   output$scatterCollegeIncome <- renderPlot({
     # If no zipcodes are in view, don't plot
     if (nrow(zipsInBounds()) == 0)
       return(NULL)
-    
+
     print(xyplot(income ~ college, data = zipsInBounds(), xlim = range(allzips$college), ylim = range(allzips$income)))
   })
-  
+
   # session$onFlushed is necessary to work around a bug in the Shiny/Leaflet
   # integration; without it, the addCircle commands arrive in the browser
   # before the map is created.
@@ -73,7 +73,7 @@ shinyServer(function(input, output, session) {
       }
       colors <- brewer.pal(7, "Spectral")[cut(colorData, 7, labels = FALSE)]
       colors <- colors[match(zipdata$zipcode, allzips$zipcode)]
-      
+
       # Clear existing circles before drawing
       map$clearShapes()
       # Draw in batches of 1000; makes the app feel a bit more responsive
@@ -94,12 +94,12 @@ shinyServer(function(input, output, session) {
         )
       }
     })
-    
+
     # TIL this is necessary in order to prevent the observer from
     # attempting to write to the websocket after the session is gone.
     session$onSessionEnded(paintObs$suspend)
   })
-  
+
   # Show a popup at the given location
   showZipcodePopup <- function(zipcode, lat, lng) {
     selectedZip <- allzips[allzips$zipcode == zipcode,]
@@ -121,43 +121,43 @@ shinyServer(function(input, output, session) {
     event <- input$map_shape_click
     if (is.null(event))
       return()
-    
+
     isolate({
       showZipcodePopup(event$id, event$lat, event$lng)
     })
   })
-  
+
   session$onSessionEnded(clickObs$suspend)
-  
-  
+
+
   ## Data Explorer ###########################################
-  
+
   observe({
     cities <- if (is.null(input$states)) character(0) else {
-      filter(cleantable, State %in% input$states) %.%
-        `$`('City') %.%
-        unique() %.%
+      filter(cleantable, State %in% input$states) %>%
+        `$`('City') %>%
+        unique() %>%
         sort()
     }
     stillSelected <- isolate(input$cities[input$cities %in% cities])
     updateSelectInput(session, "cities", choices = cities,
       selected = stillSelected)
   })
-  
+
   observe({
     zipcodes <- if (is.null(input$states)) character(0) else {
-      cleantable %.%
+      cleantable %>%
         filter(State %in% input$states,
-          is.null(input$cities) | City %in% input$cities) %.%
-        `$`('Zipcode') %.%
-        unique() %.%
+          is.null(input$cities) | City %in% input$cities) %>%
+        `$`('Zipcode') %>%
+        unique() %>%
         sort()
     }
     stillSelected <- isolate(input$zipcodes[input$zipcodes %in% zipcodes])
     updateSelectInput(session, "zipcodes", choices = zipcodes,
       selected = stillSelected)
   })
-  
+
   observe({
     if (is.null(input$goto))
       return()
@@ -172,16 +172,16 @@ shinyServer(function(input, output, session) {
         lat + dist, lng + dist)
     })
   })
-  
+
   output$ziptable <- renderDataTable({
-    cleantable %.%
+    cleantable %>%
       filter(
         Score >= input$minScore,
         Score <= input$maxScore,
         is.null(input$states) | State %in% input$states,
         is.null(input$cities) | City %in% input$cities,
         is.null(input$zipcodes) | Zipcode %in% input$zipcodes
-      ) %.%
+      ) %>%
       mutate(Action = paste('<a class="go-map" href="" data-lat="', Lat, '" data-long="', Long, '" data-zip="', Zipcode, '"><i class="fa fa-crosshairs"></i></a>', sep=""))
   })
 })
