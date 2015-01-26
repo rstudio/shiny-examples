@@ -31,24 +31,25 @@ shinyUI(navbarPage("Superzip", id="nav",
           maxBounds = list(list(15.961329,-129.92981), list(52.908902,-56.80481)) # Show US only
         )
       ),
-      
-      absolutePanel(id = "controls", class = "modal", fixed = TRUE, draggable = TRUE,
-        top = 60, left = "auto", right = 20, bottom = "auto",
+
+      # Shiny versions prior to 0.11 should use class="modal" instead.
+      absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
+        draggable = TRUE, top = 60, left = "auto", right = 20, bottom = "auto",
         width = 330, height = "auto",
-        
+
         h2("ZIP explorer"),
-        
+
         selectInput("color", "Color", vars),
         selectInput("size", "Size", vars, selected = "adultpop"),
         conditionalPanel("input.color == 'superzip' || input.size == 'superzip'",
           # Only prompt for threshold when coloring or sizing by superzip
           numericInput("threshold", "SuperZIP threshold (top n percentile)", 5)
         ),
-        
+
         plotOutput("histCentile", height = 200),
         plotOutput("scatterCollegeIncome", height = 250)
       ),
-      
+
       tags$div(id="cite",
         'Data compiled for ', tags$em('Coming Apart: The State of White America, 1960–2010'), ' by Charles Murray (Crown Forum, 2012).'
       )
@@ -82,6 +83,6 @@ shinyUI(navbarPage("Superzip", id="nav",
     hr(),
     dataTableOutput("ziptable")
   ),
-  
+
   conditionalPanel("false", icon("crosshair"))
 ))
