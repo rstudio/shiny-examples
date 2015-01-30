@@ -1,0 +1,8 @@
+Version: 1.0
+Type: Shiny
+Title: Bus dashboard example
+Author: RStudio, Inc.
+AuthorUrl: http://www.rstudio.com/
+License: MIT
+Tags:
+DisplayMode: Normal
