@@ -183,5 +183,5 @@ shinyServer(function(input, output, session) {
         is.null(input$zipcodes) | Zipcode %in% input$zipcodes
       ) %>%
       mutate(Action = paste('<a class="go-map" href="" data-lat="', Lat, '" data-long="', Long, '" data-zip="', Zipcode, '"><i class="fa fa-crosshairs"></i></a>', sep=""))
-  })
+  }, escape = FALSE)
 })
