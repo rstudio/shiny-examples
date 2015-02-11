@@ -13,9 +13,9 @@ dashboardPage(
     tabItems(
       tabItem("dashboard",
         fluidRow(
-          uiOutput("rate"),
-          uiOutput("count"),
-          uiOutput("users")
+          valueBoxOutput("rate"),
+          valueBoxOutput("count"),
+          valueBoxOutput("users")
         ),
         fluidRow(
           box(
