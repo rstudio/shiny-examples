@@ -29,11 +29,14 @@ The increment to place between each selectable value on the slider bar.
 `round`
 `TRUE` to round every value to an integer. `FALSE` to perform no rounding. An integer to specify which digit to round to. Positive integers will round to digits left of the decimal place. Negative integers will round to digits right of the decimal place.
 
-`format`
-The format to apply to values in the slider labels. See [https://code.google.com/p/jquery-numberformatter/](https://code.google.com/p/jquery-numberformatter/) for syntax details.
+`sep`
+Separator between thousands places in numbers.
 
-`locale`
-The locale to use when applying format. See `?sliderInput` for details.
+`pre`
+A prefix string to put in front of the value.
+
+`post`
+A suffix string to put after the value.
 
 `ticks`
 `TRUE` to show tick marks, `FALSE` to hide them.
