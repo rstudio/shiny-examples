@@ -13,8 +13,3 @@ devtools::install_github("jcheng5/bubbles")
 devtools::install_github("hadley/shinySignals")
 ```
 
-## Running
-
-```r
-shiny::runGitHub("jcheng5/crandash")
-```

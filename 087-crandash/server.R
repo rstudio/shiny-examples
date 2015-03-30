@@ -1,31 +1,31 @@
 function(input, output, session) {
-  
+
   # pkgStream is a reactive expression that represents a stream of
   # new package download data; up to once a second it may return a
   # data frame of new downloads since the last update.
   pkgStream <- packageStream(session)
-  
+
   # Max age of data (5 minutes)
   maxAgeSecs <- 60 * 5
-  
+
   # pkgData is a reactive expression that accumulates previous
   # values of pkgStream, discarding any that are older than
   # maxAgeSecs.
   pkgData <- packageData(pkgStream, maxAgeSecs)
-  
+
   # dlCount is a reactive expression that keeps track of the total
   # number of rows that have ever appeared through pkgStream.
   dlCount <- downloadCount(pkgStream)
-  
+
   # usrCount is a reactive expression that keeps an approximate
   # count of all of the unique users that have been seen since the
   # app started.
   usrCount <- userCount(pkgStream)
-  
+
   # Record the time that the session started.
   startTime <- as.numeric(Sys.time())
 
-  output$rate <- renderUI({
+  output$rate <- renderValueBox({
     # The downloadRate is the number of rows in pkgData since
     # either startTime or maxAgeSecs ago, whichever is later.
     elapsed <- as.numeric(Sys.time()) - startTime
@@ -36,11 +36,10 @@ function(input, output, session) {
       subtitle = "Downloads per sec (last 5 min)",
       icon = icon("area-chart"),
       color = if (downloadRate >= input$rateThreshold) "yellow" else "aqua"
-
     )
   })
 
-  output$count <- renderUI({
+  output$count <- renderValueBox({
     valueBox(
       value = dlCount(),
       subtitle = "Total downloads",
@@ -48,7 +47,7 @@ function(input, output, session) {
     )
   })
 
-  output$users <- renderUI({
+  output$users <- renderValueBox({
     valueBox(
       usrCount(),
       "Unique users",
@@ -89,7 +88,7 @@ function(input, output, session) {
     },
     contentType = "text/csv"
   )
-  
+
   output$rawtable <- renderPrint({
     orig <- options(width = 1000)
     print(tail(pkgData(), input$maxrows))

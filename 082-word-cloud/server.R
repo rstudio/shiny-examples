@@ -1,6 +1,3 @@
-library(shiny)
-library(shinyIncubator)
- 
 # Text of the books downloaded from:
 # A Mid Summer Night's Dream:
 #  http://www.gutenberg.org/cache/epub/2242/pg2242.txt
@@ -8,15 +5,15 @@ library(shinyIncubator)
 #  http://www.gutenberg.org/cache/epub/2243/pg2243.txt
 # Romeo and Juliet:
 #  http://www.gutenberg.org/cache/epub/1112/pg1112.txt
- 
-shinyServer(function(input, output, session) {
+
+function(input, output, session) {
   # Define a reactive expression for the document term matrix
   terms <- reactive({
     # Change when the "update" button is pressed...
     input$update
     # ...but not for anything else
     isolate({
-      withProgress(session, {
+      withProgress({
         setProgress(message = "Processing corpus...")
         getTermMatrix(input$selection)
       })
@@ -32,4 +29,4 @@ shinyServer(function(input, output, session) {
                   min.freq = input$freq, max.words=input$max,
                   colors=brewer.pal(8, "Dark2"))
   })
-})
+}
