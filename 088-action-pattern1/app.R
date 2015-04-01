@@ -1,12 +1,14 @@
 library(shiny)
 
 ui <- fluidPage(
-  actionButton("do", "Close")
+  tags$head(tags$script(src = "message-handler.js")),
+  actionButton("do", "Click Me")
 )
 
-server <- function(input, output) {
+server <- function(input, output, session) {
   observeEvent(input$do, {
-    stopApp()
+    session$sendCustomMessage(type = 'testmessage',
+      message = 'Thank you for clicking')
   })
 }
 
