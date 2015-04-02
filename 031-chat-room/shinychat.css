@@ -1,0 +1,40 @@
+#chat {
+  padding: .5em;
+  border: 1px solid #777;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.user-change, .user-exit, .user-enter {
+  color: #aaa;
+  font-size: .8em;
+}
+
+.username {
+  font-weight: bold;
+  color: #226;
+}
+
+#entry {
+  width: 100%;
+}
+
+.center {
+  text-align :center;
+  padding-top: 3px;
+}
+
+#play-nice {
+  color: #AAA;
+  text-align: right;
+  padding: 30px 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
