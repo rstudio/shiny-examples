@@ -8,7 +8,8 @@ http://gallery.shinyapps.io/054-nvd3-line-chart-output
 https://gallery.shinyapps.io/google-charts/
 http://gallery.shinyapps.io/081-widgets-gallery
 http://gallery.shinyapps.io/005-sliders
-http://gallery.shinyapps.io/007-widgetshttp://gallery.shinyapps.io/030-basic-datatable
+http://gallery.shinyapps.io/007-widgets
+http://gallery.shinyapps.io/030-basic-datatable
 http://gallery.shinyapps.io/012-datatables
 http://gallery.shinyapps.io/018-datatable-options
 http://gallery.shinyapps.io/037-date-and-date-range
