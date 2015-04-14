@@ -10,7 +10,7 @@
 
 if (FALSE) {
   devtools::install_github('rstudio/shiny')
-  devtools::install_github('rstudio/shinyapps')
+  devtools::install_github('rstudio/rsconnect')
 }
 
 # first, sync shiny examples
@@ -33,7 +33,7 @@ if (!file.exists('022-unicode-chinese/wqy-zenhei.ttc'))
 
 # then deploy all apps
 library(methods)
-library(shinyapps)
+library(rsconnect)
 
 # ./deploy [-d] [-p] [001-hello 002-text ...]
 apps = commandArgs(TRUE)
