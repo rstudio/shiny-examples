@@ -22,5 +22,6 @@ features under development. Please be cautious that such features may or may
 not end up in the final release, or they may also change according to the
 feedback.
 
-- 013
-- 015
+- 093
+- 094
+- 095
