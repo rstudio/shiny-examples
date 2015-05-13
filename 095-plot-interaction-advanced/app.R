@@ -116,7 +116,8 @@ shinyApp(
           radioButtons("hover_policy", "Input rate policy",
             c("debounce", "throttle"), inline = TRUE),
           sliderInput("hover_delay", "Delay", min=100, max=1000, value=200,
-            step=100)
+            step=100),
+          checkboxInput("hover_null_outside", "NULL when outside", value=TRUE)
         )
       ),
       column(width = 3,
@@ -155,7 +156,7 @@ shinyApp(
             flowLayout(
               sliderInput("max_distance", "Max distance (pixels)",
                 min=1, max=20, value=5, step=1),
-              sliderInput("max_rows", "Max number of rows to select",
+              sliderInput("max_points", "Max number of rows to select",
                 min=1, max=100, value=100, step=1)
             )
           ),
@@ -230,7 +231,8 @@ shinyApp(
         hover = hoverOpts(
           id = "plot_hover",
           delay = input$hover_delay,
-          delayType = input$hover_policy
+          delayType = input$hover_policy,
+          nullOutside = input$hover_null_outside
         ),
         brush = brushOpts(
           id = "plot_brush",
@@ -337,17 +339,16 @@ shinyApp(
       # used; with ggplot2, we don't.
       if (input$plot_type == "base") {
         res <- nearPoints(dat, input$plot_click, xvar(), yvar(),
-          threshold = input$max_distance, maxpoints = input$max_rows,
+          threshold = input$max_distance, maxpoints = input$max_points,
           addDist = TRUE)
 
       } else if (input$plot_type == "ggplot2") {
         res <- nearPoints(dat, input$plot_click,
-          threshold = input$max_distance, maxpoints = input$max_rows,
+          threshold = input$max_distance, maxpoints = input$max_points,
           addDist = TRUE)
       }
 
-      if (nrow(res) > 0)
-        res$dist_ <- round(res$dist_, 1)
+      res$dist_ <- round(res$dist_, 1)
 
       datatable(res)
     })
@@ -361,29 +362,6 @@ shinyApp(
         res <- brushedPoints(dat, input$plot_brush)
 
       datatable(res)
-    })
-
-
-    output$imageui <- renderUI({
-      imageOutput("image", height=300,
-        click="image_click",
-        dblclick = dblclickOpts(
-          id = "image_dblclick",
-          delay = input$dblclick_delay
-        ),
-        hover = hoverOpts(
-          id = "image_hover",
-          delay = input$hover_delay,
-          delayType = input$hover_policy
-        ),
-        brush = brushOpts(
-          id = "image_brush",
-          delay = input$brush_delay,
-          delayType = input$brush_policy,
-          direction = input$brush_dir,
-          resetOnNew = input$brush_reset
-        )
-      )
     })
   }
 )
