@@ -7,5 +7,5 @@ This app demonstrates some advanced plot interaction features:
 
 This app also demonstrates how to use the `nearPoints()` and `brushedPoints()` functions for filtering rows from the data frame.
 
-* `nearPoints()` is used for selecting rows of the data frame that are near a click, double-click, or hover event. In this app, it is used to select rows near the most recent click. The rows are sorted by distance of the point from the mouse event; when you use `addDist=TRUE`, the distance in pixels is shown in the `_dist` column. If you just want the nearest point, you can set the `maxrows=1`.
+* `nearPoints()` is used for selecting rows of the data frame that are near a click, double-click, or hover event. In this app, it is used to select rows near the most recent click. The rows are sorted by distance of the point from the mouse event; when you use `addDist=TRUE`, the distance in pixels is shown in the `dist_` column. If you just want the nearest point, you can set the `maxpoints=1`.
 * `brushedPoints()` is used for selecting rows of the data frame that are inside the brush.

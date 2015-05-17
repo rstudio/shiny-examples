@@ -337,17 +337,17 @@ shinyApp(
       # used; with ggplot2, we don't.
       if (input$plot_type == "base") {
         res <- nearPoints(dat, input$plot_click, xvar(), yvar(),
-          threshold = input$max_distance, maxrows = input$max_rows,
+          threshold = input$max_distance, maxpoints = input$max_rows,
           addDist = TRUE)
 
       } else if (input$plot_type == "ggplot2") {
         res <- nearPoints(dat, input$plot_click,
-          threshold = input$max_distance, maxrows = input$max_rows,
+          threshold = input$max_distance, maxpoints = input$max_rows,
           addDist = TRUE)
       }
 
       if (nrow(res) > 0)
-        res$`_dist` <- round(res$`_dist`, 1)
+        res$`dist_` <- round(res$`dist_`, 1)
 
       datatable(res)
     })
