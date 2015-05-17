@@ -18,7 +18,7 @@ shinyUI(navbarPage("Navbar!",
   ),
   navbarMenu("More",
     tabPanel("Table",
-      dataTableOutput("table")
+      DT::dataTableOutput("table")
     ),
     tabPanel("About",
       fluidRow(

@@ -13,7 +13,7 @@ shinyUI(fluidPage(
     ),
     column(
       7,
-      dataTableOutput('rawdata')
+      DT::dataTableOutput('rawdata')
     )
   )
 ))

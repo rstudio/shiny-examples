@@ -81,7 +81,7 @@ shinyUI(navbarPage("Superzip", id="nav",
       )
     ),
     hr(),
-    dataTableOutput("ziptable")
+    DT::dataTableOutput("ziptable")
   ),
 
   conditionalPanel("false", icon("crosshair"))

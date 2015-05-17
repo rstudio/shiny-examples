@@ -22,9 +22,9 @@ shinyUI(fluidPage(
     mainPanel(
       tabsetPanel(
         id = 'dataset',
-        tabPanel('diamonds', dataTableOutput('mytable1')),
-        tabPanel('mtcars', dataTableOutput('mytable2')),
-        tabPanel('iris', dataTableOutput('mytable3'))
+        tabPanel('diamonds', DT::dataTableOutput('mytable1')),
+        tabPanel('mtcars', DT::dataTableOutput('mytable2')),
+        tabPanel('iris', DT::dataTableOutput('mytable3'))
       )
     )
   )

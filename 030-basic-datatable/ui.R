@@ -8,31 +8,31 @@ library(ggplot2)
 shinyUI(
   fluidPage(
     titlePanel("Basic DataTable"),
-          
+
     # Create a new Row in the UI for selectInputs
     fluidRow(
-      column(4, 
-          selectInput("man", 
-                      "Manufacturer:", 
-                      c("All", 
+      column(4,
+          selectInput("man",
+                      "Manufacturer:",
+                      c("All",
                         unique(as.character(mpg$manufacturer))))
       ),
-      column(4, 
-          selectInput("trans", 
-                      "Transmission:", 
-                      c("All", 
+      column(4,
+          selectInput("trans",
+                      "Transmission:",
+                      c("All",
                         unique(as.character(mpg$trans))))
       ),
-      column(4, 
-          selectInput("cyl", 
-                      "Cylinders:", 
-                      c("All", 
+      column(4,
+          selectInput("cyl",
+                      "Cylinders:",
+                      c("All",
                         unique(as.character(mpg$cyl))))
-      )        
+      )
     ),
     # Create a new row for the table.
     fluidRow(
-      dataTableOutput(outputId="table")
-    )    
-  )  
+      DT::dataTableOutput("table")
+    )
+  )
 )

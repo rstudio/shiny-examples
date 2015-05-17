@@ -7,7 +7,7 @@ shinyServer(function(input, output, session) {
     summary(cars)
   })
 
-  output$table <- renderDataTable({
-    cars
-  }, options=list(pageLength=10))
+  output$table <- DT::renderDataTable({
+    DT::datatable(cars)
+  })
 })

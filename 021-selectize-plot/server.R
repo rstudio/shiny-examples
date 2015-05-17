@@ -64,9 +64,9 @@ shinyServer(function(input, output, session) {
   })
 
   # show raw data
-  output$rawdata <- renderDataTable(
+  output$rawdata <- DT::renderDataTable(DT::datatable(
     cbind(State = rownames(USArrests), USArrests),
-    options = list(pageLength = 10)
-  )
+    options = list(pageLength = 10), rownames = FALSE
+  ))
 
 })
