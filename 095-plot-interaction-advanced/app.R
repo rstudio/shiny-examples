@@ -347,7 +347,7 @@ shinyApp(
       }
 
       if (nrow(res) > 0)
-        res$`dist_` <- round(res$`dist_`, 1)
+        res$dist_ <- round(res$dist_, 1)
 
       datatable(res)
     })
