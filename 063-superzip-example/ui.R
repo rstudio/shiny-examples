@@ -22,15 +22,7 @@ shinyUI(navbarPage("Superzip", id="nav",
         includeScript("gomap.js")
       ),
 
-      leafletMap("map", width="100%", height="100%",
-        initialTileLayer = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
-        initialTileLayerAttribution = HTML('Maps by <a href="http://www.mapbox.com/">Mapbox</a>'),
-        options=list(
-          center = c(37.45, -93.85),
-          zoom = 4,
-          maxBounds = list(list(15.961329,-129.92981), list(52.908902,-56.80481)) # Show US only
-        )
-      ),
+      leafletOutput("map", width="100%", height="100%"),
 
       # Shiny versions prior to 0.11 should use class="modal" instead.
       absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
