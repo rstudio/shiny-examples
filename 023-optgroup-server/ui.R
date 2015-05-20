@@ -7,10 +7,10 @@ shinyUI(fluidPage(
 
     # predefine all option groups
     optgroups = list(
-      c(value = '1st', label = 'First Class'),
-      c(value = '2nd', label = 'Second Class'),
-      c(value = '3rd', label = 'Third Class'),
-      c(value = 'Crew', label = 'Crew')
+      list(value = '1st', label = 'First Class'),
+      list(value = '2nd', label = 'Second Class'),
+      list(value = '3rd', label = 'Third Class'),
+      list(value = 'Crew', label = 'Crew')
     ),
 
     # 'Class' is a field in Titanic2 created in server.R
