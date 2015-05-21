@@ -17,7 +17,14 @@ shinyServer(function(input, output, session) {
   ## Interactive Map ###########################################
 
   # Create the map
-  map <- createLeafletMap(session, "map")
+  output$map <- renderLeaflet({
+    leaflet() %>%
+      addTiles(
+        urlTemplate = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
+        attribution = 'Maps by <a href="http://www.mapbox.com/">Mapbox</a>'
+      ) %>%
+      setView(lng = -93.85, lat = 37.45, zoom = 4)
+  })
 
   # A reactive expression that returns the set of zips that are
   # in bounds right now
@@ -58,46 +65,35 @@ shinyServer(function(input, output, session) {
     print(xyplot(income ~ college, data = zipsInBounds(), xlim = range(allzips$college), ylim = range(allzips$income)))
   })
 
-  # session$onFlushed is necessary to work around a bug in the Shiny/Leaflet
-  # integration; without it, the addCircle commands arrive in the browser
-  # before the map is created.
-  session$onFlushed(once=TRUE, function() {
-    paintObs <- observe({
-      colorBy <- input$color
-      sizeBy <- input$size
+  # This observer is responsible for maintaining the circles and legend,
+  # according to the variables the user has chosen to map to color and size.
+  observe({
+    colorBy <- input$color
+    sizeBy <- input$size
 
-      colorData <- if (colorBy == "superzip") {
-        as.numeric(allzips$centile > (100 - input$threshold))
-      } else {
-        allzips[[colorBy]]
-      }
-      colors <- brewer.pal(7, "Spectral")[cut(colorData, 7, labels = FALSE)]
-      colors <- colors[match(zipdata$zipcode, allzips$zipcode)]
+    if (colorBy == "superzip") {
+      # Color and palette are treated specially in the "superzip" case, because
+      # the values are categorical instead of continuous.
+      colorData <- ifelse(zipdata$centile >= (100 - input$threshold), "yes", "no")
+      pal <- colorFactor("Spectral", colorData)
+    } else {
+      colorData <- zipdata[[colorBy]]
+      pal <- colorBin("Spectral", colorData, 7, pretty = FALSE)
+    }
 
-      # Clear existing circles before drawing
-      map$clearShapes()
-      # Draw in batches of 1000; makes the app feel a bit more responsive
-      chunksize <- 1000
-      for (from in seq.int(1, nrow(zipdata), chunksize)) {
-        to <- min(nrow(zipdata), from + chunksize)
-        zipchunk <- zipdata[from:to,]
-        # Bug in Shiny causes this to error out when user closes browser
-        # before we get here
-        try(
-          map$addCircle(
-            zipchunk$latitude, zipchunk$longitude,
-            (zipchunk[[sizeBy]] / max(allzips[[sizeBy]])) * 30000,
-            zipchunk$zipcode,
-            list(stroke=FALSE, fill=TRUE, fillOpacity=0.4),
-            list(color = colors[from:to])
-          )
-        )
-      }
-    })
+    if (sizeBy == "superzip") {
+      # Radius is treated specially in the "superzip" case.
+      radius <- ifelse(zipdata$centile >= (100 - input$threshold), 30000, 3000)
+    } else {
+      radius <- zipdata[[sizeBy]] / max(zipdata[[sizeBy]]) * 30000
+    }
 
-    # TIL this is necessary in order to prevent the observer from
-    # attempting to write to the websocket after the session is gone.
-    session$onSessionEnded(paintObs$suspend)
+    leafletProxy("map", data = zipdata) %>%
+      clearShapes() %>%
+      addCircles(~longitude, ~latitude, radius=radius, layerId=~zipcode,
+        stroke=FALSE, fillOpacity=0.4, fillColor=pal(colorData)) %>%
+      addLegend("bottomleft", pal=pal, values=colorData, title=colorBy,
+        layerId="colorLegend")
   })
 
   # Show a popup at the given location
@@ -112,12 +108,12 @@ shinyServer(function(input, output, session) {
       sprintf("Percent of adults with BA: %s%%", as.integer(selectedZip$college)), tags$br(),
       sprintf("Adult population: %s", selectedZip$adultpop)
     ))
-    map$showPopup(lat, lng, content, zipcode)
+    leafletProxy("map") %>% addPopups(lng, lat, content, layerId = zipcode)
   }
 
   # When map is clicked, show a popup with city info
-  clickObs <- observe({
-    map$clearPopups()
+  observe({
+    leafletProxy("map") %>% clearPopups()
     event <- input$map_shape_click
     if (is.null(event))
       return()
@@ -126,8 +122,6 @@ shinyServer(function(input, output, session) {
       showZipcodePopup(event$id, event$lat, event$lng)
     })
   })
-
-  session$onSessionEnded(clickObs$suspend)
 
 
   ## Data Explorer ###########################################
@@ -162,19 +156,19 @@ shinyServer(function(input, output, session) {
     if (is.null(input$goto))
       return()
     isolate({
-      map$clearPopups()
+      map <- leafletProxy("map")
+      map %>% clearPopups()
       dist <- 0.5
       zip <- input$goto$zip
       lat <- input$goto$lat
       lng <- input$goto$lng
       showZipcodePopup(zip, lat, lng)
-      map$fitBounds(lat - dist, lng - dist,
-        lat + dist, lng + dist)
+      map %>% fitBounds(lng - dist, lat - dist, lng + dist, lat + dist)
     })
   })
 
-  output$ziptable <- DT::renderDataTable(DT::datatable({
-    cleantable %>%
+  output$ziptable <- DT::renderDataTable({
+    df <- cleantable %>%
       filter(
         Score >= input$minScore,
         Score <= input$maxScore,
@@ -183,5 +177,9 @@ shinyServer(function(input, output, session) {
         is.null(input$zipcodes) | Zipcode %in% input$zipcodes
       ) %>%
       mutate(Action = paste('<a class="go-map" href="" data-lat="', Lat, '" data-long="', Long, '" data-zip="', Zipcode, '"><i class="fa fa-crosshairs"></i></a>', sep=""))
-  }, escape = FALSE))
+    action <- DT::dataTableAjax(session, df)
+
+    DT::datatable(df, server = TRUE, options = list(ajax = list(url = action)),
+      escape = FALSE)
+  })
 })
