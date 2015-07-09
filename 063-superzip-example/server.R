@@ -179,7 +179,6 @@ shinyServer(function(input, output, session) {
       mutate(Action = paste('<a class="go-map" href="" data-lat="', Lat, '" data-long="', Long, '" data-zip="', Zipcode, '"><i class="fa fa-crosshairs"></i></a>', sep=""))
     action <- DT::dataTableAjax(session, df)
 
-    DT::datatable(df, server = TRUE, options = list(ajax = list(url = action)),
-      escape = FALSE)
+    DT::datatable(df, options = list(ajax = list(url = action)), escape = FALSE)
   })
 })
