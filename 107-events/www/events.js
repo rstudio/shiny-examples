@@ -66,7 +66,16 @@ $(function() {
       if (event.name === 'error_info') {
         event.error.message = 'A nice error occurred :)';
       }
+    },
+
+    'shiny:recalculating': function(event) {
+      console.log('An output is being recalculated... ' + new Date());
+    },
+
+    'shiny:recalculated': function(event) {
+      console.log('An output has been recalculated! ' + new Date());
     }
+
   });
 
   // when the slider input is bound, add a red border to it
