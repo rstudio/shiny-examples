@@ -28,7 +28,7 @@ server <- function(input, output) {
     exclude <- mtcars[!vals$keeprows, , drop = FALSE]
     
     ggplot(keep, aes(wt, mpg)) + geom_point() +
-      geom_smooth(method = lm, fullrange = TRUE, shape = 21, color = "black") +
+      geom_smooth(method = lm, fullrange = TRUE, color = "black") +
       geom_point(data = exclude, shape = 21, fill = NA, color = "black", alpha = 0.25) +
       coord_cartesian(xlim = c(1.5, 5.5), ylim = c(5,35))
   })
