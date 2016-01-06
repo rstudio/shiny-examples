@@ -161,11 +161,11 @@ shinyApp(
             )
           ),
           h4("Points selected by clicking, with nearPoints():"),
-          dataTableOutput("plot_clicked_points")
+          DT::dataTableOutput("plot_clicked_points")
         ),
         wellPanel(width = 9,
           h4("Points selected by brushing, with brushedPoints():"),
-          dataTableOutput("plot_brushed_points")
+          DT::dataTableOutput("plot_brushed_points")
         )
       ),
       column(width = 3,
@@ -332,7 +332,7 @@ shinyApp(
       cat("input$plot_brush:\n")
       str(input$plot_brush)
     })
-    output$plot_clicked_points <- renderDataTable({
+    output$plot_clicked_points <- DT::renderDataTable({
       dat <- curdata()
 
       # With base graphics, we need to explicitly tell it which variables were
@@ -352,7 +352,7 @@ shinyApp(
 
       datatable(res)
     })
-    output$plot_brushed_points <- renderDataTable({
+    output$plot_brushed_points <- DT::renderDataTable({
       dat <- curdata()
       # With base graphics, we need to explicitly tell it which variables were
       # used; with ggplot2, we don't.
