@@ -23,7 +23,7 @@ shinyServer(function(input, output) {
       # permission to the current working directory
       owd <- setwd(tempdir())
       on.exit(setwd(owd))
-      file.copy(src, 'report.Rmd')
+      file.copy(src, 'report.Rmd', overwrite = TRUE)
 
       library(rmarkdown)
       out <- render('report.Rmd', switch(
