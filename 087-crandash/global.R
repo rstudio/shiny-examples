@@ -16,7 +16,7 @@ prototype <- data.frame(date = character(), time = character(),
 # results as a data frame
 packageStream <- function(session) {
   # Connect to data source
-  sock <- socketConnection("rstudio.com", 6789, blocking = FALSE, open = "r")
+  sock <- socketConnection("cransim.rstudio.com", 6789, blocking = FALSE, open = "r")
   # Clean up when session is over
   session$onSessionEnded(function() {
     close(sock)

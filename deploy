@@ -74,7 +74,7 @@ print(apps[unlist(lapply(apps, function(app) {
   system(paste(
     '../shiny-dev-center/_scripts/import.R',
     app,
-    sprintf('http://gallery.shinyapps.io/%s', app),
+    sprintf('https://internal.shinyapps.io/gallery/%s', app),
     sprintf('https://github.com/rstudio/shiny-examples/tree/master/%s', app)
   ))
 })) != 0])

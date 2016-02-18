@@ -25,7 +25,7 @@ fluidPage(
   ),
 
   div(
-    id = 'busyModal', class = 'modal fade', role = 'dialog',
+    id = 'busyModal', class = 'modal', role = 'dialog', 'data-backdrop' = 'static',
     div(
       class = 'modal-dialog modal-sm',
       div(
