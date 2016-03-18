@@ -1,0 +1,9 @@
+This app lets you play around with Shiny's improved `renderTable()` function. All arguments are intially set to their default values (the code chunk under the table illustrates this by omitting the arguments if they are set to their default value). A few noteworthy points:
+
+- The first three datasets are actual datasets found in the `datasets` package. The last one (`mock`) provides you with different classes of variables (like strings and booleans), 'stringy' rownames and a few missing values to test the inputs with.
+
+- `width` can take in any valid CSS unit of length. If a unit (like 'px', '%', 'em') is not specified, then 'px' is assumed.
+
+- If `align` is set to `NULL`, then all numeric/integer columns (including the row names, if they are numbers) will be right-aligned and everything else will be left-aligned (`align = '?'` produces the same result). You can also specify a global alignment that will apply to all columns; for example, `align = 'c'` makes all columns centered. For finer control, you can also specify the alignment for each column, with the *i*-th character specifying the alignment for the *i*-th column (remember to include the alignment for the row names if the argument `rownames` is set to `TRUE`). In this case, besides `'l'`, `'c'` and `'r'`, `'?'` is also permitted - `'?'` is a placeholder for that particular column, indicating that it should keep its default alignment.
+
+- `digits` specifies the number the decimal places for the numeric columns (notice that this will not apply to columns with an integer class). If `digits` is set to a negative value, then the numeric columns will be displayed in scientific format with a precision of `abs(digits)` digits.
