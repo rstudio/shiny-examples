@@ -9,7 +9,7 @@ shinyUI(fluidPage(
   br(),
   sidebarPanel(
     radioButtons("sanitize", "Sanitize errors?", 
-                 c(TRUE, FALSE), inline = TRUE),
+                 c(TRUE, FALSE), FALSE, inline = TRUE),
     hr(),
     p("Somewhere in you app, insert: "),
     htmlOutput("code")
