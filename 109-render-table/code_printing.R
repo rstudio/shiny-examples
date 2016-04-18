@@ -40,86 +40,85 @@ hover_code <- reactive({
 
 spacing_code <- reactive({
   code <- ""
-  if (input$spacing != "small") {
+  if (spacing() != "s") {
     if (hover_code() == "") {
       code <- paste0(",&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      &nbsp;&nbsp;&nbsp;&nbsp;spacing = '", 
-                     input$spacing, "'")
-    } else code <- paste0(", spacing = '", input$spacing, "'")
+                     spacing(), "'")
+    } else code <- paste0(", spacing = '", spacing(), "'")
   }
   return(code)
 })
 
 width_code <- reactive({
   code <- ""
-  if (input$width != "auto") {
+  if (width() != "auto") {
     code <- paste0(",&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;width = '", 
-                   input$width, "'")
+                   width(), "'")
   }
   return(code)
 })
 
 align_code <- reactive({
   code <- ""
-  if (input$align != "NULL") {
+  if (deparse(align()) != "NULL") {
     if (width_code() == "") {
       code <- paste0(",&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      &nbsp;&nbsp;&nbsp;&nbsp;align = '",
-                     input$align, "'")
-    } else code <- paste0(", align = '", input$align, "'")
+                     align(), "'")
+    } else code <- paste0(", align = '", align(), "'")
   }
   return(code)
-})
+  })
 
 rownames_code <- reactive({
   code <- ""
-  if (as.logical(input$rownames) != FALSE) {
+  if (rownames() != FALSE) {
     code <- paste0(",&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;rownames = ", 
-                   as.logical(input$rownames))
+                   rownames())
   }
   return(code)
 })
 
 colnames_code <- reactive({
   code <- ""
-  if (as.logical(input$colnames) != TRUE) {
+  if (colnames() != TRUE) {
     if (rownames_code() == "") {
       code <- paste0(",&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      &nbsp;&nbsp;&nbsp;&nbsp;colnames = ", 
-                     as.logical(input$colnames))
-    } else code <- paste0(", colnames = ", 
-                          as.logical(input$colnames))
+                     colnames())
+    } else code <- paste0(", colnames = ", colnames())
   }
   return(code)
 })
 
 digits_code <- reactive({
   code <- ""
-  if (input$digits != "NULL") {
+  if (deparse(digits()) != "NULL") {
     code <- paste0(",&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;digits = ", 
-                   as.numeric(input$digits))
+                   digits())
   }
   return(code)
 })
 
 na_code <- reactive({
   code <- ""
-  if (input$na != "NA") {
+  if (na() != "NA") {
     if (digits_code() == "") {
       code <- paste0(",&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      &nbsp;&nbsp;&nbsp;&nbsp;na = '", 
-                     input$na, "'")
-    } else code <- paste0(", na = '", input$na, "'")
+                     na(), "'")
+    } else code <- paste0(", na = '", na(), "'")
   }
   return(code)
 })

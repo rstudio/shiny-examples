@@ -13,7 +13,8 @@ row.names(mock) <- c("uno", "dos", "tres", "cuatro", "cinco", "seis")
 
 shinyServer(function(input, output, session) {
   # Source the code printing functions to improve readibility
-  source("code_printing.R", local=TRUE)
+  source("check_valid.R", local=TRUE)
+  source("code_printing.R", local = TRUE)
   
   datasetInput <- reactive({
     switch(input$dataset,
@@ -41,31 +42,19 @@ shinyServer(function(input, output, session) {
     selectInput("align", "Column alignment:", choices, "NULL")
   })
   
-  # Convert input$format into the four booleans required by
-  # the renderTable() function
-  striped <- function() "striped" %in% input$format
-  bordered <- function() "bordered" %in% input$format
-  hover <- function() "hover" %in% input$format
-  
   # Display the resulting table
   output$view <- renderTable({
     head(datasetInput(), n = input$obs)}, 
     striped = striped,
     bordered = bordered,
     hover = hover,
-    spacing = function() input$spacing,
-    width = function() input$width,
-    rownames = function() as.logical(input$rownames),
-    colnames = function() as.logical(input$colnames),
-    align = function() {
-      if (input$align == "NULL") NULL 
-      else input$align
-    },
-    digits = function() {
-      if (input$digits == "NULL") NULL 
-      else as.numeric(input$digits)
-    },
-    na = function() input$na
+    spacing = spacing,
+    width = width,
+    rownames = rownames,
+    colnames = colnames,
+    align = align,
+    digits = digits,
+    na = na
     )
   
   # Display the corresponding code for the user to generate
@@ -75,8 +64,8 @@ shinyServer(function(input, output, session) {
             "<br><code>tableOutput('tbl')</code><br><br>",
             "in <strong>server.R</strong>: ", 
             "<br><code>output$tbl <- ", 
-            "renderTable({ head( ", input$dataset, 
-            ", n = ", input$obs, " )}", 
+            "renderTable({ head( ", dataset(), 
+            ", n = ", obs(), " )}", 
             striped_code(), bordered_code(), 
             hover_code(), spacing_code(),
             width_code(), align_code(),
