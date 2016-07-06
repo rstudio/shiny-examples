@@ -1,5 +1,7 @@
 Type: Shiny
 Title: Generating reports
 Author: Winston Chang
+AuthorUrl: http://www.rstudio.com/
 License: MIT
+Tags: reports
 DisplayMode: Showcase

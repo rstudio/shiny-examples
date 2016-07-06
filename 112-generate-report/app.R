@@ -7,6 +7,14 @@ shinyApp(
     output$report <- downloadHandler(
       filename = "report.html",
       content = function(file) {
+        src <- normalizePath('report.Rmd')
+
+        # Temporarily switch to a temp dir, in case you don't have write
+        # permissions to the current working directory.
+        owd <- setwd(tempdir())
+        on.exit(setwd(owd))
+        file.copy(src, "report.Rmd", overwrite = TRUE)
+
         # Set up parameters to pass to Rmd document
         params <- list(n = input$slider)
 
