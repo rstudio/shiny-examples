@@ -1,0 +1,24 @@
+---
+title: "Dynamic report"
+output: html_document
+params:
+  n: NA
+---
+
+```{r eval = FALSE, echo = FALSE}
+# Note that due to an issue in rmarkdown, the default value of a parameter in
+# the YAML header cannot be `NULL`, so I used a default of `NA` for the default
+# value of `n`.
+```
+
+
+```{r}
+# The `params` object is available in the document.
+params$n
+```
+
+A plot of `params$n` random points.
+
+```{r}
+plot(rnorm(params$n), rnorm(params$n))
+```
