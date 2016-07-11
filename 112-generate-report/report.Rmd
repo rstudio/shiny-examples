@@ -6,9 +6,11 @@ params:
 ---
 
 ```{r eval = FALSE, echo = FALSE}
+# For PDF output, change the header to have "output: pdf_document".
+#
 # Note that due to an issue in rmarkdown, the default value of a parameter in
-# the YAML header cannot be `NULL`, so I used a default of `NA` for the default
-# value of `n`.
+# the header cannot be `NULL`, so I used a default of `NA` for the default value
+# of `n`.
 ```
 
 
