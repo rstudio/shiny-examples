@@ -1,4 +1,3 @@
-library(shiny)
 library(datasets)
 
 # Create a mock dataset with the three main types of variables 
@@ -11,7 +10,7 @@ mock <- data.frame(v1 = c(    1,    2,    NA,   9,   NaN,   7 ),
 row.names(mock) <- c("uno", "dos", "tres", "cuatro", "cinco", "seis")
 
 
-shinyServer(function(input, output, session) {
+function(input, output, session) {
   # Source the code printing functions to improve readibility
   source("check_valid.R", local=TRUE)
   source("code_printing.R", local = TRUE)
@@ -74,4 +73,4 @@ shinyServer(function(input, output, session) {
             ")&nbsp;&nbsp;</code>"
     )
   })
-})
+}

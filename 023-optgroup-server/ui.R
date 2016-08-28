@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyUI(fluidPage(
+fluidPage(
   selectizeInput('group', NULL, NULL, multiple = TRUE, options = list(
 
     placeholder = 'Select a category',
@@ -34,4 +32,4 @@ shinyUI(fluidPage(
 
   verbatimTextOutput('row'),
   title = 'Using options groups for server-side selectize input'
-))
+)

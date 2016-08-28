@@ -8,7 +8,7 @@ actionLink <- function(inputId, ...) {
          ...)
 }
 
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("Movie explorer"),
   fluidRow(
     column(3,
@@ -50,4 +50,4 @@ shinyUI(fluidPage(
       )
     )
   )
-))
+)

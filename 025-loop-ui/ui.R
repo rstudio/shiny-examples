@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyUI(fluidPage(
+fluidPage(
   title = 'Creating a UI from a loop',
 
   sidebarLayout(
@@ -21,4 +19,4 @@ shinyUI(fluidPage(
       })
     )
   )
-))
+)

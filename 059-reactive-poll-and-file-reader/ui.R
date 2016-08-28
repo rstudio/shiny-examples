@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("reactivePoll and reactiveFileReader"),
   fluidRow(
     column(12,
@@ -19,4 +19,4 @@ shinyUI(fluidPage(
       verbatimTextOutput("pollText")
     ))
   )
-))
+)

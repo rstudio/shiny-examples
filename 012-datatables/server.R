@@ -1,7 +1,7 @@
 library(shiny)
 library(ggplot2)
 
-shinyServer(function(input, output) {
+function(input, output) {
 
   # choose columns to display
   diamonds2 = diamonds[sample(nrow(diamonds), 1000), ]
@@ -19,4 +19,4 @@ shinyServer(function(input, output) {
     DT::datatable(iris, options = list(lengthMenu = c(5, 30, 50), pageLength = 5))
   })
 
-})
+}

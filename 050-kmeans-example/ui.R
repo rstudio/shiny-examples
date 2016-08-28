@@ -1,4 +1,4 @@
-shinyUI(pageWithSidebar(
+pageWithSidebar(
   headerPanel('Iris k-means clustering'),
   sidebarPanel(
     selectInput('xcol', 'X Variable', names(iris)),
@@ -10,4 +10,4 @@ shinyUI(pageWithSidebar(
   mainPanel(
     plotOutput('plot1')
   )
-))
+)

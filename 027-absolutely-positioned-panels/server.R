@@ -1,4 +1,4 @@
-shinyServer(function(input, output, session) {
+function(input, output, session) {
   output$plot <- renderPlot({
     mtscaled <- as.matrix(scale(mtcars))
     heatmap(mtscaled,
@@ -9,4 +9,4 @@ shinyServer(function(input, output, session) {
   output$plot2 <- renderPlot({
     plot(head(cars, input$n), main="Foo")
   }, bg = "#F5F5F5")
-})
+}

@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyUI(fluidPage(
+fluidPage(
   title = 'Embed an HTML report from R Markdown/knitr',
   sidebarLayout(
     sidebarPanel(
@@ -12,4 +10,4 @@ shinyUI(fluidPage(
       uiOutput('report')
     )
   )
-))
+)

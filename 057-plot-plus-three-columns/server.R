@@ -1,7 +1,6 @@
-library(shiny)
 library(ggplot2)
  
-shinyServer(function(input, output) {
+function(input, output) {
  
   dataset <- reactive({
     diamonds[sample(nrow(diamonds), input$sampleSize),]
@@ -27,4 +26,4 @@ shinyServer(function(input, output) {
     
   })
   
-})
+}

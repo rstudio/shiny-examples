@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("isolate example"),
   fluidRow(
     column(4, wellPanel(
@@ -17,4 +17,4 @@ shinyUI(fluidPage(
       textOutput("summary2")
     )
   )
-))
+)

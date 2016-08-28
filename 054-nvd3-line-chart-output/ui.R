@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   tags$h2("JavaScript output binding example"),
   fluidRow(
     column(width=6,
@@ -23,4 +23,4 @@ shinyUI(fluidPage(
         animate=animationOptions(interval=100, loop=TRUE))
     )
   )
-))
+)

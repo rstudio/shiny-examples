@@ -1,4 +1,3 @@
-library(shiny)
 library(leaflet)
 
 # Choices for drop-downs
@@ -11,7 +10,7 @@ vars <- c(
 )
 
 
-shinyUI(navbarPage("Superzip", id="nav",
+navbarPage("Superzip", id="nav",
 
   tabPanel("Interactive map",
     div(class="outer",
@@ -77,4 +76,4 @@ shinyUI(navbarPage("Superzip", id="nav",
   ),
 
   conditionalPanel("false", icon("crosshair"))
-))
+)

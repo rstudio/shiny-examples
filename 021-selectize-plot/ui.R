@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyUI(fluidPage(
+fluidPage(
   title = 'Create plots in selectize input',
   fluidRow(
     column(
@@ -16,4 +14,4 @@ shinyUI(fluidPage(
       DT::dataTableOutput('rawdata')
     )
   )
-))
+)

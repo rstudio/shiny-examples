@@ -1,4 +1,4 @@
-shinyServer(function(input, output) {
+function(input, output) {
 
   output$ui <- renderUI({
     if (is.null(input$input_type))
@@ -49,4 +49,4 @@ shinyServer(function(input, output) {
     str(input$dynamic)
   })
 
-})
+}

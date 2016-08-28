@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   fluidRow(
     column(4,
       
@@ -21,4 +21,4 @@ shinyUI(fluidPage(
     column(4, verbatimTextOutput("range"))
   )
   
-))
+)

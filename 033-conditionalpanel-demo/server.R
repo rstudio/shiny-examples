@@ -1,4 +1,4 @@
-shinyServer(function(input, output) {
+function(input, output) {
 
   output$scatterPlot <- renderPlot({
     x <- rnorm(input$n)
@@ -6,4 +6,4 @@ shinyServer(function(input, output) {
     plot(x, y)
   })
 
-})
+}

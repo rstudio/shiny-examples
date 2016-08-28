@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
     
   # Copy the line below to make an action button
   actionButton("action", label = "Action"),
@@ -6,4 +6,4 @@ shinyUI(fluidPage(
   hr(),
   fluidRow(column(2, verbatimTextOutput("value")))
   
-))
+)

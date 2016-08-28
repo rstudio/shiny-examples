@@ -1,7 +1,6 @@
-library(shiny)
 library(maps)
 
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   mapurl <- session$registerDataObj(
 
@@ -69,4 +68,4 @@ shinyServer(function(input, output, session) {
     options = list(pageLength = 10), rownames = FALSE
   ))
 
-})
+}

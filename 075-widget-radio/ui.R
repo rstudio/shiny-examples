@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
     
   # Copy the line below to make a set of radio buttons
   radioButtons("radio", label = h3("Radio buttons"),
@@ -8,4 +8,4 @@ shinyUI(fluidPage(
   hr(),
   fluidRow(column(3, verbatimTextOutput("value")))
   
-))
+)

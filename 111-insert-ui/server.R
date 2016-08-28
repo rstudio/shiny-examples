@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyServer(function(input, output) {
+function(input, output) {
   
   ## keep track of elements inserted and not yet removed
   inserted <- c()
@@ -27,4 +25,4 @@ shinyServer(function(input, output) {
     inserted <<- inserted[-length(inserted)]
   })
   
-})
+}

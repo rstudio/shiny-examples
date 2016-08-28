@@ -1,4 +1,4 @@
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   # Create a random name for the log file
   logfilename <- paste0('logfile',
@@ -28,4 +28,4 @@ shinyServer(function(input, output, session) {
     paste0("The value of input$n is: ", input$n)
   })
 
-})
+}

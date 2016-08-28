@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("Changing the values of inputs from the server"),
   fluidRow(
     column(3, wellPanel(
@@ -60,4 +60,4 @@ shinyUI(fluidPage(
       )
     )
   )
-))
+)

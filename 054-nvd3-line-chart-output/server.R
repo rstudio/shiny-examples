@@ -1,4 +1,4 @@
-shinyServer(function(input, output, session) {
+function(input, output, session) {
   
   output$mychart <- renderLineChart({
     # Return a data frame. Each column will be a series in the line chart.
@@ -8,4 +8,4 @@ shinyServer(function(input, output, session) {
       "Sine 2" = sin(1:100/10) * 0.25 + 0.5
     )
   })
-})
+}

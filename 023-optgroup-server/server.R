@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   Titanic2 <- as.data.frame(Titanic, stringsAsFactors = FALSE)
   Titanic2 <- cbind(Titanic2, value = seq_len(nrow(Titanic2)))
@@ -13,4 +11,4 @@ shinyServer(function(input, output, session) {
     ))
     Titanic2[as.integer(input$group), -(6:7)]
   })
-})
+}

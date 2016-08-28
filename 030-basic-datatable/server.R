@@ -1,11 +1,8 @@
-library(shiny)
-
 # Load the ggplot2 package which provides
 # the 'mpg' dataset.
 library(ggplot2)
 
-# Define a server for the Shiny app
-shinyServer(function(input, output) {
+function(input, output) {
 
   # Filter data based on selections
   output$table <- DT::renderDataTable(DT::datatable({
@@ -22,4 +19,4 @@ shinyServer(function(input, output) {
     data
   }))
 
-})
+}

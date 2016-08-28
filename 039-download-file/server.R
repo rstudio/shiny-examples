@@ -1,4 +1,4 @@
-shinyServer(function(input, output) {
+function(input, output) {
   datasetInput <- reactive({
     # Fetch the appropriate data object, depending on the value
     # of input$dataset.
@@ -33,4 +33,4 @@ shinyServer(function(input, output) {
         row.names = FALSE)
     }
   )
-})
+}

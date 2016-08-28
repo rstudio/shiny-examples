@@ -1,4 +1,4 @@
-shinyServer(function(input, output, session) {
+function(input, output, session) {
   # An observer is used to send messages to the client.
   # The message is converted to JSON
   observe({
@@ -6,4 +6,4 @@ shinyServer(function(input, output, session) {
       message = list(a = 1, b = 'text',
                      controller = input$controller))
   })
-})
+}

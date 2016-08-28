@@ -1,6 +1,6 @@
 library(shiny)
 
-shinyServer(function(input, output) {
+function(input, output) {
   output$ex_out <- renderPrint({
     str(sapply(sprintf('e%d', 0:7), function(id) {
       input[[id]]
@@ -10,4 +10,4 @@ shinyServer(function(input, output) {
     paste('You selected', if (input$github == '') 'nothing' else input$github,
           'in the Github example.')
   })
-})
+}

@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   verticalLayout(
     titlePanel("Vertical layout example"),
     plotOutput("plot1"),
@@ -7,4 +7,4 @@ shinyUI(fluidPage(
                   value = 50, step = 10)
     )
   )
-))
+)

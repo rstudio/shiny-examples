@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("Dates and date ranges"),
 
   column(4, wellPanel(
@@ -39,4 +39,4 @@ shinyUI(fluidPage(
     verbatimTextOutput("dateRangeText"),
     verbatimTextOutput("dateRangeText2")
   )
-))
+)

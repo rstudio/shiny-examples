@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyUI(fluidPage(
+fluidPage(
   title = 'Download a PDF report',
   sidebarLayout(
     sidebarPanel(
@@ -15,4 +13,4 @@ shinyUI(fluidPage(
       plotOutput('regPlot')
     )
   )
-))
+)

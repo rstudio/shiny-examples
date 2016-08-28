@@ -1,4 +1,4 @@
-shinyServer(function(input, output) {
+function(input, output) {
 
   output$distPlot <- renderPlot({
     x    <- faithful[, 2]  # Old Faithful Geyser data
@@ -8,4 +8,4 @@ shinyServer(function(input, output) {
     hist(x, breaks = bins, col = 'darkgray', border = 'white')
   })
 
-})
+}

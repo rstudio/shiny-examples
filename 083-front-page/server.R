@@ -1,4 +1,4 @@
-shinyServer(function(input, output) {
+function(input, output) {
 
   output$main_plot <- renderPlot({
 
@@ -19,4 +19,4 @@ shinyServer(function(input, output) {
     }
 
   })
-})
+}

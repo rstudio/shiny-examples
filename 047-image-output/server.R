@@ -1,6 +1,14 @@
 library(png) # For writePNG function
 
-shinyServer(function(input, output, session) {
+# Return a matrix with 2d guassian distribution
+gauss2d <- function(x, y, r = 0.15) {
+  exp(
+    -((x - 0.5)^2 + (y - 0.5)^2) /
+    (2 * r^2)
+  )
+}
+
+function(input, output, session) {
 
   # image1 creates a new PNG file each time Radius changes
   output$image1 <- renderImage({
@@ -50,13 +58,4 @@ shinyServer(function(input, output, session) {
     }
 
   }, deleteFile = FALSE)
-})
-
-
-# Return a matrix with 2d guassian distribution
-gauss2d <- function(x, y, r = 0.15) {
-  exp(
-    -((x - 0.5)^2 + (y - 0.5)^2) /
-    (2 * r^2)
-  )
 }

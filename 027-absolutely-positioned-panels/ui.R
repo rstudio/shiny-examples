@@ -1,6 +1,6 @@
 library(markdown)
 
-shinyUI(fluidPage(style="padding-top: 80px;",
+fluidPage(style="padding-top: 80px;",
   h1("Absolutely-positioned panels"),
   absolutePanel(
     bottom = 20, right = 20, width = 300,
@@ -34,4 +34,4 @@ Because `fixed=TRUE`, it won't scroll with the page."
     )
   ),
   plotOutput("plot", height = "800px")
-))
+)

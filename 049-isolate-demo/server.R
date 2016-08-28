@@ -1,4 +1,4 @@
-shinyServer(function(input, output) {
+function(input, output) {
   output$summary <- renderText({
     # Simply accessing input$goButton here makes this reactive
     # object take a dependency on it. That means when
@@ -30,4 +30,4 @@ shinyServer(function(input, output) {
     })
   })
 
-})
+}

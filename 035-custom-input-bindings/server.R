@@ -1,4 +1,4 @@
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   output$urlText <- renderText({
     as.character(input$my_url)
@@ -11,4 +11,4 @@ shinyServer(function(input, output, session) {
     # Send an update to my_url, resetting its value
     updateUrlInput(session, "my_url", value = "http://www.r-project.org/")
   })
-})
+}

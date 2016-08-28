@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyServer(function(input, output) {
+function(input, output) {
 
   # display 10 rows initially
   output$ex1 <- DT::renderDataTable(
@@ -38,4 +36,4 @@ shinyServer(function(input, output) {
       }'
     ))
   ))
-})
+}

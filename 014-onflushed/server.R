@@ -1,4 +1,4 @@
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   values <- reactiveValues(starting = TRUE)
 
@@ -23,4 +23,4 @@ shinyServer(function(input, output, session) {
     plot(rnorm(100000), main = "A slow plot")
   })
 
-})
+}

@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyUI(fluidPage(
+fluidPage(
   title = 'MathJax Examples',
   withMathJax(),
   helpText('An irrational number \\(\\sqrt{2}\\)
@@ -15,4 +13,4 @@ shinyUI(fluidPage(
   uiOutput('ex4'),
   checkboxInput('ex5_visible', 'Show Example 5', FALSE),
   uiOutput('ex5')
-))
+)

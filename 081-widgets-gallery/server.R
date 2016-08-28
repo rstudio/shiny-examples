@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyServer(function(input, output) {
+function(input, output) {
 
   output$action <- renderPrint({ input$action })
   output$checkbox <- renderPrint({ input$checkbox })
@@ -16,4 +14,4 @@ shinyServer(function(input, output) {
   #output$submit <- renderPrint({ input$submit })
   output$text <- renderPrint({ input$text })
 
-})
+}

@@ -1,6 +1,6 @@
 library(shiny)
 
-shinyUI(fluidPage(
+fluidPage(
   title = 'Selectize examples',
   sidebarLayout(
     sidebarPanel(
@@ -90,4 +90,4 @@ shinyUI(fluidPage(
       verbatimTextOutput('github')
     )
   )
-))
+)

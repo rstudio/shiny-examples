@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("Observer demo"),
   fluidRow(
     column(4, wellPanel(
@@ -14,4 +14,4 @@ shinyUI(fluidPage(
         "file each time the slider value changes.")
     )
   )
-))
+)

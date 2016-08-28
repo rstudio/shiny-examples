@@ -23,7 +23,7 @@ renderInputs <- function(prefix) {
 }
 
 # Define UI for application that plots random distributions
-shinyUI(fluidPage(theme="simplex.min.css",
+fluidPage(theme="simplex.min.css",
   tags$style(type="text/css",
     "label {font-size: 12px;}",
     ".recalculating {opacity: 1.0;}"
@@ -54,4 +54,4 @@ shinyUI(fluidPage(theme="simplex.min.css",
       plotOutput("b_distPlot", height = "600px")
     )
   )
-))
+)

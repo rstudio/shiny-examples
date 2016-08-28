@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   
   tags$head(tags$style(HTML("
     .shiny-text-output {
@@ -171,4 +171,4 @@ shinyUI(fluidPage(
     )) 
   )
 
-))
+)

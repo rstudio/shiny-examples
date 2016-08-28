@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("sendCustomMessage example"),
 
   fluidRow(
@@ -15,4 +15,4 @@ shinyUI(fluidPage(
       )
     ))
   )
-))
+)

@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   updateSelectizeInput(session, 'x2', choices = list(
     Eastern = c(`Rhode Island` = 'RI', `New Jersey` = 'NJ'),
@@ -11,4 +9,4 @@ shinyServer(function(input, output, session) {
   output$values <- renderPrint({
     list(x1 = input$x1, x2 = input$x2, x3 = input$x3, x4 = input$x4)
   })
-})
+}

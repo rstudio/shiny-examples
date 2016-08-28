@@ -1,4 +1,14 @@
-shinyServer(function(input, output, session) {
+list_to_string <- function(obj, listname) {
+  if (is.null(names(obj))) {
+    paste(listname, "[[", seq_along(obj), "]] = ", obj,
+          sep = "", collapse = "\n")
+  } else {
+    paste(listname, "$", names(obj), " = ", obj,
+          sep = "", collapse = "\n")
+  }
+}
+
+function(input, output, session) {
 
   # Print out clientData, which is a reactiveValues object.
   # This object is list-like, but it is not a list.
@@ -26,15 +36,4 @@ shinyServer(function(input, output, session) {
     paste(names(query), query, sep = "=", collapse=", ")
   })
 
-})
-
-
-list_to_string <- function(obj, listname) {
-  if (is.null(names(obj))) {
-    paste(listname, "[[", seq_along(obj), "]] = ", obj,
-          sep = "", collapse = "\n")
-  } else {
-    paste(listname, "$", names(obj), " = ", obj,
-          sep = "", collapse = "\n")
-  }
 }

@@ -1,6 +1,6 @@
 options(digits.secs = 3) # Include milliseconds in time display
 
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   output$currentTime <- renderText({
     # invalidateLater causes this output to automatically
@@ -10,4 +10,4 @@ shinyServer(function(input, output, session) {
 
     format(Sys.time())
   })
-})
+}

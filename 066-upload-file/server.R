@@ -2,7 +2,7 @@
 # setting this option. Here we'll raise limit to 9MB.
 options(shiny.maxRequestSize = 9*1024^2)
 
-shinyServer(function(input, output) {
+function(input, output) {
   output$contents <- renderTable({
     # input$file1 will be NULL initially. After the user selects
     # and uploads a file, it will be a data frame with 'name',
@@ -18,4 +18,4 @@ shinyServer(function(input, output) {
     read.csv(inFile$datapath, header = input$header,
              sep = input$sep, quote = input$quote)
   })
-})
+}

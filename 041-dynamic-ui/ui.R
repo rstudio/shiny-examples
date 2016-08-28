@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("Dynamically generated user interface components"),
   fluidRow(
 
@@ -23,4 +23,4 @@ shinyUI(fluidPage(
       verbatimTextOutput("dynamic_value")
     )
   )
-))
+)

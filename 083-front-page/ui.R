@@ -1,4 +1,4 @@
-shinyUI(bootstrapPage(
+bootstrapPage(
 
   selectInput(inputId = "n_breaks",
       label = "Number of bins in histogram (approximate):",
@@ -22,4 +22,4 @@ shinyUI(bootstrapPage(
         min = 0.2, max = 2, value = 1, step = 0.2)
   )
 
-))
+)

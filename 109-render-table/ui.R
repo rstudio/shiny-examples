@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyUI(fluidPage(
+fluidPage(
   fluidRow(
     column(12,
       h2("Shiny Table Demo"),
@@ -53,4 +51,4 @@ shinyUI(fluidPage(
       )
     )
   )
-))
+)

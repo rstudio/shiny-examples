@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyUI(fluidPage(sidebarLayout(
+fluidPage(sidebarLayout(
   sidebarPanel(
     # use regions as option groups
     selectizeInput('x1', 'X1', choices = list(
@@ -23,4 +21,4 @@ shinyUI(fluidPage(sidebarLayout(
   mainPanel(
     verbatimTextOutput('values')
   )
-), title = 'Options groups for select(ize) input'))
+), title = 'Options groups for select(ize) input')

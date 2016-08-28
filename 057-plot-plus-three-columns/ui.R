@@ -1,9 +1,8 @@
-library(shiny)
 library(ggplot2)
 
 dataset <- diamonds
 
-shinyUI(fluidPage(
+fluidPage(
 
   title = "Diamonds Explorer",
   
@@ -34,4 +33,4 @@ shinyUI(fluidPage(
         c(None='.', names(diamonds[sapply(diamonds, is.factor)])))
     )
   )
-))
+)

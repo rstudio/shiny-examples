@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyUI(fluidPage(
+fluidPage(
   tags$style(HTML("#shiny-notification-panel { width: 450px; }
                   .shiny-notification { opacity: 0.95; }
                   h2 { padding-left: 15px; }")),
@@ -131,4 +129,4 @@ shinyUI(fluidPage(
       )
     )
   )
-))
+)

@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
     
   # Copy the line below to make a select box 
   selectInput("select", label = h3("Select box"), 
@@ -8,4 +8,4 @@ shinyUI(fluidPage(
   hr(),
   fluidRow(column(3, verbatimTextOutput("value")))
   
-))
+)

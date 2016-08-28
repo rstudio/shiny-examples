@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   # note we use the syntax input[['foo']] instead of input$foo, because we have
   # to construct the id as a character string, then use it to access the value;
@@ -15,4 +13,4 @@ shinyServer(function(input, output, session) {
       strong(paste0('Hi, this is output B#', i))
     })
   })
-})
+}

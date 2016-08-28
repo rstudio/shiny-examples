@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyUI(fluidPage(
+fluidPage(
   br(),
   fluidRow(
     column(4,
@@ -51,4 +49,4 @@ shinyUI(fluidPage(
       selectInput('in6', 'Options', state.name, multiple=TRUE, selectize=TRUE)
     )
   )
-))
+)

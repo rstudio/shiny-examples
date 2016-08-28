@@ -1,8 +1,7 @@
-library(shiny)
 library(datasets)
 
 # 定义服务器逻辑
-shinyServer(function(input, output) {
+function(input, output) {
 
   cars2 <- cars
   cars2$random <- sample(
@@ -39,4 +38,4 @@ shinyServer(function(input, output) {
   output$view <- renderTable({
     head(datasetInput(), n = input$obs)
   })
-})
+}

@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   titlePanel('File download'),
   sidebarLayout(
     sidebarPanel(
@@ -12,4 +12,4 @@ shinyUI(fluidPage(
       tableOutput('table')
     )
   )
-))
+)

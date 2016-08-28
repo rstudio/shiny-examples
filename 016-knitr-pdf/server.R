@@ -1,4 +1,4 @@
-shinyServer(function(input, output) {
+function(input, output) {
 
   regFormula <- reactive({
     as.formula(paste('mpg ~', input$x))
@@ -34,4 +34,4 @@ shinyServer(function(input, output) {
     }
   )
 
-})
+}

@@ -1,4 +1,4 @@
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   # input$date and others are Date objects. When outputting
   # text, we need to convert to character; otherwise it will
@@ -22,4 +22,4 @@ shinyServer(function(input, output, session) {
       paste(as.character(input$dateRange2), collapse = " to ")
     )
   })
-})
+}

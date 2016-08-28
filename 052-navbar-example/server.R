@@ -1,4 +1,4 @@
-shinyServer(function(input, output, session) {
+function(input, output, session) {
   output$plot <- renderPlot({
     plot(cars, type=input$plotType)
   })
@@ -10,4 +10,4 @@ shinyServer(function(input, output, session) {
   output$table <- DT::renderDataTable({
     DT::datatable(cars)
   })
-})
+}

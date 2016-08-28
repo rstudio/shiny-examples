@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
     
   numericInput("num", label = "Make changes", value = 1),
   
@@ -8,4 +8,4 @@ shinyUI(fluidPage(
   hr(),
   fluidRow(column(3, verbatimTextOutput("value")))
   
-))
+)

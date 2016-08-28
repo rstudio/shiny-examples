@@ -1,6 +1,6 @@
 library(markdown)
 
-shinyUI(navbarPage("Navbar!",
+navbarPage("Navbar!",
   tabPanel("Plot",
     sidebarLayout(
       sidebarPanel(
@@ -41,4 +41,4 @@ shinyUI(navbarPage("Navbar!",
       )
     )
   )
-))
+)

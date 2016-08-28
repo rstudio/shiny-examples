@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
 
   titlePanel("Navlist panel example"),
 
@@ -15,4 +15,4 @@ shinyUI(fluidPage(
       h3("This is the third panel")
     )
   )
-))
+)

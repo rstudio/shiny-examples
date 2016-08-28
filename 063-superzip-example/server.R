@@ -1,4 +1,3 @@
-library(shiny)
 library(leaflet)
 library(RColorBrewer)
 library(scales)
@@ -12,7 +11,7 @@ zipdata <- allzips[sample.int(nrow(allzips), 10000),]
 # will be drawn last and thus be easier to see
 zipdata <- zipdata[order(zipdata$centile),]
 
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   ## Interactive Map ###########################################
 
@@ -181,4 +180,4 @@ shinyServer(function(input, output, session) {
 
     DT::datatable(df, options = list(ajax = list(url = action)), escape = FALSE)
   })
-})
+}

@@ -16,7 +16,7 @@ all_movies <- inner_join(omdb, tomatoes, by = "ID") %>%
     BoxOffice, Production)
 
 
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
   # Filter the movies, returning a data frame
   movies <- reactive({
@@ -110,4 +110,4 @@ shinyServer(function(input, output, session) {
   vis %>% bind_shiny("plot1")
 
   output$n_movies <- renderText({ nrow(movies()) })
-})
+}

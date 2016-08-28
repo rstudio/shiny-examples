@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyServer(function(input, output, session) {
+function(input, output, session) {
 
 
   histColor <- reactive({
@@ -47,4 +45,4 @@ shinyServer(function(input, output, session) {
 
   observeEvent(input$stop, stopApp())
 
-})
+}

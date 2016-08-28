@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
 
   titlePanel("Hello Shiny!"),
 
@@ -13,4 +13,4 @@ shinyUI(fluidPage(
       plotOutput("distPlot")
     )
   )
-))
+)

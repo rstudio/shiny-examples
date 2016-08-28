@@ -1,7 +1,7 @@
 library(shiny)
 library(ggplot2)  # for the diamonds dataset
 
-shinyUI(fluidPage(
+fluidPage(
   title = 'Examples of DataTables',
   sidebarLayout(
     sidebarPanel(
@@ -28,4 +28,4 @@ shinyUI(fluidPage(
       )
     )
   )
-))
+)

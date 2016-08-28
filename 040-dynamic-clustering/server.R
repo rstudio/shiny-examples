@@ -1,7 +1,7 @@
 library(shiny)
 library(mclust)
 
-shinyServer(function(input, output, session) {
+function(input, output, session) {
   
   # Create a spot where we can store additional
   # reactive values for this session
@@ -57,4 +57,4 @@ shinyServer(function(input, output, session) {
       text(0, 0, "Unable to create clusters.\nClick to add more points.")
     })
   })
-})
+}

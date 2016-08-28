@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("submitButton example"),
   fluidRow(
     column(3, wellPanel(
@@ -12,4 +12,4 @@ shinyUI(fluidPage(
       verbatimTextOutput("text")
     )
   )
-))
+)

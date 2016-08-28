@@ -1,4 +1,4 @@
-shinyUI(basicPage(
+basicPage(
   h4(
     "The time is ",
     # We give textOutput a span container to make it appear
@@ -10,4 +10,4 @@ shinyUI(basicPage(
     "1 second" = "1000",
     "0.5 second" = "500"
   ), selected = 1000, selectize = FALSE)
-))
+)

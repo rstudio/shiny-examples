@@ -1,4 +1,4 @@
-shinyServer(function(input, output, clientData, session) {
+function(input, output, clientData, session) {
 
   observe({
     # We'll use these multiple times, so use short var names for
@@ -131,4 +131,4 @@ shinyServer(function(input, output, clientData, session) {
       updateTabsetPanel(session, "inTabset", selected = "panel1")
     }
   })
-})
+}

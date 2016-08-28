@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
     
   # Copy the chunk below to make a group of checkboxes
   checkboxGroupInput("checkGroup", label = h3("Checkbox group"), 
@@ -9,4 +9,4 @@ shinyUI(fluidPage(
   hr(),
   fluidRow(column(3, verbatimTextOutput("value")))
   
-))
+)

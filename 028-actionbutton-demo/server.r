@@ -1,4 +1,4 @@
-shinyServer(function(input, output) {
+function(input, output) {
   
   # builds a reactive expression that only invalidates 
   # when the value of input$goButton becomes out of date 
@@ -10,4 +10,4 @@ shinyServer(function(input, output) {
   output$nText <- renderText({
     ntext()
   })
-})
+}

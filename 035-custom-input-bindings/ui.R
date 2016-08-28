@@ -1,6 +1,6 @@
 source("url-input.R")
 
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("Custom input example"),
 
   fluidRow(
@@ -12,4 +12,4 @@ shinyUI(fluidPage(
       verbatimTextOutput("urlText")
     ))
   )
-))
+)

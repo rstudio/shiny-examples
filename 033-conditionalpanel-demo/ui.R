@@ -1,4 +1,4 @@
-shinyUI(fluidPage(
+fluidPage(
 
   titlePanel("Conditional panels"),
 
@@ -18,4 +18,4 @@ shinyUI(fluidPage(
       plotOutput("scatterPlot", height = 300)
     )
   )
-))
+)

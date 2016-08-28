@@ -1,7 +1,6 @@
-library(shiny)
 library(datasets)
 
-shinyServer(function(input, output) {
+function(input, output) {
   ## for the sidebarPanel
   observe({
     if (as.logical(input$sanitize) == TRUE) {
@@ -79,5 +78,4 @@ shinyServer(function(input, output) {
       write.csv(tryCatch(datasetInpute(), error = f)) 
     }
   )
-})
-
+}

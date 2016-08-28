@@ -1,6 +1,6 @@
 library(markdown)
 
-shinyUI(fluidPage(
+fluidPage(
 
   titlePanel("includeText, includeHTML, and includeMarkdown"),
 
@@ -17,4 +17,4 @@ shinyUI(fluidPage(
       includeMarkdown("include.md")
     )
   )
-))
+)

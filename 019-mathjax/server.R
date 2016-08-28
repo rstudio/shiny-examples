@@ -1,6 +1,4 @@
-library(shiny)
-
-shinyServer(function(input, output, session) {
+function(input, output, session) {
   output$ex1 <- renderUI({
     withMathJax(helpText('Dynamic output 1:  $$\\alpha^2$$'))
   })
@@ -28,4 +26,4 @@ shinyServer(function(input, output, session) {
       helpText('You do not see me initially: $$e^{i \\pi} + 1 = 0$$')
     )
   })
-})
+}
