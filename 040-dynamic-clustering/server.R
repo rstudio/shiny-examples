@@ -49,7 +49,7 @@ function(input, output, session) {
       })
       
       mclust2Dplot(data = data, what = "classification", 
-                   classification = fit$classification, identify = FALSE, 
+                   classification = fit$classification, main = FALSE,
                    xlim=c(-2,2), ylim=c(-2,2))
     }, error=function(warn){
       # Otherwise just plot the points and instructions

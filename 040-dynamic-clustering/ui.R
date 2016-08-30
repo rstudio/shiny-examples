@@ -11,7 +11,7 @@ fluidPage(
     
     # Create a space for the plot output
     plotOutput(
-        "clusterPlot", "100%", "500px", clickId="clusterClick"
+        "clusterPlot", "100%", "500px", click="clusterClick"
     )
   ),
   
