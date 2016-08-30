@@ -1,5 +1,5 @@
 fluidPage(
-  titlePanel("Client data and query string example"),
+  titlePanel("Image output"),
 
   fluidRow(
     column(4, wellPanel(
