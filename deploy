@@ -36,45 +36,77 @@ library(methods)
 library(rsconnect)
 
 # ./deploy [-d] [-p] [001-hello 002-text ...]
-apps = commandArgs(TRUE)
-only_deploy = FALSE
-if ('-d' %in% apps) {
-  apps = setdiff(apps, '-d')
-  only_deploy = TRUE
+args <- commandArgs(TRUE)
+only_deploy <- FALSE
+if ('-d' %in% args) {
+  args <- setdiff(args, '-d')
+  only_deploy <- TRUE
 }
-only_publish = FALSE
-if ('-p' %in% apps) {
-  apps = setdiff(apps, '-p')
-  only_publish = TRUE
+only_publish <- FALSE
+if ('-p' %in% args) {
+  args <- setdiff(args, '-p')
+  only_publish <- TRUE
 }
 
+apps <- character()
+
 # if no other arguments specified, use all the directories here
-if (length(apps) == 0) {
-  apps = list.dirs(full.names = FALSE, recursive = FALSE)
-  apps = grep('^[0-9]{3,}', apps, value = TRUE)
-} else if (any(i <- !file_test('-d', apps))) {
-  # you can also `./deploy 001 002` without typing the full app names
-  if (!all(grep('^[0-9]{3,}$', apps[i])))
-    stop('Unknown app name(s) ', paste(apps[i], collapse = ', '))
-  apps = c(
-    apps[!i],
-    grep(
-      paste0('^', paste(apps[i], collapse = '|')),
+if (length(args) == 0) {
+  apps <- list.dirs(full.names = FALSE, recursive = FALSE)
+  apps <- grep('^[0-9]{3,}', apps, value = TRUE)
+
+} else {
+  # Can also `./deploy 001 002` without typing the full app names.
+
+  # Find abbreviated args like '001'
+  abbrevIdx <- !file_test('-d', args)
+
+  if (any(abbrevIdx)) {
+    if (!all(grep('^[0-9]{3,}$', args[abbrevIdx])))
+      stop('Unknown app name(s) ', paste(args[abbrevIdx], collapse = ', '))
+
+    fullNames <- grep(
+      paste0('^', paste(args[abbrevIdx], collapse = '|')),
       list.dirs(recursive = FALSE, full.names = FALSE),
       value = TRUE
     )
-  )
+
+    apps <- c(args[!abbrevIdx], fullNames)
+  }
 }
-# print the apps that were not successfully deployed
-print(apps[unlist(lapply(apps, function(app) {
-  if (!only_publish)  # need deployment
-    if (inherits(try(deployApp(app, account = 'gallery')), 'try-error'))
+
+# Try deploying apps and get return codes (0 is success)
+deployRes <- lapply(apps, function(app) {
+  if (!only_publish) {
+    # need deployment
+    res <- try(deployApp(app, account = 'gallery'))
+    if (inherits(res, 'try-error')) {
       return(1)
-  if (only_deploy) return(0)  # no need to publish posts
+    }
+  }
+
+  if (only_deploy) {
+    # no need to publish posts
+    return(0)
+  }
+
+  # If we get here, import the app in the shiny-dev-center
   system(paste(
     '../shiny-dev-center/_scripts/import.R',
     app,
     sprintf('https://gallery.shinyapps.io/%s', app),
     sprintf('https://github.com/rstudio/shiny-examples/tree/master/%s', app)
   ))
-})) != 0])
+})
+
+deployRes <- unlist(deployRes)
+
+# Print apps that were not successfully deployed
+if (any(deployRes != 0)) {
+  cat(
+    "Error deploying apps:\n",
+    paste0("  ", apps[deployRes != 0], collapse = "\n"),
+    "\n",
+    sep = ""
+  )
+}
