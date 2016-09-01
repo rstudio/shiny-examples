@@ -77,6 +77,7 @@ if (length(args) == 0) {
 
 # Try deploying apps and get return codes (0 is success)
 deployRes <- lapply(apps, function(app) {
+  cat('-------- Deploying', app, '--------\n')
   if (!only_publish) {
     # need deployment
     res <- try(deployApp(app, account = 'gallery'))
