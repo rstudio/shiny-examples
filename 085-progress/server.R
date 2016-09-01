@@ -30,7 +30,9 @@ function(input, output) {
   output$plot <- renderPlot({
     input$goPlot # Re-run when button is clicked
 
-      withProgress(message = 'Creating plot', value = 0.1, {
+    style <- isolate(input$style)
+
+      withProgress(message = 'Creating plot', style = style, value = 0.1, {
         Sys.sleep(0.25)
 
         # Create 0-row data frame which will be used to store data
@@ -58,7 +60,7 @@ function(input, output) {
         # Another nested progress indicator.
         # When value=NULL, progress text is displayed, but not a progress bar.
         withProgress(message = 'And this also', detail = "This other thing",
-                     value = NULL, {
+                     style = style, value = NULL, {
 
           Sys.sleep(0.75)
         })
@@ -79,8 +81,10 @@ function(input, output) {
   output$table <- renderTable({
     input$goTable
 
+    style <- isolate(input$style)
+
     # Create a Progress object
-    progress <- shiny::Progress$new()
+    progress <- shiny::Progress$new(style = style)
     progress$set(message = "Computing data", value = 0)
     # Close the progress when this reactive exits (even if there's an error)
     on.exit(progress$close())
