@@ -10,7 +10,6 @@ fluidPage(
     tabPanel("Second",
       h3("This is the second panel")
     ),
-    "-----",
     tabPanel("Third",
       h3("This is the third panel")
     )
