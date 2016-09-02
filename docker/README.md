@@ -39,9 +39,7 @@ docker run --rm -p 3838:3838 \
     --name ss ss-shiny-devel
 
 # Then, in another terminal, you can install Shiny:
-docker exec -ti ss /bin/bash
-cd /shiny
-Rscript -e 'devtools::install()'
+docker exec -ti ss Rscript -e 'devtools::install("/shiny")'
 ```
 
 ### Miscellaneous notes
