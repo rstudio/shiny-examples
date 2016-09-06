@@ -80,5 +80,5 @@ cd /srv/shiny-server
 ./deploy -d 116
 
 # Or, to deploy all
-./deploy -d
+./deploy -d --all
 ```

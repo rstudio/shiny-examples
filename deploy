@@ -13,7 +13,7 @@ if (FALSE) {
   devtools::install_github('rstudio/rsconnect')
 }
 
-# first, sync shiny examples
+# first, copy shiny's built-in examples to this directory.
 if (file_test('-d', '../shiny/inst/examples')) {
   for (app in list.dirs('../shiny/inst/examples', recursive = FALSE)) {
     dir.create(app1 <- sub('^(\\d\\d)_', '0\\1-', basename(app)), showWarnings = FALSE)
@@ -35,27 +35,81 @@ if (!file.exists('022-unicode-chinese/wqy-zenhei.ttc')) {
   )
 }
 
-# then deploy all apps
 library(methods)
 library(rsconnect)
 
 # ./deploy [-d] [-p] [001-hello 002-text ...]
 args <- commandArgs(TRUE)
-only_deploy <- FALSE
+
+if (length(args) == 0) {
+  cat(sep = "\n",
+    "Usage: deploy [OPTIONS] APPDIR1 APPDIR2 ...",
+    "  or   deploy [OPTIONS] --all",
+    "",
+    "Options:",
+    "  -a ACCOUNT  Use specified account name (default: gallery)",
+    "  -s SERVER   Deploy to specified server (default: shinyapps.io)",
+    "  -d          Deploy only (don't publish). By default, this script deploys and",
+    "              publishes each app.",
+    "  -p          Publish only (don't deploy). This takes a screenshot of the app and",
+    "              adds it to ../shiny-dev-center.",
+    "  --all       Deploy all applications",
+    "",
+    "Examples:",
+    "  ./deploy -d 116",
+    "  ./deploy 116",
+    "  ./deploy -d --all",
+    ""
+  )
+
+  q()
+}
+
+# Default options
+opts <- list(
+  deploy = TRUE,
+  publish = TRUE,
+  account = "gallery",
+  server = "shinyapps.io",
+  all = FALSE
+)
+
+if (all(c('-d', '-p') %in% args)) {
+  stop("Can't use -d and -p together.")
+}
 if ('-d' %in% args) {
   args <- setdiff(args, '-d')
-  only_deploy <- TRUE
+  opts$publish <- FALSE
 }
-only_publish <- FALSE
 if ('-p' %in% args) {
   args <- setdiff(args, '-p')
-  only_publish <- TRUE
+  opts$deploy <- FALSE
 }
+if ('-a' %in% args) {
+  optIdx <- which('-a' == args)
+  if (optIdx >= length(args)) {
+    stop("-a option must be followed with an account name")
+  }
+  opts$account <- args[optIdx + 1]
+  args <- args[-c(optIdx, optIdx+1)]
+}
+if ('-s' %in% args) {
+  optIdx <- which('-s' == args)
+  if (optIdx >= length(args)) {
+    stop("-s option must be followed with an server name")
+  }
+  opts$server <- args[optIdx + 1]
+  args <- args[-c(optIdx, optIdx+1)]
+}
+if ('--all' %in% args) {
+  args <- setdiff(args, '--all')
+  opts$all <- TRUE
+}
+
 
 apps <- character()
 
-# if no other arguments specified, use all the directories here
-if (length(args) == 0) {
+if (opts$all) {
   apps <- list.dirs(full.names = FALSE, recursive = FALSE)
   apps <- grep('^[0-9]{3,}', apps, value = TRUE)
 
@@ -82,26 +136,24 @@ if (length(args) == 0) {
 # Try deploying apps and get return codes (0 is success)
 deployRes <- lapply(apps, function(app) {
   cat('-------- Deploying', app, '--------\n')
-  if (!only_publish) {
-    # need deployment
-    res <- try(deployApp(app, account = 'gallery'))
+  if (opts$deploy) {
+    res <- try(deployApp(app, account = opts$account, server = opts$server))
     if (inherits(res, 'try-error')) {
       return(1)
     }
   }
 
-  if (only_deploy) {
-    # no need to publish posts
+  if (opts$publish) {
+    # If we get here, import the app in the shiny-dev-center
+    system(paste(
+      '../shiny-dev-center/_scripts/import.R',
+      app,
+      sprintf('https://gallery.shinyapps.io/%s', app),
+      sprintf('https://github.com/rstudio/shiny-examples/tree/master/%s', app)
+    ))
+  } else {
     return(0)
   }
-
-  # If we get here, import the app in the shiny-dev-center
-  system(paste(
-    '../shiny-dev-center/_scripts/import.R',
-    app,
-    sprintf('https://gallery.shinyapps.io/%s', app),
-    sprintf('https://github.com/rstudio/shiny-examples/tree/master/%s', app)
-  ))
 })
 
 deployRes <- unlist(deployRes)
