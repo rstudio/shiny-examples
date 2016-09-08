@@ -4,7 +4,7 @@
 # To run with the built-in shiny-examples:
 #   docker run --rm -p 3838:3838 --name ss ss-shiny-devel
 
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 MAINTAINER Winston Chang "winston@rstudio.com"
 
@@ -12,16 +12,20 @@ MAINTAINER Winston Chang "winston@rstudio.com"
 # R
 # =====================================================================
 
+# Don't print "debconf: unable to initialize frontend: Dialog" messages
+ARG DEBIAN_FRONTED=noninteractive
+
 # Need this to add R repo
 RUN apt-get update && apt-get install -y software-properties-common
 
 # Add R apt repository
-RUN add-apt-repository "deb http://cran.rstudio.com/bin/linux/ubuntu $(lsb_release -cs)/"
+RUN add-apt-repository "deb http://cran.r-project.org/bin/linux/ubuntu $(lsb_release -cs)/"
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
 # Install basic stuff and R
 RUN apt-get update && apt-get install -y \
     sudo \
+    git \
     vim-tiny \
     less \
     wget \
@@ -30,7 +34,17 @@ RUN apt-get update && apt-get install -y \
     r-recommended \
     fonts-texgyre
 
-RUN echo 'options(repos = c(CRAN = "https://cran.r-project.org/"), download.file.method = "libcurl")' >> /etc/R/Rprofile.site
+RUN echo 'options(\n\
+  repos = c(CRAN = "https://cran.r-project.org/"),\n\
+  download.file.method = "libcurl",\n\
+  # Detect number of physical cores\n\
+  Ncpus = parallel::detectCores(logical=FALSE)\n\
+)' >> /etc/R/Rprofile.site
+
+# Create docker user with empty password (will have uid and gid 1000)
+RUN useradd --create-home --shell /bin/bash docker \
+    && passwd docker -d \
+    && adduser docker sudo
 
 # =====================================================================
 # Shiny Server
@@ -51,7 +65,7 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     wget --no-verbose "https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-12.04/x86_64/shiny-server-$VERSION-amd64.deb" -O ss-latest.deb && \
     gdebi -n ss-latest.deb && \
     rm -f version.txt ss-latest.deb && \
-    R -e "install.packages(c('shiny', 'rmarkdown'), Ncpus = parallel::detectCores())" && \
+    R -e "install.packages(c('shiny', 'rmarkdown'))" && \
     cp -R /usr/local/lib/R/site-library/shiny/examples/* /srv/shiny-server/
 
 EXPOSE 3838
@@ -67,7 +81,7 @@ CMD ["/usr/bin/shiny-server.sh"]
 RUN apt-get update && apt-get install -y \
     libxml2-dev
 
-RUN R -e "install.packages(c('devtools', 'packrat'), Ncpus = parallel::detectCores())"
+RUN R -e "install.packages(c('devtools', 'packrat'))"
 
 # For deploying apps from a container
 RUN R -e "devtools::install_github('rstudio/rsconnect')"
@@ -81,7 +95,7 @@ RUN cd /srv && \
     rm master.zip
 
 # Packages needed for the examples
-RUN R -e "install.packages(packrat:::dirDependencies('/srv/shiny-server'), Ncpus = parallel::detectCores())"
+RUN R -e "install.packages(packrat:::dirDependencies('/srv/shiny-server'))"
 
 # For 087-crandash
 RUN R -e "devtools::install_github('hadley/shinySignals')"
