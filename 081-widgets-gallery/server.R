@@ -1,6 +1,6 @@
 function(input, output) {
 
-  output$action <- renderPrint({ input$action })
+  output$actionOut <- renderPrint({ input$action })
   output$checkbox <- renderPrint({ input$checkbox })
   output$checkGroup <- renderPrint({ input$checkGroup })
   output$date <- renderPrint({ input$date })

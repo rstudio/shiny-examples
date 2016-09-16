@@ -33,7 +33,7 @@ fluidPage(
         actionButton("action", label = "Action"),
         hr(),
         p("Current Value:", style = "color:#888888;"), 
-        verbatimTextOutput("action"),
+        verbatimTextOutput("actionOut"),
         a("See Code", class = "btn btn-primary btn-md", 
           href = "https://gallery.shinyapps.io/068-widget-action-button/")
       )),
