@@ -45,7 +45,7 @@ fluidPage(
                       value = TRUE),
         hr(),
         p("Current Value:", style = "color:#888888;"), 
-        verbatimTextOutput("checkbox"),
+        verbatimTextOutput("checkboxOut"),
         a("See Code", class = "btn btn-primary btn-md",  
           href = "https://gallery.shinyapps.io/070-widget-checkbox/")
       )),
@@ -59,7 +59,7 @@ fluidPage(
           selected = 1),
         hr(),
         p("Current Values:", style = "color:#888888;"), 
-        verbatimTextOutput("checkGroup"),
+        verbatimTextOutput("checkGroupOut"),
         a("See Code", class = "btn btn-primary btn-md", 
           href = "https://gallery.shinyapps.io/069-widget-check-group/")
       ))
@@ -72,7 +72,7 @@ fluidPage(
         dateInput("date", label = h3("Date input"), value = "2014-01-01"),  
         hr(),
         p("Current Value:", style = "color:#888888;"), 
-        verbatimTextOutput("date"),
+        verbatimTextOutput("dateOut"),
         a("See Code", class = "btn btn-primary btn-md",  
           href = "https://gallery.shinyapps.io/071-widget-date/")
       )),
@@ -82,7 +82,7 @@ fluidPage(
         dateRangeInput("dates", label = h3("Date range")),
         hr(),
         p("Current Values:", style = "color:#888888;"), 
-        verbatimTextOutput("dates"),
+        verbatimTextOutput("datesOut"),
         a("See Code", class = "btn btn-primary btn-md",  
           href = "https://gallery.shinyapps.io/072-widget-date-range/")
       )),
@@ -92,7 +92,7 @@ fluidPage(
         fileInput("file", label = h3("File input")),
         hr(),
         p("Current Value:", style = "color:#888888;"), 
-        verbatimTextOutput("file"),
+        verbatimTextOutput("fileOut"),
         a("See Code", class = "btn btn-primary btn-md",  
           href = "https://gallery.shinyapps.io/073-widget-file/")
       ))
@@ -105,7 +105,7 @@ fluidPage(
         numericInput("num", label = h3("Numeric input"), value = 1),
         hr(),
         p("Current Value:", style = "color:#888888;"), 
-        verbatimTextOutput("num"),
+        verbatimTextOutput("numOut"),
         a("See Code", class = "btn btn-primary btn-md",  
           href = "https://gallery.shinyapps.io/074-widget-numeric/")
       )),
@@ -117,7 +117,7 @@ fluidPage(
           selected = 1),
         hr(),
         p("Current Values:", style = "color:#888888;"), 
-        verbatimTextOutput("radio"),
+        verbatimTextOutput("radioOut"),
         a("See Code", class = "btn btn-primary btn-md",  
           href = "https://gallery.shinyapps.io/075-widget-radio/")
       )),
@@ -129,7 +129,7 @@ fluidPage(
                        "Choice 3" = 3), selected = 1),
         hr(),
         p("Current Value:", style = "color:#888888;"), 
-        verbatimTextOutput("select"),
+        verbatimTextOutput("selectOut"),
         a("See Code", class = "btn btn-primary btn-md",  
           href = "https://gallery.shinyapps.io/076-widget-select/")
       ))
@@ -143,7 +143,7 @@ fluidPage(
                     value = 50),
         hr(),
         p("Current Value:", style = "color:#888888;"), 
-        verbatimTextOutput("slider1"),
+        verbatimTextOutput("slider1Out"),
         a("See Code", class = "btn btn-primary btn-md",  
           href = "https://gallery.shinyapps.io/077-widget-slider/")
       )),
@@ -154,7 +154,7 @@ fluidPage(
                     max = 100, value = c(25, 75)),
         hr(),
         p("Current Values:", style = "color:#888888;"), 
-        verbatimTextOutput("slider2"),
+        verbatimTextOutput("slider2Out"),
         a("See Code", class = "btn btn-primary btn-md",  
           href = "https://gallery.shinyapps.io/077-widget-slider/")
       )),
@@ -165,7 +165,7 @@ fluidPage(
                   value = "Enter text..."),
         hr(),
         p("Current Value:", style = "color:#888888;"), 
-        verbatimTextOutput("text"),
+        verbatimTextOutput("textOut"),
         a("See Code", class = "btn btn-primary btn-md",  
           href = "https://gallery.shinyapps.io/080-widget-text/")
     )) 
