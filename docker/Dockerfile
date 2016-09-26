@@ -103,3 +103,6 @@ RUN R -e "devtools::install_github('jcheng5/bubbles')"
 
 # Install latest shiny from GitHub
 RUN R -e "devtools::install_github('rstudio/shiny')"
+
+# For 117-shinythemes
+RUN R -e "devtools::install_github('rstudio/shinythemes')"
