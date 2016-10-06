@@ -101,6 +101,9 @@ RUN R -e "install.packages(packrat:::dirDependencies('/srv/shiny-server'))"
 RUN R -e "devtools::install_github('hadley/shinySignals')"
 RUN R -e "devtools::install_github('jcheng5/bubbles')"
 
+# For 118-highcharther-births
+RUN R -e "install.packages('highcharter')"
+
 # Install latest shiny from GitHub
 RUN R -e "devtools::install_github('rstudio/shiny')"
 
