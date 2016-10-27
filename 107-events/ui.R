@@ -13,7 +13,8 @@ fluidPage(
       actionButton('color1', 'Change color'),
       actionButton('color2', 'Change color (canceled)'),
       actionButton('message', 'Send message'),
-      actionButton('stop', 'Stop App')
+      actionButton('busy', 'Be busy for 2 seconds'),
+      actionButton('end', 'End session')
     ),
 
     mainPanel(

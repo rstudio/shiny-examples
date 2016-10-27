@@ -37,12 +37,11 @@ function(input, output, session) {
     session$sendCustomMessage('special', list(a = rnorm(10), b = letters))
   })
 
-  observe({
-    invalidateLater(10000, session)
-    message('Shiny will be busy for 1 second')
-    Sys.sleep(1)
+  observeEvent(input$busy, {
+    message('Shiny will be busy for 2 seconds')
+    Sys.sleep(2)
   })
 
-  observeEvent(input$stop, stopApp())
+  observeEvent(input$end, session$close())
 
 }
