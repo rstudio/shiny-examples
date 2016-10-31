@@ -277,9 +277,9 @@ shinyApp(
             pc + scale_x_continuous(trans = scales::log2_trans()) +
                  scale_y_continuous(trans = scales::log2_trans()),
           log10_trans =
-            pc + coord_trans(xtrans = "log10", ytrans = "log10"),
+            pc + coord_trans(x = "log10", y = "log10"),
           log2_trans =
-            pc + coord_trans(xtrans = "log2", ytrans = "log2"),
+            pc + coord_trans(x = "log2", y = "log2"),
           coord_cartesian =
             pc + coord_cartesian(xlim = c(2,4), ylim = c(0,50)),
           coord_flip =
