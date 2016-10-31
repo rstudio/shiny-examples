@@ -94,15 +94,13 @@ RUN cd /srv && \
     mv shiny-examples-master shiny-server && \
     rm master.zip
 
-# Packages needed for the examples
+# Autodetect packages needed for the examples (will install from CRAN)
 RUN R -e "install.packages(packrat:::dirDependencies('/srv/shiny-server'))"
 
+# Packages that need to be installed from GitHub
 # For 087-crandash
 RUN R -e "devtools::install_github('hadley/shinySignals')"
 RUN R -e "devtools::install_github('jcheng5/bubbles')"
-
-# For 118-highcharther-births
-RUN R -e "install.packages('highcharter')"
 
 # Install latest shiny from GitHub
 RUN R -e "devtools::install_github('rstudio/shiny')"
