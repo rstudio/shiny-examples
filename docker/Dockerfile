@@ -106,6 +106,3 @@ RUN R -e "install.packages('highcharter')"
 
 # Install latest shiny from GitHub
 RUN R -e "devtools::install_github('rstudio/shiny')"
-
-# For 117-shinythemes
-RUN R -e "devtools::install_github('rstudio/shinythemes')"

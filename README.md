@@ -23,7 +23,3 @@ not end up in the final release, or they may also change according to the
 feedback.
 
 * [None]
-
-The example below requires the development version of [shinythemes](https://github.com/rstudio/shinythemes):
-
-* 117-shinythemes
