@@ -6,7 +6,7 @@ fluidPage(
       h3("session$clientdata values"),
       verbatimTextOutput("summary"),
       h3("Parsed URL query string"),
-      verbatimTextOutput("queryText")
+      verbatimTextOutput("queryText", placeholder = TRUE)
     )
   )
 )
