@@ -1,12 +1,11 @@
 #!/usr/bin/env Rscript
 
-# Usage: ./deploy [app]; if app is missing, all apps under this directory will
-# be deployed; otherwise deploy the app(s) specified. Note the shiny-dev-center
-# repository must be under the same directory of this shiny-examples repository.
-# Please ask garrett@rstudio.com if you want the credentials for the account
-# `gallery` on ShinyApps.io. There are two optional arguments -d and -p, meaning
-# deploy the app(s) without publishing to the gallery, and publish without
-# deployment.
+# Usage: ./deploy [app]
+# Running ./deploy without any arguments will print instructions.
+#
+# Note the shiny-dev-center repository must be under the same directory of
+# this shiny-examples repository. Please ask garrett@rstudio.com if you want
+# the credentials for the account `gallery` on ShinyApps.io.
 
 if (FALSE) {
   devtools::install_github('rstudio/shiny')
