@@ -1,4 +1,4 @@
-# Copied from http://rstudio.github.io/dygraphs/shiny.html
+# Slightly adapted from http://rstudio.github.io/dygraphs/shiny.html
 library(dygraphs)
 library(datasets)
 
@@ -14,7 +14,11 @@ shinyServer(function(input, output) {
   output$dygraph <- renderDygraph({
     dygraph(predicted(), main = "Predicted Deaths/Month") %>%
       dySeries(c("lwr", "fit", "upr"), label = "Deaths") %>%
-      dyOptions(drawGrid = input$showgrid)
+      dyAxis("y", label = "Monthly Deaths") %>%
+      dyAnnotation("1983-08-1", text = "A", tooltip = "Local Min") %>%
+      dyEvent("1982-06-01", "Summer 1982", labelLoc = "bottom", color="Coral") %>%
+      dyRangeSelector(dateWindow = c("1981-01-01", "1984-01-01")) %>%
+      dyOptions(drawGrid = input$showgrid, includeZero = TRUE)
   })
 
   output$from <- renderText({
