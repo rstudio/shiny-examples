@@ -1,9 +1,18 @@
-# Copied from http://rstudio.github.io/dygraphs/shiny.html
+# Slightly adapted from from http://rstudio.github.io/dygraphs/shiny.html
 library(dygraphs)
+
+tags_style <- "
+  .dygraph-label {color:#555555;}
+  .dygraph-axis-label {color:#777777}
+  .dygraph-title {color:#3C8DBC; font-size:120%}
+"
 
 shinyUI(fluidPage(
 
   titlePanel("Predicted Deaths from Lung Disease (UK)"),
+  shiny::tags$head(
+    tags$style(HTML(tags_style))
+  ),
 
   sidebarLayout(
     sidebarPanel(
