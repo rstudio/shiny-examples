@@ -42,7 +42,7 @@ server <- function(input, output) {
   output$plot1 <- renderPlot({
     ggplot(mtcars, aes(wt, mpg)) +
       geom_point() +
-      coord_cartesian(xlim = ranges$x, ylim = ranges$y)
+      coord_cartesian(xlim = ranges$x, ylim = ranges$y, expand = FALSE)
   })
 
   # When a double-click happens, check if there's a brush on the plot.
@@ -71,7 +71,7 @@ server <- function(input, output) {
   output$plot3 <- renderPlot({
     ggplot(mtcars, aes(wt, mpg)) +
       geom_point() +
-      coord_cartesian(xlim = ranges2$x, ylim = ranges2$y)
+      coord_cartesian(xlim = ranges2$x, ylim = ranges2$y, expand = FALSE)
   })
 
   # When a double-click happens, check if there's a brush on the plot.
