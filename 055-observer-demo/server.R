@@ -13,13 +13,9 @@ function(input, output, session) {
   })
 
 
-  # When the client ends the session, suspend the observer.
-  # Otherwise, the observer could keep running after the client
-  # ends the session.
   session$onSessionEnded(function() {
-    obs$suspend()
-
-    # Also clean up the log file for this example
+    # When the client ends the session, clean up the log file
+    # for this session.
     unlink(logfilename)
   })
 
