@@ -86,13 +86,16 @@ RUN R -e "install.packages(c('devtools', 'packrat'))"
 # For deploying apps from a container
 RUN R -e "devtools::install_github('rstudio/rsconnect')"
 
-# Install shiny-examples
+# Install shiny-examples, and fix permissions for apps that require write
+# access.
 RUN cd /srv && \
     mv shiny-server shiny-server-orig && \
     wget -nv https://github.com/rstudio/shiny-examples/archive/master.zip && \
     unzip -x master.zip && \
     mv shiny-examples-master shiny-server && \
-    rm master.zip
+    rm master.zip && \
+    cd shiny-server && \
+    chmod 777 022-unicode-chinese 055-observer-demo 059-reactive-poll-and-file-reader
 
 # Autodetect packages needed for the examples (will install from CRAN)
 RUN R -e "install.packages(packrat:::dirDependencies('/srv/shiny-server'))"
