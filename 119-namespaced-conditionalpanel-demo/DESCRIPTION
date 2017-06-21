@@ -1,0 +1,7 @@
+Type: Shiny
+Title: Namespaced conditionalPanel demo
+License: MIT
+Author: Alan Dipert <alan@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+Tags: conditionalpanel
+DisplayMode: Showcase
