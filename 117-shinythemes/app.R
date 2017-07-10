@@ -28,13 +28,13 @@ shinyApp(
               h4("Header 4"),
               h5("Header 5")
             ),
-            tabPanel("Tab 2"),
-            tabPanel("Tab 3")
+            tabPanel("Tab 2", "This panel is intentionally left blank"),
+            tabPanel("Tab 3", "This panel is intentionally left blank")
           )
         )
       ),
-      tabPanel("Navbar 2"),
-      tabPanel("Navbar 3")
+      tabPanel("Navbar 2", "This panel is intentionally left blank"),
+      tabPanel("Navbar 3", "This panel is intentionally left blank")
     )
   ),
   server = function(input, output) {
