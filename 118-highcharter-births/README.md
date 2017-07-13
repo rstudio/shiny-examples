@@ -4,4 +4,4 @@ The app is based on data from a FiveThirtyEight article titled [Some People Are 
 
 Use the inputs to select a single year or a range of years, a plot type, and a theme.
 
-Note that the products in the Highcharts library are free for non-commercial use. For use in commercial projects and websites, see https://shop.highsoft.com/.
+Note that the products in the Highcharts library are free for non-commercial use. For use in commercial projects and websites, see [here](https://shop.highsoft.com/).
