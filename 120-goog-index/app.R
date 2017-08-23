@@ -22,20 +22,10 @@ ui <- fluidPage(theme = shinytheme("lumen"),
                               "Unemployment" = "unempl"),
                   selected = "travel"),
 
-      # Descriptor text
-      HTML("The index is set to 1.0 on January 1, 2004 and is
-           calculated only for US search traffic."),
-
-      # Line for visual separation
-      hr(),
-
       # Select date range to be plotted
       dateRangeInput("date", strong("Date range"),
                      start = "2007-01-01", end = "2017-07-31",
                      min = "2007-01-01", max = "2017-07-31"),
-
-      # Line for visual separation
-      hr(),
 
       # Select whether to overlay smooth trend line
       checkboxInput(inputId = "smoother",
@@ -54,9 +44,11 @@ ui <- fluidPage(theme = shinytheme("lumen"),
 
     # Output: Description, lineplot, and reference
     mainPanel(
+      plotOutput(outputId = "lineplot", height = "300px"),
       textOutput(outputId = "description"),
-      plotOutput(outputId = "lineplot"),
-      tags$a(href="https://www.google.com/finance/domestic_trends", "Source: Google Domestic Trends"))
+      tags$a(href="https://www.google.com/finance/domestic_trends",
+             "Source: Google Domestic Trends", target="_blank")
+    )
   )
 )
 
@@ -92,9 +84,11 @@ server <- function(input, output) {
 
   # Pull in description of trend
   output$description <- renderText({
-    trend_description %>%
+    trend_text <- trend_description %>%
       filter(type == input$type) %>%
       pull(text)
+    paste(trend_text, "The index is set to 1.0 on January 1, 2004 and
+                      is calculated only for US search traffic.")
   })
 }
 
