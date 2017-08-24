@@ -45,7 +45,7 @@ ui <- fluidPage(theme = shinytheme("lumen"),
     # Output: Description, lineplot, and reference
     mainPanel(
       plotOutput(outputId = "lineplot", height = "300px"),
-      textOutput(outputId = "description"),
+      textOutput(outputId = "desc"),
       tags$a(href="https://www.google.com/finance/domestic_trends",
              "Source: Google Domestic Trends", target="_blank")
     )
@@ -83,7 +83,7 @@ server <- function(input, output) {
     })
 
   # Pull in description of trend
-  output$description <- renderText({
+  output$desc <- renderText({
     trend_text <- trend_description %>%
       filter(type == input$type) %>%
       pull(text)
