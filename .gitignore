@@ -11,3 +11,6 @@
 
 # Fonts
 *.ttc
+
+# DS Store
+.DS_Store
