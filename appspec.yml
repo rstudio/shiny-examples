@@ -4,6 +4,6 @@ files:
    - source: /
      destination: /srv/infra-Shiny/docroot
 hooks:
-   BeforeInstall:
+   ApplicationStart:
     - location: scripts/startdocker.sh
       runas: root
