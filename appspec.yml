@@ -5,5 +5,5 @@ files:
      destination: /srv/infra-Shiny/docroot
 hooks:
    AfterInstall:
-    - location: scripts/restartapache.sh
+    - location: scripts/startdocker.sh
       runas: root
