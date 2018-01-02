@@ -4,7 +4,7 @@ library(shiny)
 ui <- fluidPage(
 
   # App title ----
-  titlePanel("New Shiny dashboard..!!!"),
+  titlePanel("New dashboard..!!!"),
 
   # Sidebar layout with a input and output definitions ----
   sidebarLayout(
