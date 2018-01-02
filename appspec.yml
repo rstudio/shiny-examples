@@ -3,7 +3,3 @@ os: linux
 files:
    - source: /
      destination: /srv/infra-Shiny/docroot
-hooks:
-   AfterInstall:
-    - location: scripts/startdocker.sh
-      runas: root
