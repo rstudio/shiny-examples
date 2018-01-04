@@ -2,4 +2,4 @@ version: 0.0
 os: linux
 files:
    - source: /
-     destination: /srv/infra-shiny-test/docroot
+     destination: /srv/rshiny/docroot
