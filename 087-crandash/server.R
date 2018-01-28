@@ -91,7 +91,7 @@ function(input, output, session) {
 
   output$rawtable <- renderPrint({
     orig <- options(width = 1000)
-    print(tail(pkgData(), input$maxrows))
+    print(tail(pkgData(), input$maxrows), row.names = FALSE)
     options(orig)
   })
 }
