@@ -50,8 +50,7 @@ server <- function(input, output, session) {
     start_time <- Sys.time()
     promise_resolve("boom") %...>%
       stop %>%
-      finally(~{elapsed(Sys.time() - start_time)}) %...!%
-      {} # prevent crash
+      finally(~{elapsed(Sys.time() - start_time)})
   })
   outputOptions(output, "foo2", suspendWhenHidden = FALSE)
   
