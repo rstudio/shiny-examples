@@ -1,0 +1,41 @@
+{
+  "input": {
+    "bw_adjust": 0.2,
+    "density": true,
+    "individual_obs": true,
+    "n_breaks": "50"
+  },
+  "output": {
+    "main_plot": {
+      "src": "[image data sha1: 7bd2b33d686435ad0a3d7cde4c8e8e57826ac72f]",
+      "width": 992,
+      "height": 300,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 1.46,
+            "right": 5.24,
+            "bottom": -0.0352941176470588,
+            "top": 0.917647058823529
+          },
+          "range": {
+            "left": 59.04,
+            "right": 961.76,
+            "bottom": 225.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

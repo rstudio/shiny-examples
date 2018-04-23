@@ -1,0 +1,16 @@
+{
+  "input": {
+    "close": true,
+    "duration": "10",
+    "remove": 1,
+    "show": 2,
+    "txt": "Text of messagemnvckns",
+    "type": "message"
+  },
+  "output": {
+
+  },
+  "export": {
+
+  }
+}

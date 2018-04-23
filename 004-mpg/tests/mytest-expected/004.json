@@ -1,0 +1,40 @@
+{
+  "input": {
+    "outliers": false,
+    "variable": "gear"
+  },
+  "output": {
+    "caption": "mpg ~ gear",
+    "mpgPlot": {
+      "src": "[image data sha1: 93d2e982c1c2b993cf155c8dfb76ae280be23edb]",
+      "width": 631,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 0.38,
+            "right": 3.62,
+            "bottom": 9.46,
+            "top": 34.84
+          },
+          "range": {
+            "left": 59.04,
+            "right": 600.76,
+            "bottom": 325.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

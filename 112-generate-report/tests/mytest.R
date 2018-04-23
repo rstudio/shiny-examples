@@ -1,0 +1,10 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$setInputs(slider = 75)
+app$snapshot()
+app$snapshotDownload("report")
+app$snapshot()
+app$setInputs(slider = 20)
+app$snapshot()

@@ -1,0 +1,10 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$setInputs(checkbox = FALSE)
+app$snapshot()
+app$setInputs(checkbox = TRUE)
+app$snapshot()
+app$setInputs(checkbox = FALSE)
+app$snapshot()

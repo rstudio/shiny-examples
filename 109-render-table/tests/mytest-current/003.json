@@ -1,0 +1,43 @@
+{
+  "input": {
+    "align": "NULL",
+    "colnames": "T",
+    "dataset": "cars",
+    "digits": "NULL",
+    "format": [
+      "striped",
+      "bordered"
+    ],
+    "na": "NA",
+    "obs": 6,
+    "rownames": "F",
+    "spacing": "s",
+    "width": "auto"
+  },
+  "output": {
+    "code": "in <strong>ui.R<\/strong>: <br><code>tableOutput('tbl')<\/code><br><br>in <strong>server.R<\/strong>: <br><code>output$tbl <- renderTable({ head( cars, n = 6 )},&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;\n                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                   &nbsp;&nbsp;&nbsp;&nbsp;striped = TRUE, bordered = TRUE)&nbsp;&nbsp;<\/code>",
+    "pre_align": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"align\">Column alignment:<\/label>\n  <div>\n    <select id=\"align\"><option value=\"NULL\" selected>NULL<\/option>\n<option value=\"?\">?<\/option>\n<option value=\"c\">c<\/option>\n<option value=\"l\">l<\/option>\n<option value=\"cl\">cl<\/option>\n<option value=\"rr\">rr<\/option>\n<option value=\"rl\">rl<\/option><\/select>\n    <script type=\"application/json\" data-for=\"align\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "view": "<table  class = 'table shiny-table table-striped table-bordered spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> speed <\/th> <th style='text-align: right;'> dist <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 2.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 10.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 4.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 22.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 8.00 <\/td> <td align=\"right\"> 16.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 9.00 <\/td> <td align=\"right\"> 10.00 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

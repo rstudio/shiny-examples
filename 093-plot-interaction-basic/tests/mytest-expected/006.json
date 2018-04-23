@@ -1,0 +1,54 @@
+{
+  "input": {
+    "plot_click": null,
+    "plot_dblclick": null,
+    "plot_hover": null,
+    "plot_type": "ggplot2"
+  },
+  "output": {
+    "brush_info": "input$plot_brush:\n NULL",
+    "click_info": "input$plot_click:\n NULL",
+    "dblclick_info": "input$plot_dblclick:\n NULL",
+    "hover_info": "input$plot_hover:\n NULL",
+    "plot1": {
+      "src": "[image data sha1: 18dd35cd3d69bda9250623ac4d05b908e100e861]",
+      "width": 301,
+      "height": 350,
+      "coordmap": [
+        {
+          "panel": 1,
+          "row": 1,
+          "col": 1,
+          "panel_vars": {
+
+          },
+          "scale_x": 1,
+          "scale_y": 1,
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "domain": {
+            "left": 1.31745,
+            "right": 5.61955,
+            "bottom": 9.225,
+            "top": 35.075
+          },
+          "mapping": {
+            "x": "wt",
+            "y": "mpg"
+          },
+          "range": {
+            "left": 36.078106462139,
+            "right": 295.520547945205,
+            "bottom": 319.854315467064,
+            "top": 5.47945205479452
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

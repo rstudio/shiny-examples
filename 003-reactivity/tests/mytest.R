@@ -1,0 +1,11 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$setInputs(dataset = "pressure")
+app$snapshot()
+app$setInputs(dataset = "cars")
+app$snapshot()
+app$setInputs(dataset = "rock")
+app$setInputs(dataset = "pressure")
+app$snapshot()

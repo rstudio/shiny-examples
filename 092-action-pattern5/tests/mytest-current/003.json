@@ -1,0 +1,47 @@
+{
+  "input": {
+    "go": 3,
+    "normCount": 100,
+    "normMean": 0,
+    "normSd": 1,
+    "tabset": "Uniform",
+    "unifCount": 100,
+    "unifRange": [
+      -10,
+      100
+    ]
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: cf5fd0b00abf424c5841db9b08c03475090f0d8c]",
+      "width": 631,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -14.4,
+            "right": 104.4,
+            "bottom": -0.52,
+            "top": 13.52
+          },
+          "range": {
+            "left": 59.04,
+            "right": 600.76,
+            "bottom": 325.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

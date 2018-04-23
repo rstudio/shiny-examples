@@ -1,0 +1,19 @@
+{
+  "input": {
+    "deepstacktrace": true,
+    "failure": 1,
+    "success": 1
+  },
+  "output": {
+    "foo1": "TRUE",
+    "foo2": {
+      "message": "boom",
+      "call": "onFulfilled(...)",
+      "type": null
+    },
+    "time": "Failure in 0.01456499 secs"
+  },
+  "export": {
+
+  }
+}

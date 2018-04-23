@@ -1,0 +1,12 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+app$snapshot()
+Sys.sleep(2)
+app$setInputs(text = "text here for testing")
+Sys.sleep(2)
+app$snapshot()
+Sys.sleep(2)
+app$setInputs(n = 590)
+Sys.sleep(2)
+app$snapshot()

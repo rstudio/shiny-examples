@@ -1,0 +1,10 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$setInputs(date = "2014-01-17")
+app$snapshot()
+app$setInputs(date = "2014-01-31")
+app$snapshot()
+app$setInputs(date = "2014-12-27")
+app$snapshot()

@@ -1,0 +1,81 @@
+{
+  "input": {
+    "maxrows": 25,
+    "rateThreshold": 3,
+    "sidebarCollapsed": false,
+    "sidebarItemExpanded": null
+  },
+  "output": {
+    "count": {
+      "html": "<div class=\"small-box bg-aqua\">\n  <div class=\"inner\">\n    <h3>0<\/h3>\n    <p>Total downloads<\/p>\n  <\/div>\n  <div class=\"icon-large\">\n    <i class=\"fa fa-download\"><\/i>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "font-awesome",
+          "version": "4.7.0",
+          "src": {
+            "href": "shared/font-awesome"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/font-awesome.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "packagePlot": {
+      "x": null,
+      "evals": [
+
+      ],
+      "jsHooks": null,
+      "deps": [
+
+      ]
+    },
+    "packageTable": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Package name <\/th> <th style='text-align: right;'> % of downloads <\/th>  <\/tr> <\/thead> <tbody>\n  <\/tbody> <\/table>",
+    "rate": {
+      "html": "<div class=\"small-box bg-aqua\">\n  <div class=\"inner\">\n    <h3>0.0<\/h3>\n    <p>Downloads per sec (last 5 min)<\/p>\n  <\/div>\n  <div class=\"icon-large\">\n    <i class=\"fa fa-area-chart\"><\/i>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "font-awesome",
+          "version": "4.7.0",
+          "src": {
+            "href": "shared/font-awesome"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/font-awesome.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "users": {
+      "html": "<div class=\"small-box bg-aqua\">\n  <div class=\"inner\">\n    <h3>0<\/h3>\n    <p>Unique users<\/p>\n  <\/div>\n  <div class=\"icon-large\">\n    <i class=\"fa fa-users\"><\/i>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "font-awesome",
+          "version": "4.7.0",
+          "src": {
+            "href": "shared/font-awesome"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/font-awesome.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

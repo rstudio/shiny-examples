@@ -1,0 +1,16 @@
+{
+  "input": {
+    "close": true,
+    "duration": "10",
+    "remove": 0,
+    "show": 1,
+    "txt": "Text of message",
+    "type": "message"
+  },
+  "output": {
+
+  },
+  "export": {
+
+  }
+}

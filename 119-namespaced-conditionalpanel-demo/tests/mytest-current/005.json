@@ -1,0 +1,67 @@
+{
+  "input": {
+    "plot1-n": 180,
+    "plot2-n": 20
+  },
+  "output": {
+    "plot1-scatterPlot": {
+      "src": "[image data sha1: 5363068e9b023c4e2dc131d68639bc79b239b570]",
+      "width": 371,
+      "height": 300,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -2.75770975187232,
+            "right": 2.37710494771367,
+            "bottom": -2.42265010368404,
+            "top": 2.8516609246221
+          },
+          "range": {
+            "left": 59.04,
+            "right": 340.76,
+            "bottom": 225.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    },
+    "plot2-scatterPlot": {
+      "src": "[image data sha1: 591ed775f01fb3bce19abfd12f4bda67bfe5a6cc]",
+      "width": 371,
+      "height": 300,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -2.37042158340903,
+            "right": 1.63213824921258,
+            "bottom": -1.78520087277359,
+            "top": 1.60262061079335
+          },
+          "range": {
+            "left": 59.04,
+            "right": 340.76,
+            "bottom": 225.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

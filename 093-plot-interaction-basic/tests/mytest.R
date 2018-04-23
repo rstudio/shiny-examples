@@ -1,0 +1,15 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+# Input 'plot_hover' was set, but doesn't have an input binding.
+app$snapshot()
+app$setInputs(plot_type = "ggplot2")
+app$snapshot()
+app$setInputs(plot_type = "base")
+app$snapshot()
+app$setInputs(plot_type = "ggplot2")
+app$snapshot()
+app$setInputs(plot_type = "base")
+app$snapshot()
+app$setInputs(plot_type = "ggplot2")
+app$snapshot()

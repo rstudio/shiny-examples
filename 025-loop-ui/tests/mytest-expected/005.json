@@ -1,0 +1,75 @@
+{
+  "input": {
+    "a1": "",
+    "a2": "",
+    "a3": "Z",
+    "a4": "V",
+    "a5": ""
+  },
+  "output": {
+    "a_out": "List of 5\n $ a1: chr \"\"\n $ a2: chr \"\"\n $ a3: chr \"Z\"\n $ a4: chr \"V\"\n $ a5: chr \"\"",
+    "b1": {
+      "html": "<strong>Hi, this is output B#1<\/strong>",
+      "deps": [
+
+      ]
+    },
+    "b10": {
+      "html": "<strong>Hi, this is output B#10<\/strong>",
+      "deps": [
+
+      ]
+    },
+    "b2": {
+      "html": "<strong>Hi, this is output B#2<\/strong>",
+      "deps": [
+
+      ]
+    },
+    "b3": {
+      "html": "<strong>Hi, this is output B#3<\/strong>",
+      "deps": [
+
+      ]
+    },
+    "b4": {
+      "html": "<strong>Hi, this is output B#4<\/strong>",
+      "deps": [
+
+      ]
+    },
+    "b5": {
+      "html": "<strong>Hi, this is output B#5<\/strong>",
+      "deps": [
+
+      ]
+    },
+    "b6": {
+      "html": "<strong>Hi, this is output B#6<\/strong>",
+      "deps": [
+
+      ]
+    },
+    "b7": {
+      "html": "<strong>Hi, this is output B#7<\/strong>",
+      "deps": [
+
+      ]
+    },
+    "b8": {
+      "html": "<strong>Hi, this is output B#8<\/strong>",
+      "deps": [
+
+      ]
+    },
+    "b9": {
+      "html": "<strong>Hi, this is output B#9<\/strong>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

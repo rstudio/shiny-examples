@@ -1,0 +1,47 @@
+{
+  "input": {
+    "align": "",
+    "colnames": "T",
+    "dataset": "cars",
+    "digits": "NULL",
+    "format": [
+      "striped",
+      "bordered"
+    ],
+    "na": "NA",
+    "obs": 6,
+    "rownames": "F",
+    "spacing": "s",
+    "width": "auto"
+  },
+  "output": {
+    "code": "in <strong>ui.R<\/strong>: <br><code>tableOutput('tbl')<\/code><br><br>in <strong>server.R<\/strong>: <br><code>output$tbl <- renderTable({ head( cars, n = 6 )},&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;\n                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                   &nbsp;&nbsp;&nbsp;&nbsp;striped = TRUE, bordered = TRUE,&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;\n                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                     &nbsp;&nbsp;&nbsp;&nbsp;align = '')&nbsp;&nbsp;<\/code>",
+    "pre_align": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"align\">Column alignment:<\/label>\n  <div>\n    <select id=\"align\"><option value=\"NULL\" selected>NULL<\/option>\n<option value=\"?\">?<\/option>\n<option value=\"c\">c<\/option>\n<option value=\"l\">l<\/option>\n<option value=\"lr\">lr<\/option>\n<option value=\"lc\">lc<\/option>\n<option value=\"rr\">rr<\/option><\/select>\n    <script type=\"application/json\" data-for=\"align\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "view": {
+      "message": "`align` must contain only the characters `l`, `c`, `r` and/or `?` andhave length either equal to 1 or to the total number of columns",
+      "call": "transform(setVisible(value, .visible), shinysession, name, ...)",
+      "type": null
+    }
+  },
+  "export": {
+
+  }
+}

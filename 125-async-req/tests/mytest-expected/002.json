@@ -1,0 +1,16 @@
+{
+  "input": {
+    "boom": 1
+  },
+  "output": {
+    "cancelOutput": "After self destruct, this text should remain",
+    "cancelOutput_async": "After self destruct, this text should remain",
+    "req": "After self destruct, this text should disappear",
+    "req_async": "After self destruct, this text should disappear",
+    "validateNeed": "After self destruct, this text should be replaced by a grey validation message",
+    "validateNeed_async": "After self destruct, this text should be replaced by a validation message"
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "input": {
+    "n": 200,
+    "text": "text here"
+  },
+  "output": {
+    "plot1": {
+      "src": "[image data sha1: 25cc6fb6226a3755719a36702d46d5f8f1a98d45]",
+      "width": 400,
+      "height": 300,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -3.24,
+            "right": 3.24,
+            "bottom": -1.56,
+            "top": 40.56
+          },
+          "range": {
+            "left": 59.04,
+            "right": 369.76,
+            "bottom": 225.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    },
+    "text": "Input text is: text here"
+  },
+  "export": {
+
+  }
+}

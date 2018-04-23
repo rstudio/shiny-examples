@@ -1,0 +1,114 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "datatable": {
+      "colnames": [
+        "speed",
+        "dist"
+      ],
+      "options": null,
+      "evalOptions": null,
+      "searchDelay": 500,
+      "callback": "function(oTable) {}",
+      "escape": true
+    },
+    "datatablea": {
+      "colnames": [
+        "speed",
+        "dist"
+      ],
+      "options": null,
+      "evalOptions": null,
+      "searchDelay": 500,
+      "callback": "function(oTable) {}",
+      "escape": true
+    },
+    "image": {
+      "src": "[image data sha1: fd852df5478eb7eb9410ee9101bb364adf487fb0]"
+    },
+    "imagea": {
+      "src": "[image data sha1: fd852df5478eb7eb9410ee9101bb364adf487fb0]"
+    },
+    "plot": {
+      "src": "[image data sha1: 9f570107911d8a7ad634f49a62aff0d631add501]",
+      "width": 383,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 3.16,
+            "right": 25.84,
+            "bottom": -2.72,
+            "top": 124.72
+          },
+          "range": {
+            "left": 59.04,
+            "right": 352.76,
+            "bottom": 325.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    },
+    "plota": {
+      "src": "[image data sha1: 9f570107911d8a7ad634f49a62aff0d631add501]",
+      "width": 383,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 3.16,
+            "right": 25.84,
+            "bottom": -2.72,
+            "top": 124.72
+          },
+          "range": {
+            "left": 59.04,
+            "right": 352.76,
+            "bottom": 325.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    },
+    "print": "[1] \"hello\"",
+    "print2": "[1] \"hello\"",
+    "print2a": "[1] \"hello\"",
+    "printa": "[1] \"hello\"",
+    "table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> speed <\/th> <th style='text-align: right;'> dist <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 2.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 10.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 4.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 22.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 8.00 <\/td> <td align=\"right\"> 16.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 9.00 <\/td> <td align=\"right\"> 10.00 <\/td> <\/tr>\n   <\/tbody> <\/table>",
+    "tablea": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> speed <\/th> <th style='text-align: right;'> dist <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 2.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 10.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 4.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 22.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 8.00 <\/td> <td align=\"right\"> 16.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 9.00 <\/td> <td align=\"right\"> 10.00 <\/td> <\/tr>\n   <\/tbody> <\/table>",
+    "text": "hello",
+    "texta": "hello",
+    "ui": {
+      "html": "<h1>hello world<\/h1>",
+      "deps": [
+
+      ]
+    },
+    "uia": {
+      "html": "<h1>hello world<\/h1>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

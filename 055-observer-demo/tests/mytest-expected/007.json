@@ -1,0 +1,11 @@
+{
+  "input": {
+    "n": 890
+  },
+  "output": {
+    "text": "The value of input$n is: 890"
+  },
+  "export": {
+
+  }
+}

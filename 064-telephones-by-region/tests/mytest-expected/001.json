@@ -1,0 +1,38 @@
+{
+  "input": {
+    "region": "N.Amer"
+  },
+  "output": {
+    "phonePlot": {
+      "src": "[image data sha1: ec6c58781206f227d978b6ec6d71905291bff8c3]",
+      "width": 631,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -0.128,
+            "right": 8.728,
+            "bottom": -798310,
+            "top": 79831000
+          },
+          "range": {
+            "left": 59.04,
+            "right": 600.76,
+            "bottom": 325.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

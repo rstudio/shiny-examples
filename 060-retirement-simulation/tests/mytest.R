@@ -1,0 +1,11 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$setInputs(a_recalc = "click")
+app$setInputs(a_monthly_withdrawals = 68000)
+app$setInputs(b_recalc = "click")
+app$setInputs(b_recalc = "click")
+app$setInputs(b_annual_ret_std_dev = 12.3)
+app$setInputs(b_annual_ret_std_dev = 16.8)
+app$setInputs(b_n_sim = 1070)

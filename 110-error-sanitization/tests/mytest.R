@@ -1,0 +1,11 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$snapshot()
+app$snapshot()
+app$setInputs(sanitize = "TRUE")
+app$snapshot()
+#app$snapshotDownload("downloadData")
+app$setInputs(safe = "TRUE")
+#app$snapshotDownload("downloadData")

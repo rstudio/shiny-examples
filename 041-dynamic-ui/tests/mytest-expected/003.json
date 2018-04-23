@@ -1,0 +1,19 @@
+{
+  "input": {
+    "dynamic": 12,
+    "input_type": "numeric"
+  },
+  "output": {
+    "dynamic_value": " int 12",
+    "input_type_text": "numeric",
+    "ui": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label for=\"dynamic\">Dynamic<\/label>\n  <input id=\"dynamic\" type=\"number\" class=\"form-control\" value=\"12\"/>\n<\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

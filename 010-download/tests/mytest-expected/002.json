@@ -1,0 +1,11 @@
+{
+  "input": {
+    "dataset": "pressure"
+  },
+  "output": {
+    "table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> temperature <\/th> <th style='text-align: right;'> pressure <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 0.00 <\/td> <td align=\"right\"> 0.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 20.00 <\/td> <td align=\"right\"> 0.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 40.00 <\/td> <td align=\"right\"> 0.01 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 60.00 <\/td> <td align=\"right\"> 0.03 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 80.00 <\/td> <td align=\"right\"> 0.09 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 100.00 <\/td> <td align=\"right\"> 0.27 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 120.00 <\/td> <td align=\"right\"> 0.75 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 140.00 <\/td> <td align=\"right\"> 1.85 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 160.00 <\/td> <td align=\"right\"> 4.20 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 180.00 <\/td> <td align=\"right\"> 8.80 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 200.00 <\/td> <td align=\"right\"> 17.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 220.00 <\/td> <td align=\"right\"> 32.10 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 240.00 <\/td> <td align=\"right\"> 57.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 260.00 <\/td> <td align=\"right\"> 96.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 280.00 <\/td> <td align=\"right\"> 157.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 300.00 <\/td> <td align=\"right\"> 247.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 320.00 <\/td> <td align=\"right\"> 376.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 340.00 <\/td> <td align=\"right\"> 558.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 360.00 <\/td> <td align=\"right\"> 806.00 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

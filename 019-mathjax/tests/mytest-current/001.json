@@ -1,0 +1,35 @@
+{
+  "input": {
+    "ex5_visible": false
+  },
+  "output": {
+    "ex1": {
+      "html": "<head><\/head>\n<span class=\"help-block\">Dynamic output 1:  $$\\alpha^2$$<\/span>\n<script>if (window.MathJax) MathJax.Hub.Queue([\"Typeset\", MathJax.Hub]);<\/script>",
+      "deps": [
+
+      ]
+    },
+    "ex2": {
+      "html": "<head><\/head>\n<span class=\"help-block\">and output 2 $$3^2+4^2=5^2$$<\/span>\n<span class=\"help-block\">and output 3 $$\\sin^2(\\theta)+\\cos^2(\\theta)=1$$<\/span>\n<script>if (window.MathJax) MathJax.Hub.Queue([\"Typeset\", MathJax.Hub]);<\/script>",
+      "deps": [
+
+      ]
+    },
+    "ex3": {
+      "html": "<head><\/head>\n<span class=\"help-block\">The busy Cauchy distribution\n               $$\\frac{1}{\\pi\\gamma\\,\\left[1 +\n               \\left(\\frac{x-x_0}{\\gamma}\\right)^2\\right]}\\!$$<\/span>\n<script>if (window.MathJax) MathJax.Hub.Queue([\"Typeset\", MathJax.Hub]);<\/script>",
+      "deps": [
+
+      ]
+    },
+    "ex4": {
+      "html": "<head><\/head>\nIf \\(X\\) is a Cauchy random variable, then\n                        $$P(X \\leq -0.718 ) = 0.302$$\n<script>if (window.MathJax) MathJax.Hub.Queue([\"Typeset\", MathJax.Hub]);<\/script>",
+      "deps": [
+
+      ]
+    },
+    "ex5": null
+  },
+  "export": {
+
+  }
+}

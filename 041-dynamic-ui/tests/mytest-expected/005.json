@@ -1,0 +1,19 @@
+{
+  "input": {
+    "dynamic": "option2",
+    "input_type": "checkboxGroup"
+  },
+  "output": {
+    "dynamic_value": " chr \"option2\"",
+    "input_type_text": "checkboxGroup",
+    "ui": {
+      "html": "<div id=\"dynamic\" class=\"form-group shiny-input-checkboxgroup shiny-input-container\">\n  <label class=\"control-label\" for=\"dynamic\">Dynamic<\/label>\n  <div class=\"shiny-options-group\">\n    <div class=\"checkbox\">\n      <label>\n        <input type=\"checkbox\" name=\"dynamic\" value=\"option1\"/>\n        <span>Option 1<\/span>\n      <\/label>\n    <\/div>\n    <div class=\"checkbox\">\n      <label>\n        <input type=\"checkbox\" name=\"dynamic\" value=\"option2\" checked=\"checked\"/>\n        <span>Option 2<\/span>\n      <\/label>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "info": " [1] mpg  cyl  disp hp   drat wt   qsec vs   am   gear carb\n<0 rows> (or 0-length row.names)",
+    "plot1": {
+      "src": "[image data sha1: 5eabe1c5ab8e8e2467d7a18fdb8c6614c23d7b23]",
+      "width": 962,
+      "height": 250,
+      "coordmap": [
+        {
+          "panel": 1,
+          "row": 1,
+          "col": 1,
+          "panel_vars": {
+            "panelvar1": 4
+          },
+          "scale_x": 1,
+          "scale_y": 1,
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "domain": {
+            "left": 1.31745,
+            "right": 5.61955,
+            "bottom": 9.225,
+            "top": 35.075
+          },
+          "mapping": {
+            "x": "wt",
+            "y": "mpg",
+            "panelvar1": "cyl"
+          },
+          "range": {
+            "left": 36.078106462139,
+            "right": 339.239285586631,
+            "bottom": 219.854315467064,
+            "top": 22.7375750509155
+          }
+        },
+        {
+          "panel": 2,
+          "row": 1,
+          "col": 2,
+          "panel_vars": {
+            "panelvar1": 6
+          },
+          "scale_x": 1,
+          "scale_y": 1,
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "domain": {
+            "left": 1.31745,
+            "right": 5.61955,
+            "bottom": 9.225,
+            "top": 35.075
+          },
+          "mapping": {
+            "x": "wt",
+            "y": "mpg",
+            "panelvar1": "cyl"
+          },
+          "range": {
+            "left": 344.718737641426,
+            "right": 647.879916765918,
+            "bottom": 219.854315467064,
+            "top": 22.7375750509155
+          }
+        },
+        {
+          "panel": 3,
+          "row": 1,
+          "col": 3,
+          "panel_vars": {
+            "panelvar1": 8
+          },
+          "scale_x": 1,
+          "scale_y": 1,
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "domain": {
+            "left": 1.31745,
+            "right": 5.61955,
+            "bottom": 9.225,
+            "top": 35.075
+          },
+          "mapping": {
+            "x": "wt",
+            "y": "mpg",
+            "panelvar1": "cyl"
+          },
+          "range": {
+            "left": 653.359368820713,
+            "right": 956.520547945206,
+            "bottom": 219.854315467064,
+            "top": 22.7375750509155
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

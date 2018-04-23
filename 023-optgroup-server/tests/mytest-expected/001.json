@@ -1,0 +1,11 @@
+{
+  "input": {
+    "group": "17"
+  },
+  "output": {
+    "row": "   Class  Sex   Age Survived Freq\n17   1st Male Child      Yes    5"
+  },
+  "export": {
+
+  }
+}

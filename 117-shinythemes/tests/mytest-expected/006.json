@@ -1,0 +1,30 @@
+{
+  "input": {
+    "action": 0,
+    "action2": 2,
+    "file": {
+      "name": [
+        "Rock.csv"
+      ],
+      "size": [
+        1296
+      ],
+      "type": [
+        "text/csv"
+      ],
+      "datapath": [
+        "0.csv"
+      ]
+    },
+    "shinytheme-selector": "lumen",
+    "slider": 30,
+    "txt": "general testing"
+  },
+  "output": {
+    "table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> speed <\/th> <th style='text-align: right;'> dist <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 2.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 10.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 4.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 22.00 <\/td> <\/tr>\n   <\/tbody> <\/table>",
+    "txtout": "general testing, 30, NULL"
+  },
+  "export": {
+
+  }
+}

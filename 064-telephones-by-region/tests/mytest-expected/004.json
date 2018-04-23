@@ -1,0 +1,38 @@
+{
+  "input": {
+    "region": "Asia"
+  },
+  "output": {
+    "phonePlot": {
+      "src": "[image data sha1: e0f6c8ee3973c5f1d89771ec167a62a9beeffe6f]",
+      "width": 631,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -0.128,
+            "right": 8.728,
+            "bottom": -90530,
+            "top": 9053000
+          },
+          "range": {
+            "left": 59.04,
+            "right": 600.76,
+            "bottom": 325.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}
