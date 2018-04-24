@@ -41,8 +41,6 @@ RUN echo 'options(\n\
   Ncpus = parallel::detectCores(logical=FALSE)\n\
 )' >> /etc/R/Rprofile.site
 
-RUN echo "MAKEFLAGS='--jobs=4'" >> /usr/lib/R/etc/Renviron
-
 
 # Create docker user with empty password (will have uid and gid 1000)
 RUN useradd --create-home --shell /bin/bash docker \
