@@ -35,6 +35,11 @@ RUN apt-get update && apt-get install -y \
     fonts-texgyre \
     texinfo
 
+RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
+   && locale-gen en_US.utf8 \
+   && /usr/sbin/update-locale LANG=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+
 RUN echo 'options(\n\
   repos = c(CRAN = "https://cloud.r-project.org/"),\n\
   download.file.method = "libcurl",\n\
