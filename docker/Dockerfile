@@ -32,7 +32,8 @@ RUN apt-get update && apt-get install -y \
     r-base \
     r-base-dev \
     r-recommended \
-    fonts-texgyre
+    fonts-texgyre \
+    texinfo
 
 RUN echo 'options(\n\
   repos = c(CRAN = "https://cloud.r-project.org/"),\n\
@@ -41,6 +42,16 @@ RUN echo 'options(\n\
   Ncpus = parallel::detectCores(logical=FALSE)\n\
 )' >> /etc/R/Rprofile.site
 
+# Install TinyTeX (subset of TeXLive)
+# From FAQ 5 and 6 here: https://yihui.name/tinytex/faq/
+# Also install ae, parskip, and listings packages to build R vignettes
+RUN wget -qO- \
+    "https://github.com/yihui/tinytex/raw/master/tools/install-unx.sh" | \
+    sh -s - --admin --no-path \
+    && ~/.TinyTeX/bin/*/tlmgr path add \
+    && tlmgr install metafont mfware inconsolata tex ae parskip listings \
+    && tlmgr path add \
+    && Rscript -e "source('https://install-github.me/yihui/tinytex'); tinytex::r_texmf()"
 
 # Create docker user with empty password (will have uid and gid 1000)
 RUN useradd --create-home --shell /bin/bash docker \
