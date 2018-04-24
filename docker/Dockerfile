@@ -35,7 +35,7 @@ RUN apt-get update && apt-get install -y \
     fonts-texgyre
 
 RUN echo 'options(\n\
-  repos = c(CRAN = "https://cran.r-project.org/"),\n\
+  repos = c(CRAN = "https://cloud.r-project.org/"),\n\
   download.file.method = "libcurl",\n\
   # Detect number of physical cores\n\
   Ncpus = parallel::detectCores(logical=FALSE)\n\
