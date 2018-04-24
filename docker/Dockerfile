@@ -53,6 +53,9 @@ RUN wget -qO- \
     && tlmgr path add \
     && Rscript -e "source('https://install-github.me/yihui/tinytex'); tinytex::r_texmf()"
 
+# This is necessary for non-root users to follow symlinks to /root/.TinyTeX
+RUN chmod 755 /root
+
 # Create docker user with empty password (will have uid and gid 1000)
 RUN useradd --create-home --shell /bin/bash docker \
     && passwd docker -d \
