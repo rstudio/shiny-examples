@@ -54,7 +54,7 @@ fluidPage(
         render = I("{
       option: function(item, escape) {
         return '<div>' +
-               '<strong><img src=\"http://brianreavis.github.io/selectize.js/images/repo-' + (item.fork ? 'forked' : 'source') + '.png\" width=20 />' + escape(item.name) + '</strong>:' +
+               '<strong><img src=\"http://selectize.github.io/selectize.js/images/repo-' + (item.fork ? 'forked' : 'source') + '.png\" width=20 />' + escape(item.name) + '</strong>:' +
                ' <em>' + escape(item.description) + '</em>' +
                ' (by ' + escape(item.username) + ')' +
             '<ul>' +
