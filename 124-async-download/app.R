@@ -1,4 +1,3 @@
-options(shiny.trace=T)
 library(shiny)
 library(promises)
 library(future)
