@@ -72,10 +72,20 @@ server <- function(input, output) {
 
     req(input$file1)
 
-    df <- read.csv(input$file1$datapath,
-             header = input$header,
-             sep = input$sep,
-             quote = input$quote)
+    # when reading semicolon separated files,
+    # having a comma separator causes `read.csv` to error
+    tryCatch(
+      {
+        df <- read.csv(input$file1$datapath,
+                 header = input$header,
+                 sep = input$sep,
+                 quote = input$quote)
+      },
+      error = function(e) {
+        # return a safeError if a parsing error occurs
+        stop(safeError(e))
+      }
+    )
 
     if(input$disp == "head") {
       return(head(df))
