@@ -62,7 +62,7 @@ server <- function(input, output, session) {
   })
   output$validateNeed_async <- renderText({
     p %...>% {validate(need(!isTruthy(input$boom), "Self destructed"))} %...>%
-    {"After self destruct, this text should be replaced by a validation message"}
+    {"After self destruct, this text should be replaced by a grey validation message"}
   })
 }
 
