@@ -1,3 +1,8 @@
+# Workaround for https://github.com/yihui/knitr/issues/1538
+evaluate2 <- function(...) evaluate::evaluate(...)
+environment(evaluate2) <- asNamespace("knitr")
+knitr::knit_hooks$set(evaluate = evaluate2)
+
 function(input, output) {
 
   regFormula <- reactive({
