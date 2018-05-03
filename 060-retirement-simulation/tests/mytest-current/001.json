@@ -1,0 +1,83 @@
+{
+  "input": {
+    "a_annual_inf_std_dev": 1.5,
+    "a_annual_inflation": 2.5,
+    "a_annual_mean_return": 5,
+    "a_annual_ret_std_dev": 7,
+    "a_monthly_withdrawals": 10000,
+    "a_n_obs": 20,
+    "a_n_sim": 200,
+    "a_recalc": 0,
+    "a_start_capital": 2000000,
+    "b_annual_inf_std_dev": 1.5,
+    "b_annual_inflation": 2.5,
+    "b_annual_mean_return": 5,
+    "b_annual_ret_std_dev": 7,
+    "b_monthly_withdrawals": 10000,
+    "b_n_obs": 20,
+    "b_n_sim": 200,
+    "b_recalc": 0,
+    "b_start_capital": 2000000
+  },
+  "output": {
+    "a_distPlot": {
+      "src": "[image data sha1: e8a9f2745a0dcd84faab54ffdaf462f15e360b76]",
+      "width": 466,
+      "height": 600,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -0.090671624833304,
+            "right": 2.35746224566591,
+            "bottom": -0.0299480475755606,
+            "top": 1.29441747385212
+          },
+          "range": {
+            "left": 98.0064,
+            "right": 415.8016,
+            "bottom": 477.0896,
+            "top": 97.0064
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    },
+    "b_distPlot": {
+      "src": "[image data sha1: 0332cb6e6e87589c0458f8c359337f63cd97b01f]",
+      "width": 466,
+      "height": 600,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -0.0922469512687303,
+            "right": 2.39842073298699,
+            "bottom": 0.0148155985866641,
+            "top": 1.09954201487294
+          },
+          "range": {
+            "left": 98.0064,
+            "right": 415.8016,
+            "bottom": 477.0896,
+            "top": 97.0064
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

@@ -5,16 +5,16 @@
   },
   "output": {
     "plot": {
-      "src": "[image data sha1: 57fccbd3b3ba844e2d4e89a059ee08e203a7dcb1]",
+      "src": "[image data sha1: 88a913f2aae76ba01cf34214f669b3f3e96b1807]",
       "width": 976,
       "height": 300,
       "coordmap": [
         {
           "domain": {
-            "left": -3.22,
-            "right": 2.72,
-            "bottom": -3.64,
-            "top": 94.64
+            "left": -3.76,
+            "right": 3.26,
+            "bottom": -4.64,
+            "top": 120.64
           },
           "range": {
             "left": 59.0399999999999,
@@ -32,8 +32,8 @@
         }
       ]
     },
-    "summary": "    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. \n-2.65707 -0.70320 -0.04571 -0.03464  0.60963  2.30621 ",
-    "table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> x <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 0.34 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -0.31 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 1.65 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 1.74 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -0.40 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -0.20 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+    "summary": "    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. \n-3.02490 -0.60853 -0.01655  0.05304  0.80762  2.50404 ",
+    "table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> x <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> -0.57 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 0.13 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -0.48 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 0.61 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -0.84 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 0.61 <\/td> <\/tr>\n   <\/tbody> <\/table>"
   },
   "export": {
 

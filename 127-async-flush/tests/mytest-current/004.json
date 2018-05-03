@@ -1,34 +1,14 @@
 {
   "input": {
-    "go": 2
+    "go": 1
   },
   "output": {
     "plot": {
-      "src": "[image data sha1: 6889d2de9cad4c507d4692a322cd66aac4289fab]",
-      "width": 962,
-      "height": 400,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 0.64,
-            "right": 10.36,
-            "bottom": -0.61433500299961,
-            "top": 1.50452232009486
-          },
-          "range": {
-            "left": 59.04,
-            "right": 931.76,
-            "bottom": 325.56,
-            "top": 58.04
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
-
-          }
-        }
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
       ]
     }
   },

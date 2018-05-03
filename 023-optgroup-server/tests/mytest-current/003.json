@@ -1,0 +1,19 @@
+{
+  "input": {
+    "group": [
+      "17",
+      "30",
+      "22",
+      "14",
+      "20",
+      "8",
+      "12"
+    ]
+  },
+  "output": {
+    "row": "   Class    Sex   Age Survived Freq\n17   1st   Male Child      Yes    5\n30   2nd Female Adult      Yes   80\n22   2nd Female Child      Yes   13\n14   2nd Female Adult       No   13\n20  Crew   Male Child      Yes    0\n8   Crew Female Child       No    0\n12  Crew   Male Adult       No  670"
+  },
+  "export": {
+
+  }
+}

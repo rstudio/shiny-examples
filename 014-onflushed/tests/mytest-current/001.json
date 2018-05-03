@@ -6,7 +6,7 @@
     "fast": "This happens right away",
     "slow": "This happens later",
     "slow_plot": {
-      "src": "[image data sha1: cb73fb2c64412a36494137b5b9efdd27eceefb92]",
+      "src": "[image data sha1: 90635bb6f6b83ded8423f1b43f4b89e45e89191d]",
       "width": 962,
       "height": 400,
       "coordmap": [
@@ -14,8 +14,8 @@
           "domain": {
             "left": -3998.96,
             "right": 103999.96,
-            "bottom": -4.60172798416966,
-            "top": 4.52739299618927
+            "bottom": -4.17950230146948,
+            "top": 4.57230816952574
           },
           "range": {
             "left": 59.04,

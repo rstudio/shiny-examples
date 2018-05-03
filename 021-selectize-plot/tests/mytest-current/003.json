@@ -1,0 +1,197 @@
+{
+  "input": {
+    "rawdata_cell_clicked": {
+
+    },
+    "rawdata_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "rawdata_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "rawdata_rows_selected": null,
+    "rawdata_search": "",
+    "rawdata_state": null,
+    "state": "Arizona"
+  },
+  "output": {
+    "parcoord": {
+      "src": "[image data sha1: f18b4db4405e24d4818d545ebd768b0deefec85a]",
+      "width": 383,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 0.92,
+            "right": 3.08,
+            "bottom": -12.648,
+            "top": 350.448
+          },
+          "range": {
+            "left": 57.6,
+            "right": 381.56,
+            "bottom": 370.2,
+            "top": 27.7999999999999
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    },
+    "rawdata": {
+      "x": {
+        "filter": "none",
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>State<\/th>\n      <th>Murder<\/th>\n      <th>Assault<\/th>\n      <th>UrbanPop<\/th>\n      <th>Rape<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "pageLength": 10,
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                1,
+                2,
+                3,
+                4
+              ]
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "input": {
+    "n": 10
+  },
+  "output": {
+    "scatterPlot": {
+      "src": "[image data sha1: 9eb94e4cba619771188374fd34711403c84a2717]",
+      "width": 371,
+      "height": 300,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -1.63261608991741,
+            "right": 1.4882432957472,
+            "bottom": -2.22321530694034,
+            "top": 0.764357957839998
+          },
+          "range": {
+            "left": 59.04,
+            "right": 340.76,
+            "bottom": 225.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

@@ -5,16 +5,16 @@
   },
   "output": {
     "plot1-scatterPlot": {
-      "src": "[image data sha1: 5363068e9b023c4e2dc131d68639bc79b239b570]",
+      "src": "[image data sha1: ea1d78d8df7143ae8b7ccc14ae54bf5534178217]",
       "width": 371,
       "height": 300,
       "coordmap": [
         {
           "domain": {
-            "left": -2.75770975187232,
-            "right": 2.37710494771367,
-            "bottom": -2.42265010368404,
-            "top": 2.8516609246221
+            "left": -3.03757774195274,
+            "right": 2.93706415913805,
+            "bottom": -3.07665761544804,
+            "top": 2.90030125369199
           },
           "range": {
             "left": 59.04,
@@ -33,16 +33,16 @@
       ]
     },
     "plot2-scatterPlot": {
-      "src": "[image data sha1: 591ed775f01fb3bce19abfd12f4bda67bfe5a6cc]",
+      "src": "[image data sha1: 542dc30b579657560ad1a4cd950cd0bf669a5e21]",
       "width": 371,
       "height": 300,
       "coordmap": [
         {
           "domain": {
-            "left": -2.37042158340903,
-            "right": 1.63213824921258,
-            "bottom": -1.78520087277359,
-            "top": 1.60262061079335
+            "left": -2.09579369412914,
+            "right": 2.65737681926973,
+            "bottom": -2.23305152722219,
+            "top": 1.20897750618147
           },
           "range": {
             "left": 59.04,

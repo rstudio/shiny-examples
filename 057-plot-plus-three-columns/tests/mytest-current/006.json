@@ -1,0 +1,45 @@
+{
+  "input": {
+    "color": "None",
+    "facet_col": ".",
+    "facet_row": "clarity",
+    "jitter": true,
+    "sampleSize": 27001,
+    "smooth": true,
+    "x": "clarity",
+    "y": "depth"
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: 581d466fc83e7b41ea769b1417198d3eced39a52]",
+      "width": 962,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -0.04,
+            "right": 1.04,
+            "bottom": -0.04,
+            "top": 1.04
+          },
+          "range": {
+            "left": 0,
+            "right": 962,
+            "bottom": 399,
+            "top": -1
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

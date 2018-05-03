@@ -5,16 +5,16 @@
   },
   "output": {
     "plot": {
-      "src": "[image data sha1: 9ce8c312862c12ccc1e2f30975352840ca745468]",
+      "src": "[image data sha1: 0b0c0fdc3653bbe9bf227bec5be8c8b2a3c41dcd]",
       "width": 631,
       "height": 400,
       "coordmap": [
         {
           "domain": {
-            "left": -4.3,
-            "right": 3.8,
-            "bottom": -4.32,
-            "top": 112.32
+            "left": -3.78,
+            "right": 3.78,
+            "bottom": -3.8,
+            "top": 98.8
           },
           "range": {
             "left": 59.04,

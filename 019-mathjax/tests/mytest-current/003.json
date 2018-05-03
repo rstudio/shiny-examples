@@ -22,7 +22,7 @@
       ]
     },
     "ex4": {
-      "html": "<head><\/head>\nIf \\(X\\) is a Cauchy random variable, then\n                        $$P(X \\leq -0.583 ) = 0.332$$\n<script>if (window.MathJax) MathJax.Hub.Queue([\"Typeset\", MathJax.Hub]);<\/script>",
+      "html": "<head><\/head>\nIf \\(X\\) is a Cauchy random variable, then\n                        $$P(X \\leq -0.346 ) = 0.394$$\n<script>if (window.MathJax) MathJax.Hub.Queue([\"Typeset\", MathJax.Hub]);<\/script>",
       "deps": [
 
       ]
