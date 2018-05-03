@@ -32,14 +32,35 @@ RUN apt-get update && apt-get install -y \
     r-base \
     r-base-dev \
     r-recommended \
-    fonts-texgyre
+    fonts-texgyre \
+    texinfo \
+    locales
+
+RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
+   && locale-gen en_US.utf8 \
+   && /usr/sbin/update-locale LANG=en_US.UTF-8
+ENV LANG=en_US.UTF-8
 
 RUN echo 'options(\n\
-  repos = c(CRAN = "https://cran.r-project.org/"),\n\
+  repos = c(CRAN = "https://cloud.r-project.org/"),\n\
   download.file.method = "libcurl",\n\
   # Detect number of physical cores\n\
   Ncpus = parallel::detectCores(logical=FALSE)\n\
 )' >> /etc/R/Rprofile.site
+
+# Install TinyTeX (subset of TeXLive)
+# From FAQ 5 and 6 here: https://yihui.name/tinytex/faq/
+# Also install ae, parskip, and listings packages to build R vignettes
+RUN wget -qO- \
+    "https://github.com/yihui/tinytex/raw/master/tools/install-unx.sh" | \
+    sh -s - --admin --no-path \
+    && ~/.TinyTeX/bin/*/tlmgr path add \
+    && tlmgr install metafont mfware inconsolata tex ae parskip listings \
+    && tlmgr path add \
+    && Rscript -e "source('https://install-github.me/yihui/tinytex'); tinytex::r_texmf()"
+
+# This is necessary for non-root users to follow symlinks to /root/.TinyTeX
+RUN chmod 755 /root
 
 # Create docker user with empty password (will have uid and gid 1000)
 RUN useradd --create-home --shell /bin/bash docker \
@@ -60,9 +81,9 @@ RUN apt-get install -y \
     libssl-dev
 
 # Download and install shiny server
-RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-12.04/x86_64/VERSION -O "version.txt" && \
+RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-14.04/x86_64/VERSION -O "version.txt" && \
     VERSION=$(cat version.txt)  && \
-    wget --no-verbose "https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-12.04/x86_64/shiny-server-$VERSION-amd64.deb" -O ss-latest.deb && \
+    wget --no-verbose "https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-14.04/x86_64/shiny-server-$VERSION-amd64.deb" -O ss-latest.deb && \
     gdebi -n ss-latest.deb && \
     rm -f version.txt ss-latest.deb && \
     R -e "install.packages(c('shiny', 'rmarkdown'))" && \

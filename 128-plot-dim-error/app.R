@@ -3,6 +3,7 @@
 library(shiny)
 
 ui <- fluidPage(
+  p("Verify that this app doesn't crash on startup, and that Go draws a plot."),
   actionButton("go", "Go"),
   plotOutput("plot")
 )

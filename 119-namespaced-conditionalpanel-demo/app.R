@@ -47,8 +47,12 @@ server <- function(input, output) {
 
 ui <- fluidPage(
   titlePanel("Namespaced conditional panels"),
-  myPlotUI("plot1", label = "My first plot"),
-  myPlotUI("plot2", label = "My second plot")
+  fluidRow(
+    myPlotUI("plot1", label = "My first plot")
+  ),
+  fluidRow(
+    myPlotUI("plot2", label = "My second plot")
+  )
 )
 
 shinyApp(ui = ui, server = server)

@@ -16,7 +16,7 @@ all_movies <- inner_join(omdb, tomatoes, by = "ID") %>%
   select(ID, imdbID, Title, Year, Rating_m = Rating.x, Runtime, Genre, Released,
     Director, Writer, imdbRating, imdbVotes, Language, Country, Oscars,
     Rating = Rating.y, Meter, Reviews, Fresh, Rotten, userMeter, userRating, userReviews,
-    BoxOffice, Production)
+    BoxOffice, Production, Cast)
 
 
 function(input, output, session) {
