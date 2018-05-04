@@ -125,10 +125,19 @@ R -e 'library(shinytest);testApp("130-output-null") ' >>runall.out 2>&1 ;
 R -e 'library(shinytest);testApp("131-renderplot-args") ' >>runall.out 2>&1 ; 
 R -e 'library(shinytest);testApp("132-async-events") ' >>runall.out 2>&1 ;
 
+
 FAILED=`grep -c 'viewTestDiff' runall.out`
 echo "***********Failed Tests" $FAILED >>runall.out 2>&1
 
 echo "***********List of Failed Tests" >>runall.out 2>&1
 LIST=`grep 'viewTestDiff' runall.out | cut -d'"' -f2`
-echo $LIST >>runall.out 2>&1 
+echo $LIST >>runall.out 2>&1
 
+rm diff.*
+
+`grep 'viewTestDiff' runall.out | grep -v grep > diff.sh`
+`sed -i -e "s/  viewTestDiff/R -e 'library(shinytest);viewTestDiff/g" diff.sh`
+`sed -i -e "s/$/' >>diff.out 2>\&1/g" diff.sh`
+
+`chmod 755 diff.sh`
+sh ./diff.sh >> diff.out 2>&1
