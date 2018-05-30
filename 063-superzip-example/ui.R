@@ -73,8 +73,8 @@ navbarPage("Superzip", id="nav",
       )
     ),
     hr(),
-    DT::dataTableOutput("ziptable")
-  ),
+    DT::dataTableOutput("ziptable"),
 
   conditionalPanel("false", icon("crosshair"))
+  )
 )
