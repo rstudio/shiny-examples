@@ -1,0 +1,15 @@
+{
+  "input": {
+    "m_select": "2",
+    "s_select": "2",
+    "selected": true,
+    "server": false,
+    "set": "Unnamed vector"
+  },
+  "output": {
+    "txt": "[1] \"2\""
+  },
+  "export": {
+
+  }
+}

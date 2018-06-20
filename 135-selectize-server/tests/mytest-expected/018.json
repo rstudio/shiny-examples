@@ -1,0 +1,18 @@
+{
+  "input": {
+    "m_select": [
+      "a1",
+      "a2"
+    ],
+    "s_select": "a2",
+    "selected": false,
+    "server": true,
+    "set": "Big nested list (server-side only)"
+  },
+  "output": {
+    "txt": "[1] \"a2\""
+  },
+  "export": {
+
+  }
+}
