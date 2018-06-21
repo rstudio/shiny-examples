@@ -1,0 +1,15 @@
+{
+  "input": {
+    "m_select": null,
+    "s_select": "1",
+    "selected": false,
+    "server": true,
+    "set": "Nested list"
+  },
+  "output": {
+    "txt": "[1] \"1\""
+  },
+  "export": {
+
+  }
+}

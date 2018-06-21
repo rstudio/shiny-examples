@@ -1,13 +1,13 @@
 {
   "input": {
-    "m_select": null,
-    "s_select": "3",
-    "selected": false,
+    "m_select": "2",
+    "s_select": "2",
+    "selected": true,
     "server": false,
-    "set": "Nested list"
+    "set": "Unnamed list"
   },
   "output": {
-    "txt": "[1] \"3\""
+    "txt": "[1] \"2\""
   },
   "export": {
 

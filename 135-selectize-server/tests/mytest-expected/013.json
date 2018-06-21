@@ -1,10 +1,10 @@
 {
   "input": {
-    "m_select": "3",
+    "m_select": null,
     "s_select": "3",
     "selected": false,
-    "server": true,
-    "set": "Nested list"
+    "server": false,
+    "set": "Partially named list"
   },
   "output": {
     "txt": "[1] \"3\""

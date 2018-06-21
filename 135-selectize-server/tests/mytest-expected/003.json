@@ -4,7 +4,7 @@
     "s_select": "1",
     "selected": false,
     "server": false,
-    "set": "Partially named vector"
+    "set": "Named vector"
   },
   "output": {
     "txt": "[1] \"1\""

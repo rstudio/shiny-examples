@@ -11,6 +11,7 @@ test_set <- list(
   "Named list" = list(a = 1, B = 2, c = 3),
   "Partially named list" = list(a = 1, B = 2, 3),
   "Nested list" = list(a = 1, B = list(B = 2, C = 4, 5), c = list(3)),
+  "Nested list (with vectors)" = list(a = 1, B = c(B = 2, C = 4, 5), c = list(3)),
   "Big unnamed vector (server-side only)" = bigvec,
   "Big named vector (server-side only)" = named_bigvec,
   "Big unnamed list (server-side only)" = as.list(bigvec),

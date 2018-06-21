@@ -1,0 +1,15 @@
+{
+  "input": {
+    "m_select": null,
+    "s_select": "a1",
+    "selected": false,
+    "server": true,
+    "set": "Big unnamed vector (server-side only)"
+  },
+  "output": {
+    "txt": "[1] \"a1\""
+  },
+  "export": {
+
+  }
+}

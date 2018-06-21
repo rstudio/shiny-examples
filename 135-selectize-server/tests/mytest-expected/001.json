@@ -1,13 +1,13 @@
 {
   "input": {
     "m_select": null,
-    "s_select": "1",
+    "s_select": "",
     "selected": false,
     "server": false,
-    "set": "Named vector"
+    "set": "Unnamed vector"
   },
   "output": {
-    "txt": "[1] \"1\""
+    "txt": "[1] \"\""
   },
   "export": {
 

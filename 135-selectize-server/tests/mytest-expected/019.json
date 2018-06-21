@@ -4,7 +4,7 @@
     "s_select": "2",
     "selected": true,
     "server": false,
-    "set": "Unnamed vector"
+    "set": "Nested list (with vectors)"
   },
   "output": {
     "txt": "[1] \"2\""

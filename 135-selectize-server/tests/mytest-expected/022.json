@@ -3,7 +3,7 @@
     "m_select": "2",
     "s_select": "2",
     "selected": true,
-    "server": false,
+    "server": true,
     "set": "Named vector"
   },
   "output": {
