@@ -1,0 +1,1 @@
+This example shows how to use [sassr](https://github.com/rstudio/sassr) to dynamically generate a stylesheet that changes the background and font color in a shiny app. This extends the previous example by dynamically resizing the plot.
