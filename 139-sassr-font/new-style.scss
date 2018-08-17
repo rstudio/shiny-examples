@@ -4,7 +4,7 @@ body {
   background-color: $color;
 }
 
-/* https://stackoverflow.com/a/3943023/6637133 */
+// https://stackoverflow.com/a/3943023/6637133
 @function font-color($color) {
   @return if(
     red($color) * 0.299 + green($color) * 0.587 + blue($color) * 0.114 > 186,
