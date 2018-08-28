@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y software-properties-common
 
 # Add R apt repository
 RUN add-apt-repository "deb http://cran.r-project.org/bin/linux/ubuntu $(lsb_release -cs)/"
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0x51716619e084dab9
 
 # Install basic stuff and R
 RUN apt-get update && apt-get install -y \
