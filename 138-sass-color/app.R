@@ -1,5 +1,5 @@
 library(shiny)
-library(sassr)
+library(sass)
 library(colourpicker)
 
 input_scss <- "new-style.scss"
@@ -9,10 +9,10 @@ style_list <- list(
   `$color` = "#FFFFFF"
 )
 
-compile_sass(input_scss, output = output_css)
+sass(input_scss, output = output_css)
 
 ui <- fluidPage(
-  headerPanel("Sassr Example"),
+  headerPanel("Sass Example"),
 
   sidebarPanel(
     colourInput("color", "Background Color", value = 'white',
@@ -43,7 +43,7 @@ server <- function(input, output) {
 
   compiled_css <- reactive({
     write(variables(), "_variables.scss")
-    compile_sass(input_scss, output = output_css)
+    sass(input_scss, output = output_css)
   })
 
   output$bgcolor <- renderUI({
