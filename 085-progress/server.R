@@ -40,7 +40,7 @@ function(input, output) {
 
         # withProgress calls can be nested, in which case the nested text appears
         # below, and a second bar is shown.
-        withProgress(message = 'Generating data', detail = "part 0", value = 0, {
+        withProgress(message = 'Generating data', style = style, detail = "part 0", value = 0, {
           for (i in 1:10) {
             # Each time through the loop, add another row of data. This a stand-in
             # for a long-running computation.
