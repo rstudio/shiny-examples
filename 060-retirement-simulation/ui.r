@@ -32,7 +32,7 @@ fluidPage(theme="simplex.min.css",
   # Application title
   tags$h2("Retirement: simulating wealth with random returns, inflation and withdrawals"),
   p("An adaptation of the",
-    tags$a(href="http://glimmer.rstudio.com/systematicin/retirement.withdrawal/", "retirement app"),
+    tags$a(href="https://systematicinvestor.wordpress.com/2013/04/06/retirement-simulating-wealth-with-random-returns-inflation-and-withdrawals-shiny-web-application/", "retirement app"),
     "from",
     tags$a(href="http://systematicinvestor.wordpress.com/", "Systematic Investor"),
     "to demonstrate the use of Shiny's new grid options."),
