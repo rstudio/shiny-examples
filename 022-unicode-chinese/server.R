@@ -10,10 +10,9 @@ function(input, output) {
 
   # 返回数据集，注意input$dataset返回的结果可能是中文“岩石”
   datasetInput <- reactive({
-    switch(input$dataset,
-           "岩石" = rock2,
-           "pressure" = pressure,
-           "cars" = cars2)
+    if (input$dataset == "岩石") return(rock2)
+    if (input$dataset == "pressure") return(pressure)
+    if (input$dataset == "cars") return(cars2)
   })
 
   output$rockvars <- renderUI({
