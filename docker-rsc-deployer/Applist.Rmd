@@ -1,0 +1,41 @@
+---
+title: "Connect Example Apps Listing"
+author: "Alan Dipert"
+date: "9/27/2018"
+output: html_document
+params:
+  account: "alan"
+  server: "rsc.radixu.com"
+  api_key: ""
+---
+
+```{r setup, include=FALSE}
+library(httr)
+library(magrittr)
+library(jsonlite)
+
+account <- params$account
+server <- params$server
+api_key <- params$api_key
+
+user <- GET(paste0("https://", server, "/__api__/me"), add_headers(authorization = paste0("Key ", api_key))) %>%
+  `[[`("content") %>%
+  rawToChar() %>%
+  jsonlite::fromJSON()
+
+# TODO paginate
+apps <- GET(paste0("https://", server, "/__api__/applications?count=1000"), add_headers(authorization = paste0("Key ", api_key))) %>%
+  `[[`("content") %>%
+  rawToChar() %>%
+  jsonlite::fromJSON() %>%
+  `[[`("applications")
+apps <- subset(apps, apps$owner_guid == user$guid & grepl("^[0-9]{3}", apps$name))
+apps <- apps[,c("name", "url")]
+apps <- apps[order(apps$name),]
+```
+
+# Shiny Examples on Connect
+
+```{r df, echo=FALSE}
+knitr::kable(apps, row.names = FALSE)
+```
