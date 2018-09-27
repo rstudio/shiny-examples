@@ -20,3 +20,15 @@ if (Sys.info()[['sysname']] == 'Linux' &&
   system2('fc-cache', paste('-f', font_home()))
 }
 rm(font_home)
+
+
+if (.Platform$OS.type == "windows") {
+  if (!grepl("Chinese", Sys.getlocale())) {
+    warning(
+      "You probably want Chinese locale on Windows for this app",
+      "to render correctly. See ",
+      "https://github.com/rstudio/shiny/issues/1053#issuecomment-167011937"
+    )
+  }
+}
+

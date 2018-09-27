@@ -22,7 +22,6 @@ function(input, output) {
 
   output$rockplot <- renderPlot({
     validate(need(input$vars, ""))
-    print(input$vars)
     par(mar = c(4, 4, .1, .1))
     plot(as.formula(paste("面积 ~ ", input$vars)), data = rock2)
   })
