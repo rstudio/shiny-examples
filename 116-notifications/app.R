@@ -34,7 +34,7 @@ shinyApp(
     })
 
     observeEvent(input$remove, {
-      removeNotification(id)
+      removeNotification(req(id))
     })
   }
 )
