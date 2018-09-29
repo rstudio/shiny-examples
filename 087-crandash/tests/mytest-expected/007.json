@@ -1,0 +1,186 @@
+{
+  "input": {
+    "maxrows": 30,
+    "rateThreshold": 31.9,
+    "sidebarCollapsed": false,
+    "sidebarItemExpanded": null
+  },
+  "output": {
+    "count": {
+      "html": "<div class=\"small-box bg-aqua\">\n  <div class=\"inner\">\n    <h3>18<\/h3>\n    <p>Total downloads<\/p>\n  <\/div>\n  <div class=\"icon-large\">\n    <i class=\"fa fa-download\"><\/i>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "font-awesome",
+          "version": "4.7.0",
+          "src": {
+            "href": "shared/font-awesome"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/font-awesome.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "packagePlot": {
+      "x": {
+        "value": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          "lambda.r",
+          "pROC",
+          "RcppArmadillo",
+          "bdsmatrix",
+          "caret",
+          "caTools",
+          "dendextend",
+          "doParallel",
+          "evaluate",
+          "httr",
+          "lme4",
+          "stringi",
+          "subselect",
+          "tibble",
+          "zip"
+        ],
+        "tooltip": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "color": [
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE",
+          "#EEEEEE"
+        ],
+        "textColor": [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        "key": [
+          "lambda.r",
+          "pROC",
+          "RcppArmadillo",
+          "bdsmatrix",
+          "caret",
+          "caTools",
+          "dendextend",
+          "doParallel",
+          "evaluate",
+          "httr",
+          "lme4",
+          "stringi",
+          "subselect",
+          "tibble",
+          "zip"
+        ]
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+
+      ]
+    },
+    "packageTable": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Package name <\/th> <th style='text-align: right;'> % of downloads <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> lambda.r <\/td> <td align=\"right\"> 11.1 <\/td> <\/tr>\n  <tr> <td> pROC <\/td> <td align=\"right\"> 11.1 <\/td> <\/tr>\n  <tr> <td> RcppArmadillo <\/td> <td align=\"right\"> 11.1 <\/td> <\/tr>\n  <tr> <td> bdsmatrix <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> caret <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> caTools <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> dendextend <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> doParallel <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> evaluate <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> httr <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> lme4 <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> stringi <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> subselect <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> tibble <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n  <tr> <td> zip <\/td> <td align=\"right\"> 5.6 <\/td> <\/tr>\n   <\/tbody> <\/table>",
+    "rate": {
+      "html": "<div class=\"small-box bg-aqua\">\n  <div class=\"inner\">\n    <h3>12.7<\/h3>\n    <p>Downloads per sec (last 5 min)<\/p>\n  <\/div>\n  <div class=\"icon-large\">\n    <i class=\"fa fa-area-chart\"><\/i>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "font-awesome",
+          "version": "4.7.0",
+          "src": {
+            "href": "shared/font-awesome"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/font-awesome.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "users": {
+      "html": "<div class=\"small-box bg-aqua\">\n  <div class=\"inner\">\n    <h3>15<\/h3>\n    <p>Unique users<\/p>\n  <\/div>\n  <div class=\"icon-large\">\n    <i class=\"fa fa-users\"><\/i>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "font-awesome",
+          "version": "4.7.0",
+          "src": {
+            "href": "shared/font-awesome"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/font-awesome.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

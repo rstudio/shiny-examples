@@ -1,0 +1,13 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$setInputs(deepstacktrace = TRUE)
+app$snapshot()
+app$setInputs(success = "click")
+app$snapshot()
+app$setInputs(failure = "click")
+app$snapshot()
+app$setInputs(success = "click")
+app$setInputs(success = "click")
+app$setInputs(success = "click")

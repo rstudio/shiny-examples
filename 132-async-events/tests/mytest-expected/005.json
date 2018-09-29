@@ -1,0 +1,30 @@
+{
+  "input": {
+    "error": 0,
+    "silent": 0,
+    "success": 1,
+    "type": "validation",
+    "validation": 0
+  },
+  "output": {
+    "async_output": {
+      "message": "Validation error",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "sync_output": {
+      "message": "Validation error",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

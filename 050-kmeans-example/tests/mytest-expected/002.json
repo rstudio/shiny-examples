@@ -1,0 +1,40 @@
+{
+  "input": {
+    "clusters": 3,
+    "xcol": "Petal.Length",
+    "ycol": "Sepal.Width"
+  },
+  "output": {
+    "plot1": {
+      "src": "[image data sha1: 0816ce67fc77b4af496c50ad55e42f24869d62ac]",
+      "width": 631,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 0.764,
+            "right": 7.136,
+            "bottom": 1.904,
+            "top": 4.496
+          },
+          "range": {
+            "left": 59.04,
+            "right": 616.6,
+            "bottom": 325.56,
+            "top": -1
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

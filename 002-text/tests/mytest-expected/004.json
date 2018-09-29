@@ -1,0 +1,13 @@
+{
+  "input": {
+    "dataset": "cars",
+    "obs": 18
+  },
+  "output": {
+    "summary": "     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  ",
+    "view": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> speed <\/th> <th style='text-align: right;'> dist <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 2.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 10.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 4.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 22.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 8.00 <\/td> <td align=\"right\"> 16.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 9.00 <\/td> <td align=\"right\"> 10.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 10.00 <\/td> <td align=\"right\"> 18.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 10.00 <\/td> <td align=\"right\"> 26.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 10.00 <\/td> <td align=\"right\"> 34.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 11.00 <\/td> <td align=\"right\"> 17.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 11.00 <\/td> <td align=\"right\"> 28.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 12.00 <\/td> <td align=\"right\"> 14.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 12.00 <\/td> <td align=\"right\"> 20.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 12.00 <\/td> <td align=\"right\"> 24.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 12.00 <\/td> <td align=\"right\"> 28.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 13.00 <\/td> <td align=\"right\"> 26.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 13.00 <\/td> <td align=\"right\"> 34.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 13.00 <\/td> <td align=\"right\"> 34.00 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

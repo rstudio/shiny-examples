@@ -1,0 +1,35 @@
+{
+  "input": {
+    "control_label": "LABEL TEXT",
+    "control_num": 15,
+    "inCheckbox": false,
+    "inCheckboxGroup": null,
+    "inDate": "2018-05-01",
+    "inDateRange": [
+      "2018-05-01",
+      "2018-05-01"
+    ],
+    "inNumber": 5,
+    "inNumber2": 5,
+    "inRadio": "option1",
+    "inSelect": "option1",
+    "inSelect2": null,
+    "inSlider": 15,
+    "inSlider2": [
+      5,
+      15
+    ],
+    "inSlider3": [
+      5,
+      15
+    ],
+    "inTabset": "panel1",
+    "inText": "start text"
+  },
+  "output": {
+
+  },
+  "export": {
+
+  }
+}

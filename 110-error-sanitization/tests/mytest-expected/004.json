@@ -1,0 +1,26 @@
+{
+  "input": {
+    "dataset": "rock",
+    "nTab1": null,
+    "nTab2": null,
+    "safe": "FALSE",
+    "sanitize": "TRUE",
+    "show": 0
+  },
+  "output": {
+    "accidentalError": {
+      "message": "An error has occurred. Check your logs or contact the app author for clarification.",
+      "call": "NULL",
+      "type": null
+    },
+    "code": "<code>options(shiny.sanitize.errors = TRUE)<\/code>",
+    "intentionalError": {
+      "message": "An error has occurred. Check your logs or contact the app author for clarification.",
+      "call": "NULL",
+      "type": null
+    }
+  },
+  "export": {
+
+  }
+}

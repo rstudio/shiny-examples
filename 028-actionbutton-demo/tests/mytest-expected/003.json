@@ -1,0 +1,12 @@
+{
+  "input": {
+    "goButton": 1,
+    "n": 81
+  },
+  "output": {
+    "nText": "50"
+  },
+  "export": {
+
+  }
+}

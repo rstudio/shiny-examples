@@ -1,0 +1,13 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+app$setInputs(group = "17")
+app$snapshot()
+app$setInputs(group = c("17", "30"))
+app$setInputs(group = c("17", "30", "22"))
+app$setInputs(group = c("17", "30", "22", "14"))
+app$snapshot()
+app$setInputs(group = c("17", "30", "22", "14", "20"))
+app$setInputs(group = c("17", "30", "22", "14", "20", "8"))
+app$setInputs(group = c("17", "30", "22", "14", "20", "8", "12"))
+app$snapshot()

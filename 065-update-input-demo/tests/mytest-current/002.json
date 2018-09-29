@@ -1,0 +1,35 @@
+{
+  "input": {
+    "control_label": "LABEL TEXT",
+    "control_num": 8,
+    "inCheckbox": false,
+    "inCheckboxGroup": "option-8-A",
+    "inDate": "2013-04-08",
+    "inDateRange": [
+      "2013-01-08",
+      "2013-12-08"
+    ],
+    "inNumber": 8,
+    "inNumber2": 8,
+    "inRadio": "option-8-A",
+    "inSelect": "option-8-A",
+    "inSelect2": "option-8-B",
+    "inSlider": 8,
+    "inSlider2": [
+      7,
+      9
+    ],
+    "inSlider3": [
+      1,
+      10
+    ],
+    "inTabset": "panel1",
+    "inText": "New text 8"
+  },
+  "output": {
+
+  },
+  "export": {
+
+  }
+}

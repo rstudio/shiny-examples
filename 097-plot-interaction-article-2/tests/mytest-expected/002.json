@@ -1,0 +1,39 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "info": "click: NULL\ndblclick: NULL\nhover: NULL\nbrush: NULL",
+    "plot1": {
+      "src": "[image data sha1: 9de501db1606beb058226d6855189e37bed9be88]",
+      "width": 962,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 1.35656,
+            "right": 5.58044,
+            "bottom": 9.46,
+            "top": 34.84
+          },
+          "range": {
+            "left": 59.04,
+            "right": 931.76,
+            "bottom": 325.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

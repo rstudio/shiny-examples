@@ -1,0 +1,28 @@
+{
+  "input": {
+    "disp": "head",
+    "file1": {
+      "name": [
+        "Rock.csv"
+      ],
+      "size": [
+        1296
+      ],
+      "type": [
+        "text/csv"
+      ],
+      "datapath": [
+        "0.csv"
+      ]
+    },
+    "header": true,
+    "quote": "\"",
+    "sep": ","
+  },
+  "output": {
+    "contents": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> area <\/th> <th style='text-align: right;'> peri <\/th> <th style='text-align: right;'> shape <\/th> <th style='text-align: right;'> perm <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4990 <\/td> <td align=\"right\"> 2791.90 <\/td> <td align=\"right\"> 0.09 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7002 <\/td> <td align=\"right\"> 3892.60 <\/td> <td align=\"right\"> 0.15 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7558 <\/td> <td align=\"right\"> 3930.66 <\/td> <td align=\"right\"> 0.18 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7352 <\/td> <td align=\"right\"> 3869.32 <\/td> <td align=\"right\"> 0.12 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7943 <\/td> <td align=\"right\"> 3948.54 <\/td> <td align=\"right\"> 0.12 <\/td> <td align=\"right\"> 17.10 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7979 <\/td> <td align=\"right\"> 4010.15 <\/td> <td align=\"right\"> 0.17 <\/td> <td align=\"right\"> 17.10 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

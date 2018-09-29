@@ -1,0 +1,12 @@
+app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$setInputs(region = "S.Amer")
+app$snapshot()
+app$setInputs(region = "Africa")
+app$snapshot()
+app$setInputs(region = "Asia")
+app$snapshot()
+app$setInputs(region = "Europe")
+app$snapshot()

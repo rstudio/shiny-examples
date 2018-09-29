@@ -1,0 +1,23 @@
+{
+  "input": {
+    "date": "2018-04-20",
+    "date2": "2018-05-01",
+    "dateRange": [
+      "2018-04-29",
+      "2018-05-03"
+    ],
+    "dateRange2": [
+      "2018-04-28",
+      "2018-05-04"
+    ]
+  },
+  "output": {
+    "dateRangeText": "input$dateRange is 2018-04-29 to 2018-05-03",
+    "dateRangeText2": "input$dateRange2 is 2018-04-28 to 2018-05-04",
+    "dateText": "input$date is 2018-04-20",
+    "dateText2": "input$date2 is 2018-05-01"
+  },
+  "export": {
+
+  }
+}

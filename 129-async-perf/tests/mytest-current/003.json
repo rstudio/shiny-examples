@@ -1,0 +1,22 @@
+{
+  "input": {
+    "deepstacktrace": true,
+    "failure": 0,
+    "success": 1
+  },
+  "output": {
+    "foo1": "TRUE",
+    "foo2": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "time": "Success in 0.01982594 secs"
+  },
+  "export": {
+
+  }
+}

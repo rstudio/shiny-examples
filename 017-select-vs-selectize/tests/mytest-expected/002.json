@@ -1,0 +1,25 @@
+{
+  "input": {
+    "in1": "California",
+    "in2": "Arkansas",
+    "in3": "Arkansas",
+    "in4": "Arkansas",
+    "in5": "Arkansas",
+    "in6": [
+      "Arizona",
+      "California",
+      "Connecticut"
+    ]
+  },
+  "output": {
+    "out1": "[1] \"California\"",
+    "out2": "[1] \"Arkansas\"",
+    "out3": "[1] \"Arkansas\"",
+    "out4": "[1] \"Arkansas\"",
+    "out5": "[1] \"Arkansas\"",
+    "out6": "[1] \"Arizona\"     \"California\"  \"Connecticut\""
+  },
+  "export": {
+
+  }
+}

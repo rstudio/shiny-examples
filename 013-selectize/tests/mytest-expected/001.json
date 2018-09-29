@@ -1,0 +1,20 @@
+{
+  "input": {
+    "e0": "Alabama",
+    "e1": "Alabama",
+    "e2": null,
+    "e3": "Alabama",
+    "e4": "Alabama",
+    "e5": null,
+    "e6": "",
+    "e7": "Alabama",
+    "github": ""
+  },
+  "output": {
+    "ex_out": "List of 8\n $ e0: chr \"Alabama\"\n $ e1: chr \"Alabama\"\n $ e2: NULL\n $ e3: chr \"Alabama\"\n $ e4: chr \"Alabama\"\n $ e5: NULL\n $ e6: chr \"\"\n $ e7: chr \"Alabama\"",
+    "github": "You selected nothing in the Github example."
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "input": {
+    "region": "Europe"
+  },
+  "output": {
+    "phonePlot": {
+      "src": "[image data sha1: c49d31201578726380a2c67778d6a32d82487bd1]",
+      "width": 631,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -0.128,
+            "right": 8.728,
+            "bottom": -431730,
+            "top": 43173000
+          },
+          "range": {
+            "left": 59.04,
+            "right": 600.76,
+            "bottom": 325.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

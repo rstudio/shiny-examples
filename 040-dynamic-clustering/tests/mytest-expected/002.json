@@ -1,0 +1,39 @@
+{
+  "input": {
+    "clear": 2
+  },
+  "output": {
+    "clusterPlot": {
+      "src": "[image data sha1: 16903a14b9063a8b5ade32c0a6e8b4b194bf9c2c]",
+      "width": 992,
+      "height": 500,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -2.16,
+            "right": 2.16,
+            "bottom": -2.16,
+            "top": 2.16
+          },
+          "range": {
+            "left": 59.0399999999999,
+            "right": 961.76,
+            "bottom": 425.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    },
+    "numPoints": "0"
+  },
+  "export": {
+
+  }
+}

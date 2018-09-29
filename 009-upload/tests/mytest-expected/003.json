@@ -1,0 +1,28 @@
+{
+  "input": {
+    "disp": "head",
+    "file1": {
+      "name": [
+        "Rock.csv"
+      ],
+      "size": [
+        1296
+      ],
+      "type": [
+        "text/csv"
+      ],
+      "datapath": [
+        "0.csv"
+      ]
+    },
+    "header": true,
+    "quote": "",
+    "sep": ";"
+  },
+  "output": {
+    "contents": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> X.area...peri...shape...perm. <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 4990,2791.9,0.0903296,6.3 <\/td> <\/tr>\n  <tr> <td> 7002,3892.6,0.148622,6.3 <\/td> <\/tr>\n  <tr> <td> 7558,3930.66,0.183312,6.3 <\/td> <\/tr>\n  <tr> <td> 7352,3869.32,0.117063,6.3 <\/td> <\/tr>\n  <tr> <td> 7943,3948.54,0.122417,17.1 <\/td> <\/tr>\n  <tr> <td> 7979,4010.15,0.167045,17.1 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

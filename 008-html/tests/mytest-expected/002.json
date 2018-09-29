@@ -1,0 +1,41 @@
+{
+  "input": {
+    "dist": "norm",
+    "n": 500
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: 88a913f2aae76ba01cf34214f669b3f3e96b1807]",
+      "width": 976,
+      "height": 300,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -3.76,
+            "right": 3.26,
+            "bottom": -4.64,
+            "top": 120.64
+          },
+          "range": {
+            "left": 59.0399999999999,
+            "right": 945.76,
+            "bottom": 225.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    },
+    "summary": "    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. \n-3.02490 -0.60853 -0.01655  0.05304  0.80762  2.50404 ",
+    "table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> x <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> -0.57 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 0.13 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -0.48 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 0.61 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -0.84 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 0.61 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

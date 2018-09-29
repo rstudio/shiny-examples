@@ -1,0 +1,26 @@
+{
+  "input": {
+    "dataset": "rock",
+    "nTab1": null,
+    "nTab2": null,
+    "safe": "FALSE",
+    "sanitize": "FALSE",
+    "show": 0
+  },
+  "output": {
+    "accidentalError": {
+      "message": "non-numeric argument to binary operator",
+      "call": "as.character(n) * 100",
+      "type": null
+    },
+    "code": "<code>options(shiny.sanitize.errors = FALSE)<\/code>",
+    "intentionalError": {
+      "message": "top secret info",
+      "call": "renderText(...)",
+      "type": null
+    }
+  },
+  "export": {
+
+  }
+}

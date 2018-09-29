@@ -1,0 +1,44 @@
+{
+  "input": {
+    "boom": 1
+  },
+  "output": {
+    "cancelOutput": "After self destruct, this text should remain",
+    "cancelOutput_async": "After self destruct, this text should remain",
+    "req": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "req_async": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "validateNeed": {
+      "message": "Self destructed",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "validateNeed_async": {
+      "message": "Self destructed",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

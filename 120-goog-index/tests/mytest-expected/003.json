@@ -1,0 +1,45 @@
+{
+  "input": {
+    "date": [
+      "2007-01-01",
+      "2017-07-31"
+    ],
+    "f": 0.67,
+    "smoother": false,
+    "type": "unempl"
+  },
+  "output": {
+    "desc": "The Google Unemployment Index tracks queries related to unemployment, food stamps, social security, edd, disability, etc. The index is set to 1.0 on January 1, 2004 and is calculated only for US search traffic.",
+    "lineplot": {
+      "src": "[image data sha1: 39e3ae00e3991e1b2030a38a50fbff4dedbf3837]",
+      "width": 631,
+      "height": 300,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 1154277216,
+            "right": 1514737584,
+            "bottom": 0.4504,
+            "top": 2.5996
+          },
+          "range": {
+            "left": 57.5999999999999,
+            "right": 616.6,
+            "bottom": 241.4,
+            "top": 13.4
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

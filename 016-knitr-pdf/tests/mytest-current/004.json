@@ -1,0 +1,39 @@
+{
+  "input": {
+    "format": "PDF",
+    "x": "disp"
+  },
+  "output": {
+    "regPlot": {
+      "src": "[image data sha1: a9288bbd0fa80de9b3d9ff986de552d030a02dfa]",
+      "width": 631,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 55.064,
+            "right": 488.036,
+            "bottom": 9.46,
+            "top": 34.84
+          },
+          "range": {
+            "left": 57.6,
+            "right": 629.56,
+            "bottom": 341.4,
+            "top": 0.440000000000019
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

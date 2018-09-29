@@ -1,0 +1,45 @@
+{
+  "input": {
+    "date": [
+      "2007-01-01",
+      "2017-07-31"
+    ],
+    "f": 0.67,
+    "smoother": false,
+    "type": "educat"
+  },
+  "output": {
+    "desc": "The Google Education Index tracks queries related to college, education, test, academy, barnes and noble, harvard, etc. The index is set to 1.0 on January 1, 2004 and is calculated only for US search traffic.",
+    "lineplot": {
+      "src": "[image data sha1: 89790cb093923f68449f6e7eef7b53d2cd99c777]",
+      "width": 631,
+      "height": 300,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 1154277216,
+            "right": 1514737584,
+            "bottom": 0.5808,
+            "top": 1.6392
+          },
+          "range": {
+            "left": 57.5999999999999,
+            "right": 616.6,
+            "bottom": 241.4,
+            "top": 13.4
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

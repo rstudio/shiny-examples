@@ -1,0 +1,41 @@
+{
+  "input": {
+    "goPlot": 1,
+    "goTable": 1,
+    "style": "old"
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: 991e5bd84de67031441bde3f46150cca2a02c633]",
+      "width": 300,
+      "height": 300,
+      "coordmap": [
+        {
+          "domain": {
+            "left": 3.16,
+            "right": 25.84,
+            "bottom": -2.72,
+            "top": 124.72
+          },
+          "range": {
+            "left": 59.04,
+            "right": 269.76,
+            "bottom": 225.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    },
+    "table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> x <\/th> <th style='text-align: right;'> y <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 0.84 <\/td> <td align=\"right\"> -1.92 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 0.19 <\/td> <td align=\"right\"> 0.57 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -1.31 <\/td> <td align=\"right\"> 0.20 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 0.51 <\/td> <td align=\"right\"> 0.82 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 0.43 <\/td> <td align=\"right\"> -0.95 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -0.14 <\/td> <td align=\"right\"> -0.07 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -1.07 <\/td> <td align=\"right\"> 0.76 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -0.02 <\/td> <td align=\"right\"> -1.29 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 1.52 <\/td> <td align=\"right\"> 1.09 <\/td> <\/tr>\n  <tr> <td align=\"right\"> -0.46 <\/td> <td align=\"right\"> -0.13 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

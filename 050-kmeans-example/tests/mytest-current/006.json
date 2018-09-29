@@ -1,0 +1,17 @@
+{
+  "input": {
+    "clusters": 9,
+    "xcol": "Species",
+    "ycol": "Petal.Width"
+  },
+  "output": {
+    "plot1": {
+      "message": "NA/NaN/Inf in foreign function call (arg 1)",
+      "call": "do_one(nmeth)",
+      "type": null
+    }
+  },
+  "export": {
+
+  }
+}

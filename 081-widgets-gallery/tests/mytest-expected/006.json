@@ -1,0 +1,43 @@
+{
+  "input": {
+    "action": 2,
+    "checkbox": false,
+    "checkGroup": [
+      "1",
+      "2",
+      "3"
+    ],
+    "date": "2014-01-01",
+    "dates": [
+      "2018-04-16",
+      "2018-04-16"
+    ],
+    "file": null,
+    "num": 1,
+    "radio": "1",
+    "select": "1",
+    "slider1": 100,
+    "slider2": [
+      69,
+      87
+    ],
+    "text": "Enter hagjhfafglak"
+  },
+  "output": {
+    "actionOut": "[1] 2\nattr(,\"class\")\n[1] \"integer\"                \"shinyActionButtonValue\"",
+    "checkboxOut": "[1] FALSE",
+    "checkGroupOut": "[1] \"1\" \"2\" \"3\"",
+    "dateOut": "[1] \"2014-01-01\"",
+    "datesOut": "[1] \"2018-04-16\" \"2018-04-16\"",
+    "fileOut": "NULL",
+    "numOut": "[1] 1",
+    "radioOut": "[1] \"1\"",
+    "selectOut": "[1] \"1\"",
+    "slider1Out": "[1] 100",
+    "slider2Out": "[1] 69 87",
+    "textOut": "[1] \"Enter hagjhfafglak\""
+  },
+  "export": {
+
+  }
+}

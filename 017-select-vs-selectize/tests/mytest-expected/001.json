@@ -1,0 +1,21 @@
+{
+  "input": {
+    "in1": "",
+    "in2": "Alabama",
+    "in3": null,
+    "in4": "",
+    "in5": "Alabama",
+    "in6": null
+  },
+  "output": {
+    "out1": "[1] \"\"",
+    "out2": "[1] \"Alabama\"",
+    "out3": "NULL",
+    "out4": "[1] \"\"",
+    "out5": "[1] \"Alabama\"",
+    "out6": "NULL"
+  },
+  "export": {
+
+  }
+}

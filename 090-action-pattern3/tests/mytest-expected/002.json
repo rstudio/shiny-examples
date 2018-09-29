@@ -1,0 +1,39 @@
+{
+  "input": {
+    "rnorm": 1,
+    "runif": 1
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: a6d376e4daaae3a79e127b0bc0939cbbc20ec700]",
+      "width": 962,
+      "height": 400,
+      "coordmap": [
+        {
+          "domain": {
+            "left": -2.74,
+            "right": 3.74,
+            "bottom": -1,
+            "top": 26
+          },
+          "range": {
+            "left": 59.04,
+            "right": 931.76,
+            "bottom": 325.56,
+            "top": 58.04
+          },
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "mapping": {
+
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

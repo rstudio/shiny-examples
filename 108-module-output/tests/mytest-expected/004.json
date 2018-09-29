@@ -1,0 +1,85 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "scatters-plot1": {
+      "src": "[image data sha1: f77c24485a023332564e10dc6434a39fed02b505]",
+      "width": 455,
+      "height": 400,
+      "coordmap": [
+        {
+          "panel": 1,
+          "row": 1,
+          "col": 1,
+          "panel_vars": {
+
+          },
+          "scale_x": 1,
+          "scale_y": 1,
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "domain": {
+            "left": 7.7,
+            "right": 36.3,
+            "bottom": 10.4,
+            "top": 45.6
+          },
+          "mapping": {
+            "x": "cty",
+            "y": "hwy"
+          },
+          "range": {
+            "left": 36.078106462139,
+            "right": 449.520547945205,
+            "bottom": 367.410956092064,
+            "top": 5.47945205479452
+          }
+        }
+      ]
+    },
+    "scatters-plot2": {
+      "src": "[image data sha1: e2ccb79b73a47b8a05dbfe2902b158ba068e5c3e]",
+      "width": 455,
+      "height": 400,
+      "coordmap": [
+        {
+          "panel": 1,
+          "row": 1,
+          "col": 1,
+          "panel_vars": {
+
+          },
+          "scale_x": 1,
+          "scale_y": 1,
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "domain": {
+            "left": 0.4,
+            "right": 3.6,
+            "bottom": 10.4,
+            "top": 45.6
+          },
+          "mapping": {
+            "x": "drv",
+            "y": "hwy"
+          },
+          "range": {
+            "left": 36.078106462139,
+            "right": 449.520547945205,
+            "bottom": 369.795721717064,
+            "top": 5.47945205479452
+          }
+        }
+      ]
+    },
+    "summary": "0 observation(s) selected"
+  },
+  "export": {
+
+  }
+}

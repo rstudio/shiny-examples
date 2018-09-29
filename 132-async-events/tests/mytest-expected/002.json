@@ -1,0 +1,24 @@
+{
+  "input": {
+    "error": 0,
+    "silent": 0,
+    "success": 0,
+    "type": "error",
+    "validation": 0
+  },
+  "output": {
+    "async_output": {
+      "message": "error!",
+      "call": "eventReactiveHandler(...)",
+      "type": null
+    },
+    "sync_output": {
+      "message": "error!",
+      "call": "eventReactiveHandler(...)",
+      "type": null
+    }
+  },
+  "export": {
+
+  }
+}

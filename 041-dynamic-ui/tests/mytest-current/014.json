@@ -1,0 +1,19 @@
+{
+  "input": {
+    "dynamic": false,
+    "input_type": "checkbox"
+  },
+  "output": {
+    "dynamic_value": " logi FALSE",
+    "input_type_text": "checkbox",
+    "ui": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <div class=\"checkbox\">\n    <label>\n      <input id=\"dynamic\" type=\"checkbox\" checked=\"checked\"/>\n      <span>Dynamic<\/span>\n    <\/label>\n  <\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

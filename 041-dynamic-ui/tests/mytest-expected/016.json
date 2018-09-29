@@ -1,0 +1,19 @@
+{
+  "input": {
+    "dynamic": "option1",
+    "input_type": "radioButtons"
+  },
+  "output": {
+    "dynamic_value": " chr \"option1\"",
+    "input_type_text": "radioButtons",
+    "ui": {
+      "html": "<div id=\"dynamic\" class=\"form-group shiny-input-radiogroup shiny-input-container\">\n  <label class=\"control-label\" for=\"dynamic\">Dynamic<\/label>\n  <div class=\"shiny-options-group\">\n    <div class=\"radio\">\n      <label>\n        <input type=\"radio\" name=\"dynamic\" value=\"option1\"/>\n        <span>Option 1<\/span>\n      <\/label>\n    <\/div>\n    <div class=\"radio\">\n      <label>\n        <input type=\"radio\" name=\"dynamic\" value=\"option2\" checked=\"checked\"/>\n        <span>Option 2<\/span>\n      <\/label>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

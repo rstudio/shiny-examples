@@ -1,0 +1,11 @@
+{
+  "input": {
+    "text": "Enter test"
+  },
+  "output": {
+    "value": "[1] \"Enter test\""
+  },
+  "export": {
+
+  }
+}

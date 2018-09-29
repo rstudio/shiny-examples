@@ -1,0 +1,25 @@
+{
+  "input": {
+    "boxoffice": [
+      0,
+      800
+    ],
+    "cast": "",
+    "director": "",
+    "genre": "All",
+    "oscars": 0,
+    "reviews": 80,
+    "xvar": "Meter",
+    "year": [
+      1970,
+      2014
+    ],
+    "yvar": "Reviews"
+  },
+  "output": {
+    "n_movies": "2557"
+  },
+  "export": {
+
+  }
+}

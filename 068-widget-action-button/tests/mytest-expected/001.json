@@ -1,0 +1,11 @@
+{
+  "input": {
+    "action": 0
+  },
+  "output": {
+    "value": "[1] 0\nattr(,\"class\")\n[1] \"integer\"                \"shinyActionButtonValue\""
+  },
+  "export": {
+
+  }
+}

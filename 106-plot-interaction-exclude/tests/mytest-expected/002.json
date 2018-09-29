@@ -1,0 +1,48 @@
+{
+  "input": {
+    "exclude_reset": 3,
+    "exclude_toggle": 3
+  },
+  "output": {
+    "plot1": {
+      "src": "[image data sha1: 57bf173e9d74574687c32382e93213a85ffc7541]",
+      "width": 466,
+      "height": 350,
+      "coordmap": [
+        {
+          "panel": 1,
+          "row": 1,
+          "col": 1,
+          "panel_vars": {
+
+          },
+          "scale_x": 1,
+          "scale_y": 1,
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "domain": {
+            "left": 1.3,
+            "right": 5.7,
+            "bottom": 3.5,
+            "top": 36.5
+          },
+          "mapping": {
+            "x": "wt",
+            "y": "mpg"
+          },
+          "range": {
+            "left": 36.078106462139,
+            "right": 460.520547945205,
+            "bottom": 319.854315467064,
+            "top": 5.47945205479452
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

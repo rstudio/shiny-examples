@@ -1,0 +1,35 @@
+{
+  "input": {
+    "dynamic": [
+      "2018-04-20",
+      "2018-04-16"
+    ],
+    "input_type": "daterange"
+  },
+  "output": {
+    "dynamic_value": " Date[1:2], format: \"2018-04-20\" \"2018-04-16\"",
+    "input_type_text": "daterange",
+    "ui": {
+      "html": "<div id=\"dynamic\" class=\"shiny-date-range-input form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"dynamic\">Dynamic<\/label>\n  <div class=\"input-daterange input-group\">\n    <input class=\"input-sm form-control\" type=\"text\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-date-autoclose=\"true\"/>\n    <span class=\"input-group-addon\"> to <\/span>\n    <input class=\"input-sm form-control\" type=\"text\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-date-autoclose=\"true\"/>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "bootstrap-datepicker",
+          "version": "1.6.4",
+          "src": {
+            "href": "shared/datepicker"
+          },
+          "meta": null,
+          "script": "js/bootstrap-datepicker.min.js",
+          "stylesheet": "css/bootstrap-datepicker3.min.css",
+          "head": "<script>\n(function() {\n  var datepicker = $.fn.datepicker.noConflict();\n  $.fn.bsDatepicker = datepicker;\n})();\n<\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

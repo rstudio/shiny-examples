@@ -1,0 +1,121 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "plot1": {
+      "src": "[image data sha1: 44a855e3c8a2a56bb6488e525ab9451c1806d1f3]",
+      "width": 291,
+      "height": 300,
+      "coordmap": [
+        {
+          "panel": 1,
+          "row": 1,
+          "col": 1,
+          "panel_vars": {
+
+          },
+          "scale_x": 1,
+          "scale_y": 1,
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "domain": {
+            "left": 1.513,
+            "right": 5.424,
+            "bottom": 10.4,
+            "top": 33.9
+          },
+          "mapping": {
+            "x": "wt",
+            "y": "mpg"
+          },
+          "range": {
+            "left": 36.078106462139,
+            "right": 285.520547945205,
+            "bottom": 269.854315467064,
+            "top": 5.47945205479452
+          }
+        }
+      ]
+    },
+    "plot2": {
+      "src": "[image data sha1: 6d2649dcf973ee8cc3a4d118fea845a8111a24ba]",
+      "width": 296,
+      "height": 300,
+      "coordmap": [
+        {
+          "panel": 1,
+          "row": 1,
+          "col": 1,
+          "panel_vars": {
+
+          },
+          "scale_x": 1,
+          "scale_y": 1,
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "domain": {
+            "left": 1.31745,
+            "right": 5.61955,
+            "bottom": 9.225,
+            "top": 35.075
+          },
+          "mapping": {
+            "x": "wt",
+            "y": "mpg"
+          },
+          "range": {
+            "left": 36.078106462139,
+            "right": 290.520547945205,
+            "bottom": 269.854315467064,
+            "top": 5.47945205479452
+          }
+        }
+      ]
+    },
+    "plot3": {
+      "src": "[image data sha1: 04bf2ffcdd552f0d7429df5ca1e1fcd144a84dc4]",
+      "width": 296,
+      "height": 300,
+      "coordmap": [
+        {
+          "panel": 1,
+          "row": 1,
+          "col": 1,
+          "panel_vars": {
+
+          },
+          "scale_x": 1,
+          "scale_y": 1,
+          "log": {
+            "x": null,
+            "y": null
+          },
+          "domain": {
+            "left": 1.513,
+            "right": 5.424,
+            "bottom": 10.4,
+            "top": 33.9
+          },
+          "mapping": {
+            "x": "wt",
+            "y": "mpg"
+          },
+          "range": {
+            "left": 36.078106462139,
+            "right": 290.520547945205,
+            "bottom": 269.854315467064,
+            "top": 5.47945205479452
+          }
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

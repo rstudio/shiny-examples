@@ -1,0 +1,16 @@
+{
+  "input": {
+    "slider1": 90,
+    "slider2": [
+      40,
+      95
+    ]
+  },
+  "output": {
+    "range": "[1] 40 95",
+    "value": "[1] 90"
+  },
+  "export": {
+
+  }
+}

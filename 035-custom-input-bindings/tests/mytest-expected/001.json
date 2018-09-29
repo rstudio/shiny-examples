@@ -1,0 +1,12 @@
+{
+  "input": {
+    "my_url": "http://www.r-project.org/",
+    "reset": 0
+  },
+  "output": {
+    "urlText": "http://www.r-project.org/"
+  },
+  "export": {
+
+  }
+}
