@@ -3,7 +3,7 @@ library(ggplot2)
 
 shinyApp(
   fluidPage(
-    tags$head(tags$style("img { width: 200%; height: 75% }")),
+    tags$head(tags$style("img { width: 185%; height: 75%; padding: 30px; }")),
     h1("Brush over the rectangle of three points at hp ≈ 60 & wt ≈ 2 to display in the table below"),
     plotOutput("plot", brush = "brush"),
     tableOutput("table"),
