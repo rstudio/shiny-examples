@@ -14,3 +14,7 @@
 
 # DS Store
 .DS_Store
+
+
+# Log Files
+logfile*.txt
