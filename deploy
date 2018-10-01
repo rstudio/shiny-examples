@@ -133,7 +133,10 @@ if (opts$all) {
 }
 
 # Try deploying apps and get return codes (0 is success)
-deployRes <- lapply(apps, function(app) {
+library(doMC)
+registerDoMC(10)
+
+deployRes <- plyr::llply(apps, .parallel = TRUE, function(app) {
   cat('-------- Deploying', app, '--------\n')
   if (opts$deploy) {
     res <- try(deployApp(app, account = opts$account, server = opts$server))
