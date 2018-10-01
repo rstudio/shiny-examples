@@ -12,7 +12,7 @@ shiny () {
 
 run_26 () {
   echo $i
-  R --quiet --slave -e "rmarkdown::run('026-shiny-inline/index.Rmd', shiny_args = list(launch.browser = TRUE))"
+  R --quiet --slave -e "rmarkdown::run(\"$1\", shiny_args = list(launch.browser = TRUE))"
 }
 
 for i in $( ls -d */ ); do
