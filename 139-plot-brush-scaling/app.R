@@ -15,8 +15,8 @@ grid_xmax <- 2 ^ 12.1
 grid_ymin <- 10 ^ 2.9
 grid_ymax <- 10 ^ 7.1
 
-grid_data$brush_target[grid_data$x >= xmin & grid_data$x <= xmax &
-    grid_data$y >= ymin & grid_data$y <= ymax] <- TRUE
+grid_data$brush_target[grid_data$x >= grid_xmin & grid_data$x <= grid_xmax &
+                       grid_data$y >= grid_ymin & grid_data$y <= grid_ymax] <- TRUE
 
 # Dimensions of box in imageOutput
 image_xmin <- 200
