@@ -32,7 +32,7 @@ chooserInput <- function(inputId, leftLabel, rightLabel, leftChoices, rightChoic
   )
 }
 
-registerInputHandler("shinyjsexamples.chooser", function(data, ...) {
+shiny::registerInputHandler("shinyjsexamples.chooser", function(data, ...) {
   if (is.null(data))
     NULL
   else
