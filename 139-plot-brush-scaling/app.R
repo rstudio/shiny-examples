@@ -30,6 +30,7 @@ shinyApp(
     h3("Testing instructions"),
     p('For each plot, brush over the rectangle. Each one should say "Pass".',
       'Then resize the browser window. Each one should still say "Pass".'),
+    p("This application should be tested on both Retina and non-Retina displays."),
 
     h3("renderPlot"),
     plotOutput("plot1",brush = "plot1_brush"),
