@@ -1,7 +1,7 @@
 library(shiny)
 library(promises)
 library(future)
-plan(multiprocess)
+plan(multisession)
 
 make_row <- function(func, base_id, label, ...) {
   tagList(
@@ -88,14 +88,14 @@ server <- function(input, output, session) {
 
   output$image <- renderImage({
     path <- tempfile(fileext = ".gif")
-    download.file("http://www.google.com/images/logo.gif", path, mode = "wb")
+    download.file("https://www.google.com/images/logo.gif", path, mode = "wb")
     list(src = path)
   }, deleteFile = TRUE)
 
   output$imagea <- renderImage({
     future({
       path <- tempfile(fileext = ".gif")
-      download.file("http://www.google.com/images/logo.gif", path, mode = "wb")
+      download.file("https://www.google.com/images/logo.gif", path, mode = "wb")
       path
     }) %...>% {
       list(src = .)
