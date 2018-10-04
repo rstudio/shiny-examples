@@ -1,7 +1,7 @@
 library(shiny)
 library(promises)
 library(future)
-plan(multiprocess)
+plan(multisession)
 
 make_row <- function(func, base_id, label, ...) {
   tagList(
