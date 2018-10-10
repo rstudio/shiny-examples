@@ -1,7 +1,5 @@
 ---
-title: "Connect Example Apps Listing"
-author: "Alan Dipert"
-date: "9/27/2018"
+title: "Shiny Example Apps on Connect"
 output: html_document
 params:
   account: "alan"
@@ -33,8 +31,6 @@ apps <- subset(apps, apps$owner_guid == user$guid & grepl("^[0-9]{3}", apps$name
 apps <- apps[,c("name", "url")]
 apps <- apps[order(apps$name),]
 ```
-
-# Shiny Examples on Connect
 
 ```{r df, echo=FALSE}
 knitr::kable(apps, row.names = FALSE)
