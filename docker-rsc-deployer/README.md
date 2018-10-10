@@ -29,3 +29,15 @@ Deploy all the apps, 5 at a time:
 ```
 find * -maxdepth 0 -type d | egrep '^[0-9]{3}' | parallel -j5 deployApp.R alan rsc.radixu.com {}
 ```
+
+## Setting apps public
+
+Once you've deployed all the apps, you might want to make them all public so that they can be tested without logging in to RSC.
+
+To do this, generate an API key from the "profile" section of RSC after you've logged in.
+
+Then, in the `rsc-deployer` container, changing `https://rsc.radixu.com` to the server you're deploying to:
+
+```
+$ API_KEY=YOUR_API_KEY set_public.sh https://rsc.radixu.com
+```

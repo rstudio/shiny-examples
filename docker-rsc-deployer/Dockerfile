@@ -26,6 +26,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0x51716619e084dab9
 RUN apt-get update && apt-get install -y \
     sudo \
     git \
+    curl \
     vim-tiny \
     less \
     wget \
@@ -36,6 +37,19 @@ RUN apt-get update && apt-get install -y \
     texinfo \
     locales
 
+# Install jt for working with JSON from the RSC API
+RUN cd /usr/local \
+  && wget -O - https://github.com/micha/json-table/raw/master/jt.tar.gz \
+  | tar xzvf -
+
+# Install jo for making JSON from bash
+RUN cd /tmp \
+  && wget -O - https://github.com/jpmens/jo/releases/download/v1.1/jo-1.1.tar.gz \
+  | tar xzvf - \
+  && cd jo-1.1 \
+  && ./configure \
+  && make install
+
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
    && locale-gen en_US.utf8 \
    && /usr/sbin/update-locale LANG=en_US.UTF-8
@@ -43,9 +57,7 @@ ENV LANG=en_US.UTF-8
 
 RUN echo 'options(\n\
   repos = c(CRAN = "https://cloud.r-project.org/"),\n\
-  download.file.method = "libcurl",\n\
-  # Detect number of physical cores\n\
-  Ncpus = parallel::detectCores(logical=FALSE)\n\
+  download.file.method = "libcurl"\n\
 )' >> /etc/R/Rprofile.site
 
 # Install TinyTeX (subset of TeXLive)
@@ -89,8 +101,8 @@ RUN cd / && \
     wget -nv https://github.com/rstudio/shiny-examples/archive/master.zip && \
     unzip -x master.zip && \
     mv shiny-examples-master shiny-examples && \
-    cd shiny-examples && \
-    chmod 777 022-unicode-chinese 055-observer-demo 059-reactive-poll-and-file-reader
+    cd shiny-examples
+
 
 # Autodetect packages needed for the examples (will install from CRAN)
 RUN R -e "install.packages(packrat:::dirDependencies('/shiny-examples'))"
@@ -104,3 +116,4 @@ RUN R -e "devtools::install_github('jcheng5/bubbles')"
 RUN R -e "devtools::install_github('rstudio/rsconnect')"
 
 COPY deployApp.R /usr/local/bin
+COPY set_public.sh /usr/local/bin
