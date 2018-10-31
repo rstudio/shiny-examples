@@ -125,6 +125,8 @@ RUN R -e "install.packages(packrat:::dirDependencies('/srv/shiny-server'))"
 # For 087-crandash
 RUN R -e "devtools::install_github('hadley/shinySignals')"
 RUN R -e "devtools::install_github('jcheng5/bubbles')"
+# For ./deploy
+RUN R -e "install.packages('doMC')"
 
 # Install latest shiny from GitHub
 RUN R -e "devtools::install_github('rstudio/shiny')"
