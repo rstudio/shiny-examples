@@ -46,7 +46,7 @@ if (length(args) == 0) {
     "  or   deploy [OPTIONS] --all",
     "",
     "Options:",
-    "  -a ACCOUNT  Use specified account name (default: gallery)",
+    "  -a ACCOUNT  Use specified account name (default: testing-apps)",
     "  -s SERVER   Deploy to specified server (default: shinyapps.io)",
     "  -d          Deploy only (don't publish). By default, this script deploys and",
     "              publishes each app.",
@@ -67,9 +67,10 @@ if (length(args) == 0) {
 # Default options
 opts <- list(
   deploy = TRUE,
-  publish = TRUE,
-  account = "gallery",
+  publish = FALSE,
+  account = "testing-apps",
   server = "shinyapps.io",
+  cores = 3,
   all = FALSE
 )
 
@@ -99,6 +100,17 @@ if ('-s' %in% args) {
   }
   opts$server <- args[optIdx + 1]
   args <- args[-c(optIdx, optIdx+1)]
+}
+if ('-c' %in% args) {
+  optIdx <- which('-c' == args)
+  if (optIdx >= length(args)) {
+    stop("-c option must be followed by the number of cores")
+  }
+  opts$cores <- as.numeric(args[optIdx + 1])
+  args <- args[-c(optIdx, optIdx+1)]
+  if (is.na(opts$cores)) {
+    stop("number of cores should be a numeric value")
+  }
 }
 if ('--all' %in% args) {
   args <- setdiff(args, '--all')
@@ -133,10 +145,12 @@ if (opts$all) {
 }
 
 # Try deploying apps and get return codes (0 is success)
-library(doMC)
-registerDoMC(10)
+if (opts$cores > 1) {
+  library(doMC)
+  registerDoMC(opts$cores)
+}
 
-deployRes <- plyr::llply(apps, .parallel = TRUE, function(app) {
+deployRes <- plyr::llply(apps, .parallel = (opts$cores > 1), function(app) {
   cat('-------- Deploying', app, '--------\n')
   if (opts$deploy) {
     res <- try(deployApp(app, account = opts$account, server = opts$server))
