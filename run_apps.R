@@ -33,7 +33,7 @@
 #
 # ```r
 # new_process <- FALSE
-# # Source the file here
+# # Source the script here
 # auto_run()
 # ```
 #
@@ -53,9 +53,6 @@ if (!exists("last_app")) {
   last_app <- 0L
 }
 
-# By default, run each app in a new R process. This cannot be used if you want
-# to view the app in the RStudio viewer; it can only be used with an external
-# browser.
 if (!exists("new_process")) {
   new_process <- TRUE
 }
