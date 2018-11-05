@@ -4,7 +4,7 @@
 # To run with the built-in shiny-examples:
 #   docker run --rm -p 3838:3838 --name ss ss-shiny-devel
 
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER Winston Chang "winston@rstudio.com"
 
@@ -19,12 +19,13 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y software-properties-common
 
 # Add R apt repository
-RUN add-apt-repository "deb http://cran.r-project.org/bin/linux/ubuntu $(lsb_release -cs)/"
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0x51716619e084dab9
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+RUN add-apt-repository "deb http://cran.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran35/"
 
 # Install basic stuff and R
 RUN apt-get update && apt-get install -y \
     sudo \
+    locales \
     git \
     vim-tiny \
     less \
@@ -36,9 +37,8 @@ RUN apt-get update && apt-get install -y \
     texinfo \
     locales
 
-RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
-   && locale-gen en_US.utf8 \
-   && /usr/sbin/update-locale LANG=en_US.UTF-8
+RUN locale-gen en_US.utf8 \
+    && /usr/sbin/update-locale LANG=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 
 RUN echo 'options(\n\
