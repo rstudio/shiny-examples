@@ -55,9 +55,8 @@ if (length(args) == 0) {
     "  --all       Deploy all applications",
     "",
     "Examples:",
-    "  ./deploy -d 116",
     "  ./deploy 116",
-    "  ./deploy -d --all",
+    "  ./deploy --all",
     ""
   )
 
@@ -174,10 +173,17 @@ deployRes <- if (opts$cores > 1) {
 }
 deployRes <- unlist(deployRes)
 
+# Print any warnings
+deployWarnings <- warnings()
+if (length(deployWarnings) != 0) {
+  cat("\n")
+  print(deployWarnings)
+}
+
 # Print apps that were not successfully deployed
 if (any(deployRes != 0)) {
   cat(
-    "Error deploying apps:\n",
+    "\nError deploying apps:\n",
     paste0("  ", apps[deployRes != 0], collapse = "\n"),
     "\n",
     sep = ""
