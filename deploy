@@ -48,7 +48,7 @@ if (length(args) == 0) {
     "Options:",
     "  -a ACCOUNT  Use specified account name (default: testing-apps)",
     "  -s SERVER   Deploy to specified server (default: shinyapps.io)",
-    "  -c          Number of cores to use while deploying apps. (default: 3)",
+    "  -c          Number of cores to use while deploying apps. (default: 1 (serial))",
     "  -d          Deploy only (don't publish). (default)",
     "  -p          Publish only (don't deploy). This takes a screenshot of the app and",
     "              adds it to ../shiny-dev-center.",
@@ -70,7 +70,7 @@ opts <- list(
   publish = FALSE,
   account = "testing-apps",
   server = "shinyapps.io",
-  cores = 3,
+  cores = 1,
   all = FALSE
 )
 
