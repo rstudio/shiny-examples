@@ -13,7 +13,7 @@ MAINTAINER Winston Chang "winston@rstudio.com"
 # =====================================================================
 
 # Don't print "debconf: unable to initialize frontend: Dialog" messages
-ARG DEBIAN_FRONTED=noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Need this to add R repo
 RUN apt-get update && apt-get install -y software-properties-common
