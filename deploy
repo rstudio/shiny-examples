@@ -144,13 +144,7 @@ if (opts$all) {
   }
 }
 
-# Try deploying apps and get return codes (0 is success)
-if (opts$cores > 1) {
-  library(doMC)
-  registerDoMC(opts$cores)
-}
-
-deployRes <- plyr::llply(apps, .parallel = (opts$cores > 1), function(app) {
+deployApp <- function(app) {
   cat('-------- Deploying', app, '--------\n')
   if (opts$deploy) {
     res <- try(deployApp(app, account = opts$account, server = opts$server))
@@ -170,8 +164,14 @@ deployRes <- plyr::llply(apps, .parallel = (opts$cores > 1), function(app) {
   } else {
     return(0)
   }
-})
+}
 
+# Try deploying apps and get return codes (0 is success)
+deployRes <- if (opts$cores > 1) {
+  parallel::mclapply(apps, deployApp, mc.cores = opts$cores)
+} else {
+  lapply(apps, deployApp)
+}
 deployRes <- unlist(deployRes)
 
 # Print apps that were not successfully deployed

@@ -53,7 +53,7 @@ cd /tmp \
  && ./r-debug/r-devel/buildR.sh
 
 # Install helper packages
-RD -q -e 'install.packages(c("devtools", "doMC", "packrat", "knitr"))'
+RD -q -e 'install.packages(c("devtools", "packrat", "knitr"))'
 
 # download examples to home folder and install dependencies
 cd ~ \
