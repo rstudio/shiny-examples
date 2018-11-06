@@ -102,9 +102,10 @@ server <- function(input, output, session) {
     validate(need(FALSE, "OK"))
   }
 
+  # explicit width/height to prevent error on browser resize
   output$plot <- renderPlot({
     expect_before_tick()
-  })
+  }, width = 100, height = 100)
 
   output$plota <- renderPlot({
     p %...>% { expect_after_tick() }

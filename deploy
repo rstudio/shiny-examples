@@ -46,18 +46,17 @@ if (length(args) == 0) {
     "  or   deploy [OPTIONS] --all",
     "",
     "Options:",
-    "  -a ACCOUNT  Use specified account name (default: gallery)",
+    "  -a ACCOUNT  Use specified account name (default: testing-apps)",
     "  -s SERVER   Deploy to specified server (default: shinyapps.io)",
-    "  -d          Deploy only (don't publish). By default, this script deploys and",
-    "              publishes each app.",
+    "  -c          Number of cores to use while deploying apps. (default: 1 (serial))",
+    "  -d          Deploy only (don't publish). (default)",
     "  -p          Publish only (don't deploy). This takes a screenshot of the app and",
     "              adds it to ../shiny-dev-center.",
     "  --all       Deploy all applications",
     "",
     "Examples:",
-    "  ./deploy -d 116",
     "  ./deploy 116",
-    "  ./deploy -d --all",
+    "  ./deploy --all",
     ""
   )
 
@@ -67,9 +66,10 @@ if (length(args) == 0) {
 # Default options
 opts <- list(
   deploy = TRUE,
-  publish = TRUE,
-  account = "gallery",
+  publish = FALSE,
+  account = "testing-apps",
   server = "shinyapps.io",
+  cores = 1,
   all = FALSE
 )
 
@@ -99,6 +99,17 @@ if ('-s' %in% args) {
   }
   opts$server <- args[optIdx + 1]
   args <- args[-c(optIdx, optIdx+1)]
+}
+if ('-c' %in% args) {
+  optIdx <- which('-c' == args)
+  if (optIdx >= length(args)) {
+    stop("-c option must be followed by the number of cores")
+  }
+  opts$cores <- as.numeric(args[optIdx + 1])
+  args <- args[-c(optIdx, optIdx+1)]
+  if (is.na(opts$cores)) {
+    stop("number of cores should be a numeric value")
+  }
 }
 if ('--all' %in% args) {
   args <- setdiff(args, '--all')
@@ -132,11 +143,7 @@ if (opts$all) {
   }
 }
 
-# Try deploying apps and get return codes (0 is success)
-library(doMC)
-registerDoMC(10)
-
-deployRes <- plyr::llply(apps, .parallel = TRUE, function(app) {
+deployApp <- function(app) {
   cat('-------- Deploying', app, '--------\n')
   if (opts$deploy) {
     res <- try(deployApp(app, account = opts$account, server = opts$server))
@@ -156,14 +163,27 @@ deployRes <- plyr::llply(apps, .parallel = TRUE, function(app) {
   } else {
     return(0)
   }
-})
+}
 
+# Try deploying apps and get return codes (0 is success)
+deployRes <- if (opts$cores > 1) {
+  parallel::mclapply(apps, deployApp, mc.cores = opts$cores)
+} else {
+  lapply(apps, deployApp)
+}
 deployRes <- unlist(deployRes)
+
+# Print any warnings
+deployWarnings <- warnings()
+if (length(deployWarnings) != 0) {
+  cat("\n")
+  print(deployWarnings)
+}
 
 # Print apps that were not successfully deployed
 if (any(deployRes != 0)) {
   cat(
-    "Error deploying apps:\n",
+    "\nError deploying apps:\n",
     paste0("  ", apps[deployRes != 0], collapse = "\n"),
     "\n",
     sep = ""

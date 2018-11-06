@@ -77,8 +77,8 @@ Once in the container, you can deploy apps with:
 
 ```sh
 cd /srv/shiny-server
-./deploy -d 116
+./deploy 111 116
 
 # Or, to deploy all
-./deploy -d --all
+./deploy --all
 ```

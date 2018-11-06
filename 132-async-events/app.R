@@ -6,9 +6,9 @@ ui <- fluidPage(
 
   radioButtons("type", "Type of event", c(
     "Success" = "success",
-    "Error" = "error",
     "Silent error (i.e. req(FALSE))" = "silent",
-    "Validation error" = "validation"
+    "Validation error" = "validation",
+    "Error" = "error"
   )),
 
   hr(),
@@ -40,16 +40,16 @@ ui <- fluidPage(
     "After a one second delay, you should see a success message printed at the R console"
   ),
   p(
-    actionButton("error", "Error"),
-    "The session should be disconnected and an error printed at the console"
-  ),
-  p(
     actionButton("silent", "Silent error (i.e. req(FALSE))"),
     "Should have no effect"
   ),
   p(
     actionButton("validation", "Validation error"),
     "Should have no effect"
+  ),
+  p(
+    actionButton("error", "Error"),
+    "The session should be disconnected and an error printed at the console"
   )
 )
 
