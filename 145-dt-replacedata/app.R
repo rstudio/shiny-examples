@@ -15,7 +15,7 @@ dtmod <- function(input, output, session) {
   x <- reactiveVal(0L)
 
   output$table <- renderDT({
-    DT::datatable(data.frame(value = isolate(x())), rownames = FALSE, options = list(dom = 't'))
+    DT::datatable(data.frame(value = isolate(x())), rownames = FALSE, options = list(dom = "t", ordering = FALSE))
   })
 
   observeEvent(input$inc, {
