@@ -42,6 +42,7 @@ server <- function(input, output, session) {
   
   connect <- function(url) {
     ws <- WebSocket$new("ws://echo.websocket.org")
+    status(paste0("Connecting to ", url, ", please wait..."))
     ws$onError(function(event) {
       setEnabled(FALSE)
       status(paste0("Error: ", event$message))
