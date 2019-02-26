@@ -61,7 +61,7 @@ cd ~ \
  && RD -q -e 'install.packages(packrat:::dirDependencies("shiny-examples"))'
 
 # install github pkgs
-RD -q -e 'install.packages(c("ggvis", "dbplyr", "tm", "hicharter", "readr", "radiant"))'
+RD -q -e 'install.packages(c("ggvis", "dbplyr", "tm", "highcharter", "readr", "radiant"))'
 RD -q -e 'devtools::install_github("jcheng5/bubbles")'
 RD -q -e 'devtools::install_github("hadley/shinySignals")'
 
