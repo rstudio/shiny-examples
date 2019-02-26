@@ -151,3 +151,9 @@ auto_run <- function() {
     )
   }
 }
+
+
+# RC Branches # should not reinstall if the SHA is the same
+remotes::install_github("rstudio/httpuv@rc-v1.5.0")
+remotes::install_github("rstudio/reactlog@rc-v1.0.0", dependencies = FALSE)
+remotes::install_github("rstudio/shiny@rc-v1.3.0")
