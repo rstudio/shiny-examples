@@ -29,5 +29,6 @@ rsconnect::deployApp(
   account = args[[1]],
   server = args[[2]],
   logLevel = 'verbose',
-  launch.browser = FALSE
+  launch.browser = FALSE,
+  forceUpdate = TRUE
 )

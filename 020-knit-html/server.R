@@ -1,7 +1,13 @@
 # Workaround for https://github.com/yihui/knitr/issues/1538
-evaluate2 <- function(...) evaluate::evaluate(...)
-environment(evaluate2) <- asNamespace("knitr")
-knitr::knit_hooks$set(evaluate = evaluate2)
+if (packageVersion("knitr") < "1.17.3") {
+  if (getRversion() > "3.4.0") {
+    evaluate2 <- function(...) evaluate::evaluate(...)
+    environment(evaluate2) <- asNamespace("knitr")
+    knitr::knit_hooks$set(evaluate = evaluate2)
+  } else {
+    stop("Update knitr to run this app", call. = FALSE)
+  }
+}
 
 function(input, output) {
 
