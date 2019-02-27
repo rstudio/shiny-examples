@@ -115,5 +115,11 @@ RUN R -e "devtools::install_github('jcheng5/bubbles')"
 # For deploying apps to RSC
 RUN R -e "devtools::install_github('rstudio/rsconnect')"
 
+# RC Branches
+RUN R -e 'remotes::install_github("rstudio/httpuv@rc-v1.5.0")'
+RUN R -e 'remotes::install_github("rstudio/reactlog@rc-v1.0.0", dependencies = FALSE)'
+RUN R -e 'remotes::install_github("rstudio/shiny@rc-v1.3.0")'
+
+
 COPY deployApp.R /usr/local/bin
 COPY set_public.sh /usr/local/bin
