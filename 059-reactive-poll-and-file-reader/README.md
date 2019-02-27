@@ -4,4 +4,4 @@ There are three main parts of the server code:
 
 1. The second part uses a `reactiveFileReader` to monitor the log file for changes every 0.5 seconds.
 
-1. The third part uses a `reactivePoll` to monitor the log file for changes every 4 seconds. The `reactivePoll` is general, and it watch for things other than file changes. It could, for example, query a database.
+1. The third part uses a `reactivePoll` to monitor the log file for changes every 4 seconds. The `reactivePoll` is general, and it will watch for things other than file changes. It could, for example, query a database.
