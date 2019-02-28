@@ -152,6 +152,12 @@ auto_run <- function() {
   }
 }
 
+url_links <- function(base_url) {
+  links <- paste0(base_url, sub("^\\.", "", dirs), "/")
+  cat(paste0(links, collapse = "\n"), "\n", sep = "")
+  invisible(links)
+}
+
 
 # RC Branches # should not reinstall if the SHA is the same
 if (!require("AmesHousing")) install.packages("AmesHousing")
