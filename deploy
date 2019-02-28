@@ -143,10 +143,10 @@ if (opts$all) {
   }
 }
 
-deployApp <- function(app) {
+deployApps <- function(app) {
   cat('-------- Deploying', app, '--------\n')
   if (opts$deploy) {
-    res <- try(deployApp(app, account = opts$account, server = opts$server))
+    res <- try(rsconnect::deployApp(app, account = opts$account, server = opts$server))
     if (inherits(res, 'try-error')) {
       return(1)
     }
@@ -167,9 +167,9 @@ deployApp <- function(app) {
 
 # Try deploying apps and get return codes (0 is success)
 deployRes <- if (opts$cores > 1) {
-  parallel::mclapply(apps, deployApp, mc.cores = opts$cores)
+  parallel::mclapply(apps, deployApps, mc.cores = opts$cores)
 } else {
-  lapply(apps, deployApp)
+  lapply(apps, deployApps)
 }
 deployRes <- unlist(deployRes)
 
