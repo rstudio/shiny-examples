@@ -1,3 +1,6 @@
+# enable reactlog recording
+options(shiny.reactlog = TRUE)
+
 # Source this script while your current directory is the shiny-examples repo root.
 #
 # Options:
