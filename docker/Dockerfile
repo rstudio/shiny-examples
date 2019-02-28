@@ -127,6 +127,10 @@ RUN R -e "devtools::install_github('hadley/shinySignals')"
 RUN R -e "devtools::install_github('jcheng5/bubbles')"
 
 # RC Branches
-RUN R -e 'remotes::install_github("rstudio/httpuv@rc-v1.5.0")'
-RUN R -e 'remotes::install_github("rstudio/reactlog@rc-v1.0.0", dependencies = FALSE)'
-RUN R -e 'remotes::install_github("rstudio/shiny@rc-v1.3.0")'
+RUN R -e 'install.packages("AmesHousing")'
+RUN R -e 'devtools::install_github("rstudio/websocket")'
+RUN R -e 'devtools::install_github("rstudio/DT")'
+RUN R -e 'devtools::install_github("r-lib/scales")'
+RUN R -e 'devtools::install_github("rstudio/httpuv@rc-v1.5.0")'
+RUN R -e 'devtools::install_github("rstudio/reactlog@rc-v1.0.0", dependencies = FALSE)'
+RUN R -e 'devtools::install_github("rstudio/shiny@rc-v1.3.0")'
