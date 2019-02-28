@@ -128,8 +128,7 @@ rerun <- function() {
 }
 
 skip_next <- function() {
-  if (last_app >= length())
-    last_app <<- last_app + 1L
+  last_app <<- last_app + 1L
   message("Skipping ", dirs[[last_app]])
 }
 
