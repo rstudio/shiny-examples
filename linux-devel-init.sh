@@ -67,7 +67,6 @@ RD -q -e 'devtools::install_github("hadley/shinySignals")'
 
 # RD -q -e 'devtools::install_github("rstudio/shiny@v1.2-rc")'
 # RC Branches
-RD -q -e 'install.packages("AmesHousing")'
 RD -q -e 'devtools::install_github("rstudio/websocket")'
 RD -q -e 'devtools::install_github("rstudio/DT")'
 RD -q -e 'devtools::install_github("r-lib/scales")'

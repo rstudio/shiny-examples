@@ -116,7 +116,6 @@ RUN R -e "devtools::install_github('jcheng5/bubbles')"
 RUN R -e "devtools::install_github('rstudio/rsconnect')"
 
 # RC Branches
-RUN R -e 'install.packages("AmesHousing")'
 RUN R -e 'devtools::install_github("rstudio/websocket")'
 RUN R -e 'devtools::install_github("rstudio/DT")'
 RUN R -e 'devtools::install_github("r-lib/scales")'
