@@ -105,8 +105,10 @@ dataviewer_mod_server <- function(input, output, session, dataset) {
   cols_select <- c("Year_Built", "Year_Sold", "Sale_Price", "Sale_Condition", "Lot_Frontage", "House_Style",
                    "Lot_Shape", "Overall_Cond", "Overall_Qual")
 
+  # TODO: go back to using filter='top' once this issue is fixed
+  # https://github.com/rstudio/DT/issues/639
   output$table <- renderDT({
     filter(dataset(), selected_) %>%
       select(one_of(cols_select))
-  }, filter = 'top', selection = 'none')
+  }, selection = 'none')
 }
