@@ -105,7 +105,7 @@ RUN cd / && \
 
 
 # Autodetect packages needed for the examples (will install from CRAN)
-RUN R -e "install.packages(packrat:::dirDependencies('/shiny-examples'))"
+RUN RDsan -e "install.packages(setdiff(packrat:::dirDependencies('/srv/shiny-server'), rownames(installed.packages())))"
 
 # Packages that need to be installed from GitHub
 # For 087-crandash
