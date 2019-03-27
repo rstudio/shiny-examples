@@ -119,7 +119,7 @@ RUN cd /srv && \
     chmod 777 022-unicode-chinese 055-observer-demo 059-reactive-poll-and-file-reader
 
 # Autodetect packages needed for the examples (will install from CRAN)
-RUN RDsan -e "install.packages(setdiff(packrat:::dirDependencies('/srv/shiny-server'), rownames(installed.packages())))"
+RUN R -e "install.packages(setdiff(packrat:::dirDependencies('/srv/shiny-server'), rownames(installed.packages())))"
 
 # Packages that need to be installed from GitHub
 # For 087-crandash
