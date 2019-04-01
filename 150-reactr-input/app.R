@@ -17,17 +17,23 @@ simpleTextInput <- function(inputId, default = "") {
   )
 }
 
-ui <- fluidPage(
-  titlePanel("reactR Input Demo"),
-  tags$h1("Input"),
-  tags$p("Enter text in the box below. It should show up in the output area."),
-  simpleTextInput('simpleTextInput'),
-  tags$h1("Output"),
-  textOutput("simpleTextOutput")
-)
+ui <- function(request) {
+  fluidPage(
+    titlePanel("reactR Input Demo"),
+    tags$p("Enter text under 'Input' below. It should show up under 'Output'."),
+    tags$p("You should also be able to bookmark this page and the input will retain its value."),
+    tags$p(bookmarkButton()),
+    tags$h1("Input"),
+    tags$div(
+      tags$p(simpleTextInput('simpleTextInput')),
+      tags$h1("Output"),
+      textOutput("simpleTextOutput")
+    )
+  )
+}
 
 server <- function(input, output, session) {
   output$simpleTextOutput <- renderText(input$simpleTextInput)
 }
 
-shinyApp(ui, server)
+shinyApp(ui, server, enableBookmarking = "url")
