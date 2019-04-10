@@ -64,14 +64,14 @@ cd ~ \
 RD -q -e 'install.packages(c("ggvis", "dbplyr", "tm", "highcharter", "readr", "radiant"))'
 RD -q -e 'devtools::install_github("jcheng5/bubbles")'
 RD -q -e 'devtools::install_github("hadley/shinySignals")'
+# For 150-reactr-input
+RD -q -e 'devtools::install_github("react-R/reactR")'
 
-# RD -q -e 'devtools::install_github("rstudio/shiny@v1.2-rc")'
 # RC Branches
 RD -q -e 'devtools::install_github("rstudio/websocket")'
 RD -q -e 'devtools::install_github("rstudio/DT")'
 RD -q -e 'devtools::install_github("r-lib/scales")'
-RD -q -e 'devtools::install_github("rstudio/httpuv@rc-v1.5.0")'
-RD -q -e 'devtools::install_github("rstudio/reactlog@rc-v1.0.0", dependencies = FALSE)'
-RD -q -e 'devtools::install_github("rstudio/shiny@rc-v1.3.0")'
+RD -q -e 'devtools::install_github("rstudio/httpuv")'
+RD -q -e 'devtools::install_github("rstudio/shiny")'
 
 # cd ~/shiny-examples && RSTUDIO_WHICH_R=`which RD` rstudio

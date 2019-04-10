@@ -125,10 +125,12 @@ RUN R -e "install.packages(setdiff(packrat:::dirDependencies('/srv/shiny-server'
 # For 087-crandash
 RUN R -e "devtools::install_github('hadley/shinySignals')"
 RUN R -e "devtools::install_github('jcheng5/bubbles')"
+# For 150-reactr-input
+RUN R -e 'devtools::install_github("react-R/reactR")'
 
 # RC Branches
 RUN R -e 'devtools::install_github("rstudio/websocket")'
 RUN R -e 'devtools::install_github("rstudio/DT")'
 RUN R -e 'devtools::install_github("r-lib/scales")'
-RUN R -e 'devtools::install_github("rstudio/httpuv@rc-v1.5.1")'
-RUN R -e 'devtools::install_github("rstudio/shiny@rc-v1.3.0")'
+RUN R -e 'devtools::install_github("rstudio/httpuv")'
+RUN R -e 'devtools::install_github("rstudio/shiny")'
