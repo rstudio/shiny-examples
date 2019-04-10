@@ -1,3 +1,6 @@
+# enable reactlog recording
+options(shiny.reactlog = TRUE)
+
 # Source this script while your current directory is the shiny-examples repo root.
 #
 # Options:
@@ -151,3 +154,43 @@ auto_run <- function() {
     )
   }
 }
+
+url_links <- function(base_url) {
+  links <- paste0(base_url, sub("^\\.", "", dirs), "/")
+  cat(paste0(links, collapse = "\n"), "\n", sep = "")
+  invisible(links)
+}
+
+
+
+
+
+# make sure all packages are installed
+maybe_install_pkg <- function(pkg) {
+  tryCatch({
+    packageVersion(pkg)
+  }, error = function(e) {
+    install.packages(pkg)
+  })
+}
+# core packages
+lapply(
+  c("devtools", "rsconnect", "packrat"),
+  maybe_install_pkg
+)
+
+# extra pkgs
+devtools::install_github("hadley/shinySignals")
+devtools::install_github("jcheng5/bubbles")
+
+# RC Branches # should not reinstall if the SHA is the same
+devtools::install_github("rstudio/websocket")
+devtools::install_github("rstudio/DT")
+devtools::install_github("r-lib/scales")
+devtools::install_github("ramnathv/htmlwidgets")
+devtools::install_github("rstudio/httpuv@rc-v1.5.0")
+devtools::install_github("rstudio/reactlog@rc-v1.0.0", dependencies = FALSE)
+devtools::install_github("rstudio/shiny@rc-v1.3.0")
+
+# install all packages
+lapply(packrat:::dirDependencies("."), maybe_install_pkg)
