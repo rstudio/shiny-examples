@@ -186,6 +186,7 @@ devtools::install_github("react-R/reactR")
 
 # RC Branches # should not reinstall if the SHA is the same
 devtools::install_github("rstudio/websocket")
+devtools::install_github("ramnathv/htmlwidgets")
 devtools::install_github("rstudio/DT")
 devtools::install_github("r-lib/scales")
 devtools::install_github("ramnathv/htmlwidgets")

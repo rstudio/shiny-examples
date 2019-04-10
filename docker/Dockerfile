@@ -134,6 +134,7 @@ RUN R -e 'devtools::install_github("react-R/reactR")'
 
 # RC Branches
 RUN R -e 'devtools::install_github("rstudio/websocket")'
+RUN R -e 'devtools::install_github("ramnathv/htmlwidgets")'
 RUN R -e 'devtools::install_github("rstudio/DT")'
 RUN R -e 'devtools::install_github("r-lib/scales")'
 RUN R -e 'devtools::install_github("rstudio/httpuv")'

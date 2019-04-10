@@ -69,6 +69,7 @@ RD -q -e 'devtools::install_github("react-R/reactR")'
 
 # RC Branches
 RD -q -e 'devtools::install_github("rstudio/websocket")'
+RD -q -e 'devtools::install_github("ramnathv/htmlwidgets")'
 RD -q -e 'devtools::install_github("rstudio/DT")'
 RD -q -e 'devtools::install_github("r-lib/scales")'
 RD -q -e 'devtools::install_github("rstudio/httpuv")'
