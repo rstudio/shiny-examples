@@ -2,10 +2,6 @@ library(shiny)
 library(plotly)
 library(htmlwidgets)
 
-if (packageVersion("htmlwidgets") < "0.14") {
-  warning("This test assumes you have htmlwidgets v0.14 or higher")
-}
-
 ui <- fluidPage(
   plotlyOutput("p1", height = 200),
   plotlyOutput("p2", height = 200),
@@ -28,7 +24,7 @@ server <- function(input, output, session) {
 
   p <- plotly_empty() %>%
     add_annotations(
-      text = "Test did not pass :(",
+      text = if (packageVersion("htmlwidgets") < "0.14") "Please install htmlwidgets v0.14 or higher and try again" else "Test did not pass :(",
       x = 0,
       y = 0,
       showarrow = FALSE
