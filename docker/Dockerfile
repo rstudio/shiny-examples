@@ -125,17 +125,5 @@ RUN cd /srv && \
 # Autodetect packages needed for the examples (will install from CRAN)
 RUN R -e "install.packages(setdiff(packrat:::dirDependencies('/srv/shiny-server'), rownames(installed.packages())))"
 
-# Packages that need to be installed from GitHub
-# For 087-crandash
-RUN R -e "devtools::install_github('hadley/shinySignals')"
-RUN R -e "devtools::install_github('jcheng5/bubbles')"
-# For 150-reactr-input
-RUN R -e 'devtools::install_github("react-R/reactR")'
-
-# RC Branches
-RUN R -e 'devtools::install_github("rstudio/websocket")'
-RUN R -e 'devtools::install_github("ramnathv/htmlwidgets")'
-RUN R -e 'devtools::install_github("rstudio/DT")'
-RUN R -e 'devtools::install_github("r-lib/scales")'
-RUN R -e 'devtools::install_github("rstudio/httpuv")'
-RUN R -e 'devtools::install_github("rstudio/shiny@rc-v1.3.1")'
+# Any needed dev versions should be specified in this repo
+RUN R -e "devtools::install_github('rstudio/testShinyExamples')"

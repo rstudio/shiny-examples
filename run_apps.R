@@ -179,19 +179,8 @@ lapply(
   maybe_install_pkg
 )
 
-# extra pkgs
-devtools::install_github("hadley/shinySignals")
-devtools::install_github("jcheng5/bubbles")
-devtools::install_github("react-R/reactR")
-
-# RC Branches # should not reinstall if the SHA is the same
-devtools::install_github("rstudio/websocket")
-devtools::install_github("ramnathv/htmlwidgets")
-devtools::install_github("rstudio/DT")
-devtools::install_github("r-lib/scales")
-devtools::install_github("ramnathv/htmlwidgets")
-devtools::install_github("rstudio/httpuv")
-devtools::install_github("rstudio/shiny@rc-v1.3.1")
-
 # install all packages
 lapply(packrat:::dirDependencies("."), maybe_install_pkg)
+
+# Any needed dev versions should be specified in this repo
+devtools::install_github('rstudio/testShinyExamples')
