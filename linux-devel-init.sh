@@ -72,6 +72,6 @@ RD -q -e 'devtools::install_github("rstudio/websocket")'
 RD -q -e 'devtools::install_github("rstudio/DT")'
 RD -q -e 'devtools::install_github("r-lib/scales")'
 RD -q -e 'devtools::install_github("rstudio/httpuv")'
-RD -q -e 'devtools::install_github("rstudio/shiny")'
+RD -q -e 'devtools::install_github("rstudio/shiny@rc-v1.3.1")'
 
 # cd ~/shiny-examples && RSTUDIO_WHICH_R=`which RD` rstudio

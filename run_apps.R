@@ -190,7 +190,7 @@ devtools::install_github("rstudio/DT")
 devtools::install_github("r-lib/scales")
 devtools::install_github("ramnathv/htmlwidgets")
 devtools::install_github("rstudio/httpuv")
-devtools::install_github("rstudio/shiny")
+devtools::install_github("rstudio/shiny@rc-v1.3.1")
 
 # install all packages
 lapply(packrat:::dirDependencies("."), maybe_install_pkg)
