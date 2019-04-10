@@ -35,7 +35,11 @@ RUN apt-get update && apt-get install -y \
     r-recommended \
     fonts-texgyre \
     texinfo \
-    locales
+    locales \
+    libudunits2-dev \
+    libgdal-dev \
+    libgeos-dev \
+    libproj-dev
 
 RUN locale-gen en_US.utf8 \
     && /usr/sbin/update-locale LANG=en_US.UTF-8
