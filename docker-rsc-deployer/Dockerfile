@@ -93,7 +93,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN bash -c 'echo "will cite" | parallel --bibtex'
 
-RUN R -e "install.packages(c('devtools', 'packrat', 'knitr'))"
+RUN R -e "install.packages(c('devtools', 'packrat'))"
 
 # Install shiny-examples, and fix permissions for apps that require write
 # access to /shiny-examples
@@ -104,23 +104,8 @@ RUN cd / && \
     cd shiny-examples
 
 
-# Autodetect packages needed for the examples (will install from CRAN)
-RUN R -e "install.packages(setdiff(packrat:::dirDependencies('/srv/shiny-server'), rownames(installed.packages())))"
-
 # Packages that need to be installed from GitHub
-# For 087-crandash
-RUN R -e "devtools::install_github('hadley/shinySignals')"
-RUN R -e "devtools::install_github('jcheng5/bubbles')"
-
-# For deploying apps to RSC
-RUN R -e "devtools::install_github('rstudio/rsconnect')"
-
-# RC Branches
-RUN R -e 'devtools::install_github("rstudio/websocket")'
-RUN R -e 'devtools::install_github("rstudio/DT")'
-RUN R -e 'devtools::install_github("r-lib/scales")'
-RUN R -e 'devtools::install_github("rstudio/httpuv@rc-v1.5.1")'
-RUN R -e 'devtools::install_github("rstudio/shiny@rc-v1.3.0")'
+RUN R -e 'source("/install_deps.R", echo = TRUE)'
 
 
 COPY deployApp.R /usr/local/bin
