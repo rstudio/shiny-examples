@@ -93,7 +93,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN bash -c 'echo "will cite" | parallel --bibtex'
 
-RUN R -e "install.packages('packrat')"
+RUN R -e "install.packages(c('devtools', 'packrat'))"
 
 # Install shiny-examples, and fix permissions for apps that require write
 # access to /shiny-examples

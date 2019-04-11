@@ -106,7 +106,7 @@ CMD ["/usr/bin/shiny-server.sh"]
 RUN apt-get update && apt-get install -y \
     libxml2-dev
 
-RUN R -e "install.packages('packrat')"
+RUN R -e "install.packages(c('devtools', 'packrat'))"
 
 # For deploying apps from a container
 RUN R -e "devtools::install_github('rstudio/rsconnect')"
