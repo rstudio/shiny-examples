@@ -1,0 +1,36 @@
+---
+title: "Subapp test"
+output: html_document
+runtime: shiny
+---
+
+Check the 3 items below. Also, verify that the page survives three reloads.
+
+(1 of 3) Verify that a selectize input and summary output appear below.
+
+```{r echo=FALSE}
+ui <- fluidPage(
+  selectInput("select", "Select dataset", ls("package:datasets")),
+  verbatimTextOutput("summary")
+)
+
+server <- function(input, output, session) {
+  output$summary <- renderPrint({
+    summary(get(input$select, pos = "package:datasets", inherits = FALSE))
+  })
+}
+
+shinyApp(ui, server)
+```
+
+(2 of 3) Verify that "Hello World" appears on a pink background.
+
+```{r}
+shinyAppDir("app2")
+```
+
+(3 of 3) Verify that you see a leaflet map.
+
+```{r}
+shinyAppDir("app3")
+```
