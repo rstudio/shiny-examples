@@ -63,5 +63,5 @@ devtools::install_github(c(
   "react-R/reactR",
 
   "rstudio/httpuv",
-  "rstudio/shiny@rc-v1.3.1"
+  "rstudio/shiny"
 ))
