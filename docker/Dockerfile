@@ -1,6 +1,10 @@
 # To build, cd to this directory, then:
 #   docker build -t ss-shiny-devel .
 #
+# If you are not on the master branch and would like to build with
+# shiny-examples from your branch, run:
+#  docker build --build-arg SHINY_EXAMPLES_BRANCH=$(git symbolic-ref --short -q HEAD) -t ss-shiny-devel .
+#
 # To run with the built-in shiny-examples:
 #   docker run --rm -p 3838:3838 --name ss ss-shiny-devel
 
@@ -113,12 +117,14 @@ RUN R -e "devtools::install_github('rstudio/rsconnect')"
 
 # Install shiny-examples, and fix permissions for apps that require write
 # access.
+ARG SHINY_EXAMPLES_BRANCH=master
+ENV SHINY_EXAMPLES_BRANCH=$SHINY_EXAMPLES_BRANCH
 RUN cd /srv && \
     mv shiny-server shiny-server-orig && \
-    wget -nv https://github.com/rstudio/shiny-examples/archive/master.zip && \
-    unzip -x master.zip && \
-    mv shiny-examples-master shiny-server && \
-    rm master.zip && \
+    wget -nv https://github.com/rstudio/shiny-examples/archive/${SHINY_EXAMPLES_BRANCH}.zip && \
+    unzip -x ${SHINY_EXAMPLES_BRANCH}.zip && \
+    mv shiny-examples-${SHINY_EXAMPLES_BRANCH} shiny-server && \
+    rm ${SHINY_EXAMPLES_BRANCH}.zip && \
     cd shiny-server && \
     chmod 777 022-unicode-chinese 055-observer-demo 059-reactive-poll-and-file-reader
 
