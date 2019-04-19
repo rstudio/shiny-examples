@@ -59,9 +59,6 @@ devtools::install_github(c(
   # For 149-onRender
   "ramnathv/htmlwidgets",
 
-  # For 150-reactr-input
-  "react-R/reactR",
-
   "rstudio/httpuv",
   "rstudio/shiny@rc-v1.3.1"
 ))
