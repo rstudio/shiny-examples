@@ -42,13 +42,13 @@ server <- function(input, output, session) {
   })
 
   observe({
-    doNotification(updateDateInput, session, "x1", value = "2014-13-1", return = FALSE)
-    doNotification(updateDateInput, session, "x2", value = "2014-13-1", return = FALSE)
-    doNotification(updateDateInput, session, "x3", value = "2014-13-1", return = FALSE)
-    doNotification(updateDateRangeInput, session, "x4", end = "NA", return = FALSE)
-    doNotification(updateDateRangeInput, session, "x5", end = "NA", return = FALSE)
-    doNotification(updateDateRangeInput, session, "x6", end = "NA", return = FALSE)
-    doNotification(updateDateRangeInput, session, "x7", end = "NA", return = FALSE)
+    doNotification(updateDateInput, session, "x1", max = "2014-01-96", return = FALSE)
+    doNotification(updateDateInput, session, "x2", value = "   ", return = FALSE)
+    doNotification(updateDateInput, session, "x3", min = "{}", return = FALSE)
+    doNotification(updateDateRangeInput, session, "x4", end = "x", return = FALSE)
+    doNotification(updateDateRangeInput, session, "x5", start = "29", return = FALSE)
+    doNotification(updateDateRangeInput, session, "x6", max = "val", return = FALSE)
+    doNotification(updateDateRangeInput, session, "x7", min = "$", return = FALSE)
   }, priority = 1000)
 
   observe({
