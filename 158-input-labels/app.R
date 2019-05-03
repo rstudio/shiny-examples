@@ -4,55 +4,63 @@ row <- function(w1, w2) {
   fluidRow(column(6, w1), column(6, w2))
 }
 
+label_initial <- "An <i>escaped</i> Label"
+
 ui <- fluidPage(
-  actionButton("update", "Clicking here should add/remove the label of every widget"),
+  p("Everytime you click on the button below, it should add labels to the column that doesn't (currently) have labels, and remove labels from the column that does (currently) have labels."),
+  p(
+    a(href = "https://github.com/rstudio/shiny/pull/2406", "PR #2406"), ", ",
+    a(href = "https://github.com/rstudio/shiny/issues/868", "Issue #868")
+  ),
+  actionButton("update", "Add/remove labels"),
+  hr(),
   row(
     textInput("textInput1", label = NULL),
-    textInput("textInput2", label = "An <i>escaped</i> Label")
+    textInput("textInput2", label = label_initial)
   ),
   row(
     textAreaInput("textAreaInput1", label = NULL),
-    textAreaInput("textAreaInput2", label = "An <i>escaped</i> Label")
+    textAreaInput("textAreaInput2", label = label_initial)
   ),
   row(
     numericInput("numericInput1", label = NULL, value = 1),
-    numericInput("numericInput2", label = NULL, value = 1)
+    numericInput("numericInput2", label = label_initial, value = 1)
   ),
   row(
     sliderInput("sliderInput1", label = NULL, value = 1, min = 0, max = 1),
-    sliderInput("sliderInput2", label = NULL, value = 1, min = 0, max = 1)
+    sliderInput("sliderInput2", label = label_initial, value = 1, min = 0, max = 1)
   ),
   row(
     passwordInput("passwordInput1", label = NULL),
-    passwordInput("passwordInput2", label = NULL)
+    passwordInput("passwordInput2", label = label_initial)
   ),
   row(
     selectInput("selectInput1", label = NULL, choices = "a"),
-    selectInput("selectInput2", label = NULL, choices = "a")
+    selectInput("selectInput2", label = label_initial, choices = "a")
   ),
   row(
     selectizeInput("selectizeInput1", label = NULL, choices = "a"),
-    selectizeInput("selectizeInput2", label = NULL, choices = "a")
+    selectizeInput("selectizeInput2", label = label_initial, choices = "a")
   ),
   row(
     varSelectInput("varSelectInput1", label = NULL, data = iris),
-    varSelectInput("varSelectInput2", label = NULL, data = iris)
+    varSelectInput("varSelectInput2", label = label_initial, data = iris)
   ),
   row(
     varSelectizeInput("varSelectizeInput1", label = NULL, data = iris),
-    varSelectizeInput("varSelectizeInput2", label = NULL, data = iris)
+    varSelectizeInput("varSelectizeInput2", label = label_initial, data = iris)
   ),
   row(
     checkboxInput("checkboxInput1", label = NULL),
-    checkboxInput("checkboxInput2", label = NULL)
+    checkboxInput("checkboxInput2", label = label_initial)
   ),
   row(
     checkboxGroupInput("checkboxGroupInput1", label = NULL, choices = "a"),
-    checkboxGroupInput("checkboxGroupInput2", label = NULL, choices = "a")
+    checkboxGroupInput("checkboxGroupInput2", label = label_initial, choices = "a")
   ),
   row(
     dateInput("dateInput1", label = NULL),
-    dateInput("dateInput2", label = NULL)
+    dateInput("dateInput2", label = label_initial)
   )
 )
 
