@@ -16,7 +16,7 @@ ui <- fluidPage(
   verbatimTextOutput("output"),
   p(
     a("Issue #2387", href = "https://github.com/rstudio/shiny/issues/2387"), "/",
-    a("PR #2404", href = "https://github.com/rstudio/shiny/issues/2404")
+    a("PR #2404", href = "https://github.com/rstudio/shiny/pull/2404")
   )
 )
 
