@@ -1,0 +1,15 @@
+---
+title: "Shiny rmarkdown resource fallthrough"
+output: html_document
+runtime: shiny
+---
+
+```{r}
+tags$script(src = "js/log-rmd.js")
+```
+
+
+```{r}
+shiny::shinyAppDir("app")
+```
+
