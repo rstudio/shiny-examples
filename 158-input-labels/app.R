@@ -35,8 +35,8 @@ ui <- fluidPage(
     passwordInput("passwordInput2", label = label_initial)
   ),
   row(
-    selectInput("selectInput1", label = NULL, choices = "a"),
-    selectInput("selectInput2", label = label_initial, choices = "a")
+    selectInput("selectInput1", label = NULL, choices = "a", selectize = FALSE),
+    selectInput("selectInput2", label = label_initial, choices = "a", selectize = FALSE)
   ),
   row(
     selectizeInput("selectizeInput1", label = NULL, choices = "a"),
