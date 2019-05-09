@@ -3,8 +3,9 @@ library(shiny)
 initRange <- c(1, 2)
 
 ui <- fluidPage(
-  p("Make sure the output below is debounced (i.e. rapidly changing the slider doesn't rapidly update the output below it) both before and after updating the slider. Also, make sure after updating to a date, that the result is of a Date type."),
-  actionButton("update", "Update slider"),
+  p("Make sure the output below is debounced: if you keep moving the slider, the value should update only after you have stopped for 0.25 seconds.
+     Next, click on the 'Update to Dates' button. The slider should show dates, the output value should still be debounced when moving the slider, and the type of the values in the text box should be Date[1:2]."),
+  actionButton("update", "Update to Dates"),
   sliderInput(
     "slider",
     label = "Dates",
