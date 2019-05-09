@@ -1,15 +1,9 @@
 ---
 title: "Shiny rmarkdown resource fallthrough"
 output: html_document
-runtime: shiny
+runtime: shiny_prerendered
 ---
 
 ```{r}
 tags$script(src = "js/log-rmd.js")
 ```
-
-
-```{r}
-shiny::shinyAppDir("app")
-```
-
