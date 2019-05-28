@@ -15,12 +15,14 @@ shinyApp(
   server = function(input, output, session) {
 
     output$testResult <- renderUI({
+      input$variable
+
       nInputs <- length(.subset2(input, "impl")$toList())
       if (nInputs == 1) {
         tags$b("Test passed, move along", style = "color: green")
       } else {
         p(
-          tags$b("Test failed: ", style = "color: green"),
+          tags$b("Test failed: ", style = "color: red"),
           "expected one input value, but got ",
           nInputs
         )
