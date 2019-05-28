@@ -12,7 +12,7 @@ row <- function(w1, w2) {
 label_initial <- "An <i>escaped</i> Label"
 
 ui <- fluidPage(
-  p("Everytime you click on the button below, it should add labels to the column that doesn't (currently) have labels, and remove labels from the column that does (currently) have labels."),
+  p("Everytime you click on the button below, it should add labels to the column that doesn't (currently) have labels, and remove labels from the column that does (currently) have labels. Every label should say: '", tags$b(label_initial), "'."),
   p(
     a(href = "https://github.com/rstudio/shiny/pull/2406", "PR #2406"), ", ",
     a(href = "https://github.com/rstudio/shiny/issues/868", "Issue #868")
