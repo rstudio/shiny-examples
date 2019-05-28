@@ -17,7 +17,7 @@ ui <- fluidPage(
 server <- function(input, output, session) {
 
   # variable for tracking warning message
-  warn_messages <- NULL
+  warn_messages <- reactiveVal(NULL)
 
   # turn any warnings produced by calling a function
   # into a notification and optionally call the function
@@ -25,7 +25,10 @@ server <- function(input, output, session) {
   # function produces side effects)
   catchWarning <- function(f, ..., return = TRUE) {
     tryCatch(f(...), warning = function(w) {
-      warn_messages <<- c(warn_messages, w$message)
+      isolate({
+        msgs <- c(warn_messages(), w$message)
+        warn_messages(msgs)
+      })
       if (return) f(...)
     })
   }
@@ -54,10 +57,10 @@ server <- function(input, output, session) {
     catchWarning(updateDateRangeInput, session, "x7", min = "$", return = FALSE)
   })
 
-  output$warnings <- renderPrint(warn_messages)
+  output$warnings <- renderPrint(warn_messages())
 
   output$res <- renderUI({
-    n <- length(warn_messages)
+    n <- length(warn_messages())
     status <- if (n == 14)
       tags$b("Test passed, move along!", style = "color: green")
     else
