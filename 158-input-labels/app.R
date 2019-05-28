@@ -1,7 +1,12 @@
 library(shiny)
 
+# ensure two column appear on small displays
+column2 <- function(x) {
+  div(class = "col-xs-6", x)
+}
+
 row <- function(w1, w2) {
-  fluidRow(column(6, w1), column(6, w2))
+  fluidRow(column2(w1), column2(w2))
 }
 
 label_initial <- "An <i>escaped</i> Label"
