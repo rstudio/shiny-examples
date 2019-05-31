@@ -1,4 +1,7 @@
 $(function() {
+  $("#swallow_wrapper").on('shiny:inputchanged', function(event) {
+    event.preventDefault();
+  });
   $(document).on({
 
     'shiny:connected': function(event) {
@@ -41,6 +44,8 @@ $(function() {
       if (msg.hasOwnProperty('custom') && msg.custom.hasOwnProperty('special')) {
         console.log('This is a special message from Shiny:');
         console.log(msg.custom.special);
+      } else if (msg.hasOwnProperty('custom') && msg.custom.hasOwnProperty('swallow_fail')) {
+        alert(msg.custom.swallow_fail.msg);
       }
     },
 
@@ -57,8 +62,7 @@ $(function() {
 
     'shiny:value': function(event) {
       if (event.name === 'slider_info2') {
-        event.value = 'My output was modified by the shiny:value event.\n' +
-                      'Now I do not know the value of the slider.';
+        event.value = 'My output was modified by the shiny:value event.';
       }
     },
 

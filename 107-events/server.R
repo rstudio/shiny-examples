@@ -42,6 +42,10 @@ function(input, output, session) {
     Sys.sleep(2)
   })
 
+  observeEvent(input$swallow_event_button, {
+    session$sendCustomMessage('swallow_fail', list(msg = "Fail"))
+  })
+
   observeEvent(input$end, session$close())
 
 }
