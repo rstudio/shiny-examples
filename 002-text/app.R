@@ -1,9 +1,5 @@
 library(shiny)
 
-# Use of a factor here tests that https://github.com/rstudio/shiny/pull/2524 still works.
-choices <- c("rock", "pressure", "cars")
-choices <- factor(setNames(choices, choices))
-
 # Define UI for dataset viewer app ----
 ui <- fluidPage(
 
@@ -19,7 +15,7 @@ ui <- fluidPage(
       # Input: Selector for choosing dataset ----
       selectInput(inputId = "dataset",
                   label = "Choose a dataset:",
-                  choices = choices),
+                  choices = c("rock", "pressure", "cars")),
 
       # Input: Numeric entry for number of obs to view ----
       numericInput(inputId = "obs",
