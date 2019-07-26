@@ -5,25 +5,26 @@ ui <- fluidPage(
   # App title ----
   titlePanel("Suppress Whitespace!"),
 
-  tags$div(id="first", "Click to learn more about '", tags$a(href="https://shiny.rstudio.com", "Shiny"), "'."),
+  tags$div(id="first", "This should contain whitespace inside the single quotes (default behavior): '", tags$a(href="https://shiny.rstudio.com", "Shiny"), "'."),
   tags$div(id="firstOutcome", class="alert alert-info"),
   tags$hr(),
-  tags$div(id="second", "Click to learn more about '", tags$a(href="https://shiny.rstudio.com", "Shiny", .noWS="outside"), "'."),
+  tags$div(id="second", "This should NOT contain whitespace inside the single quotes:  '", tags$a(href="https://shiny.rstudio.com", "Shiny", .noWS="outside"), "'."),
   tags$div(id="secondOutcome", class="alert alert-info"),
   tags$hr(),
   helpText("The first link above doesn't specify a `.noWS` argument, so spacing is added around the link which isn't the ideal presentation since we want to enquote it. The second link sets `.noWS=\"outside\"` to squash the whitespace around the link."),
   tags$script("
 // Some JavaScript to help automate testing
-function testWhitespace(inputId, outputId){
+function testWhitespace(inputId, outputId, whitespaceExpected) {
   var output = $('#' + outputId);
-  if (/'Shiny'/.test($('#' + inputId).text())){
-    output.text('No whitespace detected ^');
+  
+  if (/'Shiny'/.test($('#' + inputId).text()) === whitespaceExpected) {
+    output.text('Pass!');
   } else {
-    output.text('Whitespace detected ^');
+    output.text('FAIL');
   }
 }
-testWhitespace('first', 'firstOutcome');
-testWhitespace('second', 'secondOutcome');
+testWhitespace('first', 'firstOutcome', false);
+testWhitespace('second', 'secondOutcome', true);
 ")
 )
 
