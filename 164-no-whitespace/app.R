@@ -14,10 +14,10 @@ ui <- fluidPage(
   helpText("The first link above doesn't specify a `.noWS` argument, so spacing is added around the link which isn't the ideal presentation since we want to enquote it. The second link sets `.noWS=\"outside\"` to squash the whitespace around the link."),
   tags$script("
 // Some JavaScript to help automate testing
-function testWhitespace(inputId, outputId, whitespaceExpected) {
+function testWhitespace(inputId, outputId, noWhitespaceExpected) {
   var output = $('#' + outputId);
   
-  if (/'Shiny'/.test($('#' + inputId).text()) === whitespaceExpected) {
+  if (/'Shiny'/.test($('#' + inputId).text()) === noWhitespaceExpected) {
     output.text('Pass!');
   } else {
     output.text('FAIL');
