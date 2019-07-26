@@ -62,6 +62,10 @@ devtools::install_github(c(
   # For 150-reactr-input
   "react-R/reactR",
 
+  # For 164-no-whitespace.
+  # Requires htmltools >= 0.3.6.9004
+  "rstudio/htmltools",
+
   "rstudio/httpuv",
   "rstudio/shiny"
 ))
