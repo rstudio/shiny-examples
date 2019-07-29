@@ -4,7 +4,8 @@ library(shiny)
 ui <- fluidPage(
   # App title ----
   titlePanel("Suppress Whitespace!"),
-
+  shiny::textOutput("package"),
+  tags$hr(),
   tags$div(id="first", "This should contain whitespace inside the single quotes (default behavior): '", tags$a(href="https://shiny.rstudio.com", "Shiny"), "'."),
   tags$div(id="firstOutcome", class="alert alert-info"),
   tags$hr(),
@@ -16,7 +17,7 @@ ui <- fluidPage(
 // Some JavaScript to help automate testing
 function testWhitespace(inputId, outputId, noWhitespaceExpected) {
   var output = $('#' + outputId);
-  
+
   if (/'Shiny'/.test($('#' + inputId).text()) === noWhitespaceExpected) {
     output.text('Pass!');
   } else {
@@ -30,7 +31,9 @@ testWhitespace('second', 'secondOutcome', true);
 
 # Define server logic required to draw a histogram ----
 server <- function(input, output) {
-
+  output$package <- renderText({
+    paste0("Testing on htmltools version '", packageVersion("htmltools"), "'")
+  })
 
 }
 
