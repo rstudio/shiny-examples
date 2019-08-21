@@ -63,6 +63,7 @@ devtools::install_github(c(
   "react-R/reactR",
 
   # For 164-no-whitespace.
+  # And 165-trailing-comma
   # Requires htmltools >= 0.3.6.9004
   "rstudio/htmltools",
 
