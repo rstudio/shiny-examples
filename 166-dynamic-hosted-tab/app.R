@@ -1,3 +1,4 @@
+
 # devtools::install_github("rstudio/shiny#2545")
 # devtools::install_github("rstudio/shiny")
 
@@ -21,7 +22,13 @@ ui <- fluidPage(
       tags$div(id="result"),
       tags$br(),tags$br(),
       tabsetPanel(id = "tabs",
-        tabPanel("Hello", "This is the hello tab")
+        tabPanel(
+          "Hello",
+          tagList(
+            "This is the hello tab. ",
+            tags$span(class = "val", 0)
+          )
+        )
       )
     )
   ),
@@ -36,7 +43,7 @@ server <- function(input, output, session) {
         tabPanel(
           "Dynamic",
           tagList(
-            "Content for dynamic tab",
+            "Content for dynamic tab ",
             tags$span(class = "val", n)
           )
         )

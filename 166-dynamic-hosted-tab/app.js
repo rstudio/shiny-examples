@@ -1,38 +1,35 @@
+
+
 var timeout = 250;
+// do something every X ms
 var do_fns = function(arr, callback) {
   var fns = [].concat(arr);
 
   var try_exec = function() {
+    // if no fns to call, return
     if (fns.length == 0) {
       callback(null, true);
       return;
     }
-    var fn = fns.shift(); // first element
+    // get first element
+    var fn = fns.shift();
 
     fn(function() {
+      // display progress
       $(progress).text($(progress).text() + ".")
+      // try to exec more fns
       setTimeout(try_exec, timeout);
     });
   }
 
   try_exec();
-}
+};
 
 
-
+// wait until dom is ready
 $(function() {
 
-  var tabset_id = $("#tabs").attr("data-tabsetid");
-
-
-
-
-
-
-  var tab_id = function(i) {
-    return "#tab-" + tabset_id + "-" + i;
-  }
-
+  // counter to add active tab number
 
   var counter = 0;
   var fns = [
@@ -52,7 +49,7 @@ $(function() {
       do_fns(clicks, done);
     },
 
-    // add broken tabs
+    // add "broken" tabs
     function(done) { $("#add").click(); done(); },
     function(done) { $("#add").click(); done(); },
     function(done) { $("#add").click(); done(); },
@@ -81,22 +78,23 @@ $(function() {
       do_fns(clicks, done);
     },
 
+    // verify the tabs work
     function(done) {
       var sum = 0;
-      for (var i = 0; i < $(".tab-pane").get().length; i++) {
+      var len = $(".tab-pane").get().length;
+      for (var i = 0; i < len; i++) {
         sum += i;
       }
 
       if (counter == sum ) {
         $("#result").css("background-color", "#7be092").text("PASSED!")
       } else {
-        $("#result").css("background-color", "#e07b7b").text("FAILED!\nCounted a sum of " + counter + " vs " + sum)
+        $("#result").css("background-color", "#e07b7b").text("FAILED!\nCounted a sum of " + counter + " vs " + sum);
       }
     }
   ];
 
-
+  // test!
   do_fns(fns);
-
 
 });
