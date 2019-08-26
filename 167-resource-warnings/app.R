@@ -3,6 +3,11 @@ library(shiny)
 addResourcePath("session", system.file(package = "httpuv"))
 addResourcePath("images", system.file(package = "shiny"))
 
+onStop(function() {
+  removeResourcePath("session")
+  removeResourcePath("images")
+})
+
 ui <- fluidPage(
   "You should see two warnings about resource paths in your R console.",
   # This image is here to ensure that addResourcePath("images", ...)
@@ -11,10 +16,7 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
-  onStop(function() {
-    removeResourcePath("session")
-    removeResourcePath("images")
-  })
+
 }
 
 shinyApp(ui, server)
