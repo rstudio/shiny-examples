@@ -90,7 +90,7 @@ run_next <- function() {
 run_app <- function(app, port, launch_browser, display_mode = "auto") {
   message("Running ", app)
 
-  if (grepl("026", app)) {
+  if (grepl("026", app) || grepl("169", app)) {
     rmarkdown::run(
       file.path(app, "index.Rmd"),
       shiny_args = list(
