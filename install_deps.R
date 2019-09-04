@@ -67,6 +67,9 @@ devtools::install_github(c(
   # Requires htmltools >= 0.3.6.9004
   "rstudio/htmltools",
 
+  # For 168-prerender-resources
+  "rstudio/rmarkdown",
+
   "rstudio/httpuv",
   "rstudio/shiny"
 ))
