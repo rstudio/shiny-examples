@@ -1,0 +1,45 @@
+{
+  "input": {
+    "dataset": "sepalLength",
+    "dataset-selectized": ""
+  },
+  "output": {
+    "distPlot": {
+      "src": "[image data sha1: cdd1f037f23cdbb1094ebf2f262aaa01ed982462]",
+      "width": 631,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 4.156,
+              "right": 8.044,
+              "bottom": -0.64,
+              "top": 16.64
+            },
+            "range": {
+              "left": 59.04,
+              "right": 600.76,
+              "bottom": 325.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 631,
+          "height": 400
+        }
+      }
+    }
+  },
+  "export": {
+
+  }
+}
