@@ -33,6 +33,16 @@ server <- function(input, output, session) {
     })
   }
 
+  output$warnings <- renderPrint(warn_messages())
+
+  output$res <- renderUI({
+    n <- length(warn_messages())
+    status <- if (n == 14)
+      tags$b("Test passed, move along!", style = "color: green")
+    else
+      p(tags$b("Fail:", style = "color: red"), "expected 14 warnings, but got", n)
+  })
+
   output$inputs <- renderUI({
     tagList(
       catchWarning(dateInput, "x1", "Mis-specified `value`", value = "2014-13-1"),
@@ -55,16 +65,6 @@ server <- function(input, output, session) {
     catchWarning(updateDateRangeInput, session, "x5", start = "29", return = FALSE)
     catchWarning(updateDateRangeInput, session, "x6", max = "val", return = FALSE)
     catchWarning(updateDateRangeInput, session, "x7", min = "$", return = FALSE)
-  })
-
-  output$warnings <- renderPrint(warn_messages())
-
-  output$res <- renderUI({
-    n <- length(warn_messages())
-    status <- if (n == 14)
-      tags$b("Test passed, move along!", style = "color: green")
-    else
-      p(tags$b("Fail:", style = "color: red"), "expected 14 warnings, but got", n)
   })
 
 }
