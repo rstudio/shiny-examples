@@ -1,0 +1,9 @@
+---
+title: "Test passed, move along!"
+output: html_document
+runtime: shiny_prerendered
+---
+
+```{r, echo = FALSE}
+tags$script(src = "js/log-rmd.js")
+```
