@@ -11,5 +11,5 @@ tags$script(src = "js/log-rmd.js")
 Please exit this app, and then, in the same R session, run the following:
 
 ```r
-shiny::runApp("168-prerender-resources/app")
+shiny::runApp("169-prerender-resources/app")
 ```
