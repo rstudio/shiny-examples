@@ -62,7 +62,7 @@ server <- function(input, output, session) {
   output$res <- renderUI({
     n <- length(warn_messages())
     status <- if (n == 14)
-      tags$b("Test passed, move along!", style = "color: green")
+      tags$b("Test passed (it's OK if you see warnings in your R console)", style = "color: green")
     else
       p(tags$b("Fail:", style = "color: red"), "expected 14 warnings, but got", n)
   })
