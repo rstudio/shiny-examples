@@ -21,3 +21,5 @@ logfile*.txt
 
 # Packrat lockfiles generated during RSC deploy
 packrat.lock
+
+169-prerender-a/index.html

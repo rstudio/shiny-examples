@@ -90,7 +90,8 @@ run_next <- function() {
 run_app <- function(app, port, launch_browser, display_mode = "auto") {
   message("Running ", app)
 
-  if (grepl("026", app) || grepl("169", app)) {
+  if (grepl("026", app) || grepl("169.*a$", app)) {
+
     rmarkdown::run(
       file.path(app, "index.Rmd"),
       shiny_args = list(
@@ -123,7 +124,7 @@ rerun <- function() {
     display_mode = display_mode
   )
 
-  if (new_process) {
+  if (new_process & !grepl("^169", args$app)) {
     callr::r(run_app, args, show = TRUE)
   } else {
     do.call(run_app, args)
