@@ -71,7 +71,7 @@ devtools::install_github(c(
   "rstudio/rmarkdown",
 
   # For shiny 1.4.0 release candidate
-  "rstudio/later@rc-v1.0.0",
+  "r-lib/later@rc-v1.0.0",
   "rstudio/promises@rc-v1.1.0",
   "rstudio/shiny@rc-v1.4.0"
 ))
