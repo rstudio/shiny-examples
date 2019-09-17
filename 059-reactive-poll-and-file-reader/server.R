@@ -1,10 +1,7 @@
 function(input, output, session) {
 
   # Create a random name for the log file
-  logfilename <- paste0('logfile',
-                        floor(runif(1, 1e+05, 1e+06 - 1)),
-                        '.txt')
-
+  logfilename <- tempfile('logfile', fileext = '.txt')
 
   # ============================================================
   # This part of the code writes to the log file every second.
