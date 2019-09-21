@@ -24,7 +24,7 @@ server <- function(input, output, session) {
   })
 
   session$onFlushed(function() {
-    print("Flushed")
+    message("Flushed")
   }, once = FALSE)
 
   output$out <- renderText({
