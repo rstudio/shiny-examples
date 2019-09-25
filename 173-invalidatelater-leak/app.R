@@ -1,6 +1,12 @@
 library(shiny)
 library(pryr)
 
+# It's possible for this test to fail when reactlog is enabled
+op <- options(shiny.reactlog = FALSE)
+onStop(function() {
+  options(op)
+})
+
 ui <- fluidPage(
   p("This application tests if", code("invalidateLater"),
     "causes significant memory leakage. (",
