@@ -1,6 +1,9 @@
 library(shiny)
 
 options(shiny.jquery.version = 1)
+onStop(function() {
+  options(shiny.jquery.version = NULL)
+})
 
 ui <- fluidPage(
   p(HTML("This test verifies that app authors can opt into using jQuery 1 using <code>options(shiny.jquery.version)</code>.")),
