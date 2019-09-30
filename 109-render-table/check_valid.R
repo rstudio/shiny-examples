@@ -43,6 +43,7 @@ colnames <- function() as.logical(input$colnames)
 # Check align is valid
 align <- function() {
   al <- input$align
+  req(al)
   if (al == "NULL") return(NULL)
   if (!grepl("[^lcr\\?]", al)) return(al)
   else stop("Invalid align argument")
