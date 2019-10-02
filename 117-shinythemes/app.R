@@ -9,7 +9,7 @@ shinyApp(
           fileInput("file", "File input:"),
           textInput("txt", "Text input:", "general"),
           sliderInput("slider", "Slider input:", 1, 100, 30),
-          tags$h5("Deafult actionButton:"),
+          tags$h5("Default actionButton:"),
           actionButton("action", "Search"),
 
           tags$h5("actionButton with CSS class:"),
