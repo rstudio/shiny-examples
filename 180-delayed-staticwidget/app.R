@@ -9,8 +9,8 @@ ui <- fluidPage(
   ),
   p("Verify the following:"),
   tags$ol(
-    tags$li("A 'Static render complete' alert DOES NOT appear."),
     tags$li("An 'onRender called' alert appears."),
+    tags$li("A 'Static render complete' alert appears."),
     tags$li("The map appears, with background tiles and markers."),
   ),
   uiOutput("ui"),
@@ -19,16 +19,12 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   output$ui <- renderUI({
     tagList(
-      leafletOutput("map"),
+      leaflet(quakes) %>%
+        addTiles() %>%
+        addMarkers() %>%
+        htmlwidgets::onRender("function(el, x) { alert('onRender called'); }"),
       htmlwidgets::onStaticRenderComplete("alert('Static render complete');")
     )
-  })
-  
-  output$map <- renderLeaflet({
-    leaflet(quakes) %>%
-      addTiles() %>%
-      addMarkers() %>%
-      htmlwidgets::onRender("function(el, x) { alert('onRender called'); }")
   })
 }
 
