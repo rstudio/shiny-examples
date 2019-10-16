@@ -17,7 +17,9 @@ ui <- basicPage(
   uiOutput("res1"),
   br(),
   plotOutput("plot2", brush = "brush2"),
-  uiOutput("res2")
+  uiOutput("res2"),
+  plotOutput("plot3", brush = "brush3"),
+  uiOutput("res3")
 )
 
 server <- function(input, output) {
@@ -85,6 +87,48 @@ server <- function(input, output) {
     actual <- brush2key()
     expected <- filter(m, fl == "e") %>% pull(key)
     if (identical(sort(expected), sort(actual))) {
+      tags$b("Test passed!", style = "color: green")
+    } else {
+      tags$b("Test failed", style = "color: red")
+    }
+  })
+
+  dat <- data.frame(
+    x = c("a", "b", NA, NA),
+    y = c(1, 2, 3, 2),
+    key = c("a", "b", "c", "d"),
+    stringsAsFactors = FALSE
+  )
+
+  output$plot3 <- renderPlot({
+    ggplot(dat) +
+      geom_point(aes(x, y)) +
+      facet_wrap(~x, scales = "free") +
+      geom_rect(
+        data = data.frame(
+          x1 = 0.8,
+          x2 = 1.2,
+          y1 = 2.9,
+          y2 = 3.1,
+          x = NA
+        ),
+        aes(xmin=x1, xmax=x2, ymin=y1, ymax=y2),
+        alpha = 0, color = "black", lty = 2
+      ) +
+      ylim(1, 4)
+  })
+
+  brush3key <- reactive({
+    if (is.null(input$brush3)) return(NULL)
+    brushedPoints(dat, input$brush3)$key
+  })
+
+  output$res3 <- renderPrint({
+    if (is.null(brush3key())) {
+      return(tags$b("Brush the points outlined above"))
+    }
+    actual <- brush3key()
+    if (identical(actual, "c")) {
       tags$b("Test passed!", style = "color: green")
     } else {
       tags$b("Test failed", style = "color: red")
