@@ -31,4 +31,4 @@ getTermMatrix <- function(text) {
   m = as.matrix(myDTM)
 
   sort(rowSums(m), decreasing = TRUE)
-})
+}
