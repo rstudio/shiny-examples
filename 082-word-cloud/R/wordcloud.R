@@ -1,6 +1,5 @@
 library(tm)
 library(wordcloud)
-library(memoise)
 
 # The list of valid books
 books <<- list("A Mid Summer Night's Dream" = "summer",
@@ -18,7 +17,7 @@ loadBook <- function(book){
 }
 
 # Using "memoise" to automatically cache the results
-getTermMatrix <- memoise(function(text) {
+getTermMatrix <- function(text) {
   myCorpus = Corpus(VectorSource(text))
   myCorpus = tm_map(myCorpus, content_transformer(tolower))
   myCorpus = tm_map(myCorpus, removePunctuation)
