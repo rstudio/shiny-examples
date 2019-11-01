@@ -6,13 +6,13 @@ books <<- list("A Mid Summer Night's Dream" = "summer",
               "The Merchant of Venice" = "merchant",
               "Romeo and Juliet" = "romeo")
 
-loadBook <- function(book){
+loadBook <- function(book, dir="."){
   # Careful not to let just any name slip in here; a
   # malicious user could manipulate this value.
   if (!(book %in% books))
     stop("Unknown book")
 
-  readLines(sprintf("./%s.txt.gz", book),
+  readLines(file.path(dir, sprintf("./%s.txt.gz", book)),
                     encoding="UTF-8")
 }
 

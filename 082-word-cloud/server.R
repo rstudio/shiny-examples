@@ -6,6 +6,9 @@
 # Romeo and Juliet:
 #  http://www.gutenberg.org/cache/epub/1112/pg1112.txt
 
+# Make the wordcloud drawing predictable during a session
+wordcloud_rep <- repeatable(wordcloud)
+
 function(input, output, session) {
   # Define a reactive expression for the document term matrix
   terms <- reactive({
@@ -13,15 +16,9 @@ function(input, output, session) {
     input$update
     # ...but not for anything else
     isolate({
-      withProgress({
-        setProgress(message = "Processing corpus...")
-        getTermMatrix(loadBook(input$selection))
-      })
+      getTermMatrix(loadBook(input$selection))
     })
   })
-
-  # Make the wordcloud drawing predictable during a session
-  wordcloud_rep <- repeatable(wordcloud)
 
   output$plot <- renderPlot({
     v <- terms()
