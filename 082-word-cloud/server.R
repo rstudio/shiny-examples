@@ -15,7 +15,7 @@ function(input, output, session) {
     isolate({
       withProgress({
         setProgress(message = "Processing corpus...")
-        getTermMatrix(input$selection)
+        getTermMatrix(loadBook(input$selection))
       })
     })
   })
