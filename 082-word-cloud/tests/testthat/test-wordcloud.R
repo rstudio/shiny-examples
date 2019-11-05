@@ -3,7 +3,7 @@ context("loadBook")
 
 # Write out a test book using:
 # bf <- gzfile(test_path("test_books", "summer.txt.gz"), "w")
-# writeLines(c(Sample book", "lines here"), bf)
+# writeLines(c("Sample book", "lines here"), bf)
 # close(bf)
 
 test_that("reads in the lines of a book", {
