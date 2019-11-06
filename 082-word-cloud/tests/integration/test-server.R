@@ -1,5 +1,6 @@
 
 library(testthat)
+
 testServer({
   describe("server", {
     # Initialize
