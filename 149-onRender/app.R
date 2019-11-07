@@ -39,7 +39,7 @@ server <- function(input, output, session) {
 
   p <- plotly_empty() %>%
     add_annotations(
-      text = if (packageVersion("htmlwidgets") <= "1.5.1") "Please install htmlwidgets v1.4 or higher and try again" else "Test did not pass :(",
+      text = if (packageVersion("htmlwidgets") <= "1.5.1") "Please upgrade htmlwidgets" else "Test did not pass :(",
       x = 0,
       y = 0,
       showarrow = FALSE
