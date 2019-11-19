@@ -1,0 +1,10 @@
+app <- ShinyDriver$new("../../", seed = 1234)
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$setInputs(selection = "merchant")
+app$setInputs(freq = 35)
+app$snapshot()
+app$setInputs(selection = "romeo")
+app$setInputs(max = 164)
+app$setInputs(update = "click")

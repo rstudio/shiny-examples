@@ -2,4 +2,4 @@
 # will no longer be necessary. We just include it here because we want this example to support
 # older versions of Shiny.
 
-source("R/wordcloud.R")
+# source("R/wordcloud.R")
