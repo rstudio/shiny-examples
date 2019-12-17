@@ -1,0 +1,49 @@
+{
+  "input": {
+    "client-1-select": "1",
+    "client-2-select": "1",
+    "client-3-select": "1",
+    "client-4-select": "1",
+    "client-5-select": "1",
+    "client-6-select": "1",
+    "client-7-select": "1",
+    "server-1-select": "1",
+    "server-10-select": "a1",
+    "server-11-select": "a1",
+    "server-12-select": "a1",
+    "server-13-select": "1",
+    "server-2-select": "1",
+    "server-3-select": "1",
+    "server-4-select": "1",
+    "server-5-select": "1",
+    "server-6-select": "1",
+    "server-7-select": "1",
+    "server-8-select": "a1",
+    "server-9-select": "a1"
+  },
+  "output": {
+    "client-1-output": "[1] \"1\"",
+    "client-2-output": "[1] \"1\"",
+    "client-3-output": "[1] \"1\"",
+    "client-4-output": "[1] \"1\"",
+    "client-5-output": "[1] \"1\"",
+    "client-6-output": "[1] \"1\"",
+    "client-7-output": "[1] \"1\"",
+    "server-1-output": "[1] \"1\"",
+    "server-10-output": "[1] \"a1\"",
+    "server-11-output": "[1] \"a1\"",
+    "server-12-output": "[1] \"a1\"",
+    "server-13-output": "[1] \"1\"",
+    "server-2-output": "[1] \"1\"",
+    "server-3-output": "[1] \"1\"",
+    "server-4-output": "[1] \"1\"",
+    "server-5-output": "[1] \"1\"",
+    "server-6-output": "[1] \"1\"",
+    "server-7-output": "[1] \"1\"",
+    "server-8-output": "[1] \"a1\"",
+    "server-9-output": "[1] \"a1\""
+  },
+  "export": {
+
+  }
+}

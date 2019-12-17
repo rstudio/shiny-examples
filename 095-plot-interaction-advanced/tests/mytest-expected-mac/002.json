@@ -1,0 +1,266 @@
+{
+  "input": {
+    "brush_delay": 200,
+    "brush_dir": "x",
+    "brush_policy": "debounce",
+    "brush_reset": false,
+    "dataset": "mtcars",
+    "dblclick_delay": 400,
+    "ggplot_facet": "none",
+    "ggplot_scaletype": "normal",
+    "hover_delay": 200,
+    "hover_null_outside": true,
+    "hover_policy": "debounce",
+    "max_distance": 5,
+    "max_points": 100,
+    "plot_brush": null,
+    "plot_brushed_points_cell_clicked": {
+
+    },
+    "plot_brushed_points_rows_all": null,
+    "plot_brushed_points_rows_current": null,
+    "plot_brushed_points_rows_selected": null,
+    "plot_brushed_points_search": "",
+    "plot_brushed_points_state": null,
+    "plot_clicked_points_cell_clicked": {
+
+    },
+    "plot_clicked_points_rows_all": null,
+    "plot_clicked_points_rows_current": null,
+    "plot_clicked_points_rows_selected": null,
+    "plot_clicked_points_search": "",
+    "plot_clicked_points_state": null,
+    "plot_scaletype": "normal",
+    "plot_type": "base"
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: 7678118ea617d00cabeff54ce648f9e962a038ee]",
+      "width": 466,
+      "height": 300,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 1.35656,
+              "right": 5.58044,
+              "bottom": 9.46,
+              "top": 34.84
+            },
+            "range": {
+              "left": 57.6,
+              "right": 458.8,
+              "bottom": 241.4,
+              "top": 6.19999999999997
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 466,
+          "height": 300
+        }
+      }
+    },
+    "plot_brushed_points": {
+      "x": {
+        "filter": "none",
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>wt<\/th>\n      <th>am<\/th>\n      <th>date<\/th>\n      <th>datetime<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                1,
+                3
+              ]
+            },
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "plot_brushinfo": "input$plot_brush:\n NULL",
+    "plot_clicked_points": {
+      "x": {
+        "filter": "none",
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>wt<\/th>\n      <th>am<\/th>\n      <th>date<\/th>\n      <th>datetime<\/th>\n      <th>dist_<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                1,
+                3,
+                7
+              ]
+            },
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "plot_clickinfo": "input$plot_click:\n NULL",
+    "plot_dblclickinfo": "input$plot_dblclick:\n NULL",
+    "plot_hoverinfo": "input$plot_hover:\n NULL",
+    "plotui": {
+      "html": "<div id=\"plot\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 300px\" data-click-id=\"plot_click\" data-click-clip=\"TRUE\" data-dblclick-id=\"plot_dblclick\" data-dblclick-clip=\"TRUE\" data-dblclick-delay=\"400\" data-hover-id=\"plot_hover\" data-hover-delay=\"200\" data-hover-delay-type=\"debounce\" data-hover-clip=\"TRUE\" data-hover-null-outside=\"TRUE\" data-brush-id=\"plot_brush\" data-brush-fill=\"#9cf\" data-brush-stroke=\"#036\" data-brush-opacity=\"0.25\" data-brush-delay=\"200\" data-brush-delay-type=\"debounce\" data-brush-clip=\"TRUE\" data-brush-direction=\"x\" data-brush-reset-on-new=\"FALSE\"><\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

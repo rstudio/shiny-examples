@@ -11,32 +11,38 @@
   "output": {
     "desc": "The Google Travel Index tracks queries related to airlines, hotels, beach, southwest, las vegas, flights, etc. The index is set to 1.0 on January 1, 2004 and is calculated only for US search traffic.",
     "lineplot": {
-      "src": "[image data sha1: 4598328beac654b2efc7b767e9769db903081759]",
+      "src": "[image data sha1: da5c8a2d79fe29fe8dfcb22885ff6d0b06bbdc40]",
       "width": 631,
       "height": 300,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 1154380896,
-            "right": 1512041904,
-            "bottom": 0.5784,
-            "top": 1.1616
-          },
-          "range": {
-            "left": 57.5999999999999,
-            "right": 616.6,
-            "bottom": 241.4,
-            "top": 13.4
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 1154380896,
+              "right": 1512041904,
+              "bottom": 0.5784,
+              "top": 1.1616
+            },
+            "range": {
+              "left": 57.5999999999999,
+              "right": 616.6,
+              "bottom": 241.4,
+              "top": 13.4
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 631,
+          "height": 300
         }
-      ]
+      }
     }
   },
   "export": {

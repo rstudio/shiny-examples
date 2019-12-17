@@ -1,0 +1,181 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "plot1": {
+      "src": "[image data sha1: c32c2e566254366ec74bd8cc25363a3030b1ffdb]",
+      "width": 962,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "4"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 3.6,
+              "bottom": 7.65,
+              "top": 37.35,
+              "discrete_limits": {
+                "x": [
+                  "e",
+                  "p",
+                  "r"
+                ]
+              }
+            },
+            "mapping": {
+              "x": "fl",
+              "y": "cty",
+              "panelvar1": "drv"
+            },
+            "range": {
+              "left": 33.1279312159917,
+              "right": 337.2725020892,
+              "bottom": 368.509178173071,
+              "top": 22.3977473941376
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "f"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": 7.65,
+              "top": 37.35,
+              "discrete_limits": {
+                "x": [
+                  "d",
+                  "e",
+                  "p",
+                  "r"
+                ]
+              }
+            },
+            "mapping": {
+              "x": "fl",
+              "y": "cty",
+              "panelvar1": "drv"
+            },
+            "range": {
+              "left": 342.751954143994,
+              "right": 646.896525017203,
+              "bottom": 368.509178173071,
+              "top": 22.3977473941376
+            }
+          },
+          {
+            "panel": 3,
+            "row": 1,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "r"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 3.6,
+              "bottom": 7.65,
+              "top": 37.35,
+              "discrete_limits": {
+                "x": [
+                  "e",
+                  "p",
+                  "r"
+                ]
+              }
+            },
+            "mapping": {
+              "x": "fl",
+              "y": "cty",
+              "panelvar1": "drv"
+            },
+            "range": {
+              "left": 652.375977071997,
+              "right": 956.520547945205,
+              "bottom": 368.509178173071,
+              "top": 22.3977473941376
+            }
+          }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 400
+        }
+      }
+    },
+    "plot2": {
+      "src": "[image data sha1: b3d574482482adde39c159976c912c281f9929ae]",
+      "width": 962,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 2.6,
+              "bottom": 6.65,
+              "top": 36.35,
+              "discrete_limits": {
+                "x": [
+                  "e",
+                  "p"
+                ]
+              }
+            },
+            "mapping": {
+              "x": "fl",
+              "y": "cty"
+            },
+            "range": {
+              "left": 33.1279312159917,
+              "right": 956.520547945205,
+              "bottom": 368.509178173071,
+              "top": 5.47945205479452
+            }
+          }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 400
+        }
+      }
+    },
+    "res1": "<b>Brush the points outlined above<\/b>",
+    "res2": "<b>Brush the points outlined above<\/b>"
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "input": {
+    "._bookmark_": 0,
+    "dates": [
+      "2000-01-01",
+      "2018-02-01"
+    ],
+    "progress": 0,
+    "sidebarCollapsed": false,
+    "sidebarItemExpanded": null
+  },
+  "output": {
+    "sankey_diagram": {
+      "x": {
+        "links": {
+          "source": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "target": [
+            2,
+            3,
+            2,
+            3
+          ],
+          "value": [
+            100,
+            25,
+            10,
+            20
+          ]
+        },
+        "nodes": {
+          "name": [
+            "Group 1",
+            "Group 2",
+            "Group 3",
+            "Group 4"
+          ],
+          "group": [
+            "Group 1",
+            "Group 2",
+            "Group 3",
+            "Group 4"
+          ]
+        },
+        "options": {
+          "NodeID": "name",
+          "NodeGroup": "name",
+          "LinkGroup": null,
+          "colourScale": "d3.scaleOrdinal(d3.schemeCategory10);",
+          "fontSize": 12,
+          "fontFamily": null,
+          "nodeWidth": 30,
+          "nodePadding": 10,
+          "units": "",
+          "margin": {
+            "top": null,
+            "right": null,
+            "bottom": null,
+            "left": null
+          },
+          "iterations": 0,
+          "sinksRight": true
+        }
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

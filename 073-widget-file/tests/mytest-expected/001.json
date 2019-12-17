@@ -16,7 +16,7 @@
     }
   },
   "output": {
-    "value": "'data.frame':\t1 obs. of  4 variables:\n $ name    : chr \"Rock.csv\"\n $ size    : int 1296\n $ type    : chr \"text/csv\"\n $ datapath: chr \"/var/folders/w8/l6d4__9d65gb67rvsc0j75b00000gn/T//RtmpdR4GUH/b45fbfb9ced5da0e8b7b6cc7/0.csv\""
+    "value": "'data.frame':\t1 obs. of  4 variables:\n $ name    : chr \"Rock.csv\"\n $ size    : int 1296\n $ type    : chr \"text/csv\"\n $ datapath: chr \"/var/folders/w8/l6d4__9d65gb67rvsc0j75b00000gn/T//RtmpefkYia/77785cb61dc8a4cea454a2ed/0.csv\""
   },
   "export": {
 

@@ -1,0 +1,13 @@
+{
+  "input": {
+    "dataset": "rock",
+    "obs": 10
+  },
+  "output": {
+    "summary": "      area            peri            shape              perm        \n Min.   : 1016   Min.   : 308.6   Min.   :0.09033   Min.   :   6.30  \n 1st Qu.: 5305   1st Qu.:1414.9   1st Qu.:0.16226   1st Qu.:  76.45  \n Median : 7487   Median :2536.2   Median :0.19886   Median : 130.50  \n Mean   : 7188   Mean   :2682.2   Mean   :0.21811   Mean   : 415.45  \n 3rd Qu.: 8870   3rd Qu.:3989.5   3rd Qu.:0.26267   3rd Qu.: 777.50  \n Max.   :12212   Max.   :4864.2   Max.   :0.46413   Max.   :1300.00  ",
+    "view": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> area <\/th> <th style='text-align: right;'> peri <\/th> <th style='text-align: right;'> shape <\/th> <th style='text-align: right;'> perm <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4990 <\/td> <td align=\"right\"> 2791.90 <\/td> <td align=\"right\"> 0.09 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7002 <\/td> <td align=\"right\"> 3892.60 <\/td> <td align=\"right\"> 0.15 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7558 <\/td> <td align=\"right\"> 3930.66 <\/td> <td align=\"right\"> 0.18 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7352 <\/td> <td align=\"right\"> 3869.32 <\/td> <td align=\"right\"> 0.12 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7943 <\/td> <td align=\"right\"> 3948.54 <\/td> <td align=\"right\"> 0.12 <\/td> <td align=\"right\"> 17.10 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7979 <\/td> <td align=\"right\"> 4010.15 <\/td> <td align=\"right\"> 0.17 <\/td> <td align=\"right\"> 17.10 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 9333 <\/td> <td align=\"right\"> 4345.75 <\/td> <td align=\"right\"> 0.19 <\/td> <td align=\"right\"> 17.10 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 8209 <\/td> <td align=\"right\"> 4344.75 <\/td> <td align=\"right\"> 0.16 <\/td> <td align=\"right\"> 17.10 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 8393 <\/td> <td align=\"right\"> 3682.04 <\/td> <td align=\"right\"> 0.20 <\/td> <td align=\"right\"> 119.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 6425 <\/td> <td align=\"right\"> 3098.65 <\/td> <td align=\"right\"> 0.16 <\/td> <td align=\"right\"> 119.00 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

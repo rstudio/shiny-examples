@@ -1,21 +1,21 @@
 {
   "input": {
-    "date": "2018-04-13",
-    "date2": "2018-04-13",
+    "date": "2019-12-04",
+    "date2": "2019-12-04",
     "dateRange": [
-      "2018-04-11",
-      "2018-04-15"
+      "2019-12-02",
+      "2019-12-06"
     ],
     "dateRange2": [
-      "2018-04-10",
-      "2018-04-16"
+      "2019-12-01",
+      "2019-12-07"
     ]
   },
   "output": {
-    "dateRangeText": "input$dateRange is 2018-04-11 to 2018-04-15",
-    "dateRangeText2": "input$dateRange2 is 2018-04-10 to 2018-04-16",
-    "dateText": "input$date is 2018-04-13",
-    "dateText2": "input$date2 is 2018-04-13"
+    "dateRangeText": "input$dateRange is 2019-12-02 to 2019-12-06",
+    "dateRangeText2": "input$dateRange2 is 2019-12-01 to 2019-12-07",
+    "dateText": "input$date is 2019-12-04",
+    "dateText2": "input$date2 is 2019-12-04"
   },
   "export": {
 

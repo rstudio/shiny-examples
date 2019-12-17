@@ -1,0 +1,14 @@
+{
+  "input": {
+    "goButton": 2,
+    "n": 60,
+    "text": "input text"
+  },
+  "output": {
+    "summary": "input$text is \"input text\", and input$n is 790",
+    "summary2": "input$text is \"input text\", and input$n is 790"
+  },
+  "export": {
+
+  }
+}

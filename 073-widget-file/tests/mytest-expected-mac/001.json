@@ -1,0 +1,24 @@
+{
+  "input": {
+    "file": {
+      "name": [
+        "Rock.csv"
+      ],
+      "size": [
+        1296
+      ],
+      "type": [
+        "text/csv"
+      ],
+      "datapath": [
+        "0.csv"
+      ]
+    }
+  },
+  "output": {
+    "value": "'data.frame':\t1 obs. of  4 variables:\n $ name    : chr \"Rock.csv\"\n $ size    : int 1296\n $ type    : chr \"text/csv\"\n $ datapath: chr \"/var/folders/w8/l6d4__9d65gb67rvsc0j75b00000gn/T//RtmpErYoem/3e2718a2c6b3631b2518bcb3/0.csv\""
+  },
+  "export": {
+
+  }
+}

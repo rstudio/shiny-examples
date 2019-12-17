@@ -1,0 +1,47 @@
+{
+  "input": {
+    "freq": 1,
+    "max": 300,
+    "selection": "merchant",
+    "update": 0
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: cd48c624a76bca39f0ac05a01e1eb95db86aa5d9]",
+      "width": 631,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -0.35185,
+              "right": 1.35185,
+              "bottom": -0.04,
+              "top": 1.04
+            },
+            "range": {
+              "left": 0,
+              "right": 631,
+              "bottom": 399,
+              "top": -1
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 631,
+          "height": 400
+        }
+      }
+    }
+  },
+  "export": {
+
+  }
+}

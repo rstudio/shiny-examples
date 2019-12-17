@@ -1,0 +1,12 @@
+{
+  "input": {
+    "choice": "b",
+    "go": 3
+  },
+  "output": {
+    "out": "c \nc \nc \nc "
+  },
+  "export": {
+
+  }
+}

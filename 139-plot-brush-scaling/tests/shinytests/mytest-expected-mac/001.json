@@ -1,0 +1,161 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "image": {
+      "src": "[image data sha1: 4b91e051b17eb29bc89ccbcb9af2c1f1a58bc2a1]",
+      "width": 962,
+      "height": 400
+    },
+    "image_brush_works": {
+      "html": "<h4>\n  <span style=\"background-color: #e07b7b;\">Brush: Fail<\/span>\n<\/h4>",
+      "deps": [
+
+      ]
+    },
+    "plot1": {
+      "src": "[image data sha1: 834b1b0436be1086b94af70308aada7ce485e0a0]",
+      "width": 962,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+
+            },
+            "log": {
+              "x": 2,
+              "y": 10
+            },
+            "domain": {
+              "left": 0.0499999999999999,
+              "right": 20.95,
+              "bottom": 0.55,
+              "top": 10.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "y"
+            },
+            "range": {
+              "left": 39.9797278430364,
+              "right": 956.520547945205,
+              "bottom": 366.045779887815,
+              "top": 5.47945205479452
+            }
+          }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 400
+        }
+      }
+    },
+    "plot1_brush_works": {
+      "html": "<h4>\n  <span style=\"background-color: #e07b7b;\">Brush: Fail<\/span>\n<\/h4>",
+      "deps": [
+
+      ]
+    },
+    "plot2": {
+      "src": "[image data sha1: a1177eaea96bfb5478940a12654148b01e7c7834]",
+      "width": 500,
+      "height": 300,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+
+            },
+            "log": {
+              "x": 2,
+              "y": 10
+            },
+            "domain": {
+              "left": 0.0499999999999999,
+              "right": 20.95,
+              "bottom": 0.55,
+              "top": 10.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "y"
+            },
+            "range": {
+              "left": 39.9797278430364,
+              "right": 494.520547945205,
+              "bottom": 266.045779887815,
+              "top": 5.47945205479452
+            }
+          }
+        ],
+        "dims": {
+          "width": 500,
+          "height": 300
+        }
+      }
+    },
+    "plot2_brush_works": {
+      "html": "<h4>\n  <span style=\"background-color: #e07b7b;\">Brush: Fail<\/span>\n<\/h4>",
+      "deps": [
+
+      ]
+    },
+    "plot3": {
+      "src": "[image data sha1: 2ed679acb9f3d54b63280fe5e6df06fc5bf58cb4]",
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+
+            },
+            "log": {
+              "x": 2,
+              "y": 10
+            },
+            "domain": {
+              "left": 0.0499999999999999,
+              "right": 20.95,
+              "bottom": 0.55,
+              "top": 10.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "y"
+            },
+            "range": {
+              "left": 39.9797278430364,
+              "right": 990.520547945205,
+              "bottom": 366.045779887815,
+              "top": 5.47945205479452
+            }
+          }
+        ],
+        "dims": {
+          "width": 996,
+          "height": 400
+        }
+      },
+      "class": "shiny-scalable"
+    },
+    "plot3_brush_works": {
+      "html": "<h4>\n  <span style=\"background-color: #e07b7b;\">Brush: Fail<\/span>\n<\/h4>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "input": {
+    "checkbox": true
+  },
+  "output": {
+    "value": "[1] TRUE"
+  },
+  "export": {
+
+  }
+}

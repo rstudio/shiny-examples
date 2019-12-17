@@ -10,33 +10,39 @@
       "src": "[image data sha1: 51811ad05e79b85f5d3a88ea14feb18ee2f10e8f]",
       "width": 631,
       "height": 400,
-      "coordmap": [
-        {
-          "domain": {
-            "left": -45.448,
-            "right": 1351.748,
-            "bottom": 568.16,
-            "top": 12659.84
-          },
-          "range": {
-            "left": 57.6,
-            "right": 629.56,
-            "bottom": 341.4,
-            "top": 0.440000000000019
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -45.448,
+              "right": 1351.748,
+              "bottom": 568.16,
+              "top": 12659.84
+            },
+            "range": {
+              "left": 57.6,
+              "right": 629.56,
+              "bottom": 341.4,
+              "top": 0.440000000000019
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 631,
+          "height": 400
         }
-      ]
+      }
     },
     "rockvars": null,
     "summary这里也可以用中文": "     speed           dist           random         \n Min.   : 4.0   Min.   :  2.00   Length:50         \n 1st Qu.:12.0   1st Qu.: 26.00   Class :character  \n Median :15.0   Median : 36.00   Mode  :character  \n Mean   :15.4   Mean   : 42.98                     \n 3rd Qu.:19.0   3rd Qu.: 56.00                     \n Max.   :25.0   Max.   :120.00                     ",
-    "view": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> speed <\/th> <th style='text-align: right;'> dist <\/th> <th style='text-align: left;'> random <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 2.00 <\/td> <td> 一 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 10.00 <\/td> <td> 字 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 4.00 <\/td> <td> 放 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 22.00 <\/td> <td> 放 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 8.00 <\/td> <td align=\"right\"> 16.00 <\/td> <td> 意 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 9.00 <\/td> <td align=\"right\"> 10.00 <\/td> <td> 文 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 10.00 <\/td> <td align=\"right\"> 18.00 <\/td> <td> 中 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 10.00 <\/td> <td align=\"right\"> 26.00 <\/td> <td> 一 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+    "view": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> speed <\/th> <th style='text-align: right;'> dist <\/th> <th style='text-align: left;'> random <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 2.00 <\/td> <td> 放 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 10.00 <\/td> <td> 放 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 4.00 <\/td> <td> 些 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 22.00 <\/td> <td> 随 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 8.00 <\/td> <td align=\"right\"> 16.00 <\/td> <td> 些 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 9.00 <\/td> <td align=\"right\"> 10.00 <\/td> <td> 些 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 10.00 <\/td> <td align=\"right\"> 18.00 <\/td> <td> 字 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 10.00 <\/td> <td align=\"right\"> 26.00 <\/td> <td> 一 <\/td> <\/tr>\n   <\/tbody> <\/table>"
   },
   "export": {
 

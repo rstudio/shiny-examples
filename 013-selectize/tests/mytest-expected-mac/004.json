@@ -1,0 +1,23 @@
+{
+  "input": {
+    "e0": "California",
+    "e1": "Alabama",
+    "e2": null,
+    "e3": "Arizona",
+    "e4": "Alabama",
+    "e5": [
+      "Colorado",
+      "Connecticut"
+    ],
+    "e6": "Arkansas",
+    "e7": "Arizona",
+    "github": ""
+  },
+  "output": {
+    "ex_out": "List of 8\n $ e0: chr \"California\"\n $ e1: chr \"Alabama\"\n $ e2: NULL\n $ e3: chr \"Arizona\"\n $ e4: chr \"Alabama\"\n $ e5: chr [1:2] \"Colorado\" \"Connecticut\"\n $ e6: chr \"Arkansas\"\n $ e7: chr \"Arizona\"",
+    "github": "You selected nothing in the Github example."
+  },
+  "export": {
+
+  }
+}

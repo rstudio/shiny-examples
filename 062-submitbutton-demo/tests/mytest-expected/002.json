@@ -5,32 +5,38 @@
   },
   "output": {
     "plot1": {
-      "src": "[image data sha1: e82a618e8ab716a0f29fb91633bb8d128b90161a]",
+      "src": "[image data sha1: c826882b5ecf7ae60af9b4802b51d51b46c383f8]",
       "width": 400,
       "height": 300,
-      "coordmap": [
-        {
-          "domain": {
-            "left": -3.74,
-            "right": 2.74,
-            "bottom": -1.84,
-            "top": 47.84
-          },
-          "range": {
-            "left": 59.04,
-            "right": 369.76,
-            "bottom": 225.56,
-            "top": 58.04
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -2.72,
+              "right": 3.22,
+              "bottom": -2.2,
+              "top": 57.2
+            },
+            "range": {
+              "left": 59.04,
+              "right": 369.76,
+              "bottom": 225.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 400,
+          "height": 300
         }
-      ]
+      }
     },
     "text": "Input text is: text here"
   },

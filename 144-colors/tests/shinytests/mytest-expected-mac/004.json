@@ -1,0 +1,36 @@
+{
+  "input": {
+    "bins": 12,
+    "palette": "Blues",
+    "reverse": true
+  },
+  "output": {
+    "four-code": "col_factor(\"Blues\", countries$category, reverse = TRUE)",
+    "four-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    },
+    "one-code": "col_numeric(\"Blues\", countries$gdp_md_est, reverse = TRUE)",
+    "one-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    },
+    "three-code": "col_quantile(\"Blues\", countries$gdp_md_est, 12L, reverse = TRUE)",
+    "three-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    },
+    "two-code": "col_bin(\"Blues\", countries$gdp_md_est, 12L, pretty = FALSE, reverse = TRUE)",
+    "two-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    }
+  },
+  "export": {
+
+  }
+}

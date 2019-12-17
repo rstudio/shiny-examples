@@ -1,0 +1,10 @@
+app <- ShinyDriver$new("../../", seed = 100)
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$setInputs(variable = "am")
+app$snapshot()
+app$setInputs(variable = "gear")
+app$snapshot()
+app$setInputs(variable = "am")
+app$snapshot()

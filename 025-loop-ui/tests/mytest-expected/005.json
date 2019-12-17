@@ -1,13 +1,13 @@
 {
   "input": {
-    "a1": "",
-    "a2": "",
-    "a3": "T",
-    "a4": "E",
-    "a5": ""
+    "a1": "I",
+    "a2": "M",
+    "a3": "Q",
+    "a4": "R",
+    "a5": "N"
   },
   "output": {
-    "a_out": "List of 5\n $ a1: chr \"\"\n $ a2: chr \"\"\n $ a3: chr \"T\"\n $ a4: chr \"E\"\n $ a5: chr \"\"",
+    "a_out": "List of 5\n $ a1: chr \"I\"\n $ a2: chr \"M\"\n $ a3: chr \"Q\"\n $ a4: chr \"R\"\n $ a5: chr \"N\"",
     "b1": {
       "html": "<strong>Hi, this is output B#1<\/strong>",
       "deps": [

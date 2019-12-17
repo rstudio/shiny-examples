@@ -1,0 +1,18 @@
+{
+  "input": {
+    "animation": 1051,
+    "decimal": 1,
+    "format": 7500,
+    "integer": 500,
+    "range": [
+      200,
+      1000
+    ]
+  },
+  "output": {
+    "values": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Name <\/th> <th style='text-align: left;'> Value <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> Integer <\/td> <td> 500 <\/td> <\/tr>\n  <tr> <td> Decimal <\/td> <td> 1 <\/td> <\/tr>\n  <tr> <td> Range <\/td> <td> 200 1000 <\/td> <\/tr>\n  <tr> <td> Custom Format <\/td> <td> 7500 <\/td> <\/tr>\n  <tr> <td> Animation <\/td> <td> 1051 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

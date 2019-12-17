@@ -1,0 +1,40 @@
+{
+  "input": {
+    "align": "NULL",
+    "colnames": "T",
+    "dataset": "rock",
+    "digits": "NULL",
+    "format": null,
+    "na": "NA",
+    "obs": 6,
+    "rownames": "F",
+    "spacing": "s",
+    "width": "auto"
+  },
+  "output": {
+    "code": "in <strong>ui.R<\/strong>: <br><code>tableOutput('tbl')<\/code><br><br>in <strong>server.R<\/strong>: <br><code>output$tbl <- renderTable({ head( rock, n = 6 )})&nbsp;&nbsp;<\/code>",
+    "pre_align": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"align\">Column alignment:<\/label>\n  <div>\n    <select id=\"align\"><option value=\"NULL\" selected>NULL<\/option>\n<option value=\"?\">?<\/option>\n<option value=\"c\">c<\/option>\n<option value=\"l\">l<\/option>\n<option value=\"crc?\">crc?<\/option>\n<option value=\"rlcc\">rlcc<\/option>\n<option value=\"?r?c\">?r?c<\/option><\/select>\n    <script type=\"application/json\" data-for=\"align\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "view": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> area <\/th> <th style='text-align: right;'> peri <\/th> <th style='text-align: right;'> shape <\/th> <th style='text-align: right;'> perm <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4990 <\/td> <td align=\"right\"> 2791.90 <\/td> <td align=\"right\"> 0.09 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7002 <\/td> <td align=\"right\"> 3892.60 <\/td> <td align=\"right\"> 0.15 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7558 <\/td> <td align=\"right\"> 3930.66 <\/td> <td align=\"right\"> 0.18 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7352 <\/td> <td align=\"right\"> 3869.32 <\/td> <td align=\"right\"> 0.12 <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7943 <\/td> <td align=\"right\"> 3948.54 <\/td> <td align=\"right\"> 0.12 <\/td> <td align=\"right\"> 17.10 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7979 <\/td> <td align=\"right\"> 4010.15 <\/td> <td align=\"right\"> 0.17 <\/td> <td align=\"right\"> 17.10 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

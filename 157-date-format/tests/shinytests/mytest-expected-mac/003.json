@@ -1,0 +1,53 @@
+{
+  "input": {
+    "x1": "2019-11-07",
+    "x2": "2019-12-16",
+    "x3": "2019-12-16",
+    "x4": [
+      "2019-12-16",
+      "2019-12-16"
+    ],
+    "x5": [
+      "2019-12-16",
+      null
+    ],
+    "x6": [
+      null,
+      null
+    ],
+    "x7": [
+      null,
+      null
+    ]
+  },
+  "output": {
+    "inputs": {
+      "html": "<div id=\"x1\" class=\"shiny-date-input form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"x1\">Mis-specified `value`<\/label>\n  <input type=\"text\" class=\"form-control\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-initial-date=\"2014-13-1\" data-date-autoclose=\"true\" data-date-dates-disabled=\"null\" data-date-days-of-week-disabled=\"null\"/>\n<\/div>\n<div id=\"x2\" class=\"shiny-date-input form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"x2\">Mis-specified `min`<\/label>\n  <input type=\"text\" class=\"form-control\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-min-date=\"\" data-date-autoclose=\"true\" data-date-dates-disabled=\"null\" data-date-days-of-week-disabled=\"null\"/>\n<\/div>\n<div id=\"x3\" class=\"shiny-date-input form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"x3\">Mis-specified `max`<\/label>\n  <input type=\"text\" class=\"form-control\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-max-date=\"abjs\" data-date-autoclose=\"true\" data-date-dates-disabled=\"null\" data-date-days-of-week-disabled=\"null\"/>\n<\/div>\n<div id=\"x4\" class=\"shiny-date-range-input form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"x4\">Mis-specified `start`<\/label>\n  <div class=\"input-daterange input-group\">\n    <input class=\"input-sm form-control\" type=\"text\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-initial-date=\"null\" data-date-autoclose=\"true\"/>\n    <span class=\"input-group-addon\"> to <\/span>\n    <input class=\"input-sm form-control\" type=\"text\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-date-autoclose=\"true\"/>\n  <\/div>\n<\/div>\n<div id=\"x5\" class=\"shiny-date-range-input form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"x5\">Mis-specified `end`<\/label>\n  <div class=\"input-daterange input-group\">\n    <input class=\"input-sm form-control\" type=\"text\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-date-autoclose=\"true\"/>\n    <span class=\"input-group-addon\"> to <\/span>\n    <input class=\"input-sm form-control\" type=\"text\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-initial-date=\"NA\" data-date-autoclose=\"true\"/>\n  <\/div>\n<\/div>\n<div id=\"x6\" class=\"shiny-date-range-input form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"x6\">Mis-specified `min`<\/label>\n  <div class=\"input-daterange input-group\">\n    <input class=\"input-sm form-control\" type=\"text\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-min-date=\"21380-03-10\" data-date-autoclose=\"true\"/>\n    <span class=\"input-group-addon\"> to <\/span>\n    <input class=\"input-sm form-control\" type=\"text\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-min-date=\"21380-03-10\" data-date-autoclose=\"true\"/>\n  <\/div>\n<\/div>\n<div id=\"x7\" class=\"shiny-date-range-input form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"x7\">Mis-specified `max`<\/label>\n  <div class=\"input-daterange input-group\">\n    <input class=\"input-sm form-control\" type=\"text\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-max-date=\"12\" data-date-autoclose=\"true\"/>\n    <span class=\"input-group-addon\"> to <\/span>\n    <input class=\"input-sm form-control\" type=\"text\" data-date-language=\"en\" data-date-week-start=\"0\" data-date-format=\"yyyy-mm-dd\" data-date-start-view=\"month\" data-max-date=\"12\" data-date-autoclose=\"true\"/>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "bootstrap-datepicker",
+          "version": "1.6.4",
+          "src": {
+            "href": "shared/datepicker"
+          },
+          "meta": null,
+          "script": "js/bootstrap-datepicker.min.js",
+          "stylesheet": "css/bootstrap-datepicker3.min.css",
+          "head": "<script>\n(function() {\n  var datepicker = $.fn.datepicker.noConflict();\n  $.fn.bsDatepicker = datepicker;\n})();\n<\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "res": {
+      "html": "<b style=\"color: green\">Test passed (it's OK if you see warnings in your R console)<\/b>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

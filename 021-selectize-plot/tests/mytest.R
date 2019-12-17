@@ -1,4 +1,4 @@
-app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app <- ShinyDriver$new("../", seed = 100,shinyOptions = list(display.mode = "normal"))
 app$snapshotInit("mytest")
 
 # Input 'rawdata_rows_current' was set, but doesn't have an input binding.

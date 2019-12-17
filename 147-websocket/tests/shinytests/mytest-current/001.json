@@ -1,0 +1,16 @@
+{
+  "input": {
+    "close": 0,
+    "connect": 0,
+    "input": "",
+    "send": 0,
+    "url": "wss://echo.websocket.org"
+  },
+  "output": {
+    "output": null,
+    "status": "Waiting for input"
+  },
+  "export": {
+
+  }
+}

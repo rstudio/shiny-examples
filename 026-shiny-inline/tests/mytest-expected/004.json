@@ -6,7 +6,7 @@
   },
   "output": {
     "__reactivedoc__": {
-      "html": "[html data sha1: 134bec6e591fb87f1a62f7e7d77437fb98ae2b51]",
+      "html": "[html data sha1: 31dfb4d5e6b784bdb0c65801550f76b9fa9a72a5]",
       "deps": [
         {
           "name": "jquery",
@@ -131,63 +131,75 @@
         }
       ]
     },
-    "out1eb96152fad3d713": "1",
-    "out471fabb10bd84f46": "A",
-    "out89d41e210fb7f944": {
-      "src": "[image data sha1: f3e69492fee7e1a3ff4d6daef901e61af6ccffbf]",
-      "width": 600,
-      "height": 400,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 3.16,
-            "right": 25.84,
-            "bottom": -2.72,
-            "top": 124.72
-          },
-          "range": {
-            "left": 59.04,
-            "right": 569.76,
-            "bottom": 325.56,
-            "top": 58.04
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
-
-          }
-        }
-      ]
-    },
-    "outb92a568d73cd588b": {
+    "out4f461eb96152fad3": "A",
+    "out588bc784570505a1": {
       "src": "[image data sha1: 1c42fa6414dca05e0398ad4083d560f05fd9dfa6]",
       "width": 192.307692307692,
       "height": 40,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 1739.6033333332,
-            "right": 1993.3133333368,
-            "bottom": -42.2400000024001,
-            "top": 296.0400000024
-          },
-          "range": {
-            "left": 0,
-            "right": 192.307692307692,
-            "bottom": 39,
-            "top": -1
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 1739.6033333332,
+              "right": 1993.3133333368,
+              "bottom": -42.2400000024001,
+              "top": 296.0400000024
+            },
+            "range": {
+              "left": 0,
+              "right": 192.307692307692,
+              "bottom": 39,
+              "top": -1
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 192.307692307692,
+          "height": 40
         }
-      ]
+      }
+    },
+    "outd713b92a568d73cd": "1",
+    "outf944471fabb10bd8": {
+      "src": "[image data sha1: f3e69492fee7e1a3ff4d6daef901e61af6ccffbf]",
+      "width": 600,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 3.16,
+              "right": 25.84,
+              "bottom": -2.72,
+              "top": 124.72
+            },
+            "range": {
+              "left": 59.04,
+              "right": 569.76,
+              "bottom": 325.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 600,
+          "height": 400
+        }
+      }
     }
   },
   "export": {

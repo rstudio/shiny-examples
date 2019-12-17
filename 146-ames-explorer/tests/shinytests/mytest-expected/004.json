@@ -1,0 +1,391 @@
+{
+  "input": {
+    "dataviewer-table_cell_clicked": {
+
+    },
+    "dataviewer-table_rows_all": null,
+    "dataviewer-table_rows_current": null,
+    "dataviewer-table_search": "",
+    "dataviewer-table_search_columns": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "dataviewer-table_state": null,
+    "highlight_ind": false,
+    "plot1_vars-groupvar": "Roof_Style",
+    "plot1_vars-xvar": "Total_Bsmt_SF",
+    "plot1_vars-yvar": "Mas_Vnr_Area",
+    "plot2_vars-groupvar": "",
+    "plot2_vars-xvar": "Total_Bsmt_SF",
+    "plot2_vars-yvar": "Garage_Area"
+  },
+  "output": {
+    "dataviewer-table": {
+      "x": {
+        "filter": "top",
+        "filterHTML": "<tr>\n  <td><\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>",
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Year_Built<\/th>\n      <th>Year_Sold<\/th>\n      <th>Sale_Price<\/th>\n      <th>Sale_Condition<\/th>\n      <th>Lot_Frontage<\/th>\n      <th>House_Style<\/th>\n      <th>Lot_Shape<\/th>\n      <th>Overall_Cond<\/th>\n      <th>Overall_Qual<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                1,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "orderCellsTop": true,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "none",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "nouislider",
+          "version": "7.0.10",
+          "src": {
+            "href": "nouislider-7.0.10"
+          },
+          "meta": null,
+          "script": "jquery.nouislider.min.js",
+          "stylesheet": "jquery.nouislider.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "selectize",
+          "version": "0.12.0",
+          "src": {
+            "href": "selectize-0.12.0"
+          },
+          "meta": null,
+          "script": "selectize.min.js",
+          "stylesheet": "selectize.bootstrap3.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "plots-plot1": {
+      "src": "[image data sha1: 82e156dfecae57247b7855c085709bb7373c1d5d]",
+      "width": 218,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Flat"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -305.5,
+              "right": 6415.5,
+              "bottom": -80,
+              "top": 1680
+            },
+            "mapping": {
+              "colour": "selected_",
+              "x": "Total_Bsmt_SF",
+              "y": "Mas_Vnr_Area",
+              "panelvar1": "Roof_Style"
+            },
+            "range": {
+              "left": 55.65698358296,
+              "right": 104.291870333845,
+              "bottom": 181.707347875598,
+              "top": 22.3977473941376
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "Gable"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -305.5,
+              "right": 6415.5,
+              "bottom": -80,
+              "top": 1680
+            },
+            "mapping": {
+              "colour": "selected_",
+              "x": "Total_Bsmt_SF",
+              "y": "Mas_Vnr_Area",
+              "panelvar1": "Roof_Style"
+            },
+            "range": {
+              "left": 109.77132238864,
+              "right": 158.406209139525,
+              "bottom": 181.707347875598,
+              "top": 22.3977473941376
+            }
+          },
+          {
+            "panel": 3,
+            "row": 1,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "Gambrel"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -305.5,
+              "right": 6415.5,
+              "bottom": -80,
+              "top": 1680
+            },
+            "mapping": {
+              "colour": "selected_",
+              "x": "Total_Bsmt_SF",
+              "y": "Mas_Vnr_Area",
+              "panelvar1": "Roof_Style"
+            },
+            "range": {
+              "left": 163.88566119432,
+              "right": 212.520547945205,
+              "bottom": 181.707347875598,
+              "top": 22.3977473941376
+            }
+          },
+          {
+            "panel": 4,
+            "row": 2,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Hip"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -305.5,
+              "right": 6415.5,
+              "bottom": -80,
+              "top": 1680
+            },
+            "mapping": {
+              "colour": "selected_",
+              "x": "Total_Bsmt_SF",
+              "y": "Mas_Vnr_Area",
+              "panelvar1": "Roof_Style"
+            },
+            "range": {
+              "left": 55.65698358296,
+              "right": 104.291870333845,
+              "bottom": 363.414695751196,
+              "top": 204.105095269736
+            }
+          },
+          {
+            "panel": 5,
+            "row": 2,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "Mansard"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -305.5,
+              "right": 6415.5,
+              "bottom": -80,
+              "top": 1680
+            },
+            "mapping": {
+              "colour": "selected_",
+              "x": "Total_Bsmt_SF",
+              "y": "Mas_Vnr_Area",
+              "panelvar1": "Roof_Style"
+            },
+            "range": {
+              "left": 109.77132238864,
+              "right": 158.406209139525,
+              "bottom": 363.414695751196,
+              "top": 204.105095269736
+            }
+          },
+          {
+            "panel": 6,
+            "row": 2,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "Shed"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -305.5,
+              "right": 6415.5,
+              "bottom": -80,
+              "top": 1680
+            },
+            "mapping": {
+              "colour": "selected_",
+              "x": "Total_Bsmt_SF",
+              "y": "Mas_Vnr_Area",
+              "panelvar1": "Roof_Style"
+            },
+            "range": {
+              "left": 163.88566119432,
+              "right": 212.520547945205,
+              "bottom": 363.414695751196,
+              "top": 204.105095269736
+            }
+          }
+        ],
+        "dims": {
+          "width": 218,
+          "height": 400
+        }
+      }
+    },
+    "plots-plot2": {
+      "src": "[image data sha1: a071ad7e3014bb3a65ffaad3a828af4b3229aff3]",
+      "width": 218,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -305.5,
+              "right": 6415.5,
+              "bottom": -74.4,
+              "top": 1562.4
+            },
+            "mapping": {
+              "colour": "selected_",
+              "x": "Total_Bsmt_SF",
+              "y": "Garage_Area"
+            },
+            "range": {
+              "left": 55.65698358296,
+              "right": 212.520547945205,
+              "bottom": 363.414695751196,
+              "top": 5.47945205479452
+            }
+          }
+        ],
+        "dims": {
+          "width": 218,
+          "height": 400
+        }
+      }
+    }
+  },
+  "export": {
+
+  }
+}

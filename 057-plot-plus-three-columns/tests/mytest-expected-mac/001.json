@@ -1,0 +1,51 @@
+{
+  "input": {
+    "color": "None",
+    "facet_col": ".",
+    "facet_row": ".",
+    "jitter": false,
+    "sampleSize": 1000,
+    "smooth": false,
+    "x": "carat",
+    "y": "cut"
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: 59f8cba72ae25bd73437769f24764a27e65d2d54]",
+      "width": 962,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -0.04,
+              "right": 1.04,
+              "bottom": -0.04,
+              "top": 1.04
+            },
+            "range": {
+              "left": 0,
+              "right": 962,
+              "bottom": 399,
+              "top": -1
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 400
+        }
+      }
+    }
+  },
+  "export": {
+
+  }
+}

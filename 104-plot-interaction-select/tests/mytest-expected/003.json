@@ -6,41 +6,45 @@
     "brush_info": "[1] mpg  cyl  disp hp   wt   am   gear\n<0 rows> (or 0-length row.names)",
     "click_info": "[1] mpg   cyl   disp  hp    wt    am    gear  dist_\n<0 rows> (or 0-length row.names)",
     "plot1": {
-      "src": "[image data sha1: a7dcbb6e4a575b2855092bc2207f173bc726e1e3]",
+      "src": "[image data sha1: 5e74a465ccd1b35e3fb2ed1dc52d933bc5e24aa2]",
       "width": 301,
       "height": 300,
-      "coordmap": [
-        {
-          "panel": 1,
-          "row": 1,
-          "col": 1,
-          "panel_vars": {
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
 
-          },
-          "scale_x": 1,
-          "scale_y": 1,
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 1.31745,
-            "right": 5.61955,
-            "bottom": 9.225,
-            "top": 35.075
-          },
-          "mapping": {
-            "x": "wt",
-            "y": "mpg"
-          },
-          "range": {
-            "left": 36.078106462139,
-            "right": 295.520547945205,
-            "bottom": 269.854315467064,
-            "top": 5.47945205479452
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 1.31745,
+              "right": 5.61955,
+              "bottom": 9.225,
+              "top": 35.075
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg"
+            },
+            "range": {
+              "left": 33.1279312159917,
+              "right": 295.520547945206,
+              "bottom": 268.509178173071,
+              "top": 5.47945205479452
+            }
           }
+        ],
+        "dims": {
+          "width": 301,
+          "height": 300
         }
-      ]
+      }
     }
   },
   "export": {

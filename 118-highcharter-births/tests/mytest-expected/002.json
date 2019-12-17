@@ -35,23 +35,14 @@
           },
           "plotOptions": {
             "series": {
+              "label": {
+                "enabled": false
+              },
               "turboThreshold": 0
             },
             "treemap": {
               "layoutAlgorithm": "squarified"
-            },
-            "bubble": {
-              "minSize": 5,
-              "maxSize": 25
             }
-          },
-          "annotationsOptions": {
-            "enabledButtons": false
-          },
-          "tooltip": {
-            "delayForDisplay": 10,
-            "valueDecimals": 4,
-            "pointFormat": "Day: {point.x} <br> Diff: {point.y}"
           },
           "series": [
             {
@@ -84,6 +75,10 @@
           },
           "subtitle": {
             "text": "Difference in the share of U.S. births on 13th \n                               of each month from the average of births on the 6th \n                               and the 20th, 1994  -  2014"
+          },
+          "tooltip": {
+            "valueDecimals": 4,
+            "pointFormat": "Day: {point.x} <br> Diff: {point.y}"
           }
         },
         "theme": {

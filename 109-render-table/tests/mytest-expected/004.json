@@ -1,6 +1,6 @@
 {
   "input": {
-    "align": "",
+    "align": "cc",
     "colnames": "T",
     "dataset": "cars",
     "digits": "NULL",
@@ -15,9 +15,9 @@
     "width": "auto"
   },
   "output": {
-    "code": "in <strong>ui.R<\/strong>: <br><code>tableOutput('tbl')<\/code><br><br>in <strong>server.R<\/strong>: <br><code>output$tbl <- renderTable({ head( cars, n = 6 )},&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;\n                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                   &nbsp;&nbsp;&nbsp;&nbsp;striped = TRUE, bordered = TRUE,&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;\n                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                     &nbsp;&nbsp;&nbsp;&nbsp;align = '')&nbsp;&nbsp;<\/code>",
+    "code": "in <strong>ui.R<\/strong>: <br><code>tableOutput('tbl')<\/code><br><br>in <strong>server.R<\/strong>: <br><code>output$tbl <- renderTable({ head( cars, n = 6 )},&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;\n                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                   &nbsp;&nbsp;&nbsp;&nbsp;striped = TRUE, bordered = TRUE,&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;\n                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                     &nbsp;&nbsp;&nbsp;&nbsp;align = 'cc')&nbsp;&nbsp;<\/code>",
     "pre_align": {
-      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"align\">Column alignment:<\/label>\n  <div>\n    <select id=\"align\"><option value=\"NULL\" selected>NULL<\/option>\n<option value=\"?\">?<\/option>\n<option value=\"c\">c<\/option>\n<option value=\"l\">l<\/option>\n<option value=\"lr\">lr<\/option>\n<option value=\"lc\">lc<\/option>\n<option value=\"rr\">rr<\/option><\/select>\n    <script type=\"application/json\" data-for=\"align\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"align\">Column alignment:<\/label>\n  <div>\n    <select id=\"align\"><option value=\"NULL\" selected>NULL<\/option>\n<option value=\"?\">?<\/option>\n<option value=\"c\">c<\/option>\n<option value=\"l\">l<\/option>\n<option value=\"cc\">cc<\/option>\n<option value=\"?r\">?r<\/option>\n<option value=\"lc\">lc<\/option><\/select>\n    <script type=\"application/json\" data-for=\"align\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
       "deps": [
         {
           "name": "selectize",
@@ -35,11 +35,7 @@
         }
       ]
     },
-    "view": {
-      "message": "`align` must contain only the characters `l`, `c`, `r` and/or `?` andhave length either equal to 1 or to the total number of columns",
-      "call": "transform(setVisible(value, .visible), shinysession, name, ...)",
-      "type": null
-    }
+    "view": "<table  class = 'table shiny-table table-striped table-bordered spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: center;'> speed <\/th> <th style='text-align: center;'> dist <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"center\"> 4.00 <\/td> <td align=\"center\"> 2.00 <\/td> <\/tr>\n  <tr> <td align=\"center\"> 4.00 <\/td> <td align=\"center\"> 10.00 <\/td> <\/tr>\n  <tr> <td align=\"center\"> 7.00 <\/td> <td align=\"center\"> 4.00 <\/td> <\/tr>\n  <tr> <td align=\"center\"> 7.00 <\/td> <td align=\"center\"> 22.00 <\/td> <\/tr>\n  <tr> <td align=\"center\"> 8.00 <\/td> <td align=\"center\"> 16.00 <\/td> <\/tr>\n  <tr> <td align=\"center\"> 9.00 <\/td> <td align=\"center\"> 10.00 <\/td> <\/tr>\n   <\/tbody> <\/table>"
   },
   "export": {
 

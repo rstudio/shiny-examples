@@ -1,0 +1,14 @@
+{
+  "input": {
+    "dataset": "pressure",
+    "obs": 0,
+    "update": 4
+  },
+  "output": {
+    "summary": "  temperature     pressure       \n Min.   :  0   Min.   :  0.0002  \n 1st Qu.: 90   1st Qu.:  0.1800  \n Median :180   Median :  8.8000  \n Mean   :180   Mean   :124.3367  \n 3rd Qu.:270   3rd Qu.:126.5000  \n Max.   :360   Max.   :806.0000  ",
+    "view": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> temperature <\/th> <th style='text-align: right;'> pressure <\/th>  <\/tr> <\/thead> <tbody>\n  <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "input": {
+    "checkboxGroupInput1": null,
+    "checkboxGroupInput2": null,
+    "checkboxInput1": false,
+    "checkboxInput2": false,
+    "dateInput1": "2019-11-22",
+    "dateInput2": "2019-11-22",
+    "numericInput1": 1,
+    "numericInput2": 1,
+    "passwordInput1": "",
+    "passwordInput2": "",
+    "selectInput1": "a",
+    "selectInput2": "a",
+    "selectizeInput1": "a",
+    "selectizeInput2": "a",
+    "sliderInput1": 1,
+    "sliderInput2": 1,
+    "textAreaInput1": "",
+    "textAreaInput2": "",
+    "textInput1": "",
+    "textInput2": "",
+    "update": 0,
+    "varSelectInput1": {
+
+    },
+    "varSelectInput2": {
+
+    },
+    "varSelectizeInput1": {
+
+    },
+    "varSelectizeInput2": {
+
+    }
+  },
+  "output": {
+
+  },
+  "export": {
+
+  }
+}

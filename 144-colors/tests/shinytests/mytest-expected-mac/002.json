@@ -1,0 +1,36 @@
+{
+  "input": {
+    "bins": 8,
+    "palette": "magma",
+    "reverse": false
+  },
+  "output": {
+    "four-code": "col_factor(\"magma\", countries$category, reverse = FALSE)",
+    "four-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    },
+    "one-code": "col_numeric(\"magma\", countries$gdp_md_est, reverse = FALSE)",
+    "one-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    },
+    "three-code": "col_quantile(\"magma\", countries$gdp_md_est, 8L, reverse = FALSE)",
+    "three-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    },
+    "two-code": "col_bin(\"magma\", countries$gdp_md_est, 8L, pretty = FALSE, reverse = FALSE)",
+    "two-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    }
+  },
+  "export": {
+
+  }
+}

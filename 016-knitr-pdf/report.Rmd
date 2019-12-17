@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 Here is my regression model:
 
 ```{r model, collapse=TRUE}

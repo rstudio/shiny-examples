@@ -1,0 +1,14 @@
+{
+  "input": {
+    "file1": null,
+    "header": true,
+    "quote": "",
+    "sep": ","
+  },
+  "output": {
+    "contents": null
+  },
+  "export": {
+
+  }
+}

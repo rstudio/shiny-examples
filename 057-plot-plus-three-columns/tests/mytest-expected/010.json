@@ -11,32 +11,38 @@
   },
   "output": {
     "plot": {
-      "src": "[image data sha1: 077ec930ecc6cfef72bdeda4ff827595a8be4a0f]",
+      "src": "[image data sha1: edd1842a43d4eea35fd1e75147c5a8db46903e86]",
       "width": 962,
       "height": 400,
-      "coordmap": [
-        {
-          "domain": {
-            "left": -0.04,
-            "right": 1.04,
-            "bottom": -0.04,
-            "top": 1.04
-          },
-          "range": {
-            "left": 0,
-            "right": 962,
-            "bottom": 399,
-            "top": -1
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -0.04,
+              "right": 1.04,
+              "bottom": -0.04,
+              "top": 1.04
+            },
+            "range": {
+              "left": 0,
+              "right": 962,
+              "bottom": 399,
+              "top": -1
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 400
         }
-      ]
+      }
     }
   },
   "export": {

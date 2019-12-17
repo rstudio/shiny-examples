@@ -1,0 +1,10 @@
+app <- ShinyDriver$new("../../", seed = 100)
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$setInputs(`counter1-button` = "click")
+app$setInputs(`counter1-button` = "click")
+app$setInputs(`counter1-button` = "click")
+app$setInputs(`counter1-button` = "click")
+app$setInputs(`counter1-button` = "click")
+app$snapshot()

@@ -1,0 +1,23 @@
+{
+  "input": {
+    "date": "2019-12-16",
+    "date2": "2019-12-16",
+    "dateRange": [
+      "2019-12-14",
+      "2019-12-18"
+    ],
+    "dateRange2": [
+      "2019-12-13",
+      "2019-12-19"
+    ]
+  },
+  "output": {
+    "dateRangeText": "input$dateRange is 2019-12-14 to 2019-12-18",
+    "dateRangeText2": "input$dateRange2 is 2019-12-13 to 2019-12-19",
+    "dateText": "input$date is 2019-12-16",
+    "dateText2": "input$date2 is 2019-12-16"
+  },
+  "export": {
+
+  }
+}

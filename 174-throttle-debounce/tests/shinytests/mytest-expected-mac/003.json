@@ -1,0 +1,13 @@
+{
+  "input": {
+    "click": 9
+  },
+  "output": {
+    "debounce": "9",
+    "raw": "9",
+    "throttle": "9"
+  },
+  "export": {
+
+  }
+}

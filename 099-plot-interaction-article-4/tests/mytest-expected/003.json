@@ -5,41 +5,45 @@
   "output": {
     "info": " [1] mpg   cyl   disp  hp    drat  wt    qsec  vs    am    gear  carb  dist_\n<0 rows> (or 0-length row.names)",
     "plot1": {
-      "src": "[image data sha1: dfabd2e00624250e934e19f16439d481723b0873]",
+      "src": "[image data sha1: f0512f13161fd6b600effb9130ed12f1e2953403]",
       "width": 962,
       "height": 400,
-      "coordmap": [
-        {
-          "panel": 1,
-          "row": 1,
-          "col": 1,
-          "panel_vars": {
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
 
-          },
-          "scale_x": 1,
-          "scale_y": 1,
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 1.31745,
-            "right": 5.61955,
-            "bottom": 9.225,
-            "top": 35.075
-          },
-          "mapping": {
-            "x": "wt",
-            "y": "mpg"
-          },
-          "range": {
-            "left": 36.078106462139,
-            "right": 956.520547945206,
-            "bottom": 369.854315467064,
-            "top": 5.47945205479452
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 1.31745,
+              "right": 5.61955,
+              "bottom": 9.225,
+              "top": 35.075
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg"
+            },
+            "range": {
+              "left": 33.1279312159917,
+              "right": 956.520547945205,
+              "bottom": 368.509178173071,
+              "top": 5.47945205479452
+            }
           }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 400
         }
-      ]
+      }
     }
   },
   "export": {

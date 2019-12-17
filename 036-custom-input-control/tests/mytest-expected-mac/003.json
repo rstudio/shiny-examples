@@ -1,0 +1,67 @@
+{
+  "input": {
+    "mychooser": {
+      "left": [
+        "Alabama",
+        "Alaska",
+        "Arizona",
+        "Arkansas",
+        "California",
+        "Colorado",
+        "Connecticut",
+        "Delaware",
+        "Florida",
+        "Georgia",
+        "Hawaii",
+        "Idaho",
+        "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "New York",
+        "North Carolina",
+        "North Dakota",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Pennsylvania",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wisconsin",
+        "Wyoming"
+      ],
+      "right": [
+
+      ]
+    }
+  },
+  "output": {
+    "selection": "$left\n [1] \"Alabama\"        \"Alaska\"         \"Arizona\"        \"Arkansas\"      \n [5] \"California\"     \"Colorado\"       \"Connecticut\"    \"Delaware\"      \n [9] \"Florida\"        \"Georgia\"        \"Hawaii\"         \"Idaho\"         \n[13] \"Illinois\"       \"Indiana\"        \"Iowa\"           \"Kansas\"        \n[17] \"Kentucky\"       \"Louisiana\"      \"Maine\"          \"Maryland\"      \n[21] \"Massachusetts\"  \"Michigan\"       \"Minnesota\"      \"Mississippi\"   \n[25] \"Missouri\"       \"Montana\"        \"Nebraska\"       \"Nevada\"        \n[29] \"New Hampshire\"  \"New Jersey\"     \"New Mexico\"     \"New York\"      \n[33] \"North Carolina\" \"North Dakota\"   \"Ohio\"           \"Oklahoma\"      \n[37] \"Oregon\"         \"Pennsylvania\"   \"Rhode Island\"   \"South Carolina\"\n[41] \"South Dakota\"   \"Tennessee\"      \"Texas\"          \"Utah\"          \n[45] \"Vermont\"        \"Virginia\"       \"Washington\"     \"West Virginia\" \n[49] \"Wisconsin\"      \"Wyoming\"       \n\n$right\ncharacter(0)"
+  },
+  "export": {
+
+  }
+}

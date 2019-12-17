@@ -4,42 +4,46 @@
   },
   "output": {
     "plot1": {
-      "src": "[image data sha1: 01ed53345df67d96f7018f012aae1e736127b414]",
+      "src": "[image data sha1: 9b081dae1095038d9202b2f7454e37115bbdd14b]",
       "width": 962,
       "height": 250,
-      "coordmap": [
-        {
-          "panel": 1,
-          "row": 1,
-          "col": 1,
-          "panel_vars": {
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
 
-          },
-          "scale_x": 1,
-          "scale_y": 1,
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -1.05,
-            "right": 22.05,
-            "bottom": 18.1,
-            "top": 389.9
-          },
-          "mapping": {
-            "x": "Time",
-            "y": "weight",
-            "colour": "factor(Chick)"
-          },
-          "range": {
-            "left": 40.9722476593436,
-            "right": 956.520547945206,
-            "bottom": 219.795721717064,
-            "top": 5.47945205479452
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -1.05,
+              "right": 22.05,
+              "bottom": 18.1,
+              "top": 389.9
+            },
+            "mapping": {
+              "x": "Time",
+              "y": "weight",
+              "colour": "factor(Chick)"
+            },
+            "range": {
+              "left": 38.0220724131963,
+              "right": 956.520547945205,
+              "bottom": 218.509178173071,
+              "top": 5.47945205479452
+            }
           }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 250
         }
-      ]
+      }
     }
   },
   "export": {

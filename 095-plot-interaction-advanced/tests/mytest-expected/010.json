@@ -13,6 +13,7 @@
     "hover_policy": "throttle",
     "max_distance": 5,
     "max_points": 37,
+    "plot_brush": null,
     "plot_brushed_points_cell_clicked": {
 
     },
@@ -37,209 +38,203 @@
   },
   "output": {
     "plot": {
-      "src": "[image data sha1: 9e66629f5e5ab2d6462a63fe5fd6e2031e5dc574]",
+      "src": "[image data sha1: 62b121abe514401a606368b558e14d8860d05840]",
       "width": 466,
       "height": 300,
-      "coordmap": [
-        {
-          "panel": 1,
-          "row": 1,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "4",
-            "panelvar2": "0"
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "4",
+              "panelvar2": "0"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 1.31745,
+              "right": 5.61955,
+              "bottom": 9.225,
+              "top": 35.075
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 33.1279312159917,
+              "right": 166.299736976086,
+              "bottom": 142.713736756207,
+              "top": 22.3977473941376
+            }
           },
-          "scale_x": 1,
-          "scale_y": 1,
-          "log": {
-            "x": null,
-            "y": null
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "6",
+              "panelvar2": "0"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 1.31745,
+              "right": 5.61955,
+              "bottom": 9.225,
+              "top": 35.075
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 171.77918903088,
+              "right": 304.950994790974,
+              "bottom": 142.713736756207,
+              "top": 22.3977473941376
+            }
           },
-          "domain": {
-            "left": 1.31745,
-            "right": 5.61955,
-            "bottom": 9.225,
-            "top": 35.075
+          {
+            "panel": 3,
+            "row": 1,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "8",
+              "panelvar2": "0"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 1.31745,
+              "right": 5.61955,
+              "bottom": 9.225,
+              "top": 35.075
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 310.430446845768,
+              "right": 443.602252605862,
+              "bottom": 142.713736756207,
+              "top": 22.3977473941376
+            }
           },
-          "mapping": {
-            "x": "wt",
-            "y": "mpg",
-            "panelvar1": "cyl",
-            "panelvar2": "am"
+          {
+            "panel": 4,
+            "row": 2,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "4",
+              "panelvar2": "1"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 1.31745,
+              "right": 5.61955,
+              "bottom": 9.225,
+              "top": 35.075
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 33.1279312159917,
+              "right": 166.299736976086,
+              "bottom": 268.509178173071,
+              "top": 148.193188811002
+            }
           },
-          "range": {
-            "left": 36.078106462139,
-            "right": 168.153244587924,
-            "bottom": 143.556219231592,
-            "top": 22.7375750509155
+          {
+            "panel": 5,
+            "row": 2,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "6",
+              "panelvar2": "1"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 1.31745,
+              "right": 5.61955,
+              "bottom": 9.225,
+              "top": 35.075
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 171.77918903088,
+              "right": 304.950994790974,
+              "bottom": 268.509178173071,
+              "top": 148.193188811002
+            }
+          },
+          {
+            "panel": 6,
+            "row": 2,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "8",
+              "panelvar2": "1"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 1.31745,
+              "right": 5.61955,
+              "bottom": 9.225,
+              "top": 35.075
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 310.430446845768,
+              "right": 443.602252605862,
+              "bottom": 268.509178173071,
+              "top": 148.193188811002
+            }
           }
-        },
-        {
-          "panel": 2,
-          "row": 1,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "6",
-            "panelvar2": "0"
-          },
-          "scale_x": 1,
-          "scale_y": 1,
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 1.31745,
-            "right": 5.61955,
-            "bottom": 9.225,
-            "top": 35.075
-          },
-          "mapping": {
-            "x": "wt",
-            "y": "mpg",
-            "panelvar1": "cyl",
-            "panelvar2": "am"
-          },
-          "range": {
-            "left": 173.632696642719,
-            "right": 305.707834768505,
-            "bottom": 143.556219231592,
-            "top": 22.7375750509155
-          }
-        },
-        {
-          "panel": 3,
-          "row": 1,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "8",
-            "panelvar2": "0"
-          },
-          "scale_x": 1,
-          "scale_y": 1,
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 1.31745,
-            "right": 5.61955,
-            "bottom": 9.225,
-            "top": 35.075
-          },
-          "mapping": {
-            "x": "wt",
-            "y": "mpg",
-            "panelvar1": "cyl",
-            "panelvar2": "am"
-          },
-          "range": {
-            "left": 311.187286823299,
-            "right": 443.262424949085,
-            "bottom": 143.556219231592,
-            "top": 22.7375750509155
-          }
-        },
-        {
-          "panel": 4,
-          "row": 2,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "4",
-            "panelvar2": "1"
-          },
-          "scale_x": 1,
-          "scale_y": 1,
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 1.31745,
-            "right": 5.61955,
-            "bottom": 9.225,
-            "top": 35.075
-          },
-          "mapping": {
-            "x": "wt",
-            "y": "mpg",
-            "panelvar1": "cyl",
-            "panelvar2": "am"
-          },
-          "range": {
-            "left": 36.078106462139,
-            "right": 168.153244587924,
-            "bottom": 269.854315467064,
-            "top": 149.035671286387
-          }
-        },
-        {
-          "panel": 5,
-          "row": 2,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "6",
-            "panelvar2": "1"
-          },
-          "scale_x": 1,
-          "scale_y": 1,
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 1.31745,
-            "right": 5.61955,
-            "bottom": 9.225,
-            "top": 35.075
-          },
-          "mapping": {
-            "x": "wt",
-            "y": "mpg",
-            "panelvar1": "cyl",
-            "panelvar2": "am"
-          },
-          "range": {
-            "left": 173.632696642719,
-            "right": 305.707834768505,
-            "bottom": 269.854315467064,
-            "top": 149.035671286387
-          }
-        },
-        {
-          "panel": 6,
-          "row": 2,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "8",
-            "panelvar2": "1"
-          },
-          "scale_x": 1,
-          "scale_y": 1,
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 1.31745,
-            "right": 5.61955,
-            "bottom": 9.225,
-            "top": 35.075
-          },
-          "mapping": {
-            "x": "wt",
-            "y": "mpg",
-            "panelvar1": "cyl",
-            "panelvar2": "am"
-          },
-          "range": {
-            "left": 311.187286823299,
-            "right": 443.262424949085,
-            "bottom": 269.854315467064,
-            "top": 149.035671286387
-          }
+        ],
+        "dims": {
+          "width": 466,
+          "height": 300
         }
-      ]
+      }
     },
     "plot_brushed_points": {
       "x": {
@@ -286,9 +281,9 @@
       "deps": [
         {
           "name": "dt-core",
-          "version": "1.10.16",
+          "version": "1.10.19",
           "src": {
-            "href": "dt-core-1.10.16"
+            "href": "dt-core-1.10.19"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -378,9 +373,9 @@
       "deps": [
         {
           "name": "dt-core",
-          "version": "1.10.16",
+          "version": "1.10.19",
           "src": {
-            "href": "dt-core-1.10.16"
+            "href": "dt-core-1.10.19"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",

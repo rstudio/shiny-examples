@@ -35,57 +35,69 @@
       "src": "[image data sha1: 9f570107911d8a7ad634f49a62aff0d631add501]",
       "width": 383,
       "height": 400,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 3.16,
-            "right": 25.84,
-            "bottom": -2.72,
-            "top": 124.72
-          },
-          "range": {
-            "left": 59.04,
-            "right": 352.76,
-            "bottom": 325.56,
-            "top": 58.04
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 3.16,
+              "right": 25.84,
+              "bottom": -2.72,
+              "top": 124.72
+            },
+            "range": {
+              "left": 59.04,
+              "right": 352.76,
+              "bottom": 325.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 383,
+          "height": 400
         }
-      ]
+      }
     },
     "plota": {
       "src": "[image data sha1: 9f570107911d8a7ad634f49a62aff0d631add501]",
       "width": 383,
       "height": 400,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 3.16,
-            "right": 25.84,
-            "bottom": -2.72,
-            "top": 124.72
-          },
-          "range": {
-            "left": 59.04,
-            "right": 352.76,
-            "bottom": 325.56,
-            "top": 58.04
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 3.16,
+              "right": 25.84,
+              "bottom": -2.72,
+              "top": 124.72
+            },
+            "range": {
+              "left": 59.04,
+              "right": 352.76,
+              "bottom": 325.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 383,
+          "height": 400
         }
-      ]
+      }
     },
     "print": "[1] \"hello\"",
     "print2": "[1] \"hello\"",

@@ -1242,9 +1242,9 @@
   },
   "output": {
     "mytable1": [
-      "Unsupported index type: NULL",
+      "Can't subset with `[` using an object of class NULL.",
       "NULL",
-      "NULL"
+      "rlang_error"
     ],
     "mytable2": {
       "x": {
@@ -1300,9 +1300,9 @@
       "deps": [
         {
           "name": "dt-core",
-          "version": "1.10.16",
+          "version": "1.10.19",
           "src": {
-            "href": "dt-core-1.10.16"
+            "href": "dt-core-1.10.19"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -1398,9 +1398,9 @@
       "deps": [
         {
           "name": "dt-core",
-          "version": "1.10.16",
+          "version": "1.10.19",
           "src": {
-            "href": "dt-core-1.10.16"
+            "href": "dt-core-1.10.19"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",

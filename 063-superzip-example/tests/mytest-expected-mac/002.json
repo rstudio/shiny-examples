@@ -1,0 +1,260 @@
+{
+  "input": {
+    "cities": null,
+    "color": "superzip",
+    "map_bounds": {
+      "north": 57.8914973527103,
+      "east": -50.2734375,
+      "south": 9.53574899813361,
+      "west": -137.4609375
+    },
+    "map_center": {
+      "lng": -93.85,
+      "lat": 37.45
+    },
+    "map_zoom": 4,
+    "maxScore": 100,
+    "minScore": 0,
+    "nav": "Data explorer",
+    "size": "adultpop",
+    "states": null,
+    "threshold": 5,
+    "zipcodes": null,
+    "ziptable_cell_clicked": {
+
+    },
+    "ziptable_rows_all": null,
+    "ziptable_rows_current": null,
+    "ziptable_rows_selected": null,
+    "ziptable_search": "",
+    "ziptable_state": null
+  },
+  "output": {
+    "histCentile": {
+      "src": "[image data sha1: 2749135fe0be18d9ada8370638cd56abdf66efd2]",
+      "width": 288,
+      "height": 200,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -3.999931064,
+              "right": 103.999986964,
+              "bottom": -42.6,
+              "top": 1107.6
+            },
+            "range": {
+              "left": 59.04,
+              "right": 257.76,
+              "bottom": 125.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 288,
+          "height": 200
+        }
+      }
+    },
+    "map": {
+      "x": {
+        "options": {
+          "crs": {
+            "crsClass": "L.CRS.EPSG3857",
+            "code": null,
+            "proj4def": null,
+            "projectedBounds": null,
+            "options": {
+
+            }
+          }
+        },
+        "calls": [
+          {
+            "method": "addTiles",
+            "args": [
+              "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
+              null,
+              null,
+              {
+                "minZoom": 0,
+                "maxZoom": 18,
+                "tileSize": 256,
+                "subdomains": "abc",
+                "errorTileUrl": "",
+                "tms": false,
+                "noWrap": false,
+                "zoomOffset": 0,
+                "zoomReverse": false,
+                "opacity": 1,
+                "zIndex": 1,
+                "detectRetina": false,
+                "attribution": "Maps by <a href=\"http://www.mapbox.com/\">Mapbox<\/a>"
+              }
+            ]
+          }
+        ],
+        "setView": [
+          [
+            37.45,
+            -93.85
+          ],
+          4,
+          [
+
+          ]
+        ]
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+
+      ]
+    },
+    "scatterCollegeIncome": {
+      "src": "[image data sha1: be30d51180be7f269f57994edd03eff9686aef15]",
+      "width": 288,
+      "height": 250,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -0.04,
+              "right": 1.04,
+              "bottom": -0.04,
+              "top": 1.04
+            },
+            "range": {
+              "left": 0,
+              "right": 288,
+              "bottom": 249,
+              "top": -1
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 288,
+          "height": 250
+        }
+      }
+    },
+    "ziptable": {
+      "x": {
+        "filter": "none",
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>City<\/th>\n      <th>State<\/th>\n      <th>Zipcode<\/th>\n      <th>Rank<\/th>\n      <th>Score<\/th>\n      <th>Superzip<\/th>\n      <th>Population<\/th>\n      <th>College<\/th>\n      <th>Income<\/th>\n      <th>Lat<\/th>\n      <th>Long<\/th>\n      <th>Action<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = false;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

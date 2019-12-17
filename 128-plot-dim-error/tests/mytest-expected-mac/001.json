@@ -1,0 +1,18 @@
+{
+  "input": {
+    "go": 0
+  },
+  "output": {
+    "plot": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

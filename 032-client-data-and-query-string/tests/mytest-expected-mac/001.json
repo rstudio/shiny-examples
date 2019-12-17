@@ -1,0 +1,12 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "queryText": "",
+    "summary": "output_queryText_hidden = FALSE\nurl_search = \nallowDataUriScheme = TRUE\nurl_protocol = http:\nurl_port = 4863\nurl_hash_initial = \nsingletons = \noutput_summary_hidden = FALSE\nurl_pathname = /\nurl_hash = \nurl_hostname = 127.0.0.1\npixelratio = 1"
+  },
+  "export": {
+
+  }
+}

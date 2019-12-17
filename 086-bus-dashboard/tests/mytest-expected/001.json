@@ -55,30 +55,34 @@
             "method": "addCircleMarkers",
             "args": [
               [
-                44.99046,
-                44.96462,
-                44.96267,
-                44.97107,
-                44.97009,
-                44.96188,
-                44.98276,
-                44.96272,
-                44.96707,
-                44.98123,
-                44.96264
+                44.98027,
+                44.96276,
+                44.99048,
+                44.96191,
+                44.96277,
+                44.96277,
+                44.98737,
+                44.98737,
+                44.96268,
+                44.96268,
+                44.97236,
+                44.97364,
+                44.96436
               ],
               [
-                -93.25099,
-                -93.27279,
-                -93.2563,
-                -93.24576,
-                -93.2469,
-                -93.29212,
-                -93.24124,
-                -93.23401,
-                -93.23973,
-                -93.24097,
-                -93.29102
+                -93.23853,
+                -93.26051,
+                -93.25098,
+                -93.29214,
+                -93.2674,
+                -93.2674,
+                -93.24007,
+                -93.24007,
+                -93.28831,
+                -93.26787,
+                -93.24457,
+                -93.22795,
+                -93.23615
               ],
               8,
               null,
@@ -88,32 +92,36 @@
                 "className": "",
                 "stroke": true,
                 "color": [
+                  "#A93F35",
+                  "#A93F35",
                   "#527525",
+                  "#A93F35",
                   "#A93F35",
                   "#527525",
                   "#A93F35",
                   "#527525",
-                  "#A93F35",
+                  "#527525",
                   "#527525",
                   "#A93F35",
                   "#527525",
-                  "#A93F35",
                   "#527525"
                 ],
                 "weight": 5,
                 "opacity": 0.8,
                 "fill": true,
                 "fillColor": [
+                  "#A93F35",
+                  "#A93F35",
                   "#527525",
+                  "#A93F35",
                   "#A93F35",
                   "#527525",
                   "#A93F35",
                   "#527525",
-                  "#A93F35",
+                  "#527525",
                   "#527525",
                   "#A93F35",
                   "#527525",
-                  "#A93F35",
                   "#527525"
                 ],
                 "fillOpacity": 0.2
@@ -123,7 +131,20 @@
               null,
               null,
               null,
-              null,
+              {
+                "interactive": false,
+                "permanent": false,
+                "direction": "auto",
+                "opacity": 1,
+                "offset": [
+                  0,
+                  0
+                ],
+                "textsize": "10px",
+                "textOnly": false,
+                "className": "",
+                "sticky": true
+              },
               null
             ]
           },
@@ -616,7 +637,20 @@
               null,
               null,
               null,
-              null,
+              {
+                "interactive": false,
+                "permanent": false,
+                "direction": "auto",
+                "opacity": 1,
+                "offset": [
+                  0,
+                  0
+                ],
+                "textsize": "10px",
+                "textOnly": false,
+                "className": "",
+                "sticky": true
+              },
               null
             ]
           }
@@ -643,13 +677,13 @@
       ]
     },
     "numVehiclesTable": {
-      "html": "<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Color<\/th>\n      <th>Direction<\/th>\n      <th>Number of vehicles<\/th>\n    <\/tr>\n  <\/thead>\n  <tbody>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#BA48AA; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Northbound<\/td>\n      <td>0<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#595490; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Southbound<\/td>\n      <td>0<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#527525; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Eastbound<\/td>\n      <td>6<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#A93F35; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Westbound<\/td>\n      <td>5<\/td>\n    <\/tr>\n    <tr class=\"active\">\n      <td><\/td>\n      <td>Total<\/td>\n      <td>11<\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>",
+      "html": "<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Color<\/th>\n      <th>Direction<\/th>\n      <th>Number of vehicles<\/th>\n    <\/tr>\n  <\/thead>\n  <tbody>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#BA48AA; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Northbound<\/td>\n      <td>0<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#595490; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Southbound<\/td>\n      <td>0<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#527525; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Eastbound<\/td>\n      <td>7<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#A93F35; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Westbound<\/td>\n      <td>6<\/td>\n    <\/tr>\n    <tr class=\"active\">\n      <td><\/td>\n      <td>Total<\/td>\n      <td>13<\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>",
       "deps": [
 
       ]
     },
     "routeSelect": {
-      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"routeNum\">Route<\/label>\n  <div>\n    <select id=\"routeNum\"><option value=\"0\">All<\/option>\n<option value=\"2\" selected>2<\/option>\n<option value=\"3\">3<\/option>\n<option value=\"4\">4<\/option>\n<option value=\"5\">5<\/option>\n<option value=\"6\">6<\/option>\n<option value=\"7\">7<\/option>\n<option value=\"9\">9<\/option>\n<option value=\"10\">10<\/option>\n<option value=\"11\">11<\/option>\n<option value=\"14\">14<\/option>\n<option value=\"16\">16<\/option>\n<option value=\"17\">17<\/option>\n<option value=\"18\">18<\/option>\n<option value=\"19\">19<\/option>\n<option value=\"21\">21<\/option>\n<option value=\"22\">22<\/option>\n<option value=\"23\">23<\/option>\n<option value=\"25\">25<\/option>\n<option value=\"27\">27<\/option>\n<option value=\"30\">30<\/option>\n<option value=\"32\">32<\/option>\n<option value=\"46\">46<\/option>\n<option value=\"54\">54<\/option>\n<option value=\"61\">61<\/option>\n<option value=\"62\">62<\/option>\n<option value=\"63\">63<\/option>\n<option value=\"64\">64<\/option>\n<option value=\"65\">65<\/option>\n<option value=\"67\">67<\/option>\n<option value=\"68\">68<\/option>\n<option value=\"70\">70<\/option>\n<option value=\"71\">71<\/option>\n<option value=\"74\">74<\/option>\n<option value=\"75\">75<\/option>\n<option value=\"80\">80<\/option>\n<option value=\"83\">83<\/option>\n<option value=\"84\">84<\/option>\n<option value=\"87\">87<\/option>\n<option value=\"94\">94<\/option>\n<option value=\"113\">113<\/option>\n<option value=\"114\">114<\/option>\n<option value=\"219\">219<\/option>\n<option value=\"223\">223<\/option>\n<option value=\"225\">225<\/option>\n<option value=\"227\">227<\/option>\n<option value=\"264\">264<\/option>\n<option value=\"475\">475<\/option>\n<option value=\"493\">493<\/option>\n<option value=\"515\">515<\/option>\n<option value=\"535\">535<\/option>\n<option value=\"537\">537<\/option>\n<option value=\"538\">538<\/option>\n<option value=\"539\">539<\/option>\n<option value=\"540\">540<\/option>\n<option value=\"600\">600<\/option>\n<option value=\"604\">604<\/option>\n<option value=\"612\">612<\/option>\n<option value=\"614\">614<\/option>\n<option value=\"615\">615<\/option>\n<option value=\"645\">645<\/option>\n<option value=\"690\">690<\/option>\n<option value=\"695\">695<\/option>\n<option value=\"698\">698<\/option>\n<option value=\"705\">705<\/option>\n<option value=\"716\">716<\/option>\n<option value=\"717\">717<\/option>\n<option value=\"721\">721<\/option>\n<option value=\"722\">722<\/option>\n<option value=\"723\">723<\/option>\n<option value=\"724\">724<\/option>\n<option value=\"756\">756<\/option>\n<option value=\"774\">774<\/option>\n<option value=\"801\">801<\/option>\n<option value=\"805\">805<\/option>\n<option value=\"852\">852<\/option>\n<option value=\"901\">901<\/option>\n<option value=\"902\">902<\/option>\n<option value=\"903\">903<\/option>\n<option value=\"921\">921<\/option><\/select>\n    <script type=\"application/json\" data-for=\"routeNum\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"routeNum\">Route<\/label>\n  <div>\n    <select id=\"routeNum\"><option value=\"0\">All<\/option>\n<option value=\"2\" selected>2<\/option>\n<option value=\"3\">3<\/option>\n<option value=\"4\">4<\/option>\n<option value=\"5\">5<\/option>\n<option value=\"6\">6<\/option>\n<option value=\"7\">7<\/option>\n<option value=\"9\">9<\/option>\n<option value=\"10\">10<\/option>\n<option value=\"11\">11<\/option>\n<option value=\"12\">12<\/option>\n<option value=\"14\">14<\/option>\n<option value=\"16\">16<\/option>\n<option value=\"17\">17<\/option>\n<option value=\"18\">18<\/option>\n<option value=\"19\">19<\/option>\n<option value=\"21\">21<\/option>\n<option value=\"22\">22<\/option>\n<option value=\"23\">23<\/option>\n<option value=\"25\">25<\/option>\n<option value=\"27\">27<\/option>\n<option value=\"30\">30<\/option>\n<option value=\"32\">32<\/option>\n<option value=\"39\">39<\/option>\n<option value=\"46\">46<\/option>\n<option value=\"53\">53<\/option>\n<option value=\"54\">54<\/option>\n<option value=\"59\">59<\/option>\n<option value=\"61\">61<\/option>\n<option value=\"62\">62<\/option>\n<option value=\"63\">63<\/option>\n<option value=\"64\">64<\/option>\n<option value=\"65\">65<\/option>\n<option value=\"67\">67<\/option>\n<option value=\"68\">68<\/option>\n<option value=\"70\">70<\/option>\n<option value=\"71\">71<\/option>\n<option value=\"74\">74<\/option>\n<option value=\"75\">75<\/option>\n<option value=\"80\">80<\/option>\n<option value=\"83\">83<\/option>\n<option value=\"84\">84<\/option>\n<option value=\"87\">87<\/option>\n<option value=\"94\">94<\/option>\n<option value=\"111\">111<\/option>\n<option value=\"113\">113<\/option>\n<option value=\"114\">114<\/option>\n<option value=\"118\">118<\/option>\n<option value=\"133\">133<\/option>\n<option value=\"134\">134<\/option>\n<option value=\"135\">135<\/option>\n<option value=\"141\">141<\/option>\n<option value=\"146\">146<\/option>\n<option value=\"156\">156<\/option>\n<option value=\"219\">219<\/option>\n<option value=\"223\">223<\/option>\n<option value=\"225\">225<\/option>\n<option value=\"227\">227<\/option>\n<option value=\"250\">250<\/option>\n<option value=\"252\">252<\/option>\n<option value=\"261\">261<\/option>\n<option value=\"262\">262<\/option>\n<option value=\"263\">263<\/option>\n<option value=\"264\">264<\/option>\n<option value=\"265\">265<\/option>\n<option value=\"270\">270<\/option>\n<option value=\"272\">272<\/option>\n<option value=\"275\">275<\/option>\n<option value=\"288\">288<\/option>\n<option value=\"294\">294<\/option>\n<option value=\"350\">350<\/option>\n<option value=\"351\">351<\/option>\n<option value=\"355\">355<\/option>\n<option value=\"361\">361<\/option>\n<option value=\"364\">364<\/option>\n<option value=\"365\">365<\/option>\n<option value=\"375\">375<\/option>\n<option value=\"415\">415<\/option>\n<option value=\"417\">417<\/option>\n<option value=\"452\">452<\/option>\n<option value=\"467\">467<\/option>\n<option value=\"515\">515<\/option>\n<option value=\"535\">535<\/option>\n<option value=\"537\">537<\/option>\n<option value=\"538\">538<\/option>\n<option value=\"539\">539<\/option>\n<option value=\"540\">540<\/option>\n<option value=\"542\">542<\/option>\n<option value=\"552\">552<\/option>\n<option value=\"553\">553<\/option>\n<option value=\"554\">554<\/option>\n<option value=\"558\">558<\/option>\n<option value=\"578\">578<\/option>\n<option value=\"579\">579<\/option>\n<option value=\"587\">587<\/option>\n<option value=\"588\">588<\/option>\n<option value=\"589\">589<\/option>\n<option value=\"597\">597<\/option>\n<option value=\"615\">615<\/option>\n<option value=\"643\">643<\/option>\n<option value=\"645\">645<\/option>\n<option value=\"652\">652<\/option>\n<option value=\"663\">663<\/option>\n<option value=\"664\">664<\/option>\n<option value=\"667\">667<\/option>\n<option value=\"668\">668<\/option>\n<option value=\"670\">670<\/option>\n<option value=\"671\">671<\/option>\n<option value=\"672\">672<\/option>\n<option value=\"673\">673<\/option>\n<option value=\"677\">677<\/option>\n<option value=\"679\">679<\/option>\n<option value=\"690\">690<\/option>\n<option value=\"695\">695<\/option>\n<option value=\"697\">697<\/option>\n<option value=\"698\">698<\/option>\n<option value=\"699\">699<\/option>\n<option value=\"705\">705<\/option>\n<option value=\"716\">716<\/option>\n<option value=\"717\">717<\/option>\n<option value=\"721\">721<\/option>\n<option value=\"722\">722<\/option>\n<option value=\"723\">723<\/option>\n<option value=\"724\">724<\/option>\n<option value=\"740\">740<\/option>\n<option value=\"741\">741<\/option>\n<option value=\"742\">742<\/option>\n<option value=\"747\">747<\/option>\n<option value=\"755\">755<\/option>\n<option value=\"756\">756<\/option>\n<option value=\"758\">758<\/option>\n<option value=\"760\">760<\/option>\n<option value=\"761\">761<\/option>\n<option value=\"762\">762<\/option>\n<option value=\"763\">763<\/option>\n<option value=\"765\">765<\/option>\n<option value=\"766\">766<\/option>\n<option value=\"767\">767<\/option>\n<option value=\"768\">768<\/option>\n<option value=\"771\">771<\/option>\n<option value=\"772\">772<\/option>\n<option value=\"774\">774<\/option>\n<option value=\"776\">776<\/option>\n<option value=\"777\">777<\/option>\n<option value=\"780\">780<\/option>\n<option value=\"781\">781<\/option>\n<option value=\"782\">782<\/option>\n<option value=\"783\">783<\/option>\n<option value=\"785\">785<\/option>\n<option value=\"789\">789<\/option>\n<option value=\"790\">790<\/option>\n<option value=\"791\">791<\/option>\n<option value=\"801\">801<\/option>\n<option value=\"805\">805<\/option>\n<option value=\"824\">824<\/option>\n<option value=\"825\">825<\/option>\n<option value=\"831\">831<\/option>\n<option value=\"850\">850<\/option>\n<option value=\"852\">852<\/option>\n<option value=\"854\">854<\/option>\n<option value=\"860\">860<\/option>\n<option value=\"865\">865<\/option>\n<option value=\"888\">888<\/option>\n<option value=\"901\">901<\/option>\n<option value=\"902\">902<\/option>\n<option value=\"903\">903<\/option>\n<option value=\"921\">921<\/option>\n<option value=\"923\">923<\/option><\/select>\n    <script type=\"application/json\" data-for=\"routeNum\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
       "deps": [
         {
           "name": "selectize",
@@ -668,7 +702,7 @@
       ]
     },
     "timeSinceLastUpdate": {
-      "html": "<p class=\"text-muted\">\n  Data refreshed \n  -1\n   seconds ago.\n<\/p>",
+      "html": "<p class=\"text-muted\">\n  Data refreshed \n  0\n   seconds ago.\n<\/p>",
       "deps": [
 
       ]

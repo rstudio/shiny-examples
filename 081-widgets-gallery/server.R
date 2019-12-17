@@ -5,7 +5,14 @@ function(input, output) {
   output$checkGroupOut <- renderPrint({ input$checkGroup })
   output$dateOut <- renderPrint({ input$date })
   output$datesOut <- renderPrint({ input$dates })
-  output$fileOut <- renderPrint({ input$file })
+  #output$fileOut <- renderPrint({ input$file })
+  output$fileOut <- snapshotPreprocessOutput(
+    renderPrint({ input$file }),
+    function(value) {
+      gsub("tempdir_pattern", "", value)
+    }
+  )
+
   output$numOut <- renderPrint({ input$num })
   output$radioOut <- renderPrint({ input$radio })
   output$selectOut <- renderPrint({ input$select })

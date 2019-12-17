@@ -6,32 +6,38 @@
   },
   "output": {
     "plot1": {
-      "src": "[image data sha1: 19418a599b0fda961bd6bdefcbec9389b93c2cd5]",
+      "src": "[image data sha1: e838b963c6a629fff34df62d017640e85f178df1]",
       "width": 631,
       "height": 400,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 4.156,
-            "right": 8.044,
-            "bottom": 1.904,
-            "top": 4.496
-          },
-          "range": {
-            "left": 59.04,
-            "right": 616.6,
-            "bottom": 325.56,
-            "top": -1
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 4.156,
+              "right": 8.044,
+              "bottom": 1.904,
+              "top": 4.496
+            },
+            "range": {
+              "left": 59.04,
+              "right": 616.6,
+              "bottom": 325.56,
+              "top": -1
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 631,
+          "height": 400
         }
-      ]
+      }
     }
   },
   "export": {

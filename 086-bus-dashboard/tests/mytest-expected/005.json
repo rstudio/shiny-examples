@@ -1,14 +1,14 @@
 {
   "input": {
     "busmap_bounds": {
-      "north": 45.0444187043641,
-      "east": -93.043212890625,
-      "south": 44.8013268290486,
-      "west": -93.5197448730469
+      "north": 45.0473295611395,
+      "east": -93.039779663086,
+      "south": 44.8042500291152,
+      "west": -93.5163116455078
     },
     "busmap_center": {
-      "lng": -93.28169375935,
-      "lat": 44.9230485708148
+      "lng": -93.27782875935,
+      "lat": 44.9256763185324
     },
     "busmap_zoom": 11,
     "directions": [
@@ -66,44 +66,56 @@
             "method": "addCircleMarkers",
             "args": [
               [
-                44.98153,
-                44.95944,
-                44.86425,
-                44.90533,
-                44.97907,
-                44.97612,
-                44.90105,
-                44.98393,
-                44.97964,
-                44.94092,
-                44.87995,
-                44.87111,
-                44.86183,
-                44.86429,
-                44.97124,
-                44.92245,
-                44.97946,
-                44.94587
+                44.98943,
+                44.93736,
+                44.92499,
+                44.91223,
+                44.86486,
+                44.86436,
+                44.97455,
+                44.96488,
+                44.96488,
+                44.97393,
+                44.98031,
+                44.98031,
+                44.9806,
+                44.98235,
+                44.97368,
+                44.86584,
+                44.86584,
+                44.93237,
+                44.92205,
+                44.97239,
+                44.88217,
+                44.89531,
+                44.97405,
+                44.91437
               ],
               [
-                -93.26985,
-                -93.29386,
-                -93.24243,
-                -93.33249,
-                -93.27337,
-                -93.22626,
-                -93.31884,
-                -93.26705,
-                -93.23695,
-                -93.27488,
-                -93.32144,
-                -93.3292,
-                -93.32727,
-                -93.24328,
-                -93.28689,
-                -93.31886,
-                -93.27273,
-                -93.29828
+                -93.25559,
+                -93.30401,
+                -93.32907,
+                -93.31881,
+                -93.24367,
+                -93.24304,
+                -93.27396,
+                -93.28879,
+                -93.28879,
+                -93.27971,
+                -93.26929,
+                -93.26929,
+                -93.26878,
+                -93.26879,
+                -93.27996,
+                -93.32894,
+                -93.32894,
+                -93.32855,
+                -93.32918,
+                -93.21853,
+                -93.32212,
+                -93.31879,
+                -93.27927,
+                -93.31891
               ],
               8,
               null,
@@ -114,46 +126,58 @@
                 "stroke": true,
                 "color": [
                   "#595490",
-                  "#595490",
                   "#BA48AA",
                   "#595490",
+                  "#BA48AA",
                   "#595490",
-                  "#595490",
-                  "#595490",
-                  "#BA48AA",
-                  "#BA48AA",
-                  "#BA48AA",
-                  "#BA48AA",
-                  "#BA48AA",
                   "#595490",
                   "#595490",
                   "#BA48AA",
                   "#595490",
                   "#BA48AA",
-                  "#BA48AA"
+                  "#BA48AA",
+                  "#595490",
+                  "#BA48AA",
+                  "#595490",
+                  "#595490",
+                  "#BA48AA",
+                  "#595490",
+                  "#BA48AA",
+                  "#595490",
+                  "#BA48AA",
+                  "#BA48AA",
+                  "#BA48AA",
+                  "#595490",
+                  "#595490"
                 ],
                 "weight": 5,
                 "opacity": 0.8,
                 "fill": true,
                 "fillColor": [
                   "#595490",
-                  "#595490",
                   "#BA48AA",
                   "#595490",
+                  "#BA48AA",
                   "#595490",
-                  "#595490",
-                  "#595490",
-                  "#BA48AA",
-                  "#BA48AA",
-                  "#BA48AA",
-                  "#BA48AA",
-                  "#BA48AA",
                   "#595490",
                   "#595490",
                   "#BA48AA",
                   "#595490",
                   "#BA48AA",
-                  "#BA48AA"
+                  "#BA48AA",
+                  "#595490",
+                  "#BA48AA",
+                  "#595490",
+                  "#595490",
+                  "#BA48AA",
+                  "#595490",
+                  "#BA48AA",
+                  "#595490",
+                  "#BA48AA",
+                  "#BA48AA",
+                  "#BA48AA",
+                  "#595490",
+                  "#595490"
                 ],
                 "fillOpacity": 0.2
               },
@@ -162,7 +186,20 @@
               null,
               null,
               null,
-              null,
+              {
+                "interactive": false,
+                "permanent": false,
+                "direction": "auto",
+                "opacity": 1,
+                "offset": [
+                  0,
+                  0
+                ],
+                "textsize": "10px",
+                "textOnly": false,
+                "className": "",
+                "sticky": true
+              },
               null
             ]
           },
@@ -1011,19 +1048,32 @@
               null,
               null,
               null,
-              null,
+              {
+                "interactive": false,
+                "permanent": false,
+                "direction": "auto",
+                "opacity": 1,
+                "offset": [
+                  0,
+                  0
+                ],
+                "textsize": "10px",
+                "textOnly": false,
+                "className": "",
+                "sticky": true
+              },
               null
             ]
           }
         ],
         "limits": {
           "lat": [
-            44.86183,
-            44.9842019766
+            44.8618518028,
+            44.98943
           ],
           "lng": [
             -93.3371275187,
-            -93.22626
+            -93.21853
           ]
         }
       },
@@ -1038,13 +1088,13 @@
       ]
     },
     "numVehiclesTable": {
-      "html": "<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Color<\/th>\n      <th>Direction<\/th>\n      <th>Number of vehicles<\/th>\n    <\/tr>\n  <\/thead>\n  <tbody>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#BA48AA; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Northbound<\/td>\n      <td>9<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#595490; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Southbound<\/td>\n      <td>9<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#527525; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Eastbound<\/td>\n      <td>0<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#A93F35; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Westbound<\/td>\n      <td>0<\/td>\n    <\/tr>\n    <tr class=\"active\">\n      <td><\/td>\n      <td>Total<\/td>\n      <td>18<\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>",
+      "html": "<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Color<\/th>\n      <th>Direction<\/th>\n      <th>Number of vehicles<\/th>\n    <\/tr>\n  <\/thead>\n  <tbody>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#BA48AA; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Northbound<\/td>\n      <td>11<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#595490; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Southbound<\/td>\n      <td>13<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#527525; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Eastbound<\/td>\n      <td>0<\/td>\n    <\/tr>\n    <tr>\n      <td>\n        <span style=\"width:1.1em; height:1.1em; background-color:#A93F35; display:inline-block;\"><\/span>\n      <\/td>\n      <td>Westbound<\/td>\n      <td>0<\/td>\n    <\/tr>\n    <tr class=\"active\">\n      <td><\/td>\n      <td>Total<\/td>\n      <td>24<\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>",
       "deps": [
 
       ]
     },
     "routeSelect": {
-      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"routeNum\">Route<\/label>\n  <div>\n    <select id=\"routeNum\"><option value=\"0\">All<\/option>\n<option value=\"2\" selected>2<\/option>\n<option value=\"3\">3<\/option>\n<option value=\"4\">4<\/option>\n<option value=\"5\">5<\/option>\n<option value=\"6\">6<\/option>\n<option value=\"7\">7<\/option>\n<option value=\"9\">9<\/option>\n<option value=\"10\">10<\/option>\n<option value=\"11\">11<\/option>\n<option value=\"14\">14<\/option>\n<option value=\"16\">16<\/option>\n<option value=\"17\">17<\/option>\n<option value=\"18\">18<\/option>\n<option value=\"19\">19<\/option>\n<option value=\"21\">21<\/option>\n<option value=\"22\">22<\/option>\n<option value=\"23\">23<\/option>\n<option value=\"25\">25<\/option>\n<option value=\"27\">27<\/option>\n<option value=\"30\">30<\/option>\n<option value=\"32\">32<\/option>\n<option value=\"46\">46<\/option>\n<option value=\"54\">54<\/option>\n<option value=\"61\">61<\/option>\n<option value=\"62\">62<\/option>\n<option value=\"63\">63<\/option>\n<option value=\"64\">64<\/option>\n<option value=\"65\">65<\/option>\n<option value=\"67\">67<\/option>\n<option value=\"68\">68<\/option>\n<option value=\"70\">70<\/option>\n<option value=\"71\">71<\/option>\n<option value=\"74\">74<\/option>\n<option value=\"75\">75<\/option>\n<option value=\"80\">80<\/option>\n<option value=\"83\">83<\/option>\n<option value=\"84\">84<\/option>\n<option value=\"87\">87<\/option>\n<option value=\"94\">94<\/option>\n<option value=\"113\">113<\/option>\n<option value=\"114\">114<\/option>\n<option value=\"219\">219<\/option>\n<option value=\"223\">223<\/option>\n<option value=\"225\">225<\/option>\n<option value=\"227\">227<\/option>\n<option value=\"264\">264<\/option>\n<option value=\"475\">475<\/option>\n<option value=\"493\">493<\/option>\n<option value=\"515\">515<\/option>\n<option value=\"535\">535<\/option>\n<option value=\"537\">537<\/option>\n<option value=\"538\">538<\/option>\n<option value=\"539\">539<\/option>\n<option value=\"540\">540<\/option>\n<option value=\"600\">600<\/option>\n<option value=\"604\">604<\/option>\n<option value=\"612\">612<\/option>\n<option value=\"614\">614<\/option>\n<option value=\"615\">615<\/option>\n<option value=\"645\">645<\/option>\n<option value=\"690\">690<\/option>\n<option value=\"695\">695<\/option>\n<option value=\"698\">698<\/option>\n<option value=\"705\">705<\/option>\n<option value=\"716\">716<\/option>\n<option value=\"717\">717<\/option>\n<option value=\"721\">721<\/option>\n<option value=\"722\">722<\/option>\n<option value=\"723\">723<\/option>\n<option value=\"724\">724<\/option>\n<option value=\"756\">756<\/option>\n<option value=\"774\">774<\/option>\n<option value=\"801\">801<\/option>\n<option value=\"805\">805<\/option>\n<option value=\"852\">852<\/option>\n<option value=\"901\">901<\/option>\n<option value=\"902\">902<\/option>\n<option value=\"903\">903<\/option>\n<option value=\"921\">921<\/option><\/select>\n    <script type=\"application/json\" data-for=\"routeNum\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"routeNum\">Route<\/label>\n  <div>\n    <select id=\"routeNum\"><option value=\"0\">All<\/option>\n<option value=\"2\" selected>2<\/option>\n<option value=\"3\">3<\/option>\n<option value=\"4\">4<\/option>\n<option value=\"5\">5<\/option>\n<option value=\"6\">6<\/option>\n<option value=\"7\">7<\/option>\n<option value=\"9\">9<\/option>\n<option value=\"10\">10<\/option>\n<option value=\"11\">11<\/option>\n<option value=\"12\">12<\/option>\n<option value=\"14\">14<\/option>\n<option value=\"16\">16<\/option>\n<option value=\"17\">17<\/option>\n<option value=\"18\">18<\/option>\n<option value=\"19\">19<\/option>\n<option value=\"21\">21<\/option>\n<option value=\"22\">22<\/option>\n<option value=\"23\">23<\/option>\n<option value=\"25\">25<\/option>\n<option value=\"27\">27<\/option>\n<option value=\"30\">30<\/option>\n<option value=\"32\">32<\/option>\n<option value=\"39\">39<\/option>\n<option value=\"46\">46<\/option>\n<option value=\"53\">53<\/option>\n<option value=\"54\">54<\/option>\n<option value=\"59\">59<\/option>\n<option value=\"61\">61<\/option>\n<option value=\"62\">62<\/option>\n<option value=\"63\">63<\/option>\n<option value=\"64\">64<\/option>\n<option value=\"65\">65<\/option>\n<option value=\"67\">67<\/option>\n<option value=\"68\">68<\/option>\n<option value=\"70\">70<\/option>\n<option value=\"71\">71<\/option>\n<option value=\"74\">74<\/option>\n<option value=\"75\">75<\/option>\n<option value=\"80\">80<\/option>\n<option value=\"83\">83<\/option>\n<option value=\"84\">84<\/option>\n<option value=\"87\">87<\/option>\n<option value=\"94\">94<\/option>\n<option value=\"111\">111<\/option>\n<option value=\"113\">113<\/option>\n<option value=\"114\">114<\/option>\n<option value=\"118\">118<\/option>\n<option value=\"133\">133<\/option>\n<option value=\"134\">134<\/option>\n<option value=\"135\">135<\/option>\n<option value=\"141\">141<\/option>\n<option value=\"146\">146<\/option>\n<option value=\"156\">156<\/option>\n<option value=\"219\">219<\/option>\n<option value=\"223\">223<\/option>\n<option value=\"225\">225<\/option>\n<option value=\"227\">227<\/option>\n<option value=\"250\">250<\/option>\n<option value=\"252\">252<\/option>\n<option value=\"261\">261<\/option>\n<option value=\"262\">262<\/option>\n<option value=\"263\">263<\/option>\n<option value=\"264\">264<\/option>\n<option value=\"265\">265<\/option>\n<option value=\"270\">270<\/option>\n<option value=\"272\">272<\/option>\n<option value=\"275\">275<\/option>\n<option value=\"288\">288<\/option>\n<option value=\"294\">294<\/option>\n<option value=\"350\">350<\/option>\n<option value=\"351\">351<\/option>\n<option value=\"355\">355<\/option>\n<option value=\"361\">361<\/option>\n<option value=\"364\">364<\/option>\n<option value=\"365\">365<\/option>\n<option value=\"375\">375<\/option>\n<option value=\"415\">415<\/option>\n<option value=\"417\">417<\/option>\n<option value=\"452\">452<\/option>\n<option value=\"467\">467<\/option>\n<option value=\"515\">515<\/option>\n<option value=\"535\">535<\/option>\n<option value=\"537\">537<\/option>\n<option value=\"538\">538<\/option>\n<option value=\"539\">539<\/option>\n<option value=\"540\">540<\/option>\n<option value=\"542\">542<\/option>\n<option value=\"552\">552<\/option>\n<option value=\"553\">553<\/option>\n<option value=\"554\">554<\/option>\n<option value=\"558\">558<\/option>\n<option value=\"578\">578<\/option>\n<option value=\"579\">579<\/option>\n<option value=\"587\">587<\/option>\n<option value=\"588\">588<\/option>\n<option value=\"589\">589<\/option>\n<option value=\"597\">597<\/option>\n<option value=\"615\">615<\/option>\n<option value=\"643\">643<\/option>\n<option value=\"645\">645<\/option>\n<option value=\"652\">652<\/option>\n<option value=\"663\">663<\/option>\n<option value=\"664\">664<\/option>\n<option value=\"667\">667<\/option>\n<option value=\"668\">668<\/option>\n<option value=\"670\">670<\/option>\n<option value=\"671\">671<\/option>\n<option value=\"672\">672<\/option>\n<option value=\"673\">673<\/option>\n<option value=\"677\">677<\/option>\n<option value=\"679\">679<\/option>\n<option value=\"690\">690<\/option>\n<option value=\"695\">695<\/option>\n<option value=\"697\">697<\/option>\n<option value=\"698\">698<\/option>\n<option value=\"699\">699<\/option>\n<option value=\"705\">705<\/option>\n<option value=\"716\">716<\/option>\n<option value=\"717\">717<\/option>\n<option value=\"721\">721<\/option>\n<option value=\"722\">722<\/option>\n<option value=\"723\">723<\/option>\n<option value=\"724\">724<\/option>\n<option value=\"740\">740<\/option>\n<option value=\"741\">741<\/option>\n<option value=\"742\">742<\/option>\n<option value=\"747\">747<\/option>\n<option value=\"755\">755<\/option>\n<option value=\"756\">756<\/option>\n<option value=\"758\">758<\/option>\n<option value=\"760\">760<\/option>\n<option value=\"761\">761<\/option>\n<option value=\"762\">762<\/option>\n<option value=\"763\">763<\/option>\n<option value=\"765\">765<\/option>\n<option value=\"766\">766<\/option>\n<option value=\"767\">767<\/option>\n<option value=\"768\">768<\/option>\n<option value=\"771\">771<\/option>\n<option value=\"772\">772<\/option>\n<option value=\"774\">774<\/option>\n<option value=\"776\">776<\/option>\n<option value=\"777\">777<\/option>\n<option value=\"780\">780<\/option>\n<option value=\"781\">781<\/option>\n<option value=\"782\">782<\/option>\n<option value=\"783\">783<\/option>\n<option value=\"785\">785<\/option>\n<option value=\"789\">789<\/option>\n<option value=\"790\">790<\/option>\n<option value=\"791\">791<\/option>\n<option value=\"801\">801<\/option>\n<option value=\"805\">805<\/option>\n<option value=\"824\">824<\/option>\n<option value=\"825\">825<\/option>\n<option value=\"831\">831<\/option>\n<option value=\"850\">850<\/option>\n<option value=\"852\">852<\/option>\n<option value=\"854\">854<\/option>\n<option value=\"860\">860<\/option>\n<option value=\"865\">865<\/option>\n<option value=\"888\">888<\/option>\n<option value=\"901\">901<\/option>\n<option value=\"902\">902<\/option>\n<option value=\"903\">903<\/option>\n<option value=\"921\">921<\/option>\n<option value=\"923\">923<\/option><\/select>\n    <script type=\"application/json\" data-for=\"routeNum\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
       "deps": [
         {
           "name": "selectize",

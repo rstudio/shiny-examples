@@ -1,0 +1,19 @@
+{
+  "input": {
+    "goButton": 0,
+    "n": 50
+  },
+  "output": {
+    "nText": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

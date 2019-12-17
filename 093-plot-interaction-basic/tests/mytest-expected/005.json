@@ -14,29 +14,35 @@
       "src": "[image data sha1: 33d421af217a8f6b99f53cf1d08ce53e528b83b2]",
       "width": 301,
       "height": 350,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 1.35656,
-            "right": 5.58044,
-            "bottom": 9.46,
-            "top": 34.84
-          },
-          "range": {
-            "left": 59.04,
-            "right": 270.76,
-            "bottom": 275.56,
-            "top": 58.04
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 1.35656,
+              "right": 5.58044,
+              "bottom": 9.46,
+              "top": 34.84
+            },
+            "range": {
+              "left": 59.04,
+              "right": 270.76,
+              "bottom": 275.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 301,
+          "height": 350
         }
-      ]
+      }
     }
   },
   "export": {

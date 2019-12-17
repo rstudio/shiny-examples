@@ -11,16 +11,18 @@
       "deps": [
         {
           "name": "font-awesome",
-          "version": "4.7.0",
+          "version": "5.3.1",
           "src": {
-            "href": "shared/font-awesome"
+            "href": "font-awesome-5.3.1"
           },
           "meta": null,
           "script": null,
-          "stylesheet": "css/font-awesome.min.css",
+          "stylesheet": [
+            "css/all.min.css",
+            "css/v4-shims.min.css"
+          ],
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         }
       ]
@@ -35,22 +37,24 @@
 
       ]
     },
-    "packageTable": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Package name <\/th> <th style='text-align: right;'> % of downloads <\/th>  <\/tr> <\/thead> <tbody>\n  <\/tbody> <\/table>",
+    "packageTable": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Package name <\/th> <th style='text-align: right;'> % of downloads <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td class='NA'> NA <\/td> <td align=\"right\" class='NA'> NA <\/td> <\/tr>\n   <\/tbody> <\/table>",
     "rate": {
       "html": "<div class=\"small-box bg-aqua\">\n  <div class=\"inner\">\n    <h3>0.0<\/h3>\n    <p>Downloads per sec (last 5 min)<\/p>\n  <\/div>\n  <div class=\"icon-large\">\n    <i class=\"fa fa-area-chart\"><\/i>\n  <\/div>\n<\/div>",
       "deps": [
         {
           "name": "font-awesome",
-          "version": "4.7.0",
+          "version": "5.3.1",
           "src": {
-            "href": "shared/font-awesome"
+            "href": "font-awesome-5.3.1"
           },
           "meta": null,
           "script": null,
-          "stylesheet": "css/font-awesome.min.css",
+          "stylesheet": [
+            "css/all.min.css",
+            "css/v4-shims.min.css"
+          ],
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         }
       ]
@@ -60,16 +64,18 @@
       "deps": [
         {
           "name": "font-awesome",
-          "version": "4.7.0",
+          "version": "5.3.1",
           "src": {
-            "href": "shared/font-awesome"
+            "href": "font-awesome-5.3.1"
           },
           "meta": null,
           "script": null,
-          "stylesheet": "css/font-awesome.min.css",
+          "stylesheet": [
+            "css/all.min.css",
+            "css/v4-shims.min.css"
+          ],
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         }
       ]

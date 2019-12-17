@@ -10,32 +10,38 @@
   },
   "output": {
     "distPlot": {
-      "src": "[image data sha1: cd4488bcd64286f2c7aac4c0e7a02332aa55ba53]",
+      "src": "[image data sha1: e20d9498136045a7dd9bba57578cb45e9dc1819c]",
       "width": 631,
       "height": 400,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 40.88,
-            "right": 98.12,
-            "bottom": -1.08,
-            "top": 28.08
-          },
-          "range": {
-            "left": 59.04,
-            "right": 600.76,
-            "bottom": 325.56,
-            "top": 58.04
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 40.88,
+              "right": 98.12,
+              "bottom": -1.08,
+              "top": 28.08
+            },
+            "range": {
+              "left": 59.04,
+              "right": 600.76,
+              "bottom": 325.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 631,
+          "height": 400
         }
-      ]
+      }
     },
     "error_info": {
       "message": "A bad error occurred!",

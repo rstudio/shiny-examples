@@ -1,0 +1,13 @@
+app <- ShinyDriver$new("../../", seed = 100)
+app$snapshotInit("mytest")
+
+app$setInputs(add = "click")
+app$setInputs(add = "click")
+app$setInputs(tabs = "Dynamic")
+app$setInputs(add = "click")
+app$setInputs(add = "click")
+app$setInputs(add = "click")
+app$setInputs(add = "click")
+app$setInputs(tabs = "Hello")
+app$setInputs(tabs = "Dynamic")
+app$snapshot()

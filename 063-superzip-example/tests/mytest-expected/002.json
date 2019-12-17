@@ -34,29 +34,35 @@
       "src": "[image data sha1: f1ad379c05fd01f8c9586951439b5dc9a886a569]",
       "width": 288,
       "height": 200,
-      "coordmap": [
-        {
-          "domain": {
-            "left": -3.999931064,
-            "right": 103.999986964,
-            "bottom": -44,
-            "top": 1144
-          },
-          "range": {
-            "left": 59.04,
-            "right": 257.76,
-            "bottom": 125.56,
-            "top": 58.04
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -3.999931064,
+              "right": 103.999986964,
+              "bottom": -44,
+              "top": 1144
+            },
+            "range": {
+              "left": 59.04,
+              "right": 257.76,
+              "bottom": 125.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 288,
+          "height": 200
         }
-      ]
+      }
     },
     "map": {
       "x": {
@@ -121,29 +127,35 @@
       "src": "[image data sha1: c7b38e11aede35417f0d9a827dcc965ff14212cb]",
       "width": 288,
       "height": 250,
-      "coordmap": [
-        {
-          "domain": {
-            "left": -0.04,
-            "right": 1.04,
-            "bottom": -0.04,
-            "top": 1.04
-          },
-          "range": {
-            "left": 0,
-            "right": 288,
-            "bottom": 249,
-            "top": -1
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -0.04,
+              "right": 1.04,
+              "bottom": -0.04,
+              "top": 1.04
+            },
+            "range": {
+              "left": 0,
+              "right": 288,
+              "bottom": 249,
+              "top": -1
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 288,
+          "height": 250
         }
-      ]
+      }
     },
     "ziptable": {
       "x": {
@@ -196,9 +208,9 @@
       "deps": [
         {
           "name": "dt-core",
-          "version": "1.10.16",
+          "version": "1.10.19",
           "src": {
-            "href": "dt-core-1.10.16"
+            "href": "dt-core-1.10.19"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",

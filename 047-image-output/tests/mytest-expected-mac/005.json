@@ -1,0 +1,21 @@
+{
+  "input": {
+    "picture": "face",
+    "r": 0.05
+  },
+  "output": {
+    "image1": {
+      "src": "[image data sha1: 7b5766b2e413c7735fb1e4aeef6f4700d1a66976]",
+      "width": 301,
+      "height": 300,
+      "alt": "This is alternate text"
+    },
+    "image2": {
+      "src": "[image data sha1: b296bc86df62efcef55faefb5d36467daddc15d8]",
+      "alt": "Face"
+    }
+  },
+  "export": {
+
+  }
+}

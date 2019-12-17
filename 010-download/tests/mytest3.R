@@ -1,0 +1,12 @@
+app <- ShinyDriver$new("../", seed = 1000)
+app$snapshotInit("mytest3")
+
+app$snapshot()
+app$snapshotDownload("downloadData")
+app$setInputs(dataset = "pressure")
+app$snapshot()
+app$snapshotDownload("downloadData")
+app$snapshot()
+app$setInputs(dataset = "cars")
+app$snapshot()
+app$snapshotDownload("downloadData")

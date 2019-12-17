@@ -1,0 +1,17 @@
+{
+  "input": {
+    "action": 0,
+    "action2": 0,
+    "file": null,
+    "shinytheme-selector": "default",
+    "slider": 30,
+    "txt": "general"
+  },
+  "output": {
+    "table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> speed <\/th> <th style='text-align: right;'> dist <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 2.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 4.00 <\/td> <td align=\"right\"> 10.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 4.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 7.00 <\/td> <td align=\"right\"> 22.00 <\/td> <\/tr>\n   <\/tbody> <\/table>",
+    "txtout": "general, 30, NULL"
+  },
+  "export": {
+
+  }
+}

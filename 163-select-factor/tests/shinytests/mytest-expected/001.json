@@ -1,0 +1,11 @@
+{
+  "input": {
+    "letter": "a"
+  },
+  "output": {
+    "selected": "You selected: a"
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "input": {
+    "busy_async": 0,
+    "busy_sync": 0
+  },
+  "output": {
+    "global_counter": "1",
+    "session_counter": "0"
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "input": {
+    "clusters": 9,
+    "xcol": "Petal.Length",
+    "ycol": "Petal.Length"
+  },
+  "output": {
+    "plot1": {
+      "src": "[image data sha1: 72b5c4174de630b8659c40cf70916d986f8da079]",
+      "width": 631,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 0.764,
+              "right": 7.136,
+              "bottom": 0.764,
+              "top": 7.136
+            },
+            "range": {
+              "left": 59.04,
+              "right": 616.6,
+              "bottom": 325.56,
+              "top": -1
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 631,
+          "height": 400
+        }
+      }
+    }
+  },
+  "export": {
+
+  }
+}

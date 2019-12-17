@@ -1,0 +1,15 @@
+{
+  "input": {
+    "slider": [
+      1.46,
+      2
+    ],
+    "update": 0
+  },
+  "output": {
+    "output": " num [1:2] 1.46 2"
+  },
+  "export": {
+
+  }
+}

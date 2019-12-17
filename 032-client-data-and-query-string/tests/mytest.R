@@ -1,4 +1,4 @@
-app <- ShinyDriver$new("../", shinyOptions = list(display.mode = "normal"))
+app <- ShinyDriver$new("../", seed = 100,shinyOptions = list(display.mode = "normal"))
 Sys.sleep(5)
 app$snapshotInit("mytest")
 Sys.sleep(5)

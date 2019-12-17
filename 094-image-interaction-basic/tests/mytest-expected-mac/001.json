@@ -1,0 +1,20 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "brush_info": "input$image_brush:\n NULL",
+    "click_info": "input$image_click:\n NULL",
+    "dblclick_info": "input$image_dblclick:\n NULL",
+    "hover_info": "input$image_hover:\n NULL",
+    "image1": {
+      "src": "[image data sha1: c11af0cf760bcb6f758d7f05e58b33c52f101b1f]",
+      "width": 301,
+      "height": 350,
+      "alt": "This is alternate text"
+    }
+  },
+  "export": {
+
+  }
+}

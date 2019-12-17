@@ -1,0 +1,189 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "image_brush": {
+      "src": "[image data sha1: 807bd162579730e5e6443dafa75cd68ab5ca5bbf]"
+    },
+    "image_click": {
+      "src": "[image data sha1: 807bd162579730e5e6443dafa75cd68ab5ca5bbf]"
+    },
+    "image_no_interact": {
+      "src": "[image data sha1: 807bd162579730e5e6443dafa75cd68ab5ca5bbf]"
+    },
+    "plot_brush": {
+      "src": "[image data sha1: 745e59b0a01d2e446dbd5ae11a8b184d82a017bb]",
+      "width": 250,
+      "height": 250,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 3.16,
+              "right": 25.84,
+              "bottom": -2.72,
+              "top": 124.72
+            },
+            "range": {
+              "left": 59.04,
+              "right": 219.76,
+              "bottom": 175.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 250,
+          "height": 250
+        }
+      }
+    },
+    "plot_click": {
+      "src": "[image data sha1: 745e59b0a01d2e446dbd5ae11a8b184d82a017bb]",
+      "width": 250,
+      "height": 250,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 3.16,
+              "right": 25.84,
+              "bottom": -2.72,
+              "top": 124.72
+            },
+            "range": {
+              "left": 59.04,
+              "right": 219.76,
+              "bottom": 175.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 250,
+          "height": 250
+        }
+      }
+    },
+    "plot_click_brush": {
+      "src": "[image data sha1: 745e59b0a01d2e446dbd5ae11a8b184d82a017bb]",
+      "width": 250,
+      "height": 250,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 3.16,
+              "right": 25.84,
+              "bottom": -2.72,
+              "top": 124.72
+            },
+            "range": {
+              "left": 59.04,
+              "right": 219.76,
+              "bottom": 175.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 250,
+          "height": 250
+        }
+      }
+    },
+    "plot_hover": {
+      "src": "[image data sha1: 745e59b0a01d2e446dbd5ae11a8b184d82a017bb]",
+      "width": 250,
+      "height": 250,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 3.16,
+              "right": 25.84,
+              "bottom": -2.72,
+              "top": 124.72
+            },
+            "range": {
+              "left": 59.04,
+              "right": 219.76,
+              "bottom": 175.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 250,
+          "height": 250
+        }
+      }
+    },
+    "plot_no_interact": {
+      "src": "[image data sha1: 745e59b0a01d2e446dbd5ae11a8b184d82a017bb]",
+      "width": 250,
+      "height": 250,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 3.16,
+              "right": 25.84,
+              "bottom": -2.72,
+              "top": 124.72
+            },
+            "range": {
+              "left": 59.04,
+              "right": 219.76,
+              "bottom": 175.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 250,
+          "height": 250
+        }
+      }
+    }
+  },
+  "export": {
+
+  }
+}

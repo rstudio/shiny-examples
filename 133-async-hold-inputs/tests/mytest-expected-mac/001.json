@@ -1,0 +1,19 @@
+{
+  "input": {
+    "choice": "a",
+    "go": 0
+  },
+  "output": {
+    "out": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

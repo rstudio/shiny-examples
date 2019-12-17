@@ -1,0 +1,52 @@
+{
+  "input": {
+    "action": 4,
+    "checkbox": true,
+    "checkGroup": null,
+    "date": "2014-01-30",
+    "dates": [
+      "2019-12-19",
+      "2019-12-12"
+    ],
+    "file": {
+      "name": [
+        "cars.csv"
+      ],
+      "size": [
+        308
+      ],
+      "type": [
+        "text/csv"
+      ],
+      "datapath": [
+        "0.csv"
+      ]
+    },
+    "num": 1,
+    "radio": "2",
+    "select": "1",
+    "slider1": 71,
+    "slider2": [
+      25,
+      75
+    ],
+    "text": "Enter text..."
+  },
+  "output": {
+    "actionOut": "[1] 4\nattr(,\"class\")\n[1] \"integer\"                \"shinyActionButtonValue\"",
+    "checkboxOut": "[1] TRUE",
+    "checkGroupOut": "NULL",
+    "dateOut": "[1] \"2014-01-30\"",
+    "datesOut": "[1] \"2019-12-19\" \"2019-12-12\"",
+    "fileOut": "      name size     type\n1 cars.csv  308 text/csv\n                                                                                     datapath\n1 /var/folders/w8/l6d4__9d65gb67rvsc0j75b00000gn/T//Rtmpul54Es/3e2718a2c6b3631b2518bcb3/0.csv",
+    "numOut": "[1] 1",
+    "radioOut": "[1] \"2\"",
+    "selectOut": "[1] \"1\"",
+    "slider1Out": "[1] 71",
+    "slider2Out": "[1] 25 75",
+    "textOut": "[1] \"Enter text...\""
+  },
+  "export": {
+
+  }
+}

@@ -37,29 +37,35 @@
       "src": "[image data sha1: 7678118ea617d00cabeff54ce648f9e962a038ee]",
       "width": 466,
       "height": 300,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 1.35656,
-            "right": 5.58044,
-            "bottom": 9.46,
-            "top": 34.84
-          },
-          "range": {
-            "left": 57.6,
-            "right": 458.8,
-            "bottom": 241.4,
-            "top": 6.19999999999997
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 1.35656,
+              "right": 5.58044,
+              "bottom": 9.46,
+              "top": 34.84
+            },
+            "range": {
+              "left": 57.6,
+              "right": 458.8,
+              "bottom": 241.4,
+              "top": 6.19999999999997
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 466,
+          "height": 300
         }
-      ]
+      }
     },
     "plot_brushed_points": {
       "x": {
@@ -106,9 +112,9 @@
       "deps": [
         {
           "name": "dt-core",
-          "version": "1.10.16",
+          "version": "1.10.19",
           "src": {
-            "href": "dt-core-1.10.16"
+            "href": "dt-core-1.10.19"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -198,9 +204,9 @@
       "deps": [
         {
           "name": "dt-core",
-          "version": "1.10.16",
+          "version": "1.10.19",
           "src": {
-            "href": "dt-core-1.10.16"
+            "href": "dt-core-1.10.19"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",

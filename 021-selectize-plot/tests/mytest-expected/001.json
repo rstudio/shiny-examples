@@ -1,35 +1,111 @@
 {
   "input": {
-    "state": ""
+    "rawdata_cell_clicked": {
+
+    },
+    "rawdata_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "rawdata_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "rawdata_rows_selected": null,
+    "rawdata_search": "",
+    "rawdata_state": null,
+    "state": "Alabama"
   },
   "output": {
     "parcoord": {
-      "src": "[image data sha1: cc61d1887856ab10e6c880910f759824ad6b23a2]",
+      "src": "[image data sha1: 9b754420dbc73cdf4de0f99e5e76b8a5e591964c]",
       "width": 383,
       "height": 400,
-      "coordmap": [
-        {
-          "domain": {
-            "left": 0.92,
-            "right": 3.08,
-            "bottom": -12.648,
-            "top": 350.448
-          },
-          "range": {
-            "left": 57.6,
-            "right": 381.56,
-            "bottom": 370.2,
-            "top": 27.7999999999999
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "mapping": {
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 0.92,
+              "right": 3.08,
+              "bottom": -12.648,
+              "top": 350.448
+            },
+            "range": {
+              "left": 57.6,
+              "right": 381.56,
+              "bottom": 370.2,
+              "top": 27.7999999999999
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
 
+            }
           }
+        ],
+        "dims": {
+          "width": 383,
+          "height": 400
         }
-      ]
+      }
     },
     "rawdata": {
       "x": {
@@ -75,9 +151,9 @@
       "deps": [
         {
           "name": "dt-core",
-          "version": "1.10.16",
+          "version": "1.10.19",
           "src": {
-            "href": "dt-core-1.10.16"
+            "href": "dt-core-1.10.19"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",

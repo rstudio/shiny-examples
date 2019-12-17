@@ -1,0 +1,45 @@
+{
+  "input": {
+    "._bookmark_": 0,
+    "n": 235
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: 9d692974a77c481599a2b5e22f669f59edd7efcb]",
+      "width": 962,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": 1.46,
+              "right": 5.24,
+              "bottom": -0.8,
+              "top": 20.8
+            },
+            "range": {
+              "left": 59.04,
+              "right": 931.76,
+              "bottom": 325.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 400
+        }
+      }
+    }
+  },
+  "export": {
+
+  }
+}

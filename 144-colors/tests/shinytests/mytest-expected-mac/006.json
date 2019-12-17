@@ -1,0 +1,36 @@
+{
+  "input": {
+    "bins": 12,
+    "palette": "Accent",
+    "reverse": true
+  },
+  "output": {
+    "four-code": "col_factor(\"Accent\", countries$category, reverse = TRUE)",
+    "four-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    },
+    "one-code": "col_numeric(\"Accent\", countries$gdp_md_est, reverse = TRUE)",
+    "one-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    },
+    "three-code": "col_quantile(\"Accent\", countries$gdp_md_est, 12L, reverse = TRUE)",
+    "three-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    },
+    "two-code": "col_bin(\"Accent\", countries$gdp_md_est, 12L, pretty = FALSE, \n    reverse = TRUE)",
+    "two-map": {
+      "message": "there is no package called ‘sf’",
+      "call": "loadNamespace(name)",
+      "type": "packageNotFoundError"
+    }
+  },
+  "export": {
+
+  }
+}

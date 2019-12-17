@@ -1,0 +1,16 @@
+{
+  "input": {
+    "variable": "gear"
+  },
+  "output": {
+    "testResult": {
+      "html": "<b style=\"color: green\">Test passed, move along<\/b>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

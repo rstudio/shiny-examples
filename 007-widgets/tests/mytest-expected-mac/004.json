@@ -1,0 +1,14 @@
+{
+  "input": {
+    "dataset": "cars",
+    "obs": 10,
+    "update": 1
+  },
+  "output": {
+    "summary": "  temperature     pressure       \n Min.   :  0   Min.   :  0.0002  \n 1st Qu.: 90   1st Qu.:  0.1800  \n Median :180   Median :  8.8000  \n Mean   :180   Mean   :124.3367  \n 3rd Qu.:270   3rd Qu.:126.5000  \n Max.   :360   Max.   :806.0000  ",
+    "view": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: right;'> temperature <\/th> <th style='text-align: right;'> pressure <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td align=\"right\"> 0.00 <\/td> <td align=\"right\"> 0.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 20.00 <\/td> <td align=\"right\"> 0.00 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 40.00 <\/td> <td align=\"right\"> 0.01 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 60.00 <\/td> <td align=\"right\"> 0.03 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 80.00 <\/td> <td align=\"right\"> 0.09 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 100.00 <\/td> <td align=\"right\"> 0.27 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 120.00 <\/td> <td align=\"right\"> 0.75 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 140.00 <\/td> <td align=\"right\"> 1.85 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 160.00 <\/td> <td align=\"right\"> 4.20 <\/td> <\/tr>\n  <tr> <td align=\"right\"> 180.00 <\/td> <td align=\"right\"> 8.80 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+  },
+  "export": {
+
+  }
+}

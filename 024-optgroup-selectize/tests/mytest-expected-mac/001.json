@@ -1,0 +1,14 @@
+{
+  "input": {
+    "x1": null,
+    "x2": "IA",
+    "x3": "AL",
+    "x4": "NY"
+  },
+  "output": {
+    "values": "$x1\nNULL\n\n$x2\n[1] \"IA\"\n\n$x3\n[1] \"AL\"\n\n$x4\n[1] \"NY\""
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,434 @@
+{
+  "input": {
+    "brush_delay": 200,
+    "brush_dir": "y",
+    "brush_policy": "throttle",
+    "brush_reset": true,
+    "dataset": "mtcars",
+    "dblclick_delay": 400,
+    "ggplot_facet": "grid_xy_free",
+    "ggplot_scaletype": "normal",
+    "hover_delay": 200,
+    "hover_null_outside": true,
+    "hover_policy": "throttle",
+    "max_distance": 5,
+    "max_points": 37,
+    "plot_brush": null,
+    "plot_brushed_points_cell_clicked": {
+
+    },
+    "plot_brushed_points_rows_all": null,
+    "plot_brushed_points_rows_current": null,
+    "plot_brushed_points_rows_selected": null,
+    "plot_brushed_points_search": "",
+    "plot_brushed_points_state": null,
+    "plot_click": null,
+    "plot_clicked_points_cell_clicked": {
+
+    },
+    "plot_clicked_points_rows_all": null,
+    "plot_clicked_points_rows_current": null,
+    "plot_clicked_points_rows_selected": null,
+    "plot_clicked_points_search": "",
+    "plot_clicked_points_state": null,
+    "plot_dblclick": null,
+    "plot_hover": null,
+    "plot_scaletype": "normal",
+    "plot_type": "ggplot2"
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: 70505813b5b27185a712341c8d487bc352b04989]",
+      "width": 466,
+      "height": 300,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "4",
+              "panelvar2": "0"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 1.42915,
+              "right": 3.27385,
+              "bottom": 9.7,
+              "top": 25.1
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 33.1279312159917,
+              "right": 166.299736976086,
+              "bottom": 142.713736756207,
+              "top": 22.3977473941376
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "6",
+              "panelvar2": "0"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 2.578,
+              "right": 3.502,
+              "bottom": 9.7,
+              "top": 25.1
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 171.77918903088,
+              "right": 304.950994790974,
+              "bottom": 142.713736756207,
+              "top": 22.3977473941376
+            }
+          },
+          {
+            "panel": 3,
+            "row": 1,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "8",
+              "panelvar2": "0"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 3.0573,
+              "right": 5.5367,
+              "bottom": 9.7,
+              "top": 25.1
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 310.430446845768,
+              "right": 443.602252605862,
+              "bottom": 142.713736756207,
+              "top": 22.3977473941376
+            }
+          },
+          {
+            "panel": 4,
+            "row": 2,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "4",
+              "panelvar2": "1"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 1.42915,
+              "right": 3.27385,
+              "bottom": 14.055,
+              "top": 34.845
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 33.1279312159917,
+              "right": 166.299736976086,
+              "bottom": 268.509178173071,
+              "top": 148.193188811002
+            }
+          },
+          {
+            "panel": 5,
+            "row": 2,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "6",
+              "panelvar2": "1"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 2.578,
+              "right": 3.502,
+              "bottom": 14.055,
+              "top": 34.845
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 171.77918903088,
+              "right": 304.950994790974,
+              "bottom": 268.509178173071,
+              "top": 148.193188811002
+            }
+          },
+          {
+            "panel": 6,
+            "row": 2,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "8",
+              "panelvar2": "1"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 3.0573,
+              "right": 5.5367,
+              "bottom": 14.055,
+              "top": 34.845
+            },
+            "mapping": {
+              "x": "wt",
+              "y": "mpg",
+              "panelvar1": "cyl",
+              "panelvar2": "am"
+            },
+            "range": {
+              "left": 310.430446845768,
+              "right": 443.602252605862,
+              "bottom": 268.509178173071,
+              "top": 148.193188811002
+            }
+          }
+        ],
+        "dims": {
+          "width": 466,
+          "height": 300
+        }
+      }
+    },
+    "plot_brushed_points": {
+      "x": {
+        "filter": "none",
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>wt<\/th>\n      <th>am<\/th>\n      <th>date<\/th>\n      <th>datetime<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                1,
+                3
+              ]
+            },
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "plot_brushinfo": "input$plot_brush:\n NULL",
+    "plot_clicked_points": {
+      "x": {
+        "filter": "none",
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>wt<\/th>\n      <th>am<\/th>\n      <th>date<\/th>\n      <th>datetime<\/th>\n      <th>dist_<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                1,
+                3,
+                7
+              ]
+            },
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "plot_clickinfo": "input$plot_click:\n NULL",
+    "plot_dblclickinfo": "input$plot_dblclick:\n NULL",
+    "plot_hoverinfo": "input$plot_hover:\n NULL",
+    "plotui": {
+      "html": "<div id=\"plot\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 300px\" data-click-id=\"plot_click\" data-click-clip=\"TRUE\" data-dblclick-id=\"plot_dblclick\" data-dblclick-clip=\"TRUE\" data-dblclick-delay=\"400\" data-hover-id=\"plot_hover\" data-hover-delay=\"200\" data-hover-delay-type=\"throttle\" data-hover-clip=\"TRUE\" data-hover-null-outside=\"TRUE\" data-brush-id=\"plot_brush\" data-brush-fill=\"#9cf\" data-brush-stroke=\"#036\" data-brush-opacity=\"0.25\" data-brush-delay=\"200\" data-brush-delay-type=\"throttle\" data-brush-clip=\"TRUE\" data-brush-direction=\"y\" data-brush-reset-on-new=\"TRUE\"><\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

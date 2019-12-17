@@ -1,0 +1,44 @@
+{
+  "input": {
+    "n": 250,
+    "newdata": 2
+  },
+  "output": {
+    "plot": {
+      "src": "[image data sha1: b97aa425b612ca1673de2515a8176d69d82c4480]",
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -3.12851604051576,
+              "right": 3.40684890286931,
+              "bottom": -3.12373603801949,
+              "top": 2.94414676985692
+            },
+            "range": {
+              "left": 59.04,
+              "right": 661.76,
+              "bottom": 325.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 692,
+          "height": 400
+        }
+      },
+      "class": "shiny-scalable"
+    }
+  },
+  "export": {
+
+  }
+}
