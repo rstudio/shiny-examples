@@ -3,8 +3,9 @@ library(shiny)
 library(shinydashboard)
 library(markdown)
 
-trimLeading <- function(s) {
-  gsub("\\n[ \\t]*", "\n", s)
+markdown <- function(s) {
+  s <- gsub("\\n[ \\t]*", "\n", s)
+  HTML(markdownToHTML(fragment.only = TRUE, text = s))
 }
 
 ui <- function(req) {
@@ -26,7 +27,7 @@ ui <- function(req) {
     dashboardBody(
       fluidRow(
         tags$div(style="padding:1em;",
-          HTML(markdownToHTML(fragment.only = TRUE, text=trimLeading("
+          markdown("
           ### Background
 
           In versions of Shiny prior to 1.4.0, certain Shiny features didn't work
@@ -45,7 +46,7 @@ ui <- function(req) {
 
           1. Selecting a date in the time period on the left should work correctly.
           1. Clicking 'Show Progress' button should display a progress bar at the bottom right of the page.
-          1. Clicking 'Bookmark...' button should show a modal that the bookmark link can be copied from."))))),
+          1. Clicking 'Bookmark...' button should show a modal that the bookmark link can be copied from."))),
       fluidRow(
         box(sankeyNetworkOutput(outputId = "sankey_diagram"), width = 12))
     )
