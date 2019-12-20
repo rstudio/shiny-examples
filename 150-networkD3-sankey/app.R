@@ -3,6 +3,10 @@ library(shiny)
 library(shinydashboard)
 library(markdown)
 
+trimLeading <- function(s) {
+  gsub("\\n[ \\t]*", "\n", s)
+}
+
 ui <- function(req) {
   dashboardPage(
     dashboardHeader(title = "networkD3 tests"),
@@ -22,24 +26,26 @@ ui <- function(req) {
     dashboardBody(
       fluidRow(
         tags$div(style="padding:1em;",
-          HTML(markdownToHTML(fragment.only = TRUE, text="### Background
-In versions of Shiny prior to 1.4.0, certain Shiny features didn't work
-because SVGs introduced by the [networkD3](https://github.com/christophergandrud/networkD3)
-package interfered with Shiny's JavaScript. In particular, Shiny used
-the 'body' selector under the assumption there would be only one body
-element on the page. This wasn't  always true when networkD3's sankey
-plot was involved, as it introduced its own 'body' tags inside SVG markup.
+          HTML(markdownToHTML(fragment.only = TRUE, text=trimLeading("
+          ### Background
 
-This problem caused datepicker, progress, and bookmarking dialogs not
-to work, so we test them all here.
+          In versions of Shiny prior to 1.4.0, certain Shiny features didn't work
+          because SVGs introduced by the [networkD3](https://github.com/christophergandrud/networkD3)
+          package interfered with Shiny's JavaScript. In particular, Shiny used
+          the 'body' selector under the assumption there would be only one body
+          element on the page. This wasn't  always true when networkD3's sankey
+          plot was involved, as it introduced its own 'body' tags inside SVG markup.
 
-More information can be found on this PR: https://github.com/rstudio/shiny/pull/2361
+          This problem caused datepicker, progress, and bookmarking dialogs not
+          to work, so we test them all here.
 
-### Instructions
+          More information can be found on this PR: https://github.com/rstudio/shiny/pull/2361
 
-1. Selecting a date in the time period on the left should work correctly.
-1. Clicking 'Show Progress' button should display a progress bar at the bottom right of the page.
-1. Clicking 'Bookmark...' button should show a modal that the bookmark link can be copied from.")))),
+          ### Instructions
+
+          1. Selecting a date in the time period on the left should work correctly.
+          1. Clicking 'Show Progress' button should display a progress bar at the bottom right of the page.
+          1. Clicking 'Bookmark...' button should show a modal that the bookmark link can be copied from."))))),
       fluidRow(
         box(sankeyNetworkOutput(outputId = "sankey_diagram"), width = 12))
     )
