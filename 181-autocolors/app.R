@@ -2,7 +2,11 @@ library(shiny)
 library(ggplot2)
 library(lattice)
 
+auto <- getShinyOption("plot.autocolors")
 shinyOptions(plot.autocolors = TRUE)
+onStop(function() {
+  shinyOptions(plot.autocolors = auto)
+})
 
 ui <- fluidPage(
   # TODO: maybe have input controls for this, but how to trigger redraw?
