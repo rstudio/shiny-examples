@@ -47,31 +47,5 @@ devtools::install_github(c(
   "hadley/shinySignals",
   "jcheng5/bubbles",
 
-  # For 144-colors
-  "r-lib/scales",
-
-  # For 145-dt-replacedata
-  "rstudio/DT",
-
-  # For 147-websocket
-  "rstudio/websocket",
-
-  # For 149-onRender
-  "ramnathv/htmlwidgets",
-
-  # For 150-reactr-input
-  "react-R/reactR",
-
-  # For 164-no-whitespace.
-  # And 165-trailing-comma
-  # Requires htmltools >= 0.3.6.9004
-  "rstudio/htmltools@rc-v0.4.0",
-
-  # For 168-prerender-resources
-  "rstudio/rmarkdown",
-
-  # For shiny 1.4.0 release candidate
-  "r-lib/later@rc-v1.0.0",
-  "rstudio/promises@rc-v1.1.0",
-  "rstudio/shiny@rc-v1.4.0"
+  "rstudio/shiny@rc-v1.4.0.1"
 ))
