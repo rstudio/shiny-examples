@@ -31,8 +31,9 @@ jobs:
 
       matrix:
         config:
-        # - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 5 }
-        - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 1, extra_text: " 176 177" }
+        - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 5 }
+        # # Testing config on two small apps
+        # - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 1, extra_text: " 176 177" }
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
