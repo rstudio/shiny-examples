@@ -1,0 +1,84 @@
+# Heavily inspired from https://github.com/rstudio/shinycoreci-apps/blob/5eb7be4a0b3591205211d491365ee90087207169/.github/workflows/deploy.yml
+
+name: Deploy
+
+on:
+  push:
+    branches:
+      - deploy
+      - ghactions
+  # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#onschedule
+  schedule:
+    - cron:  '0 6 10 * *' # every 10th (arbitrary) day of each month at ~ midnight central time
+  repository_dispatch:
+    types:
+      - all
+      - deploy
+
+jobs:
+  deploy:
+    runs-on: macOS-latest
+
+    name: "${{ matrix.config.type }} (${{ matrix.config.r }})"
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        config:
+        # - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 5 }
+        - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 1, extra_text: " 176 177" }
+
+    env:
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      CRAN: "https://cloud.r-project.org"
+
+    steps:
+      - uses: actions/checkout@v2
+        name: GitHub Pull
+
+      - uses: r-lib/actions/setup-pandoc@master
+
+      - uses: r-lib/actions/setup-r@master
+        with:
+          r-version: ${{ matrix.config.r }}
+      - name: R Options
+        shell: bash
+        run: |
+          echo 'MAKEFLAGS=-j2' >> .Renviron
+
+      - name: Create cache ID from time
+        id: cache_id
+        run: |
+          echo "::set-output name=value::$(Rscript -e 'cat(as.numeric(Sys.time()))')"
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-${{ matrix.config.r }}-deploy-libs-${{ matrix.config.type }}-${{ steps.cache_id.outputs.value }}
+          restore-keys: |
+            ${{ runner.os }}-r-${{ matrix.config.r }}-deploy-libs-${{ matrix.config.type }}-
+
+      - name: Install Deps
+        # if non linux, install binaries
+        # make sure to get the best version number possible
+        # If remotes isn't installed, install it
+        # If shiny isn't available, install the cran version to init the R library
+        # install the specific branch of shinycoreci
+        run: >
+          Rscript
+          -e "options(pkgType = 'binary')"
+          -e "update.packages(ask = FALSE, lib.loc = .libPaths()[1])"
+          -e "if (system.file(package = 'remotes') == '') install.packages('remotes')"
+          -e "remotes::install_cran(c('shiny', 'rsconnect', 'packrat', 'knitr', 'plogr'))"
+          -e "remotes::install_github(c('hadley/shinySignals', 'jcheng5/bubbles'))"
+          -e "remotes::install_cran(setdiff(packrat:::dirDependencies('.'), c('shinySignals', 'bubbles')))"
+
+      - name: Set up shinyapps.io
+        run: >
+          Rscript
+          -e "options(pkgType = 'binary')"
+          -e "rsconnect::setAccountInfo(name='${{ matrix.config.account }}', token='${{ secrets.shinyapps_io_gallery_token }}', secret='${{ secrets.shinyapps_io_gallery_secret }}')"
+      - name: Deploy Apps to shinyapps.io
+        run: >
+          ./deploy -d -a ${{ matrix.config.account }} -s ${{ matrix.config.server_name }} -c ${{ matrix.config.cores }}${{ matrix.config.extra_text }}
