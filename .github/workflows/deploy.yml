@@ -70,7 +70,7 @@ jobs:
           -e "options(pkgType = 'binary')"
           -e "update.packages(ask = FALSE, lib.loc = .libPaths()[1])"
           -e "if (system.file(package = 'remotes') == '') install.packages('remotes')"
-          -e "remotes::install_cran(c('shiny', 'rsconnect', 'packrat', 'knitr', 'plogr'), dependencies = TRUE)"
+          -e "remotes::install_cran(c('shiny', 'rsconnect', 'packrat', 'knitr', 'plogr', 'BH'), dependencies = TRUE)"
           -e "remotes::install_github(c('hadley/shinySignals', 'jcheng5/bubbles'))"
           -e "remotes::install_cran(setdiff(packrat:::dirDependencies('.'), c('shinySignals', 'bubbles')), dependencies = TRUE)"
 
