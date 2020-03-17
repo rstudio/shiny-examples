@@ -1,4 +1,9 @@
-# Heavily inspired from https://github.com/rstudio/shinycoreci-apps/blob/5eb7be4a0b3591205211d491365ee90087207169/.github/workflows/deploy.yml
+## Heavily inspired from https://github.com/rstudio/shinycoreci-apps/blob/5eb7be4a0b3591205211d491365ee90087207169/.github/workflows/deploy.yml
+## Trigger workflow with
+# ```r
+# #remotes::install_github("rstudio/shinycoreci")
+# shinycoreci::trigger("deploy", "rstudio/shiny-examples")
+# ```
 
 name: Deploy
 
