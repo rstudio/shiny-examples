@@ -60,17 +60,20 @@ jobs:
             ${{ runner.os }}-r-${{ matrix.config.r }}-deploy-libs-${{ matrix.config.type }}-
 
       - name: Install Deps
-        # if non linux, install binaries
-        # make sure to get the best version number possible
+        # Install binaries
+        # Make sure to get the best version number possible
         # If remotes isn't installed, install it
-        # If shiny isn't available, install the cran version to init the R library
-        # install the specific branch of shinycoreci
+        # Install known dependencies
+        # Install pkgs that cause trouble
+        # Install github packages
+        # Install app deps
         run: >
           Rscript
           -e "options(pkgType = 'binary')"
           -e "update.packages(ask = FALSE, lib.loc = .libPaths()[1])"
           -e "if (system.file(package = 'remotes') == '') install.packages('remotes')"
-          -e "remotes::install_cran(c('shiny', 'rsconnect', 'packrat', 'knitr', 'plogr', 'BH'), dependencies = TRUE)"
+          -e "remotes::install_cran(c('shiny', 'rsconnect', 'packrat', 'knitr'), dependencies = TRUE)"
+          -e "remotes::install_cran(c('plogr', 'BH'), dependencies = TRUE)"
           -e "remotes::install_github(c('hadley/shinySignals', 'jcheng5/bubbles'))"
           -e "remotes::install_cran(setdiff(packrat:::dirDependencies('.'), c('shinySignals', 'bubbles')), dependencies = TRUE)"
 
