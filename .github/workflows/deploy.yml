@@ -71,6 +71,8 @@ jobs:
         # If remotes isn't installed, install it
         # Install known dependencies
         # Install pkgs that cause trouble
+        # Install pkgs that cause trouble for 141-radiant and websocket
+        # Install pkgs that cause trouble for 147-websocket
         # Install github packages
         # Install app deps
         run: >
@@ -80,6 +82,8 @@ jobs:
           -e "if (system.file(package = 'remotes') == '') install.packages('remotes')"
           -e "remotes::install_cran(c('shiny', 'rsconnect', 'packrat', 'knitr'), dependencies = TRUE)"
           -e "remotes::install_cran(c('plogr', 'BH'), dependencies = TRUE)"
+          -e "remotes::install_cran(c('RcppArmadillo', 'RcppEigen', 'progress'), dependencies = TRUE)"
+          -e "remotes::install_cran(c('AsioHeaders'), dependencies = TRUE)"
           -e "remotes::install_github(c('hadley/shinySignals', 'jcheng5/bubbles'))"
           -e "remotes::install_cran(setdiff(packrat:::dirDependencies('.'), c('shinySignals', 'bubbles')), dependencies = TRUE)"
 
