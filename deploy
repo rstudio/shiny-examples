@@ -165,11 +165,25 @@ deployApps <- function(app) {
   }
 }
 
+deployAppsWithAttempts <- function(app, attempts = 3) {
+  tryCatch({
+    deployApps(app)
+  }, error = function(e) {
+    if (attempts < 2) {
+      stop(e)
+    }
+    message("Error found: ", e)
+    message("Trying again in 3 seconds...")
+    Sys.sleep(3) # arbitrary
+    deployAppsWithAttempts(app, attempts = attempts - 1)
+  })
+}
+
 # Try deploying apps and get return codes (0 is success)
 deployRes <- if (opts$cores > 1) {
-  parallel::mclapply(apps, deployApps, mc.cores = opts$cores)
+  parallel::mclapply(apps, deployAppsWithAttempts, mc.cores = opts$cores)
 } else {
-  lapply(apps, deployApps)
+  lapply(apps, deployAppsWithAttempts)
 }
 deployRes <- unlist(deployRes)
 
