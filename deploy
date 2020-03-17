@@ -165,25 +165,12 @@ deployApps <- function(app) {
   }
 }
 
-deployAppsWithAttempts <- function(app, attempts = 3) {
-  tryCatch({
-    deployApps(app)
-  }, error = function(e) {
-    if (attempts < 2) {
-      stop(e)
-    }
-    message("Error found: ", e)
-    message("Trying again in 3 seconds...")
-    Sys.sleep(3) # arbitrary
-    deployAppsWithAttempts(app, attempts = attempts - 1)
-  })
-}
 
 # Try deploying apps and get return codes (0 is success)
 deployRes <- if (opts$cores > 1) {
-  parallel::mclapply(apps, deployAppsWithAttempts, mc.cores = opts$cores)
+  parallel::mclapply(apps, deployApps, mc.cores = opts$cores)
 } else {
-  lapply(apps, deployAppsWithAttempts)
+  lapply(apps, deployApps)
 }
 deployRes <- unlist(deployRes)
 
@@ -196,9 +183,29 @@ if (length(deployWarnings) != 0) {
 
 # Print apps that were not successfully deployed
 if (any(deployRes != 0)) {
-  stop(paste0(
+
+  deployAppsWithAttempts <- function(app, attempts = 2) {
+    tryCatch({
+      deployApps(app)
+    }, error = function(e) {
+      if (attempts < 2) {
+        stop(e)
+      }
+      message("Error found: ", e)
+      message("Trying again in 3 seconds...")
+      Sys.sleep(3) # arbitrary
+      deployAppsWithAttempts(app, attempts = attempts - 1)
+    })
+  }
+
+  errorApps <- apps[deployRes != 0]
+
+  message(paste0(
     "\nError deploying apps:\n",
-    paste0("  ", apps[deployRes != 0], collapse = "\n"),
+    paste0("  ", errorApps, collapse = "\n"),
     "\n"
   ))
+
+  message("Trying again...")
+  lapply(errorApps, deployAppsWithAttempts)
 }
