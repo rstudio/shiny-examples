@@ -70,28 +70,20 @@ jobs:
           Rscript
           -e "## Install binaries"
           -e "options(pkgType = 'binary')"
-
           -e "## Make sure to get the best version number possible"
           -e "update.packages(ask = FALSE, lib.loc = .libPaths()[1])"
-
           -e "## If remotes isn't installed, install it"
           -e "if (system.file(package = 'remotes') == '') install.packages('remotes')"
-
           -e "## Install known dependencies"
           -e "remotes::install_cran(c('shiny', 'rsconnect', 'packrat', 'knitr'), dependencies = TRUE)"
-
           -e "## Install pkgs that cause trouble"
           -e "remotes::install_cran(c('plogr', 'BH'), dependencies = TRUE)"
-
           -e "## 141-radiant"
           -e "remotes::install_cran(c('RcppArmadillo', 'RcppEigen', 'progress'), dependencies = TRUE)"
-
           -e "## 147-websocket"
           -e "remotes::install_cran(c('AsioHeaders'), dependencies = TRUE)"
-
           -e "## Install github packages"
           -e "remotes::install_github(c('hadley/shinySignals', 'jcheng5/bubbles'))"
-
           -e "## Install app deps"
           -e "remotes::install_cran(setdiff(packrat:::dirDependencies('.'), c('shinySignals', 'bubbles')), dependencies = TRUE)"
 
