@@ -209,7 +209,7 @@ if (any(deployRes != 0)) {
   message("Trying again...")
   deployErrorRes <- unlist(lapply(errorApps, deployAppsWithAttempts))
 
-  if (any(deployErrorRes) != 0) {
+  if (any(deployErrorRes != 0)) {
     stop(paste0(
       "\nError deploying apps:\n",
       paste0("  ", errorApps[deployErrorRes], collapse = "\n"),
