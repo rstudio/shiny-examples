@@ -1,0 +1,97 @@
+## Heavily inspired from https://github.com/rstudio/shinycoreci-apps/blob/5eb7be4a0b3591205211d491365ee90087207169/.github/workflows/deploy.yml
+## Trigger workflow with
+# ```r
+# #remotes::install_github("rstudio/shinycoreci")
+# shinycoreci::trigger("deploy", "rstudio/shiny-examples")
+# ```
+
+name: Deploy
+
+on:
+  push:
+    branches:
+      - deploy
+      - ghactions
+  # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#onschedule
+  schedule:
+    - cron:  '0 6 10 * *' # every 10th (arbitrary) day of each month at ~ midnight central time
+  repository_dispatch:
+    types:
+      - all
+      - deploy
+
+jobs:
+  deploy:
+    runs-on: macOS-latest
+
+    name: "${{ matrix.config.type }} (${{ matrix.config.r }})"
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        config:
+        - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 5, extra_text: " --all" }
+        # # Testing config on two small apps
+        # - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 1, extra_text: " 141 147" }
+
+    env:
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      CRAN: "https://cloud.r-project.org"
+
+    steps:
+      - uses: actions/checkout@v2
+        name: GitHub Pull
+
+      - uses: r-lib/actions/setup-pandoc@master
+
+      - uses: r-lib/actions/setup-r@master
+        with:
+          r-version: ${{ matrix.config.r }}
+      - name: R Options
+        shell: bash
+        run: |
+          echo 'MAKEFLAGS=-j2' >> .Renviron
+
+      - name: Create cache ID from time
+        id: cache_id
+        run: |
+          echo "::set-output name=value::$(Rscript -e 'cat(as.numeric(Sys.time()))')"
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-${{ matrix.config.r }}-deploy-libs-${{ matrix.config.type }}-${{ steps.cache_id.outputs.value }}
+          restore-keys: |
+            ${{ runner.os }}-r-${{ matrix.config.r }}-deploy-libs-${{ matrix.config.type }}-
+
+      - name: Install Deps
+        run: >
+          Rscript
+          -e "## Install binaries"
+          -e "options(pkgType = 'binary')"
+          -e "## Make sure to get the best version number possible"
+          -e "update.packages(ask = FALSE, lib.loc = .libPaths()[1])"
+          -e "## If remotes isn't installed, install it"
+          -e "if (system.file(package = 'remotes') == '') install.packages('remotes')"
+          -e "## Install known dependencies"
+          -e "remotes::install_cran(c('shiny', 'rsconnect', 'packrat', 'knitr'), dependencies = TRUE)"
+          -e "## Install pkgs that cause trouble"
+          -e "remotes::install_cran(c('plogr', 'BH'), dependencies = TRUE)"
+          -e "## 141-radiant"
+          -e "remotes::install_cran(c('RcppArmadillo', 'RcppEigen', 'progress'), dependencies = TRUE)"
+          -e "## 147-websocket"
+          -e "remotes::install_cran(c('AsioHeaders'), dependencies = TRUE)"
+          -e "## Install github packages"
+          -e "remotes::install_github(c('hadley/shinySignals', 'jcheng5/bubbles'))"
+          -e "## Install app deps"
+          -e "remotes::install_cran(setdiff(packrat:::dirDependencies('.'), c('shinySignals', 'bubbles')), dependencies = TRUE)"
+
+      - name: Set up shinyapps.io
+        run: >
+          Rscript
+          -e "options(pkgType = 'binary')"
+          -e "rsconnect::setAccountInfo(name='${{ matrix.config.account }}', token='${{ secrets.shinyapps_io_gallery_token }}', secret='${{ secrets.shinyapps_io_gallery_secret }}')"
+      - name: Deploy Apps to shinyapps.io
+        run: >
+          ./deploy -d -a ${{ matrix.config.account }} -s ${{ matrix.config.server_name }} -c ${{ matrix.config.cores }}${{ matrix.config.extra_text }}
