@@ -1,5 +1,6 @@
 library(shiny)
-dataset <- reactiveVal(data.frame(x = rnorm(400), y = rnorm(400)))
+randomData <- function() data.frame(x = rnorm(400), y = rnorm(400))
+dataset <- reactiveVal(randomData())
 
 ui <- fluidPage(
   sidebarLayout(
@@ -16,7 +17,7 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   # When the newdata button is clicked, change the data set to new random data
   observeEvent(input$newdata, {
-    dataset(data.frame(x = rnorm(400), y = rnorm(400)))
+    dataset(randomData())
   })
 
   output$plot <- renderCachedPlot(
