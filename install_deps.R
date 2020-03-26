@@ -38,14 +38,14 @@ install_if_needed <- function(pkgs) {
 # Core packages
 install_if_needed(c("devtools", "rsconnect", "packrat", "knitr"))
 
-# Autodetect packages needed for the examples (will install from CRAN)
-install_if_needed(packrat:::dirDependencies(dirname(this_file())))
-
 # Some packages must be installed from GitHub
 devtools::install_github(c(
   # For 087-crandash
   "hadley/shinySignals",
   "jcheng5/bubbles",
-
-  "rstudio/shiny@rc-v1.4.0.1"
+  "jcheng5/googleCharts"
+  # , "rstudio/shiny"
 ))
+
+# Autodetect packages needed for the examples (will install from CRAN)
+install_if_needed(packrat:::dirDependencies(dirname(this_file())))
