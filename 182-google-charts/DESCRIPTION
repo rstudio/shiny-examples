@@ -1,0 +1,11 @@
+Title: Google Charts
+Author: Joe Cheng <joe@rstudio.com>
+AuthorUrl: http://www.rstudio.com/
+License: MIT
+Tags: google-charts google-fonts bubble-chart
+Type: Shiny
+DisplayMode: Showcase
+Imports:
+  googleCharts
+Remotes:
+  jcheng5/googleCharts
