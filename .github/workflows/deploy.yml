@@ -66,6 +66,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-r-${{ matrix.config.r }}-deploy-libs-${{ matrix.config.type }}-
 
+      # remove this step once Rcpp (> 1.0.4) is uploaded
+      - name: Rcpp band-aid
+        run: >
+          Rscript
+          -e "if (system.file(package = 'Rcpp') == '') install.packages('Rcpp', repos=c('https://RcppCore.github.io/drat', 'https://cloud.r-project.org'), type = 'source')"
       - name: Install Deps
         run: >
           Rscript
