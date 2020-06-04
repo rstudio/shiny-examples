@@ -5,7 +5,7 @@ above:
 1. the option `pageLength = 25` changes the default number of rows to
   display from 10 to 25;
 
-1. the option `lengthMenu = list(c(5, 15, -1), list('5', '15', 'All'))` sets
+1. the option `lengthMenu = list(c(5, 15, -1), c('5', '15', 'All'))` sets
   the length menu items (in the top left corner); it can be either a numeric
   vector (e.g. `c(5, 10, 30, 100)`), or a list of length 2 -- in the latter
   case, the first element is the length options, and the second element
