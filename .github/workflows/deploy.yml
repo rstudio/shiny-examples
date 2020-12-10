@@ -65,13 +65,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-r-${{ matrix.config.r }}-deploy-libs-${{ matrix.config.type }}-
 
-      # remove this step once Rcpp (> 1.0.4) is uploaded
-      - name: Rcpp band-aid
-        run: >
-          Rscript
-          -e "if (system.file(package = 'Rcpp') == '') install.packages('Rcpp', repos=c('https://RcppCore.github.io/drat', 'https://cloud.r-project.org'), type = 'source')"
-          -e "if (system.file(package = 'remotes') == '') install.packages('remotes')"
-          -e "remotes::install_github('RcppCore/Rcpp')"
       - name: Install Deps
         run: >
           Rscript
@@ -81,6 +74,8 @@ jobs:
           -e "update.packages(ask = FALSE, lib.loc = .libPaths()[1])"
           -e "## If remotes isn't installed, install it"
           -e "if (system.file(package = 'remotes') == '') install.packages('remotes')"
+          -e "## Install cpp11 as it has trouble being found"
+          -e "remotes::install_cran('cpp11')"
           -e "## Install pkgs that cause trouble"
           -e "remotes::install_cran(c('plogr', 'BH'), dependencies = TRUE)"
           -e "## 141-radiant"
