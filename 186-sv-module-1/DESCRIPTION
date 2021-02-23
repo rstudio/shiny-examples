@@ -1,0 +1,7 @@
+Title: Shiny module with self-contained validation logic
+Author: RStudio, PBC
+AuthorUrl: http://www.rstudio.com/
+License: MIT
+DisplayMode: Showcase
+Tags: validation
+Type: Shiny
