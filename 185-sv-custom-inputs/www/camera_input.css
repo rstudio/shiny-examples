@@ -1,0 +1,85 @@
+.shiny-camera-input {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.shiny-camera-input .curtain {
+  background-color: #CCC;
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+}
+.shiny-camera-input.ready .curtain {
+  display: none;
+}
+
+.shiny-camera-input button {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+}
+
+.shiny-camera-input canvas {
+  display: none;
+}
+
+.shiny-camera-input video,
+.shiny-camera-input output,
+.shiny-camera-input button {
+  display: none;
+}
+
+.shiny-camera-input.ready video {
+  display: block;
+}
+.shiny-camera-input.ready output {
+  display: none;
+}
+.shiny-camera-input.ready button.take {
+  display: block;
+}
+.shiny-camera-input.ready button.retake {
+  display: none;
+}
+
+.shiny-camera-input.shot video {
+  display: none;
+}
+.shiny-camera-input.shot output {
+  display: block;
+}
+.shiny-camera-input.shot button.take {
+  display: none;
+}
+.shiny-camera-input.shot button.retake {
+  display: block;
+}
+
+.shiny-camera-input output,
+.shiny-camera-input img,
+.shiny-camera-input video {
+  padding: 0;
+  margin: 0;
+}
+
+.shiny-camera-input .feedback-message {
+  display: none;
+  position: absolute;
+  padding: 6px 8px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  background-color: red;
+  color: white;
+}
+.shiny-camera-input.ready .feedback-message {
+  opacity: 0.7;
+}
+.shiny-camera-input.invalid .feedback-message {
+  display: block;
+}

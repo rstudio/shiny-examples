@@ -43,7 +43,8 @@ devtools::install_github(c(
   # For 087-crandash
   "hadley/shinySignals",
   "jcheng5/bubbles",
-  "jcheng5/googleCharts"
+  "jcheng5/googleCharts",
+  "rstudio/shinyvalidate"
   # , "rstudio/shiny"
 ))
 
