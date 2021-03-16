@@ -8,7 +8,8 @@ pageWithSidebar(
   sidebarPanel(
     selectInput('xcol', 'X Variable', vars),
     selectInput('ycol', 'Y Variable', vars, selected = vars[[2]]),
-    numericInput('clusters', 'Cluster count', 3, min = 1, max = 9)
+    numericInput('clusters', 'Cluster count', 3, min = 1, max = 9),
+    checkboxInput("checkbox", label = "Scale Data", value = FALSE)
   ),
   mainPanel(
     plotOutput('plot1')
