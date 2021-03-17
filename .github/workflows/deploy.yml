@@ -32,7 +32,7 @@ jobs:
 
       matrix:
         config:
-        - { r: '3.6', type: "shinyappsio", account: "sam", server_name: "staging", cores: 2, extra_text: " 1 2 3 4 5 6 7 8 9 10" }
+        - { r: '3.6', type: "shinyappsio", account: "perman", server_name: "staging", cores: 2, extra_text: " 1 2 3 4 5 6 7 8 9 10" }
         # Test on all apps
         # - { r: '3.6', type: "shinyappsio", account: "sam", server_name: "staging", cores: 2, extra_text: " --all" }
         # Testing config on particular app
@@ -92,6 +92,7 @@ jobs:
         run: >
           Rscript
           -e "options(pkgType = 'binary')"
+          -e "options(rsconnect.shinyapps_url='https://api.staging.shinyapps.io/v1')"
           -e "rsconnect::setAccountInfo(name='${{ matrix.config.account }}', token='${{ secrets.STAGING_SAM_TOKEN }}', secret='${{ secrets.STAGING_SAM_SECRET }}')"
       - name: Deploy Apps to shinyapps.io
         run: >
