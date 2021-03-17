@@ -12,6 +12,7 @@ on:
     branches:
       - deploy
       - ghactions
+      - staging
   # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#onschedule
   schedule:
     - cron:  '0 6 10 * *' # every 10th (arbitrary) day of each month at ~ midnight central time
@@ -19,7 +20,6 @@ on:
     types:
       - all
       - deploy
-      - staging
 
 jobs:
   deploy:
@@ -32,7 +32,9 @@ jobs:
 
       matrix:
         config:
-        - { r: '3.6', type: "shinyappsio", account: "sam", server_name: "staging", cores: 2, extra_text: " --all" }
+        - { r: '3.6', type: "shinyappsio", account: "sam", server_name: "staging", cores: 2, extra_text: " 1 2 3 4 5 6 7 8 9 10" }
+        # Test on all apps
+        # - { r: '3.6', type: "shinyappsio", account: "sam", server_name: "staging", cores: 2, extra_text: " --all" }
         # Testing config on particular app
         # - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 1, extra_text: " 182" }
 
