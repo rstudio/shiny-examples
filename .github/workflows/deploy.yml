@@ -32,7 +32,6 @@ jobs:
 
       matrix:
         config:
-        # 141 is timing out
         - { r: '3.6', type: "shinyappsio", account: "perman", server_name: "shinyapps.io", cores: 2, extra_text: " 141" }
         # Test on all apps
         # - { r: '3.6', type: "shinyappsio", account: "sam", server_name: "staging", cores: 2, extra_text: " --all" }
