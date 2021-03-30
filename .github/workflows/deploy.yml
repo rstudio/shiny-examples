@@ -10,11 +10,12 @@ name: Deploy
 on:
   push:
     branches:
+      - focal_test
       - deploy
       - ghactions
-  # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#onschedule
-  schedule:
-    - cron:  '0 6 10 * *' # every 10th (arbitrary) day of each month at ~ midnight central time
+#   # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#onschedule
+#   schedule:
+#     - cron:  '0 6 10 * *' # every 10th (arbitrary) day of each month at ~ midnight central time
   repository_dispatch:
     types:
       - all
@@ -31,7 +32,8 @@ jobs:
 
       matrix:
         config:
-        - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 5, extra_text: " --all" }
+        # - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 5, extra_text: " --all" }
+        - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 1, extra_text: " 022 166 139 061 063 141" }
         # Testing config on particular app
         # - { r: '3.6', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 1, extra_text: " 182" }
 
