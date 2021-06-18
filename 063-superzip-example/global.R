@@ -1,5 +1,5 @@
 library(dplyr)
-
+#TEST
 allzips <- readRDS("data/superzip.rds")
 allzips$latitude <- jitter(allzips$latitude)
 allzips$longitude <- jitter(allzips$longitude)
