@@ -158,7 +158,7 @@ deployApps <- function(app) {
       '../shiny-dev-center/_scripts/import.R',
       app,
       sprintf('https://gallery.shinyapps.io/%s', app),
-      sprintf('https://github.com/rstudio/shiny-examples/tree/master/%s', app)
+      sprintf('https://github.com/rstudio/shiny-examples/tree/main/%s', app)
     ))
   } else {
     return(0)

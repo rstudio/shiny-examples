@@ -5,7 +5,7 @@
 library(rgdal)
 library(sf)
 
-download.file("https://raw.githubusercontent.com/rstudio/leaflet/master/docs/json/countries.geojson", "countries.geojson")
+download.file("https://raw.githubusercontent.com/rstudio/leaflet/main/docs/json/countries.geojson", "countries.geojson")
 countries <- readOGR("countries.geojson", "OGRGeoJSON")
 saveRDS(st_as_sf(countries), "countries.rds")
 message("Saved countries.rds")
