@@ -64,7 +64,7 @@ RUN echo 'options(\n\
 # From FAQ 5 and 6 here: https://yihui.name/tinytex/faq/
 # Also install ae, parskip, and listings packages to build R vignettes
 RUN wget -qO- \
-    "https://github.com/yihui/tinytex/raw/master/tools/install-unx.sh" | \
+    "https://github.com/yihui/tinytex/raw/main/tools/install-unx.sh" | \
     sh -s - --admin --no-path \
     && ~/.TinyTeX/bin/*/tlmgr path add \
     && tlmgr install metafont mfware inconsolata tex ae parskip listings \
@@ -98,9 +98,9 @@ RUN R -e "install.packages(c('devtools', 'packrat'))"
 # Install shiny-examples, and fix permissions for apps that require write
 # access to /shiny-examples
 RUN cd / && \
-    wget -nv https://github.com/rstudio/shiny-examples/archive/master.zip && \
-    unzip -x master.zip && \
-    mv shiny-examples-master shiny-examples && \
+    wget -nv https://github.com/rstudio/shiny-examples/archive/main.zip && \
+    unzip -x main.zip && \
+    mv shiny-examples-main shiny-examples && \
     cd shiny-examples
 
 
