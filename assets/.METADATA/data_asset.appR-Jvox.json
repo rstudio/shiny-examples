@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "name": "app.R",
+    "asset_type": "data_asset",
+    "origin_country": "us",
+    "asset_category": "USER",
+    "created_at": "2022-07-06T03:43:07Z",
+    "created": 1657078987046,
+    "asset_id": "data_asset.appR-Jvox",
+    "asset_attributes": [
+      "data_asset"
+    ]
+  },
+  "entity": {
+    "data_asset": {
+      "dataset": false,
+      "mime_type": "application/octet-stream"
+    }
+  },
+  "attachments": [
+    {
+      "asset_type": "data_asset",
+      "name": "app.R",
+      "mime": "application/octet-stream",
+      "object_key": "data_asset/app.R",
+      "object_key_is_read_only": true,
+      "created_at": "2022-07-06T03:43:07Z",
+      "id": "e24d6f0a-04ac-4e96-8e75-6f871edaa267",
+      "is_managed": false,
+      "is_referenced": true,
+      "is_remote": false
+    }
+  ]
+}

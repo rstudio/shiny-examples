@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "name": "RSHINY",
+    "description": "",
+    "origin_country": "US",
+    "tags": [
+      "dsx"
+    ],
+    "asset_type": "environment",
+    "rov": {
+      "mode": 0
+    },
+    "asset_category": "USER",
+    "created_at": "2022-07-06T01:15:03Z",
+    "created": 1657070103550,
+    "asset_id": "environment.RSHINY",
+    "asset_attributes": [
+      "environment"
+    ]
+  },
+  "entity": {
+    "environment": {
+      "sub_type": "rstudio",
+      "display_name": "RSHINY",
+      "hardware_specification": {
+        "type": "referenced",
+        "guid": "hardware_specification.RSHINY"
+      },
+      "software_specification": {
+        "type": "referenced",
+        "guid": "0e6e79df-875e-4f24-8ae9-62dcc2148306"
+      },
+      "tools_specification": {
+        "supported_kernels": [
+          {
+            "name": "R",
+            "language": "R",
+            "version": "3.6",
+            "display_name": "R 3.6"
+          }
+        ]
+      },
+      "runtime_definition": "rstudio"
+    }
+  },
+  "attachments": []
+}
