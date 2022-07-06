@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "name": "test1",
+    "asset_type": "job",
+    "origin_country": "us",
+    "asset_category": "USER",
+    "created_at": "2022-07-06T03:00:57Z",
+    "created": 1657076457477,
+    "asset_id": "job.test1",
+    "asset_attributes": [
+      "job"
+    ]
+  },
+  "entity": {
+    "job": {
+      "asset_ref_type": "script",
+      "configuration": {
+        "env_id": "environment.RSHINY",
+        "file_ref": "001-hello/tests/shinytests/mytest.R",
+        "entrypoint": "",
+        "env_type": "script",
+        "env_variables": []
+      },
+      "last_run_initiator": "None",
+      "last_run_time": "",
+      "last_run_status": "None",
+      "last_run_status_timestamp": 0,
+      "future_scheduled_runs": [],
+      "enable_notifications": true,
+      "project_name": "ShinyApp",
+      "schedule_id": "",
+      "schedule_creator_id": ""
+    }
+  },
+  "attachments": []
+}
