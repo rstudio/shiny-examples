@@ -57,10 +57,6 @@ jobs:
             any::rsconnect
             any::packrat
             any::knitr
-            any::hadley/shinySignals
-            any::jcheng5/bubbles
-            any::jcheng5/googleCharts
-            any::rstudio/shinyvalidate
             any::shiny
             any::cpp11
             any::plogr
@@ -69,6 +65,10 @@ jobs:
             any::RcppEigen
             any::progress
             any::AsioHeaders
+            hadley/shinySignals
+            jcheng5/bubbles
+            jcheng5/googleCharts
+            rstudio/shinyvalidate
 
       - name: Install remaining packages
         shell: Rscript {0}
