@@ -22,7 +22,7 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
 
-    name: "${{ matrix.config.type }}
+    name: "${{ matrix.config.type }}"
 
     strategy:
       fail-fast: false
