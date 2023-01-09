@@ -24,7 +24,7 @@ install_if_needed <- function(pkgs) {
 }
 
 # Core packages
-install_if_needed(c("devtools", "rsconnect", "packrat", "knitr"))
+install_if_needed(c("devtools", "rsconnect", "packrat", "knitr", "renv"))
 
 # Some packages must be installed from GitHub
 devtools::install_github(c(

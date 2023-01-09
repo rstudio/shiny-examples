@@ -57,6 +57,7 @@ jobs:
             any::rsconnect
             any::packrat
             any::knitr
+            any::renv
             any::shiny
             any::cpp11
             any::plogr
