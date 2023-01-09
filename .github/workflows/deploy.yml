@@ -52,22 +52,23 @@ jobs:
           r-version: ${{ matrix.config.r }}
           packages: remotes
           extra-packages: |
-            devtools
-            rsconnect
-            packrat
-            knitr
-            hadley/shinySignals
-            jcheng5/bubbles
-            jcheng5/googleCharts
-            rstudio/shinyvalidate
-            shiny
-            cpp11
-            plogr
-            BH
-            RcppArmadillo
-            RcppEigen
-            progress
-            AsioHeaders
+            any::XML
+            any::devtools
+            any::rsconnect
+            any::packrat
+            any::knitr
+            any::hadley/shinySignals
+            any::jcheng5/bubbles
+            any::jcheng5/googleCharts
+            any::rstudio/shinyvalidate
+            any::shiny
+            any::cpp11
+            any::plogr
+            any::BH
+            any::RcppArmadillo
+            any::RcppEigen
+            any::progress
+            any::AsioHeaders
 
       - name: Install remaining packages
         shell: Rscript {0}
