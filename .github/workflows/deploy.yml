@@ -29,9 +29,9 @@ jobs:
 
       matrix:
         config:
-        # - { r: 'release', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 5, extra_text: " --all" }
+        - { r: 'release', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 5, extra_text: " --all" }
         # Testing config on particular app
-        - { r: 'release', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 1, extra_text: " 182" }
+        # - { r: 'release', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 1, extra_text: " 182" }
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
