@@ -20,7 +20,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: macos-latest
 
     name: "${{ matrix.config.type }}"
 
