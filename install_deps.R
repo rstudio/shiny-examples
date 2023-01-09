@@ -4,21 +4,7 @@
 # apps. It can be sourced from RStudio, or run with Rscript.
 
 
-# Returns the file currently being sourced or run with Rscript
-this_file <- function() {
-  cmdArgs <- commandArgs(trailingOnly = FALSE)
-  needle <- "--file="
-  match <- grep(needle, cmdArgs)
-  if (length(match) > 0) {
-    # Rscript
-    return(normalizePath(sub(needle, "", cmdArgs[match])))
-  } else {
-    # 'source'd via R console
-    return(normalizePath(sys.frames()[[1]]$ofile))
-  }
-}
-
-is_installed <- function (pkg) {
+is_installed <- function(pkg) {
   if (system.file(package = pkg) == "")
     FALSE
   else
@@ -27,6 +13,8 @@ is_installed <- function (pkg) {
 
 # Install a package or packages if not already installed.
 install_if_needed <- function(pkgs) {
+  pkgs <- sort(unique(pkgs))
+  message("Trying to install: ", paste0(pkgs, collapse = ", "))
   installed_idx <- vapply(pkgs, is_installed, TRUE)
   needed <- pkgs[!installed_idx]
   if (length(needed) > 0) {
@@ -49,4 +37,4 @@ devtools::install_github(c(
 ))
 
 # Autodetect packages needed for the examples (will install from CRAN)
-install_if_needed(packrat:::dirDependencies(dirname(this_file())))
+install_if_needed(packrat:::dirDependencies("."))
