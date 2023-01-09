@@ -52,7 +52,6 @@ jobs:
           r-version: ${{ matrix.config.r }}
           packages: remotes
           extra-packages: |
-            any::XML
             any::devtools
             any::rsconnect
             any::packrat
@@ -69,6 +68,7 @@ jobs:
             jcheng5/bubbles
             jcheng5/googleCharts
             rstudio/shinyvalidate
+            cran/XML
 
       - name: Install remaining packages
         shell: Rscript {0}
