@@ -10,7 +10,7 @@ name: Deploy
 on:
   push:
     branches:
-      - deploy**
+      - "**deploy**"
   schedule:
     - cron:  '0 6 10 * *' # every 10th (arbitrary) day of each month at ~ midnight central time
   repository_dispatch:
