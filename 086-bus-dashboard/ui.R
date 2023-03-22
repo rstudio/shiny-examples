@@ -39,6 +39,7 @@ body <- dashboardBody(
       box(width = NULL, status = "warning",
         selectInput("interval", "Refresh interval",
           choices = c(
+            "15 seconds" = 15,
             "30 seconds" = 30,
             "1 minute" = 60,
             "2 minutes" = 120,
@@ -51,7 +52,7 @@ body <- dashboardBody(
         actionButton("refresh", "Refresh now"),
         p(class = "text-muted",
           br(),
-          "Source data updates every 30 seconds."
+          "Source data updates every 15 seconds."
         )
       )
     )
