@@ -1,33 +1,24 @@
 library(shinydashboard)
 library(leaflet)
 library(dplyr)
-library(curl) # make the jsonlite suggested dependency explicit
 
 # 1=South, 2=East, 3=West, 4=North
 dirColors <-c("1"="#595490", "2"="#527525", "3"="#A93F35", "4"="#BA48AA")
 
-# Download data from the Twin Cities Metro Transit API
-# http://svc.metrotransit.org/NexTrip/help
-getMetroData <- function(path) {
-  url <- paste0("http://svc.metrotransit.org/NexTrip/", path, "?format=json")
-  jsonlite::fromJSON(url)
-}
-
-# Load static trip and shape data
-trips  <- readRDS("metrotransit-data/rds/trips.rds")
-shapes <- readRDS("metrotransit-data/rds/shapes.rds")
+# Dynamically load trip and shape data
+gtfs <- get_transit_gtfs()
 
 
 # Get the shape for a particular route. This isn't perfect. Each route has a
 # large number of different trips, and each trip can have a different shape.
 # This function simply returns the most commonly-used shape across all trips for
 # a particular route.
-get_route_shape <- function(route) {
-  routeid <- paste0(route, "-75")
+get_route_shape <- function(routeid) {
+  # routeid <- paste0(route, "-75")
 
   # For this route, get all the shape_ids listed in trips, and a count of how
   # many times each shape is used. We'll just pick the most commonly-used shape.
-  shape_counts <- trips %>%
+  shape_counts <- gtfs$trips %>%
     filter(route_id == routeid) %>%
     group_by(shape_id) %>%
     summarise(n = n()) %>%
@@ -36,7 +27,7 @@ get_route_shape <- function(route) {
   shapeid <- shape_counts$shape_id[1]
 
   # Get the coordinates for the shape_id
-  shapes %>% filter(shape_id == shapeid)
+  gtfs$shapes %>% filter(shape_id == shapeid)
 }
 
 
@@ -44,9 +35,13 @@ function(input, output, session) {
 
   # Route select input box
   output$routeSelect <- renderUI({
-    live_vehicles <- getMetroData("VehicleLocations/0")
+    # live_vehicles <- getMetroData("VehicleLocations/0")
 
-    routeNums <- sort(unique(as.numeric(live_vehicles$Route)))
+    routeNums <-
+      sort(unique(as.numeric(
+        realtime_locations(gtfs = gtfs)$Route
+      )))
+
     # Add names, so that we can add all=0
     names(routeNums) <- routeNums
     routeNums <- c(All = 0, routeNums)
@@ -63,10 +58,10 @@ function(input, output, session) {
     # fetched again.
     invalidateLater(interval * 1000, session)
 
-    getMetroData("VehicleLocations/0")
+    realtime_locations(gtfs = gtfs)
   })
 
-  # Locations of vehicles for a particular route
+  # Data frame of vehicle locations for a particular route
   routeVehicleLocations <- reactive({
     if (is.null(input$routeNum))
       return()
