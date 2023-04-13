@@ -2,8 +2,8 @@ fluidPage(sidebarLayout(
   sidebarPanel(
     # use regions as option groups
     selectizeInput('x1', 'X1', choices = list(
-      Eastern = c(`New York` = 'NY', `New Jersey` = 'NJ'),
-      Western = c(`California` = 'CA', `Washington` = 'WA')
+      Eastern = list(`New York` = "NY", `New Jersey` = "NJ"),
+      Western = list(`California` = "CA", `Washington` = "WA")
     ), multiple = TRUE),
 
     # use updateSelectizeInput() to generate options later
@@ -14,8 +14,8 @@ fluidPage(sidebarLayout(
 
     # a select input
     selectInput('x4', 'X4', choices = list(
-      Eastern = c(`New York` = 'NY', `New Jersey` = 'NJ'),
-      Western = c(`California` = 'CA', `Washington` = 'WA')
+      Eastern = list(`New York` = "NY", `New Jersey` = "NJ"),
+      Western = list(`California` = "CA", `Washington` = "WA")
     ), selectize = FALSE)
   ),
   mainPanel(
