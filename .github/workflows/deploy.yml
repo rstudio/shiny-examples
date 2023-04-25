@@ -12,7 +12,7 @@ on:
     branches:
       - "**deploy**"
   schedule:
-    - cron:  '0 6 10 * *' # every 10th (arbitrary) day of each month at ~ midnight central time
+    - cron: "0 6 10 * *" # every 10th (arbitrary) day of each month at ~ midnight central time
   repository_dispatch:
     types:
       - all
@@ -29,7 +29,15 @@ jobs:
 
       matrix:
         config:
-        - { r: 'release', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 5, extra_text: " --all" }
+          # - { r: 'release', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 5, extra_text: " --all" }
+          - {
+              r: "4.2",
+              type: "shinyappsio",
+              account: "gallery",
+              server_name: "shinyapps.io",
+              cores: 5,
+              extra_text: " 500 501",
+            }
         # Testing config on particular app
         # - { r: 'release', type: "shinyappsio", account: "gallery", server_name: "shinyapps.io", cores: 1, extra_text: " 182" }
 
