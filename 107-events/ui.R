@@ -48,7 +48,7 @@ fluidPage(
     ),
 
     mainPanel(
-      HTML(knit2html(fragment.only = TRUE, text = md)),
+      HTML(knit2html(template = FALSE, text = md)),
       plotOutput('distPlot'),
       verbatimTextOutput('slider_info1'),
       tags$h3("slider_info2"),
