@@ -25,7 +25,7 @@ function(input, output) {
     knitr::opts_knit$set(root.dir = owd)
 
     tagList(
-      HTML(knitr::knit2html(text = readLines(src), fragment.only = TRUE)),
+      HTML(knitr::knit2html(text = readLines(src), template = FALSE)),
       # typeset LaTeX math
       tags$script(HTML('MathJax.Hub.Queue(["Typeset", MathJax.Hub]);')),
       # syntax highlighting
