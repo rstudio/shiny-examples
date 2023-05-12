@@ -76,6 +76,7 @@ jobs:
             jcheng5/googleCharts
             rstudio/shinyvalidate
             cran/XML
+            httpuv
 
       - name: Install remaining packages
         shell: Rscript {0}
