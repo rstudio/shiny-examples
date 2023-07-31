@@ -8,10 +8,13 @@
   gtag('config', 'UA-160622973-1');
 
   $(document).on('change', 'select', function(e) {
-    ga('send', 'event', 'widget', 'select data', $(e.currentTarget).val());
+    gtag('event', 'widget', {
+      action: 'select data',
+      label: $(e.currentTarget).val()
+    });
   });
 
   $(document).on('click', 'button', function() {
-    ga('send', 'event', 'button', 'plot data');
+    gtag('event', 'button', { action: 'update plot' });
   });
 </script>
