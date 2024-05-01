@@ -23,7 +23,7 @@ ui <- fluidPage(
     "|",
     tags$a(href = "https://github.com/rstudio/httpuv/pull/215", "PR"),
     "|",
-    tags$a(href = "https://community.rstudio.com/t/having-problems-with-shiny-v1-3-0-and-nginx/28180",
+    tags$a(href = "https://forum.posit.co/t/having-problems-with-shiny-v1-3-0-and-nginx/28180",
       "Announcement"
     )
   ),
