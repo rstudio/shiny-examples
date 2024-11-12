@@ -146,7 +146,7 @@ if (opts$all) {
 deployApps <- function(app) {
   cat('-------- Deploying', app, '--------\n')
   if (opts$deploy) {
-    res <- try(rsconnect::deployApp(app, account = opts$account, server = opts$server))
+    res <- try(rsconnect::deployApp(app, account = opts$account, server = opts$server, forceUpdate = TRUE))
     if (inherits(res, 'try-error')) {
       return(1)
     }
