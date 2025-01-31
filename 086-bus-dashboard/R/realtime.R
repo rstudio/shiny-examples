@@ -11,7 +11,7 @@ realtime_info <- memoise::memoise(
         # Only add shapes if needed
         if (! ("transit_realtime.VehiclePosition" %in% ls("RProtoBuf:DescriptorPool"))) {
             download_and_read(
-                url = "https://gtfs.org/realtime/gtfs-realtime.proto",
+                url = "https://gtfs.org/documentation/realtime/gtfs-realtime.proto",
                 # Use consistent location for caching within R session
                 destfile = file.path(tempdir(), "gtfs-realtime.proto"),
                 # Load proto shapes into RProtoBuf
