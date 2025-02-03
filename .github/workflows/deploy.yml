@@ -58,25 +58,23 @@ jobs:
           r-version: ${{ matrix.config.r }}
           packages: remotes
           extra-packages: |
-            any::devtools
-            any::rsconnect
-            any::packrat
-            any::knitr
-            any::renv
-            any::shiny
-            any::cpp11
-            any::plogr
-            any::BH
-            any::RcppArmadillo
-            any::RcppEigen
-            any::progress
-            any::AsioHeaders
+            cran::devtools
+            cran::rsconnect
+            cran::packrat
+            cran::knitr
+            cran::renv
+            cran::shiny
+            cran::cpp11
+            cran::plogr
+            cran::BH
+            cran::RcppArmadillo
+            cran::RcppEigen
+            cran::progress
+            cran::AsioHeaders
+            cran::shinyvalidate
             hadley/shinySignals
             jcheng5/bubbles
             jcheng5/googleCharts
-            rstudio/shinyvalidate
-            cran/XML
-            rstudio/httpuv
 
       - name: Install remaining packages
         shell: Rscript {0}
