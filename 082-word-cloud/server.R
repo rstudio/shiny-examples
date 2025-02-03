@@ -29,4 +29,11 @@ function(input, output, session) {
                   min.freq = input$freq, max.words=input$max,
                   colors=brewer.pal(8, "Dark2"))
   })
+
+  # tm depends on NLP which causes NLP::annotate to override
+  # ggplot2::annotate when calling `library(ggplot2); library(tm)`
+  session$onSessionEnded(function() {
+    unloadNamespace("tm")
+    unloadNamespace("NLP")
+  })
 }
