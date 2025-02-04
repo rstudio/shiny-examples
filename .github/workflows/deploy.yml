@@ -71,12 +71,12 @@ jobs:
             any::RcppEigen
             any::progress
             any::AsioHeaders
+            any::XML
+            any::httpuv
+            any::shinyvalidate
             hadley/shinySignals
             jcheng5/bubbles
             jcheng5/googleCharts
-            rstudio/shinyvalidate
-            cran/XML
-            rstudio/httpuv
 
       - name: Install remaining packages
         shell: Rscript {0}
