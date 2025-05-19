@@ -6,7 +6,8 @@ library(googleCharts)
 library(shiny)
 library(dplyr)
 
-data <- readRDS("healthexp.Rds")
+# data <- readRDS("healthexp.Rds")
+data <- readRDS(url("https://github.com/rstudio/shiny-examples/raw/refs/heads/main/182-google-charts/healthexp.Rds"))
 data$Region <- as.factor(data$Region)
 
 # Use global max/min for axes so the view window stays
@@ -26,7 +27,7 @@ ui <- fluidPage(
 
   # Use the Google webfont "Source Sans Pro"
   tags$link(
-    href=paste0("http://fonts.googleapis.com/css?",
+    href=paste0("https://fonts.googleapis.com/css?",
                 "family=Source+Sans+Pro:300,600,300italic"),
     rel="stylesheet", type="text/css"),
   tags$style(type="text/css",
