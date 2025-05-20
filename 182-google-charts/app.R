@@ -26,10 +26,12 @@ ui <- fluidPage(
 
   # Use the Google webfont "Source Sans Pro"
   tags$link(
-    href=paste0("https://fonts.googleapis.com/css?",
-                "family=Source+Sans+Pro:300,600,300italic"),
-    rel="stylesheet", type="text/css"),
-  tags$style(type="text/css",
+    href = "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic",
+    rel = "stylesheet", 
+    type = "text/css"
+  ),
+  tags$style(
+    type = "text/css",
     "body {font-family: 'Source Sans Pro'}"
   ),
 
