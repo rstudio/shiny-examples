@@ -6,8 +6,7 @@ library(googleCharts)
 library(shiny)
 library(dplyr)
 
-# data <- readRDS("healthexp.Rds")
-data <- readRDS(url("https://github.com/rstudio/shiny-examples/raw/refs/heads/main/182-google-charts/healthexp.Rds"))
+data <- readRDS("healthexp.Rds")
 data$Region <- as.factor(data$Region)
 
 # Use global max/min for axes so the view window stays
