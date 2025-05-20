@@ -1,0 +1,167 @@
+/*-- scss:defaults --*/
+$blue: #007BC2 !default;
+$indigo: #4B00C1 !default;
+$purple: #74149C !default;
+$pink: #BF007F !default;
+$red: #C10000 !default;
+$orange: #f45100 !default;
+$yellow: #F9B928 !default;
+$green: #00891A !default;
+$teal: #00BF7F !default;
+$cyan: #03C7E8 !default;
+$white: #ffffff !default;
+$gray: #606060 !default;
+$gray-dark: #303030 !default;
+$gray-100: #f8f8f8 !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #cdd4da !default;
+$gray-500: #8D959E !default;
+$gray-600: #707782 !default;
+$gray-700: #48505F !default;
+$gray-800: #343A46 !default;
+$gray-900: #1D1F21 !default;
+$default: #dee2e6 !default;
+$primary: #007BC2 !default;
+$secondary: #404040 !default;
+$success: #00891A !default;
+$info: #03C7E8 !default;
+$warning: #F9B928 !default;
+$danger: #C10000 !default; 
+$light: #f8f8f8 !default;
+$dark: #202020 !default;
+$default-rgb: 222, 226, 230 !default;
+$primary-rgb: 0, 123, 194 !default;
+$secondary-rgb: 64, 64, 64 !default;
+$success-rgb: 0, 137, 26 !default;
+$info-rgb: 3, 199, 232 !default;
+$warning-rgb: 249, 185, 40 !default;
+$danger-rgb: 193, 0, 0 !default;
+$light-rgb: 248, 248, 248 !default;
+$dark-rgb: 32, 32, 32 !default;
+$white-rgb: 255, 255, 255 !default;
+$black-rgb: 0, 0, 0 !default;
+$body-color-rgb: 52, 58, 70 !default;
+$body-bg-rgb: 255, 255, 255 !default;
+$gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)) !default;
+$root-font-size: 18px !default;
+$body-font-size: 1rem !default;
+$body-font-weight: 400 !default;
+$body-color: $gray-900 !default;
+$body-bg: #ffffff !default; 
+$hr-margin-y: 2rem !default;
+$input-btn-font-size: 15px !default;
+$btn-font-weight: 500 !default;
+$btn-padding-y: .75em !default;
+$btn-padding-x: 2em !default; 
+$h1-font-size: 2.1rem !default;
+$form-check-input-width: 1.2em !default;
+$form-check-input-border-radius: 2px !default;
+$form-check-margin-bottom: .25rem !default;
+$input-border-color: $gray-500 !default;
+$form-text-color: $red !default;
+$border-radius: 3px !default;
+
+/*-- scss:rules --*/
+
+// move checkbox and radio text slightly to the right
+.checkbox input, .radio input {
+  margin-right: 0.35em;
+}
+
+// make selected item more accessible
+.selectize-dropdown-content .option.selected.active, .selectize-dropdown-content .option:hover, .selectize-dropdown-content .option:active {
+  background-color: $blue;
+  color: $white;
+}
+// make non-selected items slightly different visually (but still 3:1 contrast)
+.selectize-dropdown-content .option.active {
+  background-color: tint-color($blue, 25%);
+  color: $white;
+}
+
+// fix "to" width in the middle of the date picker
+.shiny-date-range-input .input-daterange .input-group-addon {
+  margin-right: -1px;
+}
+
+// Garrick: this is potentially too big of a swing, but... I feel like these components should fill the containter they're in, rather than set a pixel width?
+
+.shiny-input-container:not(.shiny-input-container-inline) {
+  min-width: 230px;
+  width: 100%;
+}
+
+// SLIDERS SLIDERS SLIDERS
+  
+// give numbers above more breathing room
+.irs--shiny .irs-min, .irs--shiny .irs-max, .irs--shiny .irs-from, .irs--shiny .irs-to, .irs--shiny .irs-single {
+  padding: 3px 6px !important;
+}
+
+.irs-from, .irs-to, .irs-single, .irs--shiny .irs-min, .irs--shiny .irs-max  {
+  top: -3px !important;
+}
+
+.irs {
+  margin-top: 3px;
+}
+
+.irs--shiny .irs-min, .irs--shiny .irs-max {
+  background-color: $gray-200 !important;
+}
+
+
+.irs--shiny .irs-bar {
+  top: 31px !important;
+  height: 3px !important;
+  background: $blue !important;
+  border: none !important;
+}
+
+.irs--shiny .irs-line {
+  top: 32px !important;
+  height: 1px !important;
+  background: none !important;
+  background-color: $gray-600 !important;
+  border: none !important;
+ // NOTE: not sure we need this border radius
+  border-radius: 8px !important;
+}
+
+// Make handle(s) blue
+.irs--shiny .irs-handle {
+  top: 22px !important;
+  width: 19px !important;
+  height: 19px !important;
+  border: 1px solid $blue !important;
+  background-color: $blue !important;
+  box-shadow: none !important;
+  border-radius: 22px !important;
+}
+
+// make handles keyboard accessible
+// Garrick: looks like we need some javascript shenanigans to make the handles on the slider keyboard accessible.  I think we can do this by assigning it a role and and a tabindex? check out this article: https://www.456bereastreet.com/archive/201302/making_elements_keyboard_focusable_and_clickable/
+.irs--shiny .irs-handle:focus-visible, .irs--shiny .irs-handle:active {
+    color: shade-color($blue, 30%) !important;
+    background-color: shade-color($blue, 30%) !important;
+    border-color: shade-color($blue, 30%) !important;
+    outline: 0 !important;
+    box-shadow: $btn-focus-box-shadow !important;
+}
+
+// make ticks the right color
+.irs--shiny .irs-grid-pol {
+  background-color: $gray-600 !important;
+  height: 6px !important;
+}
+
+// remove small ticks
+.irs-grid-pol.small {
+  display: none !important;
+}
+
+.irs-grid-text {
+  color: $gray-800 !important;
+  bottom: 8px !important;
+}
