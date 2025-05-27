@@ -54,7 +54,7 @@ fluidPage(
         render = I("{
       option: function(item, escape) {
         return '<div>' +
-               '<strong><img src=\"http://selectize.github.io/selectize.js/images/repo-' + (item.fork ? 'forked' : 'source') + '.png\" width=20 />' + escape(item.name) + '</strong>:' +
+               '<strong><img src=\"https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/' + (item.fork ? 'repo-forked' : 'repo') + '-16.svg\" height=14 style=\"padding-right: 3px;\" />' + escape(item.name) + '</strong>:' +
                ' <em>' + escape(item.description) + '</em>' +
                ' (by ' + escape(item.username) + ')' +
             '<ul>' +
