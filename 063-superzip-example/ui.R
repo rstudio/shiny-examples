@@ -43,7 +43,11 @@ navbarPage("Superzip", id="nav",
       ),
 
       tags$div(id="cite",
-        'Data compiled for ', tags$em('Coming Apart: The State of White America, 1960–2010'), ' by Charles Murray (Crown Forum, 2012).'
+        'Data compiled from the 2017 American Community Survey using the',
+        tags$a("tidycensus package.", href = "https://walkerke.github.io/tidycensus/"),
+        'Inspired by a 2013',
+        tags$a("Washington Post", href = "https://www.washingtonpost.com/sf/local/2013/11/09/washington-a-world-apart/"),
+        "piece."
       )
     )
   ),
