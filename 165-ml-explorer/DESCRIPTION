@@ -1,0 +1,6 @@
+Title: ML Explorer
+Author: Claude
+License: MIT
+DisplayMode: Showcase
+Tags: machine-learning, random-forest, decision-tree, regression, classification, shinydashboard, ggplot2, DT, randomForest, rpart
+Type: Shiny
